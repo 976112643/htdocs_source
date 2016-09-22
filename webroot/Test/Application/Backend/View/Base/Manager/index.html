@@ -1,0 +1,156 @@
+<extend name="Public/body" />
+<block name="body"> <!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper" style="min-height: 922px;">
+	<!-- Content Header (Page header) -->
+	<section class="content-header">
+		<h1>
+			<?=$page_title?>
+			<small>
+				<?=$small_title?>
+			</small>
+		</h1>
+		<ol class="breadcrumb">
+			<li><a href="<?=U('/Backend')?>"><i class="fa fa-dashboard"></i>
+					首页</a></li>
+			<li class="active">
+				<?=$page_title?>
+			</li>
+		</ol>
+	</section>
+
+	<!-- Main content -->
+	<section class="content">
+		<div class="row">
+			<div class="col-xs-12">
+				<div class="box">
+					<div class="box-body">
+						<div id="example2_wrapper"
+							class="dataTables_wrapper form-inline dt-bootstrap">
+							<div class="row">
+								<div class="col-sm-6">
+								<form action="" method="get">
+									<label><input type="search" class="form-control input-sm" placeholder="用户名（工号）" name="keywords" value="<?=I('get.keywords', '')?>" size="35" /></label>
+									<label><input type="submit" class="btn btn-info btn-sm" value='搜索' /></label>
+								</form>
+								</div>
+								<div class="col-sm-6 text-right">
+									<?=getTopBtn($menu_info['id'],I('pid'))?>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-sm-12">
+									<table id="example2"
+										class="table table-bordered table-striped dataTable text-center"
+										role="grid" aria-describedby="example2_info">
+										<thead>
+											<tr role="row">
+												<th class="sorting_asc" tabindex="0"
+													aria-controls="example2" rowspan="1" colspan="1"
+													aria-sort="ascending"
+													aria-label="Rendering engine: activate to sort column descending"
+													style="width: 3%"><label><input
+														type="checkbox" class="js_check_all" value=""></label></th>
+												<th class="sorting text-left" tabindex="0"
+													aria-controls="example2" rowspan="1" colspan="1"
+													aria-label="Browser: activate to sort column ascending">用户名（工号）</th>
+												<th class="sorting" tabindex="0" aria-controls="example2"
+													rowspan="1" colspan="1"
+													aria-label="Engine version: activate to sort column ascending">用户组</th>
+												<th class="sorting" tabindex="0" aria-controls="example2"
+													rowspan="1" colspan="1"
+													aria-label="Engine version: activate to sort column ascending">最后登录时间</th>
+												<th class="sorting" tabindex="0" aria-controls="example2"
+													rowspan="1" colspan="1"
+													aria-label="Engine version: activate to sort column ascending">最后登录IP</th>
+												<th class="sorting" tabindex="0" aria-controls="example2"
+													rowspan="1" colspan="1"
+													aria-label="CSS grade: activate to sort column ascending"
+													style="width: 10%">状态</th>
+												<th class="sorting" tabindex="0" aria-controls="example2"
+													rowspan="1" colspan="1"
+													aria-label="CSS grade: activate to sort column ascending">操作</th>
+											</tr>
+										</thead>
+										<tbody>
+											<?php
+													$department_text='';
+													foreach($result as $key=>$row){
+														if($row['manager_id']==1){
+															$department='超级管理员';
+														}else{
+															$department=$row['department_text'];
+														}
+														$tdClass='';
+														if($key!=0 && $result[$key-1]['department_text']==$row['department_text']){
+															$department='∟';
+															$tdClass='text-right';
+														}
+
+														$row['manager_id']=$row['manager_id'];
+														$row['status']=$row['member_status'];
+												?>
+											<tr>
+												<td><label><input type="checkbox" class="ids"
+														name="ids[]" value="<?=$row['manager_id']?>"></label></td>
+												<td class="text-left">
+													<?=$row['username']?>
+												</td>
+												<td>
+													<?=$row['title']?>
+												</td>
+												<td>
+													<?=$row['login_time']?>
+												</td>
+												<td>
+													<?=$row['login_ip']?>
+												</td>
+												<td>
+													<?=$row['status_text']?>
+												</td>
+												<td>
+												<?php
+													$unique_url=array(
+														'status'=>array(
+															'0'=>U("enable"),
+															'1'=>U("disable"),
+														)
+													);
+													$url=array();
+													$url[]=$unique_url['status'][$row['status']];
+													getListBtn($menu_info['id'],$row['manager_id'],$url,I('pid'));
+													getListBtn($menu_info['id'],$row['manager_id'],$unique_url,I('pid'),false);
+												?>
+												</td>
+											</tr>
+											<?php
+													}
+												?>
+										</tbody>
+									</table>
+								</div>
+							</div>
+
+							<div class="pages">
+								<?=$page?>
+							</div>
+						</div>
+						<!-- /.box-body -->
+					</div>
+					<!-- /.box -->
+
+				</div>
+				<!-- /.col -->
+			</div>
+			<!-- /.row -->
+	</section>
+	<!-- /.content -->
+</div>
+</block>
+<block name="script"> <script type="text/javascript">
+$(function(){
+	$("select[name=department]").change(function(){
+		$(this).parents("form").submit();
+	})
+	$("select[name=department]").val("<?=I('department')?>");
+})
+</script> </block>

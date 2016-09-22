@@ -1,0 +1,73 @@
+<extend name="Public/body"/>
+<block name="style">
+	<css href="__CSS__/login.css"/>
+</block>
+<block name="body">
+	<header class="login_top">
+		<div class="logo">
+			<img src="__IMG__/logo.png" alt="">
+		</div>
+	</header>
+	<div class="mian_opendomain">
+		<div class="container">
+			<div class="opendomain clearfix">
+				<h2 class="top_title"><i class="iconfont">&#xe651;</i> 欢迎开通轻博客</h2>
+				<p class="tips">创建我的博客，完善以下信息，可在“博客设置”中随时更改</p>
+				<form action="" class="col-lg-7 col-lg-offset-3 openym_form js_form">
+					<div class="form_group clearfix">
+						<input type="text" class="form_input pull-left" name="昵称" id="nickname" datatype="*" placeholder="请输入昵称" nullmsg="请输入昵称">
+						<span class="Validform_checktip group_checktip pull-left"></span>
+					</div>
+					<div class="form_group clearfix">
+						<input type="text" class="form_input pull-left" id="domainName" name="域名" datatype="*" placeholder="请输入域名" nullmsg="请输入域名">
+						<span class="Validform_checktip group_checktip pull-left"></span>
+					</div>
+					<div class="form_group clearfix">
+						<div class="input_group pull-left clearfix">
+							<input type="text" class="form_input pull-left" id="Codes" placeholder="验证码">
+							<div class="yzm_img pull-left">
+								<img src="__IMG__/User/yzm.jpg" width="89" height="36" alt="">
+							</div>
+						</div>
+						<a href="#" class="pull-left change_pic">看不清，换一换</a>
+					</div>
+					<div class="form_group">
+						<input type="submit" class="btn form_btn" value="下一步">
+					</div>
+					<div class="form_group clearfix">
+						<div class="input_group bottom_tips clearfix">
+							<label class="pull-left"><input type="checkbox"> 轻微博内容发布需知</label>
+							<a href="#" class="pull-right">更换注册手机</a>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	<script>
+		// 表单验证样式自定义
+    	$(".js_form").Validform({
+			tiptype:function(msg,o,cssctl){
+				var objtip=o.obj.siblings(".Validform_checktip");
+				cssctl(objtip,o.type);
+				// objtip.text(msg);
+				var dataName = o.obj.attr('name');
+				msg = '<i class="iconfont">&#xe630;</i> '+msg;
+				msgright = '<i class="iconfont">&#xe62b;</i> 该'+dataName+'可用';
+				if(o.type==2){
+					objtip.html(msgright).fadeIn();
+				}else{
+					objtip.html(msg).fadeIn();
+				}
+			}
+			// ajaxPost:true,
+			// callback:function(data){
+			// 	if(data.status==200){
+			// 		window.location.URL = "<?=U('User/Login/opendomain')?>";
+			// 		//window.location.href=data.url;
+			// 	}
+			// }
+		});
+	
+	</script>
+</block>

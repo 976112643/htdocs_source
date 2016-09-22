@@ -1,0 +1,117 @@
+<extend name="Public/body" />
+<block name="body"> <!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper" style="min-height: 922px;">
+	<!-- Content Header (Page header) -->
+	<section class="content-header">
+		<h1>
+			<?=$page_title?>
+			<small>
+				<?=$small_title?>
+			</small>
+		</h1>
+		<ol class="breadcrumb">
+			<li><a href="<?=U('/Backend')?>"><i class="fa fa-dashboard"></i>
+					首页</a></li>
+			<li class="active">
+				<?=$page_title?>
+			</li>
+		</ol>
+	</section>
+
+	<!-- Main content -->
+	<section class="content">
+		<div class="row">
+			<div class="col-xs-12">
+				<div class="box">
+					<div class="box-body">
+						<div id="example2_wrapper"
+							class="dataTables_wrapper form-inline dt-bootstrap">
+							<div class="row">
+								<div class="col-sm-12">
+								<form action="" method="get">
+									 <?php
+									 	foreach($columns as $k_c=> $v_c) {
+											$checked = '';
+											if(in_array($v_c['column_name'], $field)) {
+												$checked = ' checked="checked"';
+											}
+									 ?>
+										<label><input class="checkbox-inline" name="field[]" type="checkbox" value="<?=$v_c['column_name']?>"<?=$checked?> /><?=$v_c['column_name']?></label>
+									<?php
+										}
+									?>
+									<label><input type="search" class="form-control input-sm" placeholder="关键字" name="keyword" value="<?=I('get.keyword', '')?>" size="35" /></label>
+									<label><input type="submit" class="btn btn-info btn-sm" value='搜索' /></label>
+								</form>
+								</div>							
+							</div>
+							<div class="row">
+								<div class="col-sm-12">
+									<div class="table-responsive">
+										<table id="example2"
+											class="table table-bordered table-striped dataTable text-center"
+											role="grid" aria-describedby="example2_info">
+											<thead>
+												<tr role="row">
+											<?php
+												foreach($columns as $k=>$v) {
+											?>
+													
+													<th class="sorting text-left" tabindex="0"
+														aria-controls="example2" rowspan="1" colspan="1"
+														aria-label="Platform(s): activate to sort column ascending"><?=$v['column_name']?></th>
+											<?php
+												}
+											?>
+												</tr>
+											</thead>
+											<tbody>
+											<?php
+												foreach($list as $key=>$row){
+											?>
+												<tr>
+												<?php
+													foreach($columns as $key=>$value) {
+												?>
+													<td class="text-left">
+														<?=$row[$value['column_name']]?>
+													</td>
+												<?php
+													}
+												?>
+												</tr>
+											<?php
+												}
+											?>
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</div>
+
+							<div class="pages">
+								<?=$page?>
+							</div>
+						</div>
+						<!-- /.box-body -->
+					</div>
+					<!-- /.box -->
+
+				</div>
+				<!-- /.col -->
+			</div>
+			<!-- /.row -->
+	</section>
+	<!-- /.content -->
+</div>
+</block>
+<block name="script">
+<script type="text/javascript">
+$(function(){
+	$("select[name=department]").change(function(){
+		$(this).parents("form").submit();
+	})
+	$("select[name=department]").val("<?=I('department')?>");
+})
+</script>
+</block>

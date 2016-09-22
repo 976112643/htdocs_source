@@ -1,0 +1,30 @@
+<extend name="Public/body"/>
+<block name="style">
+	<css href="__CSS__/index.css"/>
+	<css href="__PLUGIN__/popover/dist/jquery.webui-popover.min.css"/>
+</block>
+<block name="body">
+	<!-- 头部导航 S-->
+	<!-- <header class="header_nav">
+		<nav class="navbar">
+			<div class="container">
+				<div class="navbar-header">
+					  <a href="#" class="myBrand">
+						  <img src="__IMG__/logo.png" alt="">
+					  </a>
+				</div>
+			</div>
+		</nav>
+	</header> -->
+	<div class="container">
+		<div class="img_404 text-center">
+			<img src="__IMG__/404_bg.png" alt="">
+		</div>
+		<h3 class="tips_404">哎哟，页面走丢啦~</h3>
+		<div class="btn_box text-center">
+			<button class="back_home_btn btn">返回首页</button>
+		</div>
+	</div>
+
+	<include file="Home@Public/footer"/>
+</block>

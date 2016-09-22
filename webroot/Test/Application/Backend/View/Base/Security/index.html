@@ -1,0 +1,52 @@
+<extend name="Public/body" />
+<block name="body"> <!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+	<!-- Content Header (Page header) -->
+	<section class="content-header">
+		<h1>
+			<?=$page_title?>
+			<small>查看</small>
+		</h1>
+		<ol class="breadcrumb">
+			<li><a href="<?=U('/Backend')?>"><i class="fa fa-dashboard"></i>
+					首页</a></li>
+			<li><a href="<?=U('index')?>"> <?=$page_title?></a></li>
+			<li class="active">查看</li>
+		</ol>
+	</section>
+
+	<!-- Main content -->
+	<section class="content">
+		<div class="row">
+			<!-- left column -->
+			<div class="col-md-12">
+				<!-- general form elements -->
+				<div class="box box-primary operate_form">
+					<div class="box-body">
+						<p>
+							上次登陆时间：
+							<?=$info['last_login_time']?>
+						</p>
+						<p>
+							上次登陆地址：
+							<?=getLocationByIp($info['last_login_ip'])?>
+						</p>
+						<p>
+							本次登陆时间：
+							<?=$info['login_time']?>
+						</p>
+						<p style="margin-bottom: 0;">
+							本次登陆地址：
+							<?=getLocationByIp($info['login_ip'])?>
+						</p>
+					</div>
+				</div>
+				<!-- /.box -->
+			</div>
+			<!--/.col (left) -->
+		</div>
+		<!-- /.row -->
+	</section>
+	<!-- /.content -->
+</div>
+</block>

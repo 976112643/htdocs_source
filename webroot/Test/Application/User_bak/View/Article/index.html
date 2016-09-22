@@ -1,0 +1,314 @@
+<extend name="Home@Public/body"/>
+<block name="style">
+	<css href="__CSS__/index.css"/>
+	<css href="__PLUGIN__/popover/dist/jquery.webui-popover.min.css"/>
+</block>
+<block name="body">
+	<div class="container">
+		<div class="btn_top clearfix">
+			<div class="btn_group_l pull-left">
+				<button class="btn btn_cancel js_resize_btn">取消选择</button>
+				<button class="btn btn_add" data-toggle="modal" data-target="#addLabelModal">添加标签</button>
+				<button class="btn btn_del" data-toggle="modal" data-target="#delLabelModal">删除标签</button>
+				<button class="btn btn_del" data-toggle="modal" data-target="#warrantWayModal">编辑授权</button>
+				<button class="btn btn_del" data-toggle="modal" data-target="#delModal">删除</button>
+			</div>
+			<div class="clearfix pull-right">
+				<div class="dropdown pull-left">
+					<button class="btn dropdown-toggle" data-toggle="dropdown">按月份查询 <span class="caret"></span></button>
+					<div class="dropdown-menu month_menu dropdown-menu-right">
+						<h4 class="text-center">2016</h4>
+						<div class="month_box clearfix">
+							<a href="#" class="col-xs-2">1月<span class="atc_many">9篇</span></a>
+							<a href="#" class="col-xs-2">2月<span class="atc_many">9篇</span></a>
+							<a href="#" class="col-xs-2">3月<span class="atc_many">9篇</span></a>
+							<a href="#" class="col-xs-2">4月<span class="atc_many">9篇</span></a>
+							<a href="#" class="col-xs-2">5月<span class="atc_many">9篇</span></a>
+							<a href="#" class="col-xs-2">6月<span class="atc_many">9篇</span></a>
+							<a href="#" class="col-xs-2">7月<span class="atc_many">9篇</span></a>
+							<a href="#" class="col-xs-2">8月<span class="atc_many">9篇</span></a>
+							<a href="#" class="col-xs-2">9月<span class="atc_many">9篇</span></a>
+							<a href="#" class="col-xs-2">10月<span class="atc_many">9篇</span></a>
+							<a href="#" class="col-xs-2">11月<span class="atc_many">9篇</span></a>
+							<a href="#" class="col-xs-2">12月<span class="atc_many">9篇</span></a>
+						</div>
+					</div>
+				</div>
+				<div class="dropdown pull-left">
+					<button type="button" class="btn dropdown-toggle" data-toggle="dropdown">按标签查询 <span class="caret"></span></button>
+					<div class="dropdown-menu label_menu dropdown-menu-right">
+						<a href="#" class="lb_label">摄影(2)</a>
+						<a href="#" class="lb_label">手账(12)</a>
+						<a href="#" class="lb_label">钢笔(2)</a>
+						<a href="#" class="lb_label">宠物(2)</a>
+						<a href="#" class="lb_label">人物(2)</a>
+						<a href="#" class="lb_label">插画(2)</a>
+						<a href="#" class="lb_label">美图(2)</a>
+						<a href="#" class="lb_label">女神(2)</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="article_content con_content a_con_content">
+			<div class="title">
+				<h4>
+					<span class="month">4月</span> / <span class="many">9篇</span>
+				</h4>
+			</div>
+			<div class="article_group clearfix">
+				<div class="con_article_box js_article_box">
+					<img src="__IMG__/User/article_img1.jpg" width="100%" class="img-responsive" alt="">
+					<span class="label_num"><i class="iconfont">&#xe62a;</i> 5个标签</span>
+					<span class="modal_box"></span>
+					<span class="select_icon iconfont">&#xe62b;</span>
+				</div>
+				<div class="con_article_box js_article_box">
+					<img src="__IMG__/User/article_img1.jpg" width="100%" class="img-responsive" alt="">
+					<span class="label_num"><i class="iconfont">&#xe62a;</i> 5个标签</span>
+					<span class="modal_box"></span>
+					<span class="select_icon iconfont">&#xe62b;</span>
+				</div>
+				<div class="con_article_box js_article_box">
+					<img src="__IMG__/User/article_img1.jpg" width="100%" class="img-responsive" alt="">
+					<span class="label_num"><i class="iconfont">&#xe62a;</i> 5个标签</span>
+					<span class="modal_box"></span>
+					<span class="select_icon iconfont">&#xe62b;</span>
+				</div>
+				<div class="con_article_box js_article_box">
+					<img src="__IMG__/User/article_img1.jpg" width="100%" class="img-responsive" alt="">
+					<span class="label_num"><i class="iconfont">&#xe62a;</i> 5个标签</span>
+					<span class="modal_box"></span>
+					<span class="select_icon iconfont">&#xe62b;</span>
+				</div>
+				<div class="con_article_box js_article_box">
+					<img src="__IMG__/User/article_img1.jpg" width="100%" class="img-responsive" alt="">
+					<span class="label_num"><i class="iconfont">&#xe62a;</i> 5个标签</span>
+					<span class="modal_box"></span>
+					<span class="select_icon iconfont">&#xe62b;</span>
+				</div>
+				<div class="con_article_box js_article_box">
+					<img src="__IMG__/User/article_img1.jpg" width="100%" class="img-responsive" alt="">
+					<span class="label_num"><i class="iconfont">&#xe62a;</i> 5个标签</span>
+					<span class="modal_box"></span>
+					<span class="select_icon iconfont">&#xe62b;</span>
+				</div>
+				<div class="con_article_box js_article_box">
+					<img src="__IMG__/User/article_img1.jpg" width="100%" class="img-responsive" alt="">
+					<span class="label_num"><i class="iconfont">&#xe62a;</i> 5个标签</span>
+					<span class="modal_box"></span>
+					<span class="select_icon iconfont">&#xe62b;</span>
+				</div>
+				<div class="con_article_box js_article_box">
+					<img src="__IMG__/User/article_img1.jpg" width="100%" class="img-responsive" alt="">
+					<span class="label_num"><i class="iconfont">&#xe62a;</i> 5个标签</span>
+					<span class="modal_box"></span>
+					<span class="select_icon iconfont">&#xe62b;</span>
+				</div>
+				<div class="con_article_box js_article_box">
+					<img src="__IMG__/User/article_img1.jpg" width="100%" class="img-responsive" alt="">
+					<span class="label_num"><i class="iconfont">&#xe62a;</i> 5个标签</span>
+					<span class="modal_box"></span>
+					<span class="select_icon iconfont">&#xe62b;</span>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 添加标签模态框（Modal）S -->
+	<div class="modal fade" id="addLabelModal">
+	   <div class="modal-dialog addlabel_modal article_modal">
+	      <div class="modal-content">
+	         <div class="modal-header">
+	            <button type="button" class="close" 
+	               data-dismiss="modal" aria-hidden="true">
+	                  <i class="iconfont">&#xe633;</i>
+	            </button>
+	            <h4>将标签添加到选中的文章</h4>
+	         </div>
+	         <div class="modal-body">
+	         	<form action="">
+	         		<div class="form-group">
+	         			<textarea class="form-control area_control" placeholder="添加标签，用逗号或回车分隔"></textarea>
+	         		</div>
+	         	</form>	            
+	         </div>
+	         <div class="modal-footer">
+	            <button type="button" class="btn form_btn btn_default" 
+	               data-dismiss="modal">取 消
+	            </button>
+	            <button type="button" class="btn form_btn btn_primary">
+	               确定
+	            </button>
+	         </div>
+	      </div><!-- /.modal-content -->
+		</div><!-- /.modal -->
+	</div>
+	<!-- 添加标签模态框（Modal）E -->
+	<!-- 删除标签模态框（Modal）S -->
+	<div class="modal fade" id="delLabelModal">
+	   <div class="modal-dialog dellabel_modal article_modal">
+	      <div class="modal-content">
+	         <div class="modal-header">
+	            <button type="button" class="close" 
+	               data-dismiss="modal" aria-hidden="true">
+	                  <i class="iconfont">&#xe633;</i>
+	            </button>
+	            <h4>删除所选文章在的标签</h4>
+	         </div>
+	         <div class="modal-body">
+	         	<form action="">
+         			<label class="checkbox-inline">
+					  <input type="checkbox" id="inlineCheckbox1" value="option1"> 动漫
+					</label>
+					<label class="checkbox-inline">
+					  <input type="checkbox" id="inlineCheckbox2" value="option2"> 手账
+					</label>
+					<label class="checkbox-inline">
+					  <input type="checkbox" id="inlineCheckbox3" value="option3"> 科技
+					</label>
+					<label class="checkbox-inline">
+					  <input type="checkbox" id="inlineCheckbox3" value="option3"> 开源
+					</label>
+					<label class="checkbox-inline">
+					  <input type="checkbox" id="inlineCheckbox3" value="option3"> 摄影
+					</label>
+					<label class="checkbox-inline">
+					  <input type="checkbox" id="inlineCheckbox3" value="option3"> 宠物
+					</label>
+					<label class="checkbox-inline">
+					  <input type="checkbox" id="inlineCheckbox3" value="option3"> 女神
+					</label>
+				</form>
+         	 </div>          
+	         <div class="modal-footer">
+	            <button type="button" class="btn form_btn btn_default" 
+	               data-dismiss="modal">取 消
+	            </button>
+	            <button type="button" class="btn form_btn btn_primary">
+	               删除标签
+	            </button>
+	         </div>
+	      </div><!-- /.modal-content -->
+		</div><!-- /.modal -->
+	</div>
+	<!-- 删除标签模态框（Modal）E -->
+	<!-- 选择授权模态框（Modal）S -->
+	<div class="modal fade" id="warrantWayModal">
+	   <div class="modal-dialog warrant_modal article_modal">
+	      <div class="modal-content">
+	         <div class="modal-header">
+	            <button type="button" class="close" 
+	               data-dismiss="modal" aria-hidden="true">
+	                  <i class="iconfont">&#xe633;</i>
+	            </button>
+	            <h4>删除所选文章在的标签</h4>
+	         </div>
+	         <div class="modal-body">
+	         	<form action="">
+         			<label class="cleaarfix rightway_item">
+         				<span class="iconbox pull-left">
+							<i class="iconfont">&#xe627;</i>
+						</span>
+						<span class="right_txt pull-left">不限作品用途</span>
+						<input type="radio" name="optionsRadios" class="pull-right" id="optionsRadios1" value="option1">
+         			</label>
+         			<label class="cleaarfix rightway_item">
+         				<span class="iconbox">
+							<i class="iconfont">&#xe62a;</i>
+							<i class="iconfont">&#xe61f;</i>
+							<i class="iconfont">&#xe629;</i>
+						</span>
+						<span class="right_txt">署名-禁止商业使用-禁止转载</span>
+						<input type="radio" name="optionsRadios" class="pull-right" id="optionsRadios1" value="option1">
+         			</label>
+         			<label class="cleaarfix rightway_item">
+         				<span class="iconbox">
+							<i class="iconfont">&#xe62a;</i>
+							<i class="iconfont">&#xe61f;</i>
+							<i class="iconfont">&#xe628;</i>
+						</span>
+						<span class="right_txt">署名-禁止商业使用-禁止个人使用</span>
+						<input type="radio" name="optionsRadios" class="pull-right" id="optionsRadios1" value="option1">
+         			</label>
+         			<label class="cleaarfix rightway_item">
+         				<span class="iconbox">
+							<i class="iconfont">&#xe62a;</i>
+							<i class="iconfont">&#xe61f;</i>
+						</span>
+						<span class="right_txt">署名-禁止商业使用</span>
+						<input type="radio" name="optionsRadios" class="pull-right" id="optionsRadios1" value="option1">
+         			</label>
+         			<label class="cleaarfix rightway_item">
+         				<span class="iconbox">
+							<i class="iconfont">&#xe62a;</i>
+							<i class="iconfont">&#xe629;</i>
+						</span>
+						<span class="right_txt">署名-禁止匿名使用</span>
+						<input type="radio" name="optionsRadios" class="pull-right" id="optionsRadios1" value="option1">
+         			</label>
+         			<label class="cleaarfix rightway_item">
+         				<span class="iconbox">
+							<i class="iconfont">&#xe62a;</i>
+							<i class="iconfont">&#xe61f;</i>
+							<i class="iconfont">&#xe628;</i>
+						</span>
+						<span class="right_txt">署名-禁止商业使用-禁止个人使用</span>
+						<input type="radio" name="optionsRadios" class="pull-right" id="optionsRadios1" value="option1">
+         			</label>
+         			<label class="cleaarfix rightway_item">
+         				<span class="iconbox">
+							<i class="iconfont">&#xe62a;</i>
+						</span>
+						<span class="right_txt">仅自己可见</span>
+						<input type="radio" name="optionsRadios" class="pull-right" id="optionsRadios1" value="option1">
+         			</label>
+				</form>
+         	 </div>          
+	         <div class="modal-footer">
+	            <button type="button" class="btn form_btn btn_default" 
+	               data-dismiss="modal">取 消
+	            </button>
+	            <button type="button" data-toggle="modal" data-target="#delModal" class="btn form_btn btn_primary">
+	               设 置
+	            </button>
+	         </div>
+	      </div><!-- /.modal-content -->
+		</div><!-- /.modal -->
+	</div>
+	<!-- 选择授权模态框（Modal）E -->
+	<!-- 删除文章模态框（Modal）S -->
+	<div class="modal fade" id="delModal">
+	   <div class="modal-dialog del_modal">
+	      <div class="modal-content">
+	         <div class="modal-header">
+	            <button type="button" class="close" 
+	               data-dismiss="modal" aria-hidden="true">
+	                  <i class="iconfont">&#xe633;</i>
+	            </button>
+	         </div>
+	         <div class="modal-body">
+	            <h4><i class="iconfont">&#xe630;</i> 确定要删除这篇文章？</h4>
+	         </div>
+	         <div class="modal-footer">
+	            <button type="button" class="btn form_btn btn_default" 
+	               data-dismiss="modal">取 消
+	            </button>
+	            <button type="button" class="btn form_btn btn_primary">
+	               确定
+	            </button>
+	         </div>
+	      </div><!-- /.modal-content -->
+		</div><!-- /.modal -->
+	</div>
+	<!-- 删除文章模态框（Modal）E -->
+	<script>
+		$(function(){
+			$('.js_article_box').click(function(){
+				$(this).toggleClass('selected');
+			});
+			// 取消选择
+			$('.js_resize_btn').click(function(){
+				$('.js_article_box').removeClass('selected');
+			});
+		})
+	</script>
+</block>

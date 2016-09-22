@@ -1,0 +1,74 @@
+<extend name="Home@Public/body"/>
+<block name="style">
+	<css href="__CSS__/index.css"/>
+	<css href="__PLUGIN__/popover/dist/jquery.webui-popover.min.css"/>
+</block>
+<block name="body">
+	<div class="container">
+		<div class="a_con_content con_content">
+			<div class="title clearfix">
+				<h4 class="pull-left">黑名单设置</h4>
+				<a href="<?=U('index')?>" class="pull-right go_back">返回账号设置</a>
+			</div>
+			<div class="blacklist_body">
+				<p style="color:#999;padding:20px 0;">把其他人加入黑名单之后，动态和标签页将不再显示对方发布或推荐的内容，对方也不能对您发布评论、投稿和私信。你可以设置解除黑名单。</p>
+				<form class="blacklist_form">
+					<label for="blacklist_url">输入要加入黑名单的主页地址</label>
+					<div class="form-group">
+						<input type="text" id="blacklist_url" class="">
+						<button class="btn-lg form_btn btn_primary">加黑</button>
+					</div>
+				</form>
+				<div class="blacklist_group">
+					<div class="group_title">黑名单</div>
+					<div class="body clearfix">
+						<div class="blackname">
+							<div class="user_img pull-left">
+								<img src="__IMG__/talent_img1.jpg" class="img-responsive" alt="">
+							</div>
+							<span class="pull-left user_name">慢食堂</span>
+							<a href="javascript:;" class="btn moveout pull-right">移出黑名单</a>
+						</div>
+						<div class="blackname">
+							<div class="user_img pull-left">
+								<img src="__IMG__/talent_img1.jpg" class="img-responsive" alt="">
+							</div>
+							<span class="pull-left user_name">慢食堂</span>
+							<a href="javascript:;" class="btn moveout pull-right">移出黑名单</a>
+						</div>
+						<div class="blackname">
+							<div class="user_img pull-left">
+								<img src="__IMG__/talent_img1.jpg" class="img-responsive" alt="">
+							</div>
+							<span class="pull-left user_name">慢食堂</span>
+							<a href="javascript:;" class="btn moveout pull-right">移出黑名单</a>
+						</div>
+						<div class="blackname">
+							<div class="user_img pull-left">
+								<img src="__IMG__/talent_img1.jpg" class="img-responsive" alt="">
+							</div>
+							<span class="pull-left user_name">慢食堂</span>
+							<a href="javascript:;" class="btn moveout pull-right">移出黑名单</a>
+						</div>
+						<div class="blackname">
+							<div class="user_img pull-left">
+								<img src="__IMG__/talent_img1.jpg" class="img-responsive" alt="">
+							</div>
+							<span class="pull-left user_name">慢食堂</span>
+							<a href="javascript:;" class="btn moveout pull-right">移出黑名单</a>
+						</div>
+						<div class="blackname">
+							<div class="user_img pull-left">
+								<img src="__IMG__/talent_img1.jpg" class="img-responsive" alt="">
+							</div>
+							<span class="pull-left user_name">慢食堂</span>
+							<a href="javascript:;" class="btn moveout pull-right">移出黑名单</a>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<include file="Home@Public/footer"/>
+</block>

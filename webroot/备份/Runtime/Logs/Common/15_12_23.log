@@ -1,0 +1,42 @@
+[ 2015-12-23T10:59:13+08:00 ] 127.0.0.1 /webroot/Uploads/System/Image/55c2bc3785bc2.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000500s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001500s ]
+ERR: 无法加载模块:Uploads
+
+[ 2015-12-23T10:59:13+08:00 ] 127.0.0.1 /webroot/icon/_avatar_big.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004501s ]
+ERR: 无法加载模块:Icon
+
+[ 2015-12-23T10:59:13+08:00 ] 127.0.0.1 /webroot/Uploads/System/Image/55d306d45de36.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载模块:Uploads
+
+[ 2015-12-23T10:59:14+08:00 ] 127.0.0.1 /webroot/Uploads/Shop/license/55d2a6c313f6a.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001500s ]
+ERR: 无法加载模块:Uploads
+
+[ 2015-12-23T10:59:14+08:00 ] 127.0.0.1 /webroot/Uploads/Shop/license/55cc8076527c3.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000500s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004001s ]
+ERR: 无法加载模块:Uploads
+
+[ 2015-12-23T10:59:14+08:00 ] 127.0.0.1 /webroot/Uploads/Shop/license/55d163994d3a1.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000500s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载模块:Uploads
+
+[ 2015-12-23T10:59:14+08:00 ] 127.0.0.1 /webroot/Uploads/Shop/license/55cab33776e5e.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000500s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001500s ]
+ERR: 无法加载模块:Uploads
+

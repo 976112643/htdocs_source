@@ -1,0 +1,400 @@
+<extend name="Public/body"/>
+<block name="style">
+	<css href="__CSS__/ucenter.css"/>
+</block>
+<block name="body">
+	<div class="setup_top clearfix">
+		<div class="container">
+			<div class="user_info pull-left clearfix">
+				<div class="user_img pull-left">
+					<img src="__IMG__/headportrait1.jpg" class="img-responsive" alt="">
+				</div>
+				<span class="user_name pull-left">ljjchen29</span>
+			</div>
+		</div>
+		<div class="right_bar pull-right">
+			<a href="<?=U('setup')?>" class="btn btn-default"><i class="iconfont">&#xe60e;</i> 主页设置</a>
+			<a href="<?=U('Home/Index/index')?>" class="btn btn-default"><i class="iconfont">&#xe655;</i> 返回首页</a>
+		</div>
+	</div>
+	<div class="file_main">
+		<div class="container">
+			<div class="filter_bar clearfix">
+				<div class="dropdown">
+					<a href="#" class="dropdown_btn" data-toggle="dropdown">
+						文章 <span class="caret"></span>
+					</a>
+					<ul class="dropdown-menu filter_menu" aria-labelledby="dropdownMenu1">
+					    <li><a href="#">文章（8）</a>|</li>
+					    <li><a href="#">喜欢（4）</a>|</li>
+					    <li><a href="#">推荐（6）</a></li>
+					</ul>
+				</div>
+				<div class="dropdown">
+					<a href="#" class="dropdown_btn" data-toggle="dropdown">
+						日期 <span class="caret"></span>
+					</a>
+					<ul class="dropdown-menu filter_menu" aria-labelledby="dropdownMenu1">
+					    <li><a href="#">文章（8）</a>|</li>
+					    <li><a href="#">喜欢（4）</a>|</li>
+					    <li><a href="#">推荐（6）</a></li>
+					</ul>
+				</div>
+				<div class="dropdown">
+					<a href="#" class="dropdown_btn" data-toggle="dropdown">
+						标签 <span class="caret"></span>
+					</a>
+					<ul class="dropdown-menu filter_menu" aria-labelledby="dropdownMenu1">
+					    <li><a href="#">文章（8）</a>|</li>
+					    <li><a href="#">喜欢（4）</a>|</li>
+					    <li><a href="#">推荐（6）</a></li>
+					</ul>
+				</div>
+
+				<form class="navbar-form navbar-right mySearchBar" role="search">
+			        <div class="form-group">
+			          <div class="input-group">
+			          	  <button class="btn btn-sm btn_faj"><i class="iconfont">&#xe605;</i></button>
+				          <input type="text" class="search_input js_search_input" data-url="<?=U('getSearch')?>" placeholder="搜索">
+				       </div>
+				       <div></div>
+			        </div>
+		        </form>
+			</div>
+
+			<div class="row">
+				<div class="col-lg-9">
+					<div class="con_content main_content clearfix">
+						<div class="con_box">
+							<a href="#">
+								<img src="__IMG__/User/details_img4.jpg" width="100%" class="img-responsive" alt="">
+								<div class="info_box">
+									<div class="when">4月22日</div>
+									<div class="hot">热度（<span class="many">3</span>）</div>
+								</div>
+							</a>
+						</div>
+						<div class="con_box">
+							<a href="#">
+								<img src="__IMG__/User/file_img1.jpg" width="100%" class="img-responsive" alt="">
+								<div class="info_box">
+									<div class="when">4月22日</div>
+									<div class="hot">热度（<span class="many">3</span>）</div>
+								</div>
+							</a>
+						</div>
+						<div class="con_box">
+							<a href="#">
+								<img src="__IMG__/User/details_img4.jpg" width="100%" class="img-responsive" alt="">
+								<div class="info_box">
+									<div class="when">4月22日</div>
+									<div class="hot">热度（<span class="many">3</span>）</div>
+								</div>
+							</a>
+						</div>
+						<div class="con_box">
+							<a href="#">
+								<img src="__IMG__/User/file_img1.jpg" width="100%" class="img-responsive" alt="">
+								<div class="info_box">
+									<div class="when">4月22日</div>
+									<div class="hot">热度（<span class="many">3</span>）</div>
+								</div>
+							</a>
+						</div>
+						<div class="con_box">
+							<a href="#">
+								<img src="__IMG__/User/details_img4.jpg" width="100%" class="img-responsive" alt="">
+								<div class="info_box">
+									<div class="when">4月22日</div>
+									<div class="hot">热度（<span class="many">3</span>）</div>
+								</div>
+							</a>
+						</div>
+						<div class="con_box">
+							<a href="#">
+								<img src="__IMG__/User/file_img1.jpg" width="100%" class="img-responsive" alt="">
+								<div class="info_box">
+									<div class="when">4月22日</div>
+									<div class="hot">热度（<span class="many">3</span>）</div>
+								</div>
+							</a>
+						</div>
+						<div class="con_box">
+							<a href="#">
+								<img src="__IMG__/User/details_img3.jpg" width="100%" class="img-responsive" alt="">
+								<div class="info_box">
+									<div class="when">4月22日</div>
+									<div class="hot">热度（<span class="many">3</span>）</div>
+								</div>
+							</a>
+						</div>
+						<div class="con_box">
+							<a href="#">
+								<img src="__IMG__/User/file_img1.jpg" width="100%" class="img-responsive" alt="">
+								<div class="info_box">
+									<div class="when">4月22日</div>
+									<div class="hot">热度（<span class="many">3</span>）</div>
+								</div>
+							</a>
+						</div>
+						<div class="con_box">
+							<a href="#">
+								<img src="__IMG__/User/details_img4.jpg" width="100%" class="img-responsive" alt="">
+								<div class="info_box">
+									<div class="when">4月22日</div>
+									<div class="hot">热度（<span class="many">3</span>）</div>
+								</div>
+							</a>
+						</div>
+						<div class="con_box">
+							<a href="#">
+								<img src="__IMG__/User/file_img1.jpg" width="100%" class="img-responsive" alt="">
+								<div class="info_box">
+									<div class="when">4月22日</div>
+									<div class="hot">热度（<span class="many">3</span>）</div>
+								</div>
+							</a>
+						</div><div class="con_box">
+							<a href="#">
+								<img src="__IMG__/User/details_img3.jpg" width="100%" class="img-responsive" alt="">
+								<div class="info_box">
+									<div class="when">4月22日</div>
+									<div class="hot">热度（<span class="many">3</span>）</div>
+								</div>
+							</a>
+						</div>
+						<div class="con_box">
+							<a href="#">
+								<img src="__IMG__/User/details_img4.jpg" width="100%" class="img-responsive" alt="">
+								<div class="info_box">
+									<div class="when">4月22日</div>
+									<div class="hot">热度（<span class="many">3</span>）</div>
+								</div>
+							</a>
+						</div>
+						<div class="con_box">
+							<a href="#">
+								<img src="__IMG__/User/details_img3.jpg" width="100%" class="img-responsive" alt="">
+								<div class="info_box">
+									<div class="when">4月22日</div>
+									<div class="hot">热度（<span class="many">3</span>）</div>
+								</div>
+							</a>
+						</div>
+						<div class="con_box">
+							<a href="#">
+								<img src="__IMG__/User/file_img1.jpg" width="100%" class="img-responsive" alt="">
+								<div class="info_box">
+									<div class="when">4月22日</div>
+									<div class="hot">热度（<span class="many">3</span>）</div>
+								</div>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-3">
+					<div class="con_content sidebar_attent">
+						<div class="title clearfix">
+							<span class="pull-left">关注</span>
+							<a href="#" class="more pull-right">更多</a>
+						</div>
+						<div class="sidebar_body clearfix">
+							<div class="con_box">
+								<a href="#">
+									<img src="__IMG__/User/details_img4.jpg" class="img-responsive" alt="">
+								</a>
+							</div>
+							<div class="con_box">
+								<a href="#">
+									<img src="__IMG__/User/details_img4.jpg" class="img-responsive" alt="">
+								</a>
+							</div>
+							<div class="con_box">
+								<a href="#">
+									<img src="__IMG__/User/details_img4.jpg" class="img-responsive" alt="">
+								</a>
+							</div>
+							<div class="con_box">
+								<a href="#">
+									<img src="__IMG__/User/details_img4.jpg" class="img-responsive" alt="">
+								</a>
+							</div>
+							<div class="con_box">
+								<a href="#">
+									<img src="__IMG__/User/details_img4.jpg" class="img-responsive" alt="">
+								</a>
+							</div>
+							<div class="con_box">
+								<a href="#">
+									<img src="__IMG__/User/details_img4.jpg" class="img-responsive" alt="">
+								</a>
+							</div>
+							<div class="con_box">
+								<a href="#">
+									<img src="__IMG__/User/details_img4.jpg" class="img-responsive" alt="">
+								</a>
+							</div>
+							<div class="con_box">
+								<a href="#">
+									<img src="__IMG__/User/details_img4.jpg" class="img-responsive" alt="">
+								</a>
+							</div>
+							<div class="con_box">
+								<a href="#">
+									<img src="__IMG__/User/details_img4.jpg" class="img-responsive" alt="">
+								</a>
+							</div>
+							<div class="con_box">
+								<a href="#">
+									<img src="__IMG__/User/details_img4.jpg" class="img-responsive" alt="">
+								</a>
+							</div>
+							<div class="con_box">
+								<a href="#">
+									<img src="__IMG__/User/details_img4.jpg" class="img-responsive" alt="">
+								</a>
+							</div>
+							<div class="con_box">
+								<a href="#">
+									<img src="__IMG__/User/details_img4.jpg" class="img-responsive" alt="">
+								</a>
+							</div>
+							<div class="con_box">
+								<a href="#">
+									<img src="__IMG__/User/details_img4.jpg" class="img-responsive" alt="">
+								</a>
+							</div>
+							<div class="con_box">
+								<a href="#">
+									<img src="__IMG__/User/details_img4.jpg" class="img-responsive" alt="">
+								</a>
+							</div>
+							<div class="con_box">
+								<a href="#">
+									<img src="__IMG__/User/details_img4.jpg" class="img-responsive" alt="">
+								</a>
+							</div>
+							<div class="con_box">
+								<a href="#">
+									<img src="__IMG__/User/details_img4.jpg" class="img-responsive" alt="">
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="con_content sidebar_like">
+						<div class="title clearfix">
+							<span class="pull-left">喜欢</span>
+							<a href="#" class="more pull-right">更多</a>
+						</div>
+						<div class="sidebar_body clearfix">
+							<div class="con_box">
+								<a href="#">
+									<img src="__IMG__/User/file_img1.jpg" width="100%" class="img-responsive" alt="">
+									<div class="info_box">
+										<div class="when">4月22日</div>
+										<div class="hot">热度（<span class="many">3</span>）</div>
+									</div>
+								</a>
+							</div>
+							<div class="con_box">
+								<a href="#">
+									<img src="__IMG__/User/file_img1.jpg" width="100%" class="img-responsive" alt="">
+									<div class="info_box">
+										<div class="when">4月22日</div>
+										<div class="hot">热度（<span class="many">3</span>）</div>
+									</div>
+								</a>
+							</div>
+							<div class="con_box">
+								<a href="#">
+									<img src="__IMG__/User/file_img1.jpg" width="100%" class="img-responsive" alt="">
+									<div class="info_box">
+										<div class="when">4月22日</div>
+										<div class="hot">热度（<span class="many">3</span>）</div>
+									</div>
+								</a>
+							</div>
+							<div class="con_box">
+								<a href="#">
+									<img src="__IMG__/User/file_img1.jpg" width="100%" class="img-responsive" alt="">
+									<div class="info_box">
+										<div class="when">4月22日</div>
+										<div class="hot">热度（<span class="many">3</span>）</div>
+									</div>
+								</a>
+							</div>
+						</div>
+					</div>
+
+					<div class="con_content sidebar_recom">
+						<div class="title clearfix">
+							<span class="pull-left">推荐</span>
+							<a href="#" class="more pull-right">更多</a>
+						</div>
+						<div class="sidebar_body clearfix">
+							<div class="con_box">
+								<a href="#">
+									<img src="__IMG__/User/file_img1.jpg" width="100%" class="img-responsive" alt="">
+									<div class="info_box">
+										<div class="when">4月22日</div>
+										<div class="hot">热度（<span class="many">3</span>）</div>
+									</div>
+								</a>
+							</div>
+							<div class="con_box">
+								<a href="#">
+									<img src="__IMG__/User/file_img1.jpg" width="100%" class="img-responsive" alt="">
+									<div class="info_box">
+										<div class="when">4月22日</div>
+										<div class="hot">热度（<span class="many">3</span>）</div>
+									</div>
+								</a>
+							</div>
+							<div class="con_box">
+								<a href="#">
+									<img src="__IMG__/User/file_img1.jpg" width="100%" class="img-responsive" alt="">
+									<div class="info_box">
+										<div class="when">4月22日</div>
+										<div class="hot">热度（<span class="many">3</span>）</div>
+									</div>
+								</a>
+							</div>
+							<div class="con_box">
+								<a href="#">
+									<img src="__IMG__/User/file_img1.jpg" width="100%" class="img-responsive" alt="">
+									<div class="info_box">
+										<div class="when">4月22日</div>
+										<div class="hot">热度（<span class="many">3</span>）</div>
+									</div>
+								</a>
+							</div>
+							<div class="con_box">
+								<a href="#">
+									<img src="__IMG__/User/file_img1.jpg" width="100%" class="img-responsive" alt="">
+									<div class="info_box">
+										<div class="when">4月22日</div>
+										<div class="hot">热度（<span class="many">3</span>）</div>
+									</div>
+								</a>
+							</div>
+							<div class="con_box">
+								<a href="#">
+									<img src="__IMG__/User/file_img1.jpg" width="100%" class="img-responsive" alt="">
+									<div class="info_box">
+										<div class="when">4月22日</div>
+										<div class="hot">热度（<span class="many">3</span>）</div>
+									</div>
+								</a>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+</block>
+<block name="script">
+	<js href="__PLUGIN__/popover/dist/jquery.webui-popover.min.js"/>
+	<js href="__JS__/common.js"/>
+</block>

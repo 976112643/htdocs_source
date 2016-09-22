@@ -1,0 +1,191 @@
+<extend name="Public/body" />
+<block name="body"> <!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+	<!-- Content Header (Page header) -->
+	<section class="content-header">
+		<h1>
+			<?=$page_title?>
+			<small>
+			<?php
+				if($info){
+					echo "修改";
+				}else{
+					echo "添加";
+				}
+			?>
+			</small>
+		</h1>
+		<ol class="breadcrumb">
+			<li><a href="<?=U('/Backend')?>"><i class="fa fa-dashboard"></i>
+					首页</a></li>
+			<li><a href="<?=U('index')?>"> <?=$page_title?></a></li>
+			<li class="active">
+			<?php
+				if($info){
+					echo "修改";
+				}else{
+					echo "添加";
+				}
+			?>
+			</li>
+		</ol>
+	</section>
+
+	<!-- Main content -->
+	<section class="content">
+		<div class="row">
+			<!-- left column -->
+			<div class="col-md-12">
+				<!-- general form elements -->
+				<div class="box box-primary operate_form">
+					<!-- form start -->
+					<form role="form" action="<?=U('operate')?>" method="post">
+						<input type='hidden' name='id' value='<?=$info["id"]?>' /> 
+						<input type='hidden' name='pids' value='<?=intval(I('pid'))?>' />
+						<div class="box-body">
+						<?php
+							if(I('pid') && I('pid') != 0 && $pinfo['level'] == 0){
+						?>
+							<div class="form-group">
+								<label for="exampleInputEmail1">上级菜单</label> <select
+									class="form-control width_auto" name="pid">
+									<option value="">顶级菜单</option>
+									<!-- <?php
+											foreach($menu_result as $row){
+												$checked='';
+												if(I("pid")==$row['id']){
+													$checked='selected="selected"';
+												}
+										?>
+									<option value="<?=$row['id']?>"<?=$checked?> >
+										<?=$row['title']?></option>
+									<?php
+											}
+										?> -->
+								</select>
+							</div>
+						<?php
+							}
+						?>
+							<div class="form-group">
+								<label>菜单名称</label> <input type="text" name="title"
+									value="<?=$info['title']?>" class="form-control width_auto"
+									placeholder="菜单名称">
+							</div>
+						<?php
+							if(I('pid') && I('pid')!=0 && $pinfo['level']==0){
+						?>
+							<div class="form-group">
+								<label>所属分组</label> <input type="text" name="groups"
+									value="<?=$info['groups']?>" class="form-control width_auto"
+									placeholder="所属分组">
+							</div>
+						<?php
+							}
+							if(intval(I('pid'))!=0){
+						?>
+							<div class="form-group">
+								<label>菜单链接</label> <input type="text" name="url"
+									value="<?=$info['url']?>" class="form-control"
+									placeholder="菜单链接">
+							</div>
+						<?php
+							}
+						?>
+							<div class="form-group">
+								<label>排序</label> <input type="text" name="sort"
+									value="<?=$info['sort']?>" class="form-control width_auto"
+									placeholder="排序">
+							</div>
+
+							<div class="form-group">
+								<label>备注说明</label>
+								<textarea name="description" value="<?=$info['description']?>"
+									class="form-control" rows="3" placeholder="Enter ..."></textarea>
+							</div>
+						<?php
+							if($pinfo['level'] < 1){
+						?>
+							<div class="form-group">
+								<label>菜单图标类</label> <input type="text" name="icon"
+									value="<?=$info['icon']?>" class="form-control width_auto" placeholder="菜单图标类">
+							</div>
+						<?php
+							}
+							if($pinfo['level'] >= 1){
+						?>
+							<div class="form-group">
+								<label>ClASS（css的class类，多个class中间使用空格隔开）</label>
+								<input type="text" name="class" value="<?=$info['class']?>" class="form-control" placeholder="CSS CLASS">
+							</div>
+							<div class="form-group">
+								<label>附加属性（title="佩戴人信息" padding="20" 等）</label>
+								<input type="text" name="additional" value='<?=$info['additional']?>' class="form-control" placeholder="附加属性">
+							</div>
+							<?php
+								switch($pinfo['level']) {
+									case 1:
+							?>
+							<div class="form-group">
+								<label>按钮显示位置（1:头部，2:列表显示，3全部位置）</label> <input type="text"
+									name="display_position" value="<?=$info['display_position']?>"
+									class="form-control" placeholder="显示位置">
+							</div>
+						<?php
+										break;
+									case 2:
+										
+						?>
+							<div class="form-group">
+								<label>按钮显示位置（1:TAB标签(选项卡)）</label> <input type="text"
+									name="display_position" value="<?=$info['display_position']?>"
+									class="form-control" placeholder="显示位置">
+							</div>
+						<?php
+										break;
+									default:
+										break;
+								}
+							}
+							if(I('pid') && I('pid')!=0 && !$info && $pinfo['level']==0){
+						?>
+							<div class="form-group">
+								<label>操作子菜单</label>
+								<div class="checkbox">
+									<label><input type="checkbox"<?php
+										if(in_array('添加',$sub_menu)){echo "checked";}?>
+										name="child_menu[]" value='添加|add'>添加</label> <label><input
+										type="checkbox"<?php
+										if(in_array('修改',$sub_menu)){echo "checked";}?>
+										name="child_menu[]" value='修改|edit'>修改</label> <label><input
+										type="checkbox"<?php
+										if(in_array('启用',$sub_menu)){echo "checked";}?>
+										name="child_menu[]" value='启用|enable'>启用</label> <label><input
+										type="checkbox"<?php
+										if(in_array('禁用',$sub_menu)){echo "checked";}?>
+										name="child_menu[]" value='禁用|disable'>禁用</label> <label><input
+										type="checkbox"<?php
+										if(in_array('删除',$sub_menu)){echo "checked";}?>
+										name="child_menu[]" value='删除|del'>删除</label>
+								</div>
+							</div>
+						<?php
+							}
+						?>
+						</div>
+						<div class="box-footer">
+							<input type="submit" target-form="operate_form"
+								class="btn btn-primary ajax-post" value="提交"> <a
+								href="javascript:void(0)" class="btn btn-default js_cancel">取消返回</a>
+						</div>
+					</form>
+				</div>
+				<!-- /.box -->
+			</div>
+			<!--/.col (left) -->
+		</div>
+		<!-- /.row -->
+	</section>
+	<!-- /.content -->
+</div>
+</block>

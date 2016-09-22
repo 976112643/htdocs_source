@@ -1,0 +1,78 @@
+<extend name="Public/body"/>
+<block name="style">
+	<css href="__CSS__/ucenter.css"/>
+</block>
+<block name="body">
+	<header class="clearfix detail_top">
+		<div class="user_info pull-left clearfix">
+			<div class="img_l pull-left">
+				<img src="__IMG__/headportrait1.jpg" class="img-responsive" alt="">
+			</div>
+			<div class="txt_r pull-left">
+				<p class="user_name">ljjchen29</p>
+				<div class="user_nav">
+					<a href="<?=U('Home/Index/index')?>">首页</a>
+					<a href="<?=U('User/Letter/index')?>">私信</a>
+					<a href="<?=U('file')?>">归档</a>
+				</div>
+			</div>
+		</div>
+		<div class="toolbar pull-right">
+			<a href="#" class="btn toolbtn"><i class="iconfont">&#xe611;</i></a>
+			<a href="#" class="btn toolbtn"><i class="iconfont">&#xe610;</i></a>
+			<a href="<?=U('Home/Index/index')?>" class="btn toolbtn"><i class="iconfont">&#xe655;</i> 返回首页</a>
+		</div>
+	</header>
+	<div class="ucenter_main">
+		<div class="u_container">
+			<div class="text_detail">
+				<p>最近和一个关系不错的朋友聊天，不知道为什么人只有站在状态外似乎才能懂得很多自己以前困惑很久的问题，每对分开的恋人都会在最后饱含真情地对对方说：“祝你幸福。”而事实上呢？对于不同的人而言幸福是不一样的，如果他爱你，愿意和你在一起，而最后未能如常所愿，那么即便她锦衣玉食也不会快乐。爱情也许不需要策马奔腾的轰轰烈烈，也不需要天上人间的你侬我侬，爱情和幸福一样是陪伴。就像那句很流行的话：“我所希望的幸福是每天睁开眼，你和阳光同在。”四月，是春的尾巴，我的笔一直颓废在这个春天里，不曾落下心仪的一笔，没有深情款款，没有含情脉脉，更没有能认真欣赏那漫山遍野的花红柳绿。就这样，春天在我的世界，悄悄的来了，吹醒了沉睡的草儿，又悄悄的走了，没有带走一切，只给我们留下了一片片春暖花开美好景致。</p>
+				<p>二月，三月，于我是擦肩而过的，之所以说是擦肩，因为我没有来得及打开春的门，却被拥挤的红和翠，推进了四月，四月的春，应该是迷人的，我告诉自己，去踏春，看四月的天空，四月的小溪，四月的花儿，嗅缕缕四月的味道，星星点点都不想再次错过，错过四月，也许我就真的错过了整个春天。</p>
+				<p>就这么轻轻的一推，我便推开了四月的门扉，发现四月的美，原来早已经被那么多美好的文字，提前渲染成妖冶。站在花儿浪漫的季节，听一首古老的歌曲，独自回味。突然想到很多人都喜欢把自己喜欢的女子叫做：一朵女子。是的，每一个女子，都是一朵花，在她的生命中，或许会有一个护花使者，正用生命守护着她的春天。</p>
+
+				<div class="text_info text-center">
+					<span class="comment"><i class="iconfont">&#xe612;</i> 267</span>
+					<span class="fb_date"><i class="iconfont">&#xe661;</i> 2016-04-21</span>
+					<span class="right"><i class="iconfont">&#xe62a;</i></span>
+				</div>
+			</div>
+			<ul class="detail_img clearfix">
+				<li><img src="__IMG__/User/details_img1.jpg" width="100%" class="img-responsive" alt=""></li>
+				<li><img src="__IMG__/User/details_img2.jpg" width="100%" class="img-responsive" alt=""></li>
+				<li><img src="__IMG__/User/details_img3.jpg" width="100%" class="img-responsive" alt=""></li>
+				<li><img src="__IMG__/User/details_img4.jpg" width="100%" class="img-responsive" alt=""></li>
+				<li><img src="__IMG__/User/details_img1.jpg" width="100%" class="img-responsive" alt=""></li>
+			</ul>
+			<div class="comment_box">
+				<p class="title">评论(<span class="comment_n">1</span>)</p>
+				<form class="comment_form">
+					<div class="form-group">
+						<textarea name="comment"></textarea>
+					</div>
+					<div class="form-group text-right mb_20">
+						<input type="submit" class="btn form_btn btn_primary btn_publish" value="发布">
+					</div>
+					<ul class="comment_list">
+						<li class="clearfix">
+							<span class="user_simg pull-left">
+								<img src="__IMG__/user-img5.jpg" class="img-responsive" alt="">
+							</span>
+							<div class="comment_txt pull-left">
+								<span class="user_name">
+									ljjchen29
+								</span>:
+								<span class="js_comment_txt">
+								我很喜欢这张图。
+								</span>
+							</div>
+							<div class="btn_group pull-right">
+								<a href="javascript:;" class="replay">回复</a>	
+							</div>
+						</li>
+					</ul>
+				</form>
+			</div>
+		</div>
+		<include file="Public/footer"/>
+	</div>
+</block>

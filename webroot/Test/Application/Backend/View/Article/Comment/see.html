@@ -1,0 +1,101 @@
+<extend name="Public/body" />
+<block name="body"> <!-- Content Wrapper. Contains page content -->
+<style>.carousel-inner img{height:300px;margin:auto}</style>
+<div class="content-wrapper" style="min-height: 922px;">
+	<!-- Content Header (Page header) -->
+	<section class="content-header">
+		<h1>
+			<?=$page_title?>
+			<small>
+				<?=$small_title?>
+			</small>
+		</h1>
+		<ol class="breadcrumb">
+			<li><a href="<?=U('/Backend')?>"><i class="fa fa-dashboard"></i>
+					首页</a></li>
+			<li class="active">
+				<?=$page_title?>
+			</li>
+		</ol>
+	</section>
+
+	<!-- Main content -->
+	<section class="content">
+		<div class="row">
+			<div class="col-xs-12">
+				<div class="box">
+					<div class="box-body">
+						<div class="container-fluid">
+							<div class="row-fluid">
+								<div class="span12">
+									<span >
+										<?php 
+											if($article['icon'] != ""){
+											
+												if(!empty(parse_url($article['icon'])['scheme'])){
+													echo "<img width='80' height='80' src='".$article['icon']."'>";
+												}else{
+													echo "<img width='80' height='80' src='__ROOT__/".$article['icon']."'>";
+												}
+											}else{
+												echo "暂无头像"; 
+											} 
+										?>
+									</span>
+									<span style="font-size:20px;">&nbsp;&nbsp;<?=$article['nickname']?></span>
+									<span>&nbsp;&nbsp;<?=date("Y-m-d H:i:s",$article['addtime'])?></span>
+									
+									<hr>
+										<?php	foreach($image as $k=>$v):  ?>
+											<?php
+												echo "<img  src='__ROOT__/".$v['image']."' width='300' height='300'/>" ;
+											?>
+										<?php endforeach; ?>
+									
+									<hr>
+									<p>
+										文章标题：
+										<?php if($article['title']){echo $article['title'];}else{echo "<span style='color:red'>暂无标题</span>";}?>
+									</p>
+									<p>
+										文章内容：
+										<?php if($article['content']){echo $article['content'];}else{echo "<span style='color:red'>暂无内容</span>";}?>
+									</p>
+									<hr/>
+									<?php	foreach($comment as $k=>$v):  ?>
+									<?php 
+										if($v['icon'] != ""){
+										
+											if(!empty(parse_url($v['icon'])['scheme'])){
+												echo "<p><img width='50' height='50' src='".$v['icon']."'>";
+											}else{
+												echo "<p><img width='50' height='50' src='__ROOT__/".$v['icon']."'>";
+											}
+										}else{
+											echo "<p>暂无头像"; 
+										}
+										echo $v['nickname'];
+										echo "[".date("Y-m-d H:i:s",$v['addtime'])."]:";
+										echo $v['content']."</p>";
+									?>
+									<?php endforeach; ?>
+								</div>
+								<!-- 3 -->
+							</div>
+							<!-- 2 -->
+						</div>
+						<!-- 1 -->
+					</div>
+					<!-- /.box-body -->
+				</div>
+				<!-- /.box -->
+			</div>
+			<!-- /.col -->
+		</div>
+		<!-- /.row -->
+	</section>
+	<!-- /.content -->
+</div>
+
+
+</block>

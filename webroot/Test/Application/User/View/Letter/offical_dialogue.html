@@ -1,0 +1,80 @@
+<extend name="Home@Public/body"/>
+<block name="style">
+	<css href="__CSS__/index.css"/>
+	<css href="__PLUGIN__/popover/dist/jquery.webui-popover.min.css"/>
+</block>
+<block name="body">
+	<!-- 主体部分 S-->
+	<div class="main">
+		<div class="container">
+			<div class="col-lg-9 clearfix">
+				<div class="letter_content">
+					<div class="title clearfix">
+						<h4 class="pull-left">QING官方系统通知</h4>
+						<a href="<?=U('User/Letter/index')?>" class="go_back pull-right">返回私信列表</a>
+					</div>
+					<div class="letter_body reply_body">
+						
+						<div class="myreply clearfix">
+							<div class="u_face pull-right myface">
+								<img src="__IMG__/user-img5.jpg" class="img-responsive" alt="">
+							</div>
+							<div class="reply_con pull-right">
+								<div class="reply_area">
+									<div class="text_area">
+										<p>该消息是官方通知，如需回复请<a href="#" class="clickhere">点击这里</a>，给QING小秘书发送私信。</p>
+									</div>
+									<span class="arrow"></span>
+								</div>
+							</div>
+						</div>
+						
+						<div class="other_reply clearfix">
+							<div class="u_face pull-left myface">
+								<img src="__IMG__/User/offical_img.jpg" class="img-responsive" alt="">
+							</div>
+							<div class="reply_con pull-left">
+								<div class="reply_area">
+									<div class="text_area">
+										<p>QING全新打造一项个性化印品服务—【轻博客印品】，诚邀您体验LOMO卡套定制服务，价值10元体验优惠吗：X4ECGBVNS</p>
+										<p>1、进入轻博客客户端“我”页面，点击“轻博客印品”；</p>
+										<p>2、在“轻博客印品”中兑换优惠券，结算时，选择“优惠券”优惠券”；</p>
+										<p>3、使用有效期至2016年05月10日0点</p>
+										<p>点击进入乐乎印品>> （链接地址：<a href="#" style="color:#498cc5;">http://www.lofter.com/inpin/）</a></p>
+										<p class="reply_date">2016-04-26 11:32</p>
+									</div>
+									<span class="arrow"></span>
+								</div>
+							</div>
+						</div>
+
+						<div class="other_reply clearfix">
+							<div class="u_face pull-left myface">
+								<img src="__IMG__/User/offical_img.jpg" class="img-responsive" alt="">
+							</div>
+							<div class="reply_con pull-left">
+								<div class="reply_area">
+									<div class="text_area">
+										<p>QING全新打造一项个性化印品服务—【轻博客印品】，诚邀您体验LOMO卡套定制服务，价值10元体验优惠吗：X4ECGBVNS</p>
+										<p>1、进入轻博客客户端“我”页面，点击“轻博客印品”；</p>
+										<p>2、在“轻博客印品”中兑换优惠券，结算时，选择“优惠券”优惠券”；</p>
+										<p>3、使用有效期至2016年05月10日0点</p>
+										<p>点击进入乐乎印品>> （链接地址：<a href="#" style="color:#498cc5;">http://www.lofter.com/inpin/）</a></p>
+										<p class="reply_date">2016-04-26 11:32</p>
+									</div>
+									<span class="arrow"></span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-3">
+				<div class="user_info">
+					<include file="Home@Public/sidebar"/>
+				</div>
+			</div>
+		</div>
+	</div>
+	<include file="Home@Public/footer"/>
+</block>

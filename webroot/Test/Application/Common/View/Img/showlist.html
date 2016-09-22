@@ -1,0 +1,111 @@
+<input type="file" id="upload_picture_<?=$config['index']?>">
+<div class="bg_grey js_imgcheck">
+	<div class="imgages">
+		<ul class="clearfix">
+		<?php
+			if($config['multi']=="true"){
+				//获取附件表中符合条件的数据
+				$_list=M($config['table'])->where(array($config['table_id']=>$id,'image'=>array('neq','')))->select();
+				$index=0;
+				foreach ($_list as $row) {
+					$index++;
+					$size=getimagesize(str_replace('__ROOT__/Uploads','Uploads',thumb($row[$config['val_key']])));
+					$paddingTB=(200-$size[1])/2;
+		?>
+			<li tag =""><img src="__ROOT__/<?=$row[$config['val_key']]?>" width="100%" height="100%" /></li>
+		<?php
+				}
+			}
+		?>
+		<?php 
+			if(!isset($_list)){
+		?>
+			<li tag =""><img src="__IMG__/bg_images.png" width="100%" height="100%"/></li>
+			<li tag =""><img src="__IMG__/bg_images.png" width="100%" height="100%"/></li>
+			<li tag =""><img src="__IMG__/bg_images.png" width="100%" height="100%"/></li>
+			<li tag =""><img src="__IMG__/bg_images.png" width="100%" height="100%"/></li>
+		<?php 
+			}
+		?>
+		</ul>
+	</div>
+	<span class="prev" style="background-image: url(__IMG__/bg_prev.png);"></span>
+	<span class="next" style="background-image: url(__IMG__/bg_next.png);"></span>
+</div>
+
+<script type="text/javascript">
+	//上传图片
+	/* 初始化上传插件 */
+	$("#upload_picture_<?=$config['index']?>").uploadify({
+		formData :{
+			'<?=session_name()?>':'<?=session_id()?>'
+		},
+		'multi'        : <?=$config['multi']?>,//false表示关闭多文件上传，如果需要开启需要把值设置为true
+		"height"          : 30,
+		"swf"             : "__PLUGIN__/uploadify/uploadify.swf",
+		"fileObjName"     : "download",
+		"buttonText"      : "上传图片",
+		"uploader"        : "<?=U('uploadPicture',array('session_id'=>session_id()))?>",
+		"width"           : 120,
+		'removeTimeout'	  : 1,
+		'fileTypeExts'	  : '*.jpg; *.png; *.gif;',
+		"onUploadSuccess" : uploadPicture_<?=$config['index']?>,
+		'onFallback' : function() {
+				alert('未检测到兼容版本的Flash.');
+		}
+	});
+
+	function uploadPicture_<?=$config['index']?>(file, data){
+		var data = $.parseJSON(data);
+		var src = '';
+		if(data.status){
+			src = data.url || '__ROOT__/' + data.save_path;
+			if(<?=$config['multi']?>){
+				var html ='<div class="upload-pre-item"><input type="hidden" name="<?=$config['name']?>" value="'+data.id+'"/><img src="' + src + '" width="100%" height="100%"/><div class="delThis clearfix" title="删除" index="'+data.id+'"><i class="iconfont" onclick=\'delCache_<?=$config['index']?>(this,"'+data.id+'")\'>&#xe666;</i></div></div>';
+				var obj = $('.imgages>ul'),
+					flag = false; //判断上传图片是否有追加到li标签中,false表示未追加
+				obj.find('li').each(function(){
+					if($(this).attr('tag') == ''){
+						flag = true;
+						$(this).html(html).attr('tag','true');
+						return false;
+					}
+				});
+				if(!flag){
+					var $li = $('<li style="background-image: url(__IMG__/bg_images.png);" tag ="true"></li>').appendTo(obj);
+					$li.html(html);
+					initBox();//设置图片左右切换
+					$li = null; 
+				}
+			}
+		}else{
+			tips(data.info,1000);
+			setTimeout(function(){
+				$('#top-alert').find('button').click();
+				$(that).removeClass('disabled').prop('disabled',false);
+			},1500);
+		}
+	}
+	//删除临时上传的图片，也就是上传后还没有点击发布的图片
+	function delCache_<?=$config['index']?>(obj){
+		if(confirm("确定删除吗？")){
+			var temp_id=$(obj).attr('index');
+			$.post("<?=U('delTempFile')?>",{id:temp_id},function(data){
+				if(data.status==1){
+					$(obj).parent().remove();
+					if(<?=$config['multi']?>){
+						var index=0;
+						$(obj).parent().parent().attr('tag','');
+						$("input[name=cache_cover]").each(function(){
+							index++;
+							$(this).val(index);
+						})
+					}
+					tips(data.info,1500,'success');
+				}else{
+					tips(data.info,1500,'error');
+				}
+			})
+		}
+	}
+</script>

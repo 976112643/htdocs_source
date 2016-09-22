@@ -1,0 +1,121 @@
+<extend name="Home@Public/body"/>
+<block name="style">
+	<css href="__CSS__/index.css"/>
+	<css href="__PLUGIN__/popover/dist/jquery.webui-popover.min.css"/>
+</block>
+<block name="body">
+	<!-- 主体部分 S-->
+	<div class="main">
+		<div class="container">
+			<div class="col-lg-9 clearfix">
+				<div class="letter_content">
+					<div class="title clearfix">
+						<h4 class="pull-left">ljjchen29的私信</h4>
+						<div class="notice_nav pull-right">
+							<a href="<?=U('User/Notice/index')?>">全部</a>
+							<a href="#" class="active">未读(1)</a>
+						</div>
+					</div>
+					<div class="letter_body">
+						<div class="letter_conbox new_letter clearfix">
+							<div class="u_face pull-left">
+								<img src="__IMG__/User/offical_img.jpg" class="img-responsive" alt="">
+								<span class="letter_label"></span>
+							</div>
+							<div class="letter_text pull-right">
+								<p class="letter_top">来自QING的通知</p>
+								<p class="letter_word">QING全新打造一项个性化印品服务—【轻博客印品】，诚邀您体验LOMO卡套定制服务，价值10元体验优惠吗：X4ECGBVNS1。进入轻博客客户端“我”页面，点击“轻博客印品”；2、在“轻博客印品”中兑换优惠券，结算时，选择“优惠券”...</p>
+								<div class="letter_foot clearfix">
+									<span class="pull-left letter_date">2016-04-26 11:32</span>
+									<a href="<?=U('offical_dialogue')?>" class="look_detail pull-right">有<span class="many">2</span>条新私信，点击查看></a>
+								</div>
+							</div>
+							<div class="close_bar">
+								<a href="#" class="atb" data-toggle="modal" data-target="#addBlackModal">加黑</a>
+								<button type="button" class="close" data-toggle="modal" data-target="#delModal"><i class="iconfont">&#xe633;</i></button>
+							</div>
+						</div>
+
+						<div class="letter_conbox clearfix">
+							<div class="u_face pull-left">
+								<img src="__IMG__/user-img5.jpg" class="img-responsive" alt="">
+								<span class="letter_label"></span>
+							</div>
+							<div class="letter_text pull-right">
+								<p class="letter_top">发给  大黑不黑</p>
+								<p class="letter_word">你好，我对你说的开源新技术新感兴趣，可否加一下好友？</p>
+								<div class="letter_foot clearfix">
+									<span class="pull-left letter_date">2016-04-18 19:30</span>
+									<a href="<?=U('dialogue')?>" class="look_detail pull-right">共<span class="many">1</span>条对话</a>
+								</div>
+							</div>
+							<div class="close_bar">
+								<a href="#" class="atb">加黑</a>
+								<button type="button" class="close"><i class="iconfont">&#xe633;</i></button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-3">
+				<div class="user_info">
+					<include file="Home@Public/sidebar"/>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 加黑模态框（Modal）S -->
+	<div class="modal fade" id="addBlackModal">
+	   <div class="modal-dialog addblack_modal">
+	      <div class="modal-content">
+	         <div class="modal-header">
+	            <button type="button" class="close" 
+	               data-dismiss="modal" aria-hidden="true">
+	                  <i class="iconfont">&#xe633;</i>
+	            </button>
+	            <h4 class="modal-title" id="myModalLabel">
+	               加入黑名单
+	            </h4>
+	         </div>
+	         <div class="modal-body">
+	            <h4><i class="iconfont">&#xe630;</i> 确定将  <span>QING</span>  加入黑名单吗？</h4>
+	            <p>加入黑名单之后，动态和标签页将不再显示喵喵的美衣或推荐的内容，对方也不能向您发布评论、投稿和私信。您还可以去账号设置管理黑名单。</p>
+	         </div>
+	         <div class="modal-footer">
+	            <button type="button" class="btn form_btn btn_default" 
+	               data-dismiss="modal">取 消
+	            </button>
+	            <button type="button" class="btn form_btn btn_primary">
+	               确定
+	            </button>
+	         </div>
+	      </div><!-- /.modal-content -->
+		</div><!-- /.modal -->
+	</div>
+	<!-- 加黑模态框（Modal）E -->
+	<!-- 删除文章模态框（Modal）S -->
+	<div class="modal fade" id="delModal">
+	   <div class="modal-dialog del_modal">
+	      <div class="modal-content">
+	         <div class="modal-header">
+	            <button type="button" class="close" 
+	               data-dismiss="modal" aria-hidden="true">
+	                  <i class="iconfont">&#xe633;</i>
+	            </button>
+	         </div>
+	         <div class="modal-body">
+	            <h4><i class="iconfont">&#xe630;</i> 确定要删除与QING之间的对话？</h4>
+	         </div>
+	         <div class="modal-footer">
+	            <button type="button" class="btn form_btn btn_default" 
+	               data-dismiss="modal">取 消
+	            </button>
+	            <button type="button" class="btn form_btn btn_primary">
+	               确定
+	            </button>
+	         </div>
+	      </div><!-- /.modal-content -->
+		</div><!-- /.modal -->
+	</div>
+	<!-- 删除文章模态框（Modal）E -->
+</block>

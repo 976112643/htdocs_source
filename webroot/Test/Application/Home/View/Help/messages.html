@@ -1,0 +1,104 @@
+<extend name="Public/body"/>
+<block name="style">
+	<css href="__CSS__/help.css"/>
+	<css href="__PLUGIN__/popover/dist/jquery.webui-popover.min.css"/>
+</block>
+<block name="body">
+	<div class="container clear">
+		<div class="messages_content">
+		<form action="<?=U('feedback')?>" class="messages_form clear" method="post" onsubmit="return submit_form()">
+			<div class="form_title clear">
+				<h3 class="pull-left"><?=$title?></h3>
+				<span class="form_label pull-right inputnote">您还可以输入500字</span>
+				<input type="text" class="pull-left title_input" placeholder="请输入联系方式" name="mobile">
+			</div>
+			<textarea id="msgTextarea" class="msg_text" placeholder="请输入反馈内容" name="content"></textarea>
+			<div class="form-group btn_group clear">
+				<input type="submit" class="btn btn-primary submit_btn " value="发布" data-target="#modal_tip">
+				<button class="btn btn-default cancel_btn" onclick="JavaScript:history.go(-1);return false;">取消</button>
+			</div>
+		</form>
+		</div>
+	</div>
+
+	<div class="modal fade" id="modal_tip" tabindex="-1" role="dialog" 
+	aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+		  <div class="modal-content">
+		     <div class="modal-header">
+		        <button type="button" class="close" 
+		           data-dismiss="modal" aria-hidden="true">
+		              &times;
+		        </button>
+		        <h4 class="modal-title" id="myModalLabel">
+		           提示
+		        </h4>
+		     </div>
+		     <div class="modal-body">
+		     </div>
+		  </div><!-- /.modal-content -->
+		</div><!-- /.modal -->
+	</div>	
+	<!-- 页脚 S-->
+	<footer class="con_footer">
+		<div class="container">
+			<div class="foot_content">
+				<div class="right_info">
+					<a href="<?=U('Home/Help/index')?>">帮助中心&nbsp;&nbsp;&#124;</a>
+					<span>尚软科技2005-<?=date('Y')?>版权所有&nbsp;&nbsp;<?=C('COPY_RIGHT')?></span>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!-- 页脚 E-->
+</block>
+<block name="script">
+	<js href="__PLUGIN__/popover/dist/jquery.webui-popover.min.js"/>
+	<js href="__JS__/common.js"/>
+	<js href="__JS__/Validform_v5.3.2_min.js"/>
+	<script>
+		$(function(){
+			// 文本框字数统计
+			$('#msgTextarea').on('focusin focusout keyup keydown',function(){
+				countsize.inputLimit($('#msgTextarea'),500);
+			});
+		})
+		function submit_form () {
+			var title_input=$(".title_input").val();
+			var msgTextarea=$("#msgTextarea").val();
+			var emails=/^\w+([-+.]\w+)*@\w+([-.]\\w+)*\.\w+([-.]\w+)*$/;
+			var phones=/^1\d{10}$/;
+			if(!emails.test(title_input)&&!phones.test(title_input)){
+				$(".modal-body").text("请输入正确的联系方式！");
+				$("#modal_tip").modal();
+				return false;
+			}else if(msgTextarea.length==0){
+				$(".modal-body").text("请输入内容哦！");
+				$("#modal_tip").modal();
+				return false;
+			}else if(msgTextarea.length>500){
+				$(".modal-body").text("输入内容超过字数限制了！");
+				$("#modal_tip").modal();
+				return false;
+			}else{
+				$.ajax({
+	                type: "POST",
+	                url:"<?=U('feedback')?>",
+	                data:$('.messages_form').serialize(),
+	                success: function(data) {
+	                   	if(data.status=='1'){
+	                   		$(".modal-body").text("反馈成功！");
+	                   		$("#modal_tip").modal();
+	                   		setTimeout(function (){window.location.href=data.url;},2000)
+	                   	}else{
+	                   		$(".modal-body").text("反馈失败！");
+	                   		$("#modal_tip").modal();
+	                   	}
+	                }
+       		 	});
+       		 	return false;
+			}
+		}
+
+	</script>
+</block>

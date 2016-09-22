@@ -1,0 +1,31 @@
+<?php foreach($res as $key=>$value){?>
+<div class="comments_div clear">
+	<?php
+		if($value['icon'] != ""){
+			if(!empty(parse_url($value['icon'])['scheme'])){
+				echo "<img class='img-responsive pull-left' src='".$value['icon']."'>";
+			}else{
+				echo "<img class='img-responsive pull-left' src='__ROOT__/".$value['icon']."'>";
+			}
+		}else{
+			echo "<img class='img-responsive pull-left' src='__IMG__/User/nopic.png'>";
+		}
+	?>
+	<!-- <img src="<?=$value['icon']?>" class="img-responsive pull-left"> -->
+	<div class="messages pull-left">
+		<p class="user_names"><a href="<?=U('browse',array('ids'=>$value['from_uid']))?>"><?=$value['from_name']?></a>
+		<?php
+			if($value['to_uid']){
+				
+		?>			
+					<span class='mess'>回复</span>
+					<p class='user_names'>
+					<a href="<?=U('browse',array('ids'=>$value['from_uid']))?>"><?=$value['to_name']?></a>
+					</p>
+		<?php
+			}
+		?>
+		<span class="mess"><?=$value['content']?></span>
+	</div>
+</div>
+<?php }?>

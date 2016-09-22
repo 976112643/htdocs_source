@@ -1,0 +1,62 @@
+<extend name="Home@Public/body"/>
+<block name="style">
+	<css href="__CSS__/index.css"/>
+	<css href="__PLUGIN__/popover/dist/jquery.webui-popover.min.css"/>
+</block>
+<block name="body">
+	<div class="container">
+		<div class="a_con_content con_content">
+			<div class="title clearfix">
+				<h4 class="pull-left">标签屏蔽</h4>
+				<a href="<?=U('index')?>" class="pull-right go_back">返回账号设置</a>
+			</div>
+			<div class="blacklist_body">
+				<p style="color:#999;padding:20px 0;">标签被加入屏蔽后，包含该标签的文章将在动态流、标签页等位置隐藏。您最多可添加20个标签。</p>
+				<form class="blacklist_form">
+					<label for="blacklist_url">输入要屏蔽的标签名</label>
+					<div class="form-group">
+						<input type="text" id="blacklist_url" class="">
+						<button class="btn-lg form_btn btn_primary">添加</button>
+					</div>
+				</form>
+				<div class="blacklist_group shield_label">
+					<div class="group_title">已屏蔽标签</div>
+					<div class="body clearfix">
+						<div class="blackname">
+							<i class="iconfont pull-left">&#xe615;</i>
+							<span class="pull-left user_name">慢食堂</span>
+							<a href="javascript:;" class="btn moveout pull-right">解除屏蔽</a>
+						</div>
+						<div class="blackname">
+							<i class="iconfont pull-left">&#xe615;</i>
+							<span class="pull-left user_name">慢食堂</span>
+							<a href="javascript:;" class="btn moveout pull-right">解除屏蔽</a>
+						</div>
+						<div class="blackname">
+							<i class="iconfont pull-left">&#xe615;</i>
+							<span class="pull-left user_name">慢食堂</span>
+							<a href="javascript:;" class="btn moveout pull-right">解除屏蔽</a>
+						</div>
+						<div class="blackname">
+							<i class="iconfont pull-left">&#xe615;</i>
+							<span class="pull-left user_name">慢食堂</span>
+							<a href="javascript:;" class="btn moveout pull-right">解除屏蔽</a>
+						</div>
+						<div class="blackname">
+							<i class="iconfont pull-left">&#xe615;</i>
+							<span class="pull-left user_name">慢食堂</span>
+							<a href="javascript:;" class="btn moveout pull-right">解除屏蔽</a>
+						</div>
+						<div class="blackname">
+							<i class="iconfont pull-left">&#xe615;</i>
+							<span class="pull-left user_name">慢食堂</span>
+							<a href="javascript:;" class="btn moveout pull-right">解除屏蔽</a>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<include file="Home@Public/footer"/>
+</block>

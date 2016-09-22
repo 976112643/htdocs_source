@@ -1,0 +1,89 @@
+<extend name="Public/body" />
+<block name="body"> <!-- Content Wrapper. Contains page content -->
+<style type="text/css">
+	#container,.form-control{width: 90%!important;}
+	#edui1{width: 100%!important;}
+</style>
+<!-- 配置文件 -->
+<script type="text/javascript" src="__PLUGIN__/ueditor/ueditor.config.js"></script>
+<!-- 编辑器源码文件 -->
+<script type="text/javascript" src="__PLUGIN__/ueditor/ueditor.all.js"></script>
+<!-- 实例化编辑器 -->
+<script type="text/javascript">
+    var ue = UE.getEditor('container');
+</script>
+<div class="content-wrapper" style="min-height: 922px;">
+	<!-- Content Header (Page header) -->
+	<section class="content-header">
+		<h1>
+			<?=$page_title?>
+			<small>
+				<?=$small_title?>
+			</small>
+		</h1>
+		<ol class="breadcrumb">
+			<li>
+				<a href="<?=U('/Backend')?>"><i class="fa fa-dashboard"></i>首页</a>
+			</li>
+			<li class="active">
+				<?=$page_title?>
+			</li>
+		</ol>
+	</section>
+
+	<!-- Main content -->
+	<section class="content">
+		<div class="row">
+			<div class="col-xs-12">
+				<div class="box">
+					<div class="box-body">
+						<div id="example2_wrapper"
+							class="dataTables_wrapper form-inline dt-bootstrap">
+							<div class="row">
+								<div class="col-sm-6">
+								</div>
+								<div class="col-md-12 text-right">
+									<?=getTopBtn($menu_info['id'],I('pid'))?>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-sm-12">
+								<form class="operate_form" action="<?=U('add')?>" method="post">
+									<div class="box-body">
+										<label>问题名称</label>
+										<p><input name="title" class="form-control" type="text" placeholder="请输入问题" value="<?= $res['title'] ?>" ></p>
+									</div>
+									<div class="box-body">
+										<label>问题答案</label>
+										<p><textarea name="answer" id="container"   type="text" placeholder="请输入问题答案" ><?=htmlspecialchars_decode($res['answer'])?></textarea><p>
+									</div>
+									
+									<div class="box-body">
+										<label>排序</label>
+										<p><input  class="form-control" type="text" placeholder="请输入排序" name='sort' value="<?= $res['sort'] ?>" ></p>
+									</div>
+									
+									
+									<input type="hidden" name="id" value="<?= $res['id'] ?>" />
+									<div class="box-body">
+									<p>
+										<input class="btn btn-primary btn-sm ajax-post" target-form="operate_form" type="submit" value="提交"  /
+									></p>
+									</div>
+								
+								</form>
+								</div>
+							</div>
+						</div>
+						</div>
+						<!-- /.box-body -->
+					</div>
+					<!-- /.box -->
+				</div>
+				<!-- /.col -->
+			</div>
+			<!-- /.row -->
+	</section>
+	<!-- /.content -->
+</div>
+</block>

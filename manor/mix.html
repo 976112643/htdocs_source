@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="./js/jquery.js"></script>
+<script type="text/javascript">
+	function checkContent(content) {
+		if (content.search(/http/i) != -1) {
+			$("#method").show();
+		} else {
+			$("#method").hide();
+		}
+	}
+	function textChange(e) {
+		checkContent(e.value);
+	}
+	$(function() {
+		checkContent($("#json").val());
+		$('#generate').click(function() {
+			area = $('#json');
+			method = $('#method').val();
+			$.post("./home/Mix/generateBean", {
+				'json' : area.val(),
+				'method' : method
+			}, function(data, status) {
+				$("#result").html(data);
+			});
+		});
+	});
+</script>
+</head>
+<body>
+	<div align="center">
+		<!-- <form action="./home/Mix/generateBean" method="post"> -->
+		<textarea id="json" rows="15" cols="50" style="width: 60%"
+			onpropertychange="textChange(this)" oninput="textChange(this)">
+			</textarea>
+		<p>
+			<select id='method' style="display: none;">
+				<option value="GET">GET请求</option>
+				<option value="POST">POST请求</option>
+			</select> <input id="generate" type="submit" value="生成实体类">
+		</p>
+		<!-- </form> -->
+	</div>
+	<div align="center">
+		<div align="left" style="width: 60%">
+			<p id="result"></p>
+		</div>
+	</div>
+</body>
+</html>

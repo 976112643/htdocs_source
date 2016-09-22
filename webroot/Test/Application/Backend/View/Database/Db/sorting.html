@@ -1,0 +1,144 @@
+<html>
+	<head>
+	<script type="text/javascript" src="<?php echo look;?>/js/jquery-1.8.2.min.js"></script>
+	<script type="text/javascript" src="<?php echo look;?>/js/jquery.tablesorter.js"></script>
+		<meta charset="UTF-8">
+		<style>
+			*{ margin:0; padding:0; list-style:none;}
+			body{ font-size:12px;}
+			#menu{ overflow:hidden; margin:100px auto;border:1px solid #BF9660;}
+			#menu #nav {display:block;width:100%;padding:0;margin:0;list-style:none;}
+			#menu #nav li {float:left;width:50%;}
+			#menu #nav li a {display:block;line-height:27px;text-decoration:none;padding:0 0 0 5px; text-align:center; color:#333;}
+			#menu_con{ border-top:none}
+			.tag{ padding:10px; overflow:hidden;}
+			.selected{background:#C5A069; color:#fff;}
+			.main{text-align:center;}
+			.add_news{margin:20px 0;}
+			.search{margin-left:30px;}
+			table{margin:0 auto;}
+			th,td{padding:5px 10px;}
+			.operate{margin-top:20px;}
+			.operate a{margin-left:20px;}
+			.a{text-decoration:none;}
+		</style>
+	</head>
+	<body>
+		<form name ="form1" method="get" action="<?=U('Home/db/search')?>">
+		<div class="lists" id="list">
+		<input type="test" name="keywords"  >
+		<input type="submit" value="搜索">
+		<input type="reset" id="reset"  value="重置"/><br/>
+		<?php foreach($info  as  $key=>$value ){ ?>
+		<input type="checkbox" value="<?=$value[column_name]?>" name="ckes[]"><?=$value['column_name']?>
+		<?php }?>
+		<input type="hidden" value="<?=$sorting?>" name="sorting">
+		<input type="hidden" value="<?=$table_name?>" name="table_name">
+		<div id="menu">
+<!--tag标题-->
+		<ul id="nav">
+			<li><a href="#" class="selected">表内容</a></li>
+			<li><a href="#" class="">表结构</a></li>
+		</ul>
+	<!--二级菜单-->
+		<div id="menu_con">
+			<div class="tag" style="display:block">
+				<table border="1" id="sortTable">
+					<thead>
+						<tr>
+							<?php foreach($info  as  $key=>$value ){ ?>
+							
+							<th title="<?=$info_one[$key]['type']?>"><a href ="javascript:;" onclick="form1.action='<?=U('Home/db/sorting',array('type'=>$value[column_name]))?>';form1.submit();" ><?=$value[column_name]?></a></th>
+							<?php }?>
+						</tr>
+					</thead>	
+						<?php foreach ($result as $vo) { ; ?>
+						<tr>
+							<?php foreach ($vo as $key => $ve ) {  ?>
+							<th title=""><textarea  disabled ><?=$ve?></textarea></th>
+							<?php }?>
+						</tr>
+						<?php }?>
+				</table>
+					<p><?=$page?><a href ="<?=U('Home/Db/content',array('table_name'=>$table_name))?>">返回主页</a></p>
+			</div> 
+			<div class="tag" style="display:none">
+				<table border="1" id="sortTable">
+					<thead>
+						<tr>
+							<th>字段名</th>
+							<th>类型</th>
+							<th>是否为空</th>
+							<th>key值</th>
+							<th>default</th>
+							<th>extra</th>
+						</tr>
+					</thead>
+						<?php foreach($info_one as $value){  ?>
+							<tr>
+								<th><?=$value['field']?></th>
+								<th><?=$value['type']?></th>
+								<th><?php if($value['null'] == ""){echo '空值';  }else{ echo "$value[null]" ;  } ?></th>
+								<th><?php if($value['key'] == ""){echo '空值';  }else{ echo "$value[key]" ;  } ?></th>
+								<th><?php if($value['default'] == ""){echo '空值';  }else{ echo "$value[default]" ;  } ?></th>
+								<th><?php if($value['extra'] == ""){echo '空值';  }else{ echo "$value[extra]" ;  } ?></th>
+							</tr>
+						<?php }?>
+				</table>
+			</div> 
+		</div>
+	</div>
+</form>	
+<script>
+var tabs=function(){
+    function tag(name,elem){
+        return (elem||document).getElementsByTagName(name);
+    }
+    //获得相应ID的元素
+    function id(name){
+        return document.getElementById(name);
+    }
+    function first(elem){
+        elem=elem.firstChild;
+        return elem&&elem.nodeType==1? elem:next(elem);
+    }
+    function next(elem){
+        do{
+            elem=elem.nextSibling;  
+        }while(
+            elem&&elem.nodeType!=1  
+        )
+        return elem;
+    }
+    return {
+        set:function(elemId,tabId){
+            var elem=tag("li",id(elemId));
+            var tabs=tag("div",id(tabId));
+            var listNum=elem.length;
+            var tabNum=tabs.length;
+            for(var i=0;i<listNum;i++){
+                    elem[i].onclick=(function(i){
+                        return function(){
+                            for(var j=0;j<tabNum;j++){
+                                if(i==j){
+                                    tabs[j].style.display="block";
+                                    //alert(elem[j].firstChild);
+                                    elem[j].firstChild.className="selected";
+                                }
+                                else{
+                                    tabs[j].style.display="none";
+                                    elem[j].firstChild.className="";
+                                }
+                            }
+                        }
+                    })(i)
+            }
+        }
+    }
+}();
+tabs.set("nav","menu_con");//执行
+</script>
+<!--代码部分end-->
+
+</body>
+</html>

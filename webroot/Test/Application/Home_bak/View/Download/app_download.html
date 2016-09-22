@@ -1,0 +1,175 @@
+<extend name="Home@Public/nologin_body"/>
+<block name="style">
+	<css href="__CSS__/index.css"/>
+	<style>
+		html, body {
+			height: 100%;
+			overflow-y: hidden;
+		}
+		.foot_content {
+			border-top-color:transparent;
+		}
+		.wrap {
+			overflow-y: hidden;
+			min-width: 1200px;
+			width: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: 4;
+		}
+	</style>
+</block>
+<block name="body">
+	<!-- 首屏 S -->
+	<div class="js_section section section1">
+		<div class="container">
+			<div class="app_img">
+				<img src="__IMG__/User/lb_app.png" class="img-responsive" alt="">
+			</div>
+			<div class="download_box">
+				<img src="__IMG__/User/download_title.png" class="img-responsive" alt="">
+				<div class="linkbtn_group">
+					<div class="clearfix iPhone">
+						<a href="#" class="download_btn">
+							<i class="iconfont">&#xe654;</i>
+							App Store 下载
+						</a>
+					</div>
+					<div class="clearfix Android">
+						<a href="<?=U('down_file')?>" class="download_btn">
+							<i class="iconfont">&#xe653;</i>
+							Android 下载
+						</a>
+					</div>
+				</div>
+				<div class="ewm_img text-center">
+					<img src="__IMG__/User/ewm.jpg" alt="">
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 首屏 E -->
+	<!-- 第二屏 S -->
+	<div class="js_section section section2">
+		<div class="container">
+			<h2 class="fz_30 text-center">海量开源数据，汇集更多科技达人</h2>
+		</div>
+	</div>
+	<!-- 第二屏 E -->
+	<!-- 第三屏 S -->
+	<div class="js_section section section3" style="background:url('__IMG__/User/app_section3_bg.png') no-repeat center center;background-position-y:180px;">
+		<div class="container">
+			<h2 class="fz_30 text-center">开源信息发掘、分享、交流</h2>
+		</div>
+	</div>
+	<!-- 第三屏 E -->
+	<!-- 第四屏 S -->
+	<div class="js_section section section4">
+		<div class="container">
+			<h2 class="fz_30 text-center">标记你的干货信息，让大家迅速找到你</h2>
+			<div class="icon_img text-center">
+				<img src="__IMG__/User/app_section4.png" alt="">
+			</div>
+			<div class="download_con clearfix">
+				<div class="linkbtn_group pull-left">
+					<div class="clearfix iPhone">
+						<a href="#" class="download_btn">
+							<i class="iconfont">&#xe654;</i>
+							App Store 下载
+						</a>
+					</div>
+					<div class="clearfix Android">
+						<a href="#" class="download_btn">
+							<i class="iconfont">&#xe653;</i>
+							Android 下载
+						</a>
+					</div>
+				</div>
+				<div class="ewm_img pull-right">
+					<img src="__IMG__/User/ewm.jpg" alt="">
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 第四屏 E -->
+	<include file="Home@Public/footer"/>	
+</block>
+<block name="script">
+<js href="__JS__/jquery.mousewheel.js"/>
+<script>
+// var windowH = $(window).height();
+var screen_height=$(window).height();
+var screen_weight=window.screen.availWidth;
+var cur_page_index=0,is_scroll=true,scroll_top=false;
+var top_total_height=82;
+var footer_height=61;
+$(function(){
+// $('.js_section').css('height',screen_height+"px");
+$('.wrap').mousewheel(function(event,delta){
+	scroll_page($(this),delta,1)
+});
+function quanp(){
+	$('.js_section').height(screen_height);
+	$('.js_section').width(screen_weight);
+	setTimeout(function(){
+		cur_page_index=0;
+		scroll_page($(".wrap"),-1,0);
+	},500);
+}
+quanp();
+})
+function scroll_page(_this,delta,num){
+	//判断当前滚屏动画是否结束
+	if(is_scroll){
+		is_scroll=false;
+		//delta的值是负的即-1，那么滚轮就是向下滚动，正的1就是向上
+		if(delta>=0){
+			if(cur_page_index>0){
+				cur_page_index--;
+			}else{
+				$("#navBar li").removeClass("current");
+				$("#navBar li:eq("+cur_page_index+")").removeClass("current");
+			}
+		}else{
+			if(cur_page_index<=$(".wrap .js_section").length){
+				cur_page_index++;
+			}else{
+				$("#navBar li").removeClass("current");
+			}
+		}
+		if(cur_page_index==1){
+			$("#navBar li:eq(0)").addClass("current");
+		}
+
+		var page_top;
+		var page_scroll=cur_page_index-1;
+		if(page_scroll<0){
+			page_scroll=0;
+		}
+		if(cur_page_index<1){
+			page_top=0;
+		}else{
+			if(cur_page_index==($(".wrap .js_section").length+1)){
+				page_top=screen_height*(page_scroll-1)+top_total_height+footer_height;
+				$("#navBar li:eq("+(page_scroll-1)+")").removeClass("current");
+			}else{
+				page_top=screen_height*page_scroll+top_total_height;
+			}
+		}
+		_this.stop(false,true).animate({"margin-top":-page_top+"px"},800,function(){
+			$(".wrap .js_section:eq("+page_scroll+")").addClass("current").siblings('.js_section').removeClass("current");
+			is_scroll=true;
+		});
+
+		if(cur_page_index>0){
+			$("#navBar li:eq("+page_scroll+")").addClass("current").siblings('li').removeClass("current");
+		}else{
+			$("#navBar li:eq(0)").removeClass("current");
+		}
+
+	}
+}
+
+</script>
+</block>

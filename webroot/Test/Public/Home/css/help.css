@@ -1,0 +1,588 @@
+.help_content {
+	width: 830px;
+	border-radius: 4px;
+	background: #fff;
+	padding:24px;
+	box-shadow: 0 0 5px rgba(197,197,197,.91);
+}
+.help_content .title,
+.contact_main .title {
+	border-bottom: 1px solid #c9c9c9;
+}
+.help_content .title h4,
+.contact_main .title h4 {
+	font-size: 20px;
+	margin-top: 0;
+	margin-bottom: 20px;
+}
+.help_search_bar {
+	position: relative;
+}
+.help_search_bar .icon_fdj {
+	position: absolute;
+	left:5px;
+	font-size: 22px;
+	color:#999;
+	cursor: pointer;
+}
+.help_search_bar input {
+	padding-left: 34px;
+}
+.question_box {
+	padding: 24px 0 0;
+}
+.question_con {
+	margin-bottom: 30px;
+}
+.question{
+	position: relative;
+	word-wrap:break-word;
+	-ms-word-break: break-all;
+	word-break: break-all;
+}
+.question_con .question i {
+	color:#b0d7eb;
+	display: inline-block;
+	width: 28px;
+	height: 24px;
+	background: url(../img/User/message.png) no-repeat center;
+	font-size: 21px;
+	vertical-align: middle;
+	position: absolute;
+}
+.question_con .question span{
+	position: relative;
+	display: inline-block;
+    padding-left: 30px;
+    line-height: 25px;
+}
+.question_con .answer {
+	color:#666;
+	padding-left:30px;
+	line-height: 28px;
+}
+.question_con .answer p {
+	margin-bottom: 0;
+	word-wrap:break-word;
+}
+.question_con .answer *{
+	font-size: 14px!important;
+	color: #666!important;
+	font-weight: 500!important;
+}
+.question_con .answer .answer_list {
+	padding-left: 30px;
+	list-style: disc;
+}
+.answer_list li{
+	word-wrap:break-word;
+}
+/**/
+.feedback {
+	width: 320px;
+	box-shadow: 0 0 5px rgba(197,197,197,.91);
+	border-radius: 4px;
+}
+.feedfix{
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+.feedback .title {
+	background-color: #ececec;
+	font-size: 16px;
+	border-radius: 4px 4px 0 0;
+	padding:20px 24px;
+}
+.feedback .content {
+	background-color: #fff;
+	border-radius: 0 0 4px 4px;
+}
+.feedback .content .btn_group {
+	padding:32px 0;
+}
+.feedback .content .links {
+	padding:0 30px 20px 30px;
+}
+.feedback_btn {
+	display: block;
+	width: 264px;
+	height: 44px;
+	background-color: #5ac3ff;
+	border-radius: 4px;
+	margin:0 auto;
+	text-align: center;
+	line-height: 44px;
+	font-size: 16px;
+	color:#fff;
+}
+.feedback_btn:visited,.feedback_btn:active,.feedback_btn:focus{
+	color:#fff;
+}
+.feedback_btn i {
+	font-size: 22px;
+}
+.feedback_btn:hover {
+	background-color: #43A5DD;
+	color:#fff;
+}
+
+/*模态框样式 S*/
+.help_modal {
+	position: absolute;
+	top:50%;
+	margin-top: -165px;
+	left:50%;
+	margin-left: -300px;
+}
+.help_modal_h {
+	border-bottom-color: transparent; 
+}
+.help_modal_h .close {
+	margin-top: -8px;
+}
+.help_modal_b {
+	padding-bottom: 40px;
+}
+.link_btn {
+	position: relative;
+	display: block;
+	width: 520px;
+	height: 106px;
+	border-radius: 6px;
+	border:1px solid #e1e1e1;
+	padding-left: 50px;
+	padding-top: 4px;
+	margin:10px auto;
+	background-color: #f6f6f6;
+}
+.link_btn h3 {
+	color:#444;
+}
+.link_btn p {
+	color:#666;
+}
+.link_btn:hover {
+	background-color: #fff;
+	border-color:#32b5fb;
+	box-shadow: 1px 1px 3px 1px #c5c5c5;
+}
+.link_btn:hover i {
+	color:#32b5fb;
+}
+.link_btn i {
+	position: absolute;
+	right:40px;
+	top:50%;
+	margin-top: -19px;
+	font-size: 26px;
+}
+/*模态框样式 E*/
+/*发私信样式 S*/
+.messages_content {
+	height: 612px;
+}
+.messages_form {
+	position: absolute;
+	top:50%;
+	margin-top: -177px;
+	left:50%;
+	margin-left: -336px;
+	width: 672px;
+	background-color: #fff;
+	padding:30px;
+	border: 1px solid #e1e1e1;
+}
+.form_title h3 {
+	margin:0;
+}
+.form_title .form_label {
+	color:#666;
+	margin-top: 6px;
+}
+.msg_text {
+	width: 100%;
+	height: 170px;
+	resize: none;
+	border: 1px solid #c9c9c9;
+	box-shadow: 0 1px 3px 1px rgba(230,230,230,.75) inset;
+	margin-top: 10px;
+	padding:10px;
+}
+.messages_form .btn_group {
+	margin-top: 20px;
+}
+.title_input{
+	margin: 20px 0 10px 0;
+	padding: 5px 10px;
+	width: 100%;
+	border: 1px solid #c9c9c9;
+    box-shadow: 0 1px 3px 1px rgba(230,230,230,.75) inset;
+}
+/*发私信样式 S*/
+/*联系我们样式 S*/
+.contact_main {
+	border-radius: 4px;
+	background: #fff;
+	padding:24px;
+	box-shadow: 0 0 5px rgba(197,197,197,.91);
+	margin-bottom: 24px;
+}
+.contact_content {
+	padding:30px 0;
+}
+.contact_content p {
+	font-size: 16px;
+	line-height: 30px;
+	margin-bottom: 40px;
+}
+.us_info li {
+	font-size: 16px;
+	line-height: 30px;
+}
+.friends_link {
+	padding-top: 20px;
+}
+.friends_link li {
+	float: left;
+	margin-left: 24px;
+}
+/*联系我们样式 E*/
+
+
+/*分页*/
+.pagination>li>a{
+	color: #1eb1ff;
+	margin: 0 5px;
+}
+.pagination>li>a:focus, .pagination>li>a:hover, .pagination>li>span:focus, .pagination>li>span:hover{
+    z-index: 3;
+    color: #fff;
+    background-color: #1eb1ff;
+    border-color: #1eb1ff;
+}
+
+.page{
+	text-align: center;
+}
+.page a{
+	font-size: 14px;
+	color: #666;
+	border: 1px solid #ddd; 
+	padding: 5px 10px;
+	color: #1eb1ff;
+	margin: 0 5px;
+}
+.page a:hover,.page a:focus{
+	color: #fff;
+    background-color: #1eb1ff;
+    border-color: #1eb1ff;
+}
+.a_click{
+	color: #fff;
+    background-color: #1eb1ff;
+    border-color: #1eb1ff;
+}
+
+/*提示框*/
+#modal_tip .modal-dialog{
+	margin-top: 20%;
+}
+#modal_tip h4{
+	text-align: center;
+	color: #1eb1ff;
+}
+#modal_tip .modal-dialog{
+	width: 500px;
+}
+#modal_tip .modal-content{
+	min-height: 100px;
+}
+#modal_tip .modal-body{
+	text-align: center;
+	font-size: 16px;
+}
+
+
+
+
+
+/*自适应*/
+@media screen and (min-width: 768px) and (max-width: 1200px)  {
+.navbar-nav>li{
+    height: 20px;
+}
+.navbar-nav>li>a {
+  display: inline-block;
+  border-right: 1px dotted #fff;
+  height: 20px;
+}
+.header_nav,.wrap{
+  min-width: 768px!important;
+  width: 100%;
+}
+.help_content{
+	width: 100%;
+}
+.feedback{
+	position: fixed;
+	right: 0;
+	width: 40px;
+}
+.feedback .title{
+	display: none;
+}
+.feedback .content .links{
+	display: none;
+}
+.feedback .content .btn_group{
+	padding: 0;
+}
+.feedback_btn{
+	margin: 0;
+	width: 40px;
+	height: 140px;
+	line-height: 25px;
+	font-size: 16px;
+	padding: 0 5px;
+}
+.loads{
+	min-height: 1px;
+}
+.help_modal{
+	top: 40%;
+}
+.messages_content{
+	height: 500px;
+}
+.con_footer{
+	position: static;
+}
+}
+
+
+
+@media screen and (min-width: 375px) and (max-width: 767px)  {
+.navbar-nav>li>a {
+  display: inline-block;
+  border-right: 1px dotted #fff;
+  height: 20px;
+  padding: 0 10px;
+}
+.header_nav,.wrap{
+  min-width: 375px!important;
+  width: 100%;
+}
+.help_content{
+	width: 100%;
+	padding: 10px;
+}
+.myBrand{
+	padding: 10px 0;
+}
+#myNavbarCollapse{
+	padding-top: 0;
+}
+.feedback{
+	position: fixed;
+	right: 0;
+	width: 36px;
+	opacity: .3;
+}
+.feedback .title{
+	display: none;
+}
+.feedback .content .links{
+	display: none;
+}
+.feedback .content .btn_group{
+	padding: 0;
+}
+.feedback_btn{
+	margin: 0;
+	width: 36px;
+	height: 140px;
+	line-height: 25px;
+	font-size: 16px;
+	padding: 0 5px;
+}
+.loads{
+	min-height: 1px;
+}
+.help_modal{
+	top: 50%;
+}
+.messages_content{
+	position: relative;
+	height: 460px;
+}
+.con_footer{
+	position: static;
+}
+.link_btn{
+	width: 280px;
+	height: 80px;
+	padding-left: 10px
+}
+.help_modal{
+	width: 300px;
+	margin-left: -150px;
+}
+.help_modal_b{
+	padding: 10px;
+}
+.link_btn h3{
+	margin: 10px 0;
+	font-size: 18px;
+}
+.link_btn i{
+	right: 20px;
+	font-size: 22px;
+	margin-top: -15px;
+}
+.messages_form{
+	width: 90%;
+	margin-left: 0;
+	left: 5%;
+	padding: 10px 20px;
+}
+.form_title h3{
+	font-size: 20px;
+}
+#modal_tip .modal-dialog{
+	width: 90%;
+	left: 5%;
+	margin: 0;
+	margin-top: 50%;
+}
+
+.friends_link li{
+	margin: 5px;
+	max-width: 45%;
+}
+.friends_link li img{
+	display: inline-block;
+	max-width: 100%;
+}
+
+.question_con .question i{
+	float: left;
+}
+
+}
+
+
+@media screen and (min-width: 320px) and (max-width: 374px){
+.navbar-nav>li>a {
+  display: inline-block;
+  border-right: 1px dotted #fff;
+  height: 20px;
+  padding: 0 10px;
+  font-size: 14px;
+}
+.header_nav,.wrap{
+  min-width: 320px!important;
+  width: 100%;
+}
+.help_content{
+	width: 100%;
+	padding: 10px;
+}
+.myBrand{
+	padding: 10px 0;
+}
+#myNavbarCollapse{
+	padding-top: 0;
+}
+.feedback{
+	position: fixed;
+	right: 0;
+	width: 36px;
+}
+.feedback .title{
+	display: none;
+}
+.feedback .content .links{
+	display: none;
+}
+.feedback .content .btn_group{
+	padding: 0;
+}
+.feedback_btn{
+	margin: 0;
+	width: 36px;
+	height: 140px;
+	line-height: 25px;
+	font-size: 16px;
+	padding: 0 5px;
+}
+.loads{
+	min-height: 1px;
+}
+.help_modal{
+	top: 40%;
+}
+.messages_content{
+	position: relative;
+	height: 460px;
+}
+.con_footer{
+	position: static;
+}
+.link_btn{
+	width: 280px;
+	height: 80px;
+	padding-left: 10px
+}
+.help_modal{
+	width: 300px;
+	margin-left: -150px;
+}
+.help_modal_b{
+	padding: 10px;
+}
+.link_btn h3{
+	margin: 10px 0;
+	font-size: 16px;
+}
+.link_btn i{
+	right: 20px;
+	font-size: 22px;
+	margin-top: -15px;
+}
+.messages_form{
+	width: 90%;
+	margin-left: 0;
+	left: 5%;
+	padding: 10px 20px;
+}
+.form_title h3{
+	font-size: 18px;
+}
+.title_input{
+	margin: 10px 0;
+}
+#modal_tip .modal-dialog{
+	width: 90%;
+	left: 5%;
+	margin: 0;
+	margin-top: 30%;
+}
+.help_content .title h4{
+	font-size: 18px;
+}
+.question_con .question i{
+	float: left;
+}
+
+.question{
+	font-size: 16px;
+}
+.form_title .form_label{
+	font-size: 12px;
+}
+.messages_form .btn_group{
+	margin-top: 0;
+	margin-bottom: 10px;
+}
+}

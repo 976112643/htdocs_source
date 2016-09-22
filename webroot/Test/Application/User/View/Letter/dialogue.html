@@ -1,0 +1,72 @@
+<extend name="Home@Public/body"/>
+<block name="style">
+	<css href="__CSS__/index.css"/>
+	<css href="__PLUGIN__/popover/dist/jquery.webui-popover.min.css"/>
+</block>
+<block name="body">
+	<!-- 主体部分 S-->
+	<div class="main">
+		<div class="container">
+			<div class="col-lg-9 clearfix">
+				<div class="letter_content">
+					<div class="title clearfix">
+						<h4 class="pull-left">与 大黑不黑 的私信对话</h4>
+						<a href="<?=U('User/Letter/index')?>" class="go_back pull-right">返回私信列表</a>
+					</div>
+					<div class="letter_body reply_body">
+						<div class="reply_box clearfix">
+							<div class="u_face pull-right">
+								<img src="__IMG__/user-img5.jpg" class="img-responsive" alt="">
+							</div>
+							<form  class="pull-right reply_con">
+								<div class="reply_area">
+									<textarea></textarea>
+									<span class="arrow"></span>
+								</div>
+								<div class="form-group text-right">
+									<button class="btn form_btn btn_primary">发送</button>
+								</div>
+							</form>
+						</div>
+						<div class="myreply clearfix">
+							<div class="u_face pull-right myface">
+								<img src="__IMG__/user-img5.jpg" class="img-responsive" alt="">
+							</div>
+							<div class="reply_con pull-right">
+								<div class="reply_area">
+									<div class="text_area">
+										<p>微信号：ljjchen_032</p>
+										<p>由CSDNCODE、腾讯、腾讯基金会、腾讯云主办的“开源技术大会 2015” （Open Source Technology Conference，简称OSTC）将于2015年3月28日在北京召开。本次大会以“社区胜于代码”（Community Over Code）为主题。该口号是在Apache社区流传的一句座右铭，有人也将它写为“Community > Code”。它强调围绕代码而生的社区，会让代码变得更加优秀。</p>
+										<p class="reply_date">2016-04-26 11:32</p>
+									</div>
+									<span class="arrow"></span>
+								</div>
+							</div>
+						</div>
+						
+						<div class="other_reply clearfix">
+							<div class="u_face pull-left myface">
+								<img src="__IMG__/user-img5.jpg" class="img-responsive" alt="">
+							</div>
+							<div class=" reply_con pull-left">
+								<div class="reply_area">
+									<div class="text_area">
+										<p>你好，我对你说的开源技术很感兴趣，可否加一下好友？</p>
+										<p class="reply_date">2016-04-26 11:32</p>
+									</div>
+									<span class="arrow"></span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-3">
+				<div class="user_info">
+					<include file="Home@Public/sidebar"/>
+				</div>
+			</div>
+		</div>
+	</div>
+	<include file="Home@Public/footer"/>
+</block>

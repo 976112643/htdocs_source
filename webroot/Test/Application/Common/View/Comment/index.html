@@ -1,0 +1,184 @@
+<div class="commbox js_index_3">
+					<div class="topbox clearfix">
+						<div class="pull-left"><i></i><span>商品评价</span></div>
+					</div>
+					<div class="evaluate clearfix">
+						<div class="rate">
+							<p><?=$info['star_rating']?>%</p>
+							<span>综合好评率</span>
+						</div>
+						<ul class="compare">
+							<li class="clearfix">
+								<span class="desc">发货速度：<span><?=$info['star_speed']?></span>分</span>
+								<div class="score clearfix">
+									<span style="width:<?=($info['star_speed']/5)*100?>%"></span>
+								</div>
+							</li>
+							<li class="clearfix">
+								<span class="desc">描述相符：<span><?=$info['star_quality']?></span>分</span>
+								<div class="score clearfix">
+									<span style="width:<?=($info['star_quality']/5)*100?>%"></span>
+								</div>
+							</li>
+							<li class="clearfix">
+								<span class="desc">服务相符：<span><?=$info['star_serve']?></span>分</span>
+								<div class="score clearfix">
+									<span style="width:<?=($info['star_serve']/5)*100?>%"></span>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<!-- 商品评价 E -->
+
+				<!-- 全部评论 S -->
+				<div class="commbox">
+					<div class="topbox clearfix">
+						<i></i>
+						<ul class="top_message clearfix">
+							<a href="javascript:;" class='all_comment'   data-type="">全部评论（<span>685</span>）</a>
+							<a href="javascript:;" class='all_comment' data-type="pic">有图（<span><?=$has_pic?></span>）</a>
+							<a href="javascript:;" class='all_comment' data-type="0">好评（<span><?=$good_comment?></span>）</a>
+							<a href="javascript:;" class='all_comment' data-type="1">中评（<span><?=$comment?></span>）</a>
+							<a href="javascript:;" class='all_comment' data-type="2">差评（<span><?=$bade_comment?></span>）</a>
+						</ul>
+					</div>
+					<div class="eval_list">
+						<ul>
+							<li class="clearfix">
+								<div class="list_img">
+									<span class="photo" style="background-image: url(__IMG__/eval_photo01.jpg);"></span>
+								</div>
+								<div class="list_content">
+									<div class="clearfix">
+										<div class="leftbox">
+											<div class="clearfix">
+												<strong class="name">张协远</strong>
+												<p class="date">[ 2015-06-25  11:16:52 ]</p>
+											</div>
+											<p>很开心的一次交易！商家效率高出图快！</p>
+											<div class="imgarea">
+												<img src="__IMG__/detial_eval01.jpg" width="80" height="60" />
+												<img src="__IMG__/detial_eval02.png" width="80" height="60" />
+											</div>
+										</div>
+										<ul class="scorebox">
+											<li class="clearfix">
+												<span>描述相符：</span>
+												<div class="score clearfix">
+													<span style="width:50%"></span>
+												</div>
+											</li>
+											<li class="clearfix">
+												<span>服务态度：</span>
+												<div class="score clearfix">
+													<span style="width:80%"></span>
+												</div>
+											</li>
+											<li class="clearfix">
+												<span>发货速度：</span>
+												<div class="score clearfix">
+													<span style="width:90%"></span>
+												</div>
+											</li>
+										</ul>
+										<div class="rightbox">
+											<a href="#">【原创】总监操刀设计/产品画册设计/企业宣传册设计 </a>
+											<div class="price">价格<span>￥380.00</span></div>
+										</div>
+									</div>
+									<div class="reply">【回复】感谢您对我们的支持^^</div>
+								</div>
+							</li>
+							<?php 
+					foreach($result as $key=>$value){
+				?>
+				<li class="clearfix">
+					<div class="list_img">
+						<span class="photo" style="background-image:url(<?=get_avatar($value['member_id'],100)?>);"></span>
+					</div>
+					<div class="list_content">
+						<div class="clearfix">
+							<div class="leftbox">
+								<div class="clearfix">
+									<strong class="name"><?=get_name($value['username'],$value['nickname'])?></strong>
+									<p class="date">[<?=int_to_date($value['addtime'])?>]</p>
+								</div>
+								<p><?=$value['content']?></p>
+								<?php
+									if($value['img_pic']==1){
+								?>
+									<div class="imgarea">
+										<?php
+											foreach($value['img'] as $val){
+										?>
+												<img src="__ROOT__/<?=$val['image']?>" width="80" height="60" />
+										<?php 
+											}
+										?>
+									</div>
+								<?php
+									}
+								?>
+							</div>
+							<ul class="scorebox">
+								<li class="clearfix">
+									<span>描述相符：</span>
+									<div class="score clearfix">
+										<span style="width:<?=($value['star_quality']/5)*100?>%"></span>
+									</div>
+								</li>
+								<li class="clearfix">
+									<span>服务态度：</span>
+									<div class="score clearfix">
+										<span style="width:<?=($value['star_serve']/5)*100?>%"></span>
+									</div>
+								</li>
+								<li class="clearfix">
+									<span>发货速度：</span>
+									<div class="score clearfix">
+										<span style="width:<?=($value['star_speed']/5)*100?>%"></span>
+									</div>
+								</li>
+							</ul>
+							<!--  <div class="rightbox">
+								<a href="<?=U('Home/Product/detail/id/'.$value['product_id'])?>"><?=$value['order_title']?> </a>
+								<div class="price">价格<span>￥<?=$value['price']?></span></div>
+							</div>-->
+						</div>
+						<?php 
+							if($value['comment']){
+						?>
+							<div class="reply">【回复】<?=$value['comment'][0]['content']?></div>
+						<?php
+							}
+						?>
+					</div>
+				</li>
+				<?php
+					}
+				?>		
+			</ul>
+		</div>
+	</div>
+				<?php
+					if(intval($count) != 0){
+				?>
+				<form class="js_form" method="get">
+					<div class="pages text-center">
+						<?=$page?>
+						<span>共<span class="js_count"><?=$pages?></span>页
+						<?php 
+							if(intval($pages) > 1){
+						?>，到第</span>
+						<input class="js_check checkpage" type="text" name="p">
+						<span>页</span>
+						<input type="submit" class="js_user fixed" value="确定" />
+						<?php
+							}
+						?>
+					</div>
+				</form>
+				<?php
+					}
+				?>

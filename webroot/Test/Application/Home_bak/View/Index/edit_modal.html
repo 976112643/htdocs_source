@@ -1,0 +1,180 @@
+  <form>
+  	  <span class="b_arrow" style="display:block"></span>
+  	  <include file="Common@Plugins/editor" />
+      <div class="modal-header">
+        <h4 class="modal-title user_name">ljjchen29</h4>
+        <div class="user_img">
+        	<img src="__IMG__/headportrait1.jpg" class="img-responsive" alt="">
+        </div>
+      </div>
+      <div class="modal-body">
+        <div class="blog_img">
+        	<img src="__IMG__/img7.jpg" width="100%" alt="">
+        	<div class="toolbtns">
+        		<a href="#"><i class="iconfont">&#xe636;</i></a>
+        		<a href="#"><i class="iconfont">&#xe610;</i></a>
+        	</div>
+        </div>
+        <div class="addimg_btn mt_20 mb_20">
+        	<i class="iconfont">&#xe635;</i> 继续添加
+        </div>
+
+        <div class="form-group textarea_box">
+			<?php $time=time(); ?>
+			<script id="<?='editor_'.$time?>" type="text/plain" name="content"><?=$info['content']?></script>
+			<script type="text/javascript">
+			var config_2={
+				initialFrameWidth:"100%",
+				initialFrameHeight:150,
+				pasteplain:true,
+				autoFloatEnabled:false,
+				clearFontFamily: false,
+				toolbars: [[
+		            'bold','underline','strikethrough','insertunorderedlist','insertorderedlist','blockquote','link','unlink','source','insertimage','fullscreen'
+				]]
+			};
+			//合并配置文件，config为默认配置，config_2为自定义的配置
+			var new_config=array_merge({},[config,config_2]);
+			//说明：editor_obj_id的值必须和编辑器ID保持一致
+			var editor_<?=$time?>=UE.getEditor('editor_<?=$time?>',new_config);
+			//对编辑器的操作最好在编辑器ready之后再做
+			editor_<?=$time?>.ready(function() {
+			    //设置编辑器的内容
+			    editor_<?=$time?>.setContent('<a href="#" class="user_name">相顾无言</a><p class="user_txt">鱼与水嬉戏相间。</p>');
+			    //获取html内容，返回: <p>hello</p>
+			    var html = editor_<?=$time?>.getContent();
+			    //获取纯文本内容，返回: hello
+			    var txt = editor_<?=$time?>.getContentTxt();
+			});
+			// editor_<?=$time?>.execCommand( 'font-family', '微软雅黑' );
+			</script>
+		</div>
+		<div class="form-group">
+			<div class="tagsinput-primary tagsinput" id="tagsinput_tagsinput">
+		        <input name="tagsinput-02" class="tagsinput_inp tagsinput-typeahead input-lg"  placeholder="添加标签，用逗号或回车分隔"/>
+	    	</div>
+		</div>
+		<div class="form-group">
+			<div class="clearfix">
+				<span class="pull-left" style="font-size:16px">发布方式及版权声明：</span>
+				<div class="dropdown pull-left js_rbdropdown ">
+					<a href="javascript:;" data-toggle="dropdown" class="js_dropshow dropshow">
+						<i class="iconfont">&#xe627;</i>
+						<span class="caret"></span>
+					</a>
+					<ul class="dropdown-menu right_munu" role="menu" aria-labelledby="dLabel">
+						<span class="arrow-1"></span>
+						<span class="arrow-2"></span>
+						<li>
+							<a href="javascript:;">
+								<span class="iconbox">
+									<i class="iconfont">&#xe627;</i>
+								</span>
+								<span class="right_txt">不限作品用途</span>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:;">
+								<span class="iconbox">
+									<i class="iconfont">&#xe62a;</i>
+									<i class="iconfont">&#xe61f;</i>
+									<i class="iconfont">&#xe629;</i>
+								</span>
+								<span class="right_txt">署名-禁止商业使用-禁止转载</span>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:;">
+								<span class="iconbox">
+									<i class="iconfont">&#xe62a;</i>
+									<i class="iconfont">&#xe61f;</i>
+									<i class="iconfont">&#xe628;</i>
+								</span>
+								<span class="right_txt">署名-禁止商业使用-禁止个人使用</span>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:;">
+								<span class="iconbox">
+									<i class="iconfont">&#xe62a;</i>
+									<i class="iconfont">&#xe61f;</i>
+								</span>
+								<span class="right_txt">署名-禁止商业使用</span>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:;">
+								<span class="iconbox">
+									<i class="iconfont">&#xe62a;</i>
+									<i class="iconfont">&#xe629;</i>
+								</span>
+								<span class="right_txt">署名-禁止匿名使用</span>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:;">
+								<span class="iconbox">
+									<i class="iconfont">&#xe62a;</i>
+								</span>
+								<span class="right_txt">仅自己可见</span>
+							</a>
+						</li>
+					</ul>
+				</div><!-- div.dropdown -->
+				<div class="pull-right share_btn_link">
+					<a href="#" style="color:#d1d1d1;"><i class="iconfont"></i></a>
+					<a href="#" style="color:#d1d1d1"><i class="iconfont"></i></a>
+					<a href="#" style="color:#d1d1d1"><i class="iconfont"></i></a>
+					<a href="#" style="color:#d1d1d1"><i class="iconfont"></i></a>
+				</div>
+			</div>
+		</div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn form_btn btn_default" data-dismiss="modal">取 消</button>
+        <button type="button" class="btn form_btn btn_primary">发 布</button>
+      </div>
+  </form>
+<!-- 编辑模态框 E（Modal） -->
+<block name="script">
+	<js href="__PLUGIN__/flat-ui/dist/js/flat-ui.js"/>
+	<script>
+      var states = new Bloodhound({
+        datumTokenizer: function(d) { return Bloodhound.tokenizers.whitespace(d.word); },
+        queryTokenizer: Bloodhound.tokenizers.whitespace,
+        limit: 4,
+        local: [
+          { word: "Alabama" },
+          { word: "Alaska" },
+          { word: "Arizona" },
+          { word: "Arkansas" },
+          { word: "California" },
+          { word: "Colorado" }
+        ]
+      });
+
+      states.initialize();
+
+      $('input.tagsinput_inp').tagsinput();
+
+      $('input.tagsinput_inp').tagsinput('input').typeahead(null, {
+        name: 'states',
+        displayKey: 'word',
+        source: states.ttAdapter()
+      });
+
+      var closeIcon = '<i class="iconfont">&#xe633;</i>';
+      $('#tagsinput_tagsinput').on("mouseenter",".label-info",function(){      	
+      	$(this).children('span[data-role="remove"]').html(closeIcon);
+      });
+      $('#tagsinput_tagsinput').on("mouseleave",".label-info",function(){      	
+      	$(this).children('span[data-role="remove"]').html(null);
+      });
+
+      // 权限设置下拉框
+      $('.js_rbdropdown li').click(function(){
+      	var _checkHtml = $(this).find('a').html();
+      	$('.js_dropshow').html(_checkHtml);
+      });
+    </script>
+</block>

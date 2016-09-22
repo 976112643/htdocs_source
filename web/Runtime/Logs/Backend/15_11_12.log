@@ -1,0 +1,667 @@
+[ 2015-11-12T10:09:06+08:00 ] ::1 /web/Backend/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000500s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002500s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001500s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002500s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000501s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001501s ]
+NOTIC: [8] Undefined variable: title D:\htdocs\web\Runtime\Cache\Backend\a918f0b5d7cff94bb9b0e45a1e4b5876.php 第 10 行.
+NOTIC: [8] Undefined variable: keywords D:\htdocs\web\Runtime\Cache\Backend\a918f0b5d7cff94bb9b0e45a1e4b5876.php 第 10 行.
+NOTIC: [8] Undefined variable: description D:\htdocs\web\Runtime\Cache\Backend\a918f0b5d7cff94bb9b0e45a1e4b5876.php 第 10 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.062008s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.062508s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003500s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2015-11-12T10:09:07+08:00 ] ::1 /web/Backend/Base/Public/verify.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001500s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001501s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002501s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2015-11-12T10:09:13+08:00 ] ::1 /web/Backend/Base/Public/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003500s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001501s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002501s ]
+
+[ 2015-11-12T10:09:13+08:00 ] ::1 /web/Backend/Base/Public/verify.html?0.8907213598460364
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000500s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001501s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005000s ]
+
+[ 2015-11-12T10:09:21+08:00 ] ::1 /web/Backend/Base/Public/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `sr_member` [ RunTime:0.0250s ]
+SQL: SHOW COLUMNS FROM `sr_role` [ RunTime:0.3155s ]
+SQL: SELECT member.id AS member_id,member.status AS member_status,member.rules AS member_rules,member.add_time AS member_add_time,member.id AS id,member.pid AS pid,member.path AS path,member.telephone AS telephone,member.email AS email,member.nickname AS nickname,member.username AS username,member.type AS type,member.deal_password AS deal_password,member.password AS password,member.role_id AS role_id,member.is_admin AS is_admin,member.description AS description,member.rules AS rules,member.register_ip AS register_ip,member.level AS level,member.integration AS integration,member.balance AS balance,member.freeze AS freeze,member.withdrawals AS withdrawals,member.wallet_status AS wallet_status,member.status AS status,member.tags AS tags,member.bank_cards AS bank_cards,member.add_time AS add_time,member.login_time AS login_time,member.login_ip AS login_ip,member.last_login_time AS last_login_time,member.last_login_ip AS last_login_ip,member.realname AS realname,member.code AS code,member.address_id AS address_id,member.has_buy AS has_buy,member.remark AS remark,role.id AS id,role.title AS title,role.description AS description,role.rules AS rules,role.status AS status,role.add_time AS add_time FROM sr_member member LEFT JOIN sr_role role ON member.role_id=role.id WHERE member.username = 'admin' AND member.password = '9db06bcff9248837f86d1a6bcf41c9e7' LIMIT 1   [ RunTime:0.3295s ]
+SQL: SELECT `id`,username as title FROM `sr_member` WHERE `id` = 1  [ RunTime:0.0130s ]
+SQL: SHOW COLUMNS FROM `sr_action_log` [ RunTime:0.1045s ]
+SQL: INSERT INTO `sr_action_log` (`member_id`,`username`,`url`,`table_name`,`table_id`,`description`,`ip`,`add_time`) VALUES ('1','admin','backend/base/public/login','member','1','[{\"id\":\"1\",\"title\":\"admin\"}]','0.0.0.0','2015-11-12 10:09:21') [ RunTime:0.0410s ]
+
+[ 2015-11-12T10:09:22+08:00 ] ::1 /web/Backend
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002500s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001501s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+SQL: SHOW COLUMNS FROM `sr_menu` [ RunTime:0.0195s ]
+SQL: SELECT * FROM `sr_menu` WHERE `status` = 1 ORDER BY sort desc  [ RunTime:0.6236s ]
+SQL: SELECT `url` FROM `sr_menu` WHERE `level` = 1 AND `status` = 1 LIMIT 1   [ RunTime:0.0490s ]
+
+[ 2015-11-12T10:09:23+08:00 ] ::1 /web/Backend/Base/Config/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001500s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001501s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+SQL: SHOW COLUMNS FROM `sr_config` [ RunTime:0.0160s ]
+NOTIC: [8] Undefined index: r D:\htdocs\web\Application\Common\Controller\CommonController.class.php 第 45 行.
+NOTIC: [8] Undefined index: p D:\htdocs\web\Application\Common\Controller\CommonController.class.php 第 47 行.
+SQL: SELECT * FROM `sr_config` WHERE `status` > -1 ORDER BY id asc LIMIT 0,20   [ RunTime:0.0355s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `sr_config` WHERE `status` > -1 LIMIT 1   [ RunTime:0.0135s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002001s ]
+NOTIC: [8] Undefined variable: title D:\htdocs\web\Runtime\Cache\Backend\62e423b53d9787dace9659796aa5824a.php 第 10 行.
+NOTIC: [8] Undefined variable: keywords D:\htdocs\web\Runtime\Cache\Backend\62e423b53d9787dace9659796aa5824a.php 第 10 行.
+NOTIC: [8] Undefined variable: description D:\htdocs\web\Runtime\Cache\Backend\62e423b53d9787dace9659796aa5824a.php 第 10 行.
+NOTIC: [8] Undefined variable: need_display D:\htdocs\web\Runtime\Cache\Backend\62e423b53d9787dace9659796aa5824a.php 第 90 行.
+NOTIC: [8] Undefined variable: need_display D:\htdocs\web\Runtime\Cache\Backend\62e423b53d9787dace9659796aa5824a.php 第 90 行.
+NOTIC: [8] Undefined index: _child D:\htdocs\web\Runtime\Cache\Backend\62e423b53d9787dace9659796aa5824a.php 第 90 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\htdocs\web\Runtime\Cache\Backend\62e423b53d9787dace9659796aa5824a.php 第 90 行.
+NOTIC: [8] Undefined index: _child D:\htdocs\web\Runtime\Cache\Backend\62e423b53d9787dace9659796aa5824a.php 第 90 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\htdocs\web\Runtime\Cache\Backend\62e423b53d9787dace9659796aa5824a.php 第 90 行.
+NOTIC: [8] Undefined index: _child D:\htdocs\web\Runtime\Cache\Backend\62e423b53d9787dace9659796aa5824a.php 第 90 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\htdocs\web\Runtime\Cache\Backend\62e423b53d9787dace9659796aa5824a.php 第 90 行.
+NOTIC: [8] Undefined variable: iframe_src D:\htdocs\web\Runtime\Cache\Backend\62e423b53d9787dace9659796aa5824a.php 第 241 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.231029s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.231529s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.001001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004500s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005000s ]
+
+[ 2015-11-12T10:09:47+08:00 ] ::1 /web/Backend/Base/Config/edit/id/34.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001500s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `sr_config` [ RunTime:0.0385s ]
+SQL: SELECT * FROM `sr_config` WHERE `id` = 34 LIMIT 1   [ RunTime:0.0145s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001001s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001501s ]
+NOTIC: [8] Undefined variable: title D:\htdocs\web\Runtime\Cache\Backend\17ae205f0205b7b07a7877c29a6cf08e.php 第 10 行.
+NOTIC: [8] Undefined variable: keywords D:\htdocs\web\Runtime\Cache\Backend\17ae205f0205b7b07a7877c29a6cf08e.php 第 10 行.
+NOTIC: [8] Undefined variable: description D:\htdocs\web\Runtime\Cache\Backend\17ae205f0205b7b07a7877c29a6cf08e.php 第 10 行.
+NOTIC: [8] Undefined variable: need_display D:\htdocs\web\Runtime\Cache\Backend\17ae205f0205b7b07a7877c29a6cf08e.php 第 90 行.
+NOTIC: [8] Undefined variable: need_display D:\htdocs\web\Runtime\Cache\Backend\17ae205f0205b7b07a7877c29a6cf08e.php 第 90 行.
+NOTIC: [8] Undefined index: _child D:\htdocs\web\Runtime\Cache\Backend\17ae205f0205b7b07a7877c29a6cf08e.php 第 90 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\htdocs\web\Runtime\Cache\Backend\17ae205f0205b7b07a7877c29a6cf08e.php 第 90 行.
+NOTIC: [8] Undefined index: _child D:\htdocs\web\Runtime\Cache\Backend\17ae205f0205b7b07a7877c29a6cf08e.php 第 90 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\htdocs\web\Runtime\Cache\Backend\17ae205f0205b7b07a7877c29a6cf08e.php 第 90 行.
+NOTIC: [8] Undefined index: _child D:\htdocs\web\Runtime\Cache\Backend\17ae205f0205b7b07a7877c29a6cf08e.php 第 90 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\htdocs\web\Runtime\Cache\Backend\17ae205f0205b7b07a7877c29a6cf08e.php 第 90 行.
+NOTIC: [8] Undefined index: _child D:\htdocs\web\Runtime\Cache\Backend\17ae205f0205b7b07a7877c29a6cf08e.php 第 90 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\htdocs\web\Runtime\Cache\Backend\17ae205f0205b7b07a7877c29a6cf08e.php 第 90 行.
+NOTIC: [8] Undefined index: _child D:\htdocs\web\Runtime\Cache\Backend\17ae205f0205b7b07a7877c29a6cf08e.php 第 90 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\htdocs\web\Runtime\Cache\Backend\17ae205f0205b7b07a7877c29a6cf08e.php 第 90 行.
+NOTIC: [8] Undefined variable: iframe_src D:\htdocs\web\Runtime\Cache\Backend\17ae205f0205b7b07a7877c29a6cf08e.php 第 241 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.139018s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.140018s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001500s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003501s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001500s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-11-12T10:10:01+08:00 ] ::1 /web/Backend/Base/LanguageLevel/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001500s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001500s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+SQL: SHOW COLUMNS FROM `sr_level` [ RunTime:0.0230s ]
+NOTIC: [8] Undefined index: r D:\htdocs\web\Application\Common\Controller\CommonController.class.php 第 45 行.
+NOTIC: [8] Undefined index: p D:\htdocs\web\Application\Common\Controller\CommonController.class.php 第 47 行.
+SQL: SELECT * FROM `sr_level` WHERE `type` = 3 AND `status` > -1 ORDER BY add_time desc LIMIT 0,20   [ RunTime:0.0590s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `sr_level` WHERE `type` = 3 AND `status` > -1 LIMIT 1   [ RunTime:0.0240s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Undefined variable: title D:\htdocs\web\Runtime\Cache\Backend\38190eee2c41f48cbe4168abb83a1919.php 第 10 行.
+NOTIC: [8] Undefined variable: keywords D:\htdocs\web\Runtime\Cache\Backend\38190eee2c41f48cbe4168abb83a1919.php 第 10 行.
+NOTIC: [8] Undefined variable: description D:\htdocs\web\Runtime\Cache\Backend\38190eee2c41f48cbe4168abb83a1919.php 第 10 行.
+NOTIC: [8] Undefined variable: need_display D:\htdocs\web\Runtime\Cache\Backend\38190eee2c41f48cbe4168abb83a1919.php 第 90 行.
+NOTIC: [8] Undefined variable: need_display D:\htdocs\web\Runtime\Cache\Backend\38190eee2c41f48cbe4168abb83a1919.php 第 90 行.
+NOTIC: [8] Undefined variable: need_display D:\htdocs\web\Runtime\Cache\Backend\38190eee2c41f48cbe4168abb83a1919.php 第 90 行.
+NOTIC: [8] Undefined variable: need_display D:\htdocs\web\Runtime\Cache\Backend\38190eee2c41f48cbe4168abb83a1919.php 第 90 行.
+NOTIC: [8] Undefined index: _child D:\htdocs\web\Runtime\Cache\Backend\38190eee2c41f48cbe4168abb83a1919.php 第 90 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\htdocs\web\Runtime\Cache\Backend\38190eee2c41f48cbe4168abb83a1919.php 第 90 行.
+NOTIC: [8] Undefined variable: need_display D:\htdocs\web\Runtime\Cache\Backend\38190eee2c41f48cbe4168abb83a1919.php 第 90 行.
+NOTIC: [8] Undefined variable: need_display D:\htdocs\web\Runtime\Cache\Backend\38190eee2c41f48cbe4168abb83a1919.php 第 90 行.
+NOTIC: [8] Undefined variable: need_display D:\htdocs\web\Runtime\Cache\Backend\38190eee2c41f48cbe4168abb83a1919.php 第 90 行.
+NOTIC: [8] Undefined variable: need_display D:\htdocs\web\Runtime\Cache\Backend\38190eee2c41f48cbe4168abb83a1919.php 第 90 行.
+NOTIC: [8] Undefined variable: need_display D:\htdocs\web\Runtime\Cache\Backend\38190eee2c41f48cbe4168abb83a1919.php 第 90 行.
+NOTIC: [8] Undefined variable: need_display D:\htdocs\web\Runtime\Cache\Backend\38190eee2c41f48cbe4168abb83a1919.php 第 90 行.
+NOTIC: [8] Undefined index: _child D:\htdocs\web\Runtime\Cache\Backend\38190eee2c41f48cbe4168abb83a1919.php 第 90 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\htdocs\web\Runtime\Cache\Backend\38190eee2c41f48cbe4168abb83a1919.php 第 90 行.
+NOTIC: [8] Undefined index: _child D:\htdocs\web\Runtime\Cache\Backend\38190eee2c41f48cbe4168abb83a1919.php 第 90 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\htdocs\web\Runtime\Cache\Backend\38190eee2c41f48cbe4168abb83a1919.php 第 90 行.
+NOTIC: [8] Undefined index: _child D:\htdocs\web\Runtime\Cache\Backend\38190eee2c41f48cbe4168abb83a1919.php 第 90 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\htdocs\web\Runtime\Cache\Backend\38190eee2c41f48cbe4168abb83a1919.php 第 90 行.
+NOTIC: [8] Undefined variable: iframe_src D:\htdocs\web\Runtime\Cache\Backend\38190eee2c41f48cbe4168abb83a1919.php 第 241 行.
+NOTIC: [8] Undefined variable: add_time_begin D:\htdocs\web\Runtime\Cache\Backend\38190eee2c41f48cbe4168abb83a1919.php 第 285 行.
+NOTIC: [8] Undefined variable: add_time_end D:\htdocs\web\Runtime\Cache\Backend\38190eee2c41f48cbe4168abb83a1919.php 第 286 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.148518s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.149519s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-11-12T10:10:13+08:00 ] ::1 /web/Backend/Base/Group/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001500s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001500s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002500s ]
+SQL: SHOW COLUMNS FROM `sr_role` [ RunTime:0.0250s ]
+NOTIC: [8] Undefined index: r D:\htdocs\web\Application\Common\Controller\CommonController.class.php 第 45 行.
+NOTIC: [8] Undefined index: p D:\htdocs\web\Application\Common\Controller\CommonController.class.php 第 47 行.
+SQL: SELECT * FROM `sr_role` WHERE `status` > -1 ORDER BY id asc LIMIT 0,20   [ RunTime:0.0100s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `sr_role` WHERE `status` > -1 LIMIT 1   [ RunTime:0.0145s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001500s ]
+NOTIC: [8] Undefined variable: title D:\htdocs\web\Runtime\Cache\Backend\59c8d6a5f639ebb8316f2859e2276588.php 第 10 行.
+NOTIC: [8] Undefined variable: keywords D:\htdocs\web\Runtime\Cache\Backend\59c8d6a5f639ebb8316f2859e2276588.php 第 10 行.
+NOTIC: [8] Undefined variable: description D:\htdocs\web\Runtime\Cache\Backend\59c8d6a5f639ebb8316f2859e2276588.php 第 10 行.
+NOTIC: [8] Undefined variable: need_display D:\htdocs\web\Runtime\Cache\Backend\59c8d6a5f639ebb8316f2859e2276588.php 第 90 行.
+NOTIC: [8] Undefined variable: need_display D:\htdocs\web\Runtime\Cache\Backend\59c8d6a5f639ebb8316f2859e2276588.php 第 90 行.
+NOTIC: [8] Undefined variable: need_display D:\htdocs\web\Runtime\Cache\Backend\59c8d6a5f639ebb8316f2859e2276588.php 第 90 行.
+NOTIC: [8] Undefined variable: need_display D:\htdocs\web\Runtime\Cache\Backend\59c8d6a5f639ebb8316f2859e2276588.php 第 90 行.
+NOTIC: [8] Undefined index: _child D:\htdocs\web\Runtime\Cache\Backend\59c8d6a5f639ebb8316f2859e2276588.php 第 90 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\htdocs\web\Runtime\Cache\Backend\59c8d6a5f639ebb8316f2859e2276588.php 第 90 行.
+NOTIC: [8] Undefined variable: need_display D:\htdocs\web\Runtime\Cache\Backend\59c8d6a5f639ebb8316f2859e2276588.php 第 90 行.
+NOTIC: [8] Undefined variable: need_display D:\htdocs\web\Runtime\Cache\Backend\59c8d6a5f639ebb8316f2859e2276588.php 第 90 行.
+NOTIC: [8] Undefined variable: need_display D:\htdocs\web\Runtime\Cache\Backend\59c8d6a5f639ebb8316f2859e2276588.php 第 90 行.
+NOTIC: [8] Undefined variable: need_display D:\htdocs\web\Runtime\Cache\Backend\59c8d6a5f639ebb8316f2859e2276588.php 第 90 行.
+NOTIC: [8] Undefined variable: need_display D:\htdocs\web\Runtime\Cache\Backend\59c8d6a5f639ebb8316f2859e2276588.php 第 90 行.
+NOTIC: [8] Undefined variable: need_display D:\htdocs\web\Runtime\Cache\Backend\59c8d6a5f639ebb8316f2859e2276588.php 第 90 行.
+NOTIC: [8] Undefined variable: need_display D:\htdocs\web\Runtime\Cache\Backend\59c8d6a5f639ebb8316f2859e2276588.php 第 90 行.
+NOTIC: [8] Undefined variable: need_display D:\htdocs\web\Runtime\Cache\Backend\59c8d6a5f639ebb8316f2859e2276588.php 第 90 行.
+NOTIC: [8] Undefined variable: need_display D:\htdocs\web\Runtime\Cache\Backend\59c8d6a5f639ebb8316f2859e2276588.php 第 90 行.
+NOTIC: [8] Undefined variable: need_display D:\htdocs\web\Runtime\Cache\Backend\59c8d6a5f639ebb8316f2859e2276588.php 第 90 行.
+NOTIC: [8] Undefined variable: need_display D:\htdocs\web\Runtime\Cache\Backend\59c8d6a5f639ebb8316f2859e2276588.php 第 90 行.
+NOTIC: [8] Undefined variable: need_display D:\htdocs\web\Runtime\Cache\Backend\59c8d6a5f639ebb8316f2859e2276588.php 第 90 行.
+NOTIC: [8] Undefined variable: need_display D:\htdocs\web\Runtime\Cache\Backend\59c8d6a5f639ebb8316f2859e2276588.php 第 90 行.
+NOTIC: [8] Undefined index: _child D:\htdocs\web\Runtime\Cache\Backend\59c8d6a5f639ebb8316f2859e2276588.php 第 90 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\htdocs\web\Runtime\Cache\Backend\59c8d6a5f639ebb8316f2859e2276588.php 第 90 行.
+NOTIC: [8] Undefined index: _child D:\htdocs\web\Runtime\Cache\Backend\59c8d6a5f639ebb8316f2859e2276588.php 第 90 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\htdocs\web\Runtime\Cache\Backend\59c8d6a5f639ebb8316f2859e2276588.php 第 90 行.
+NOTIC: [8] Undefined index: _child D:\htdocs\web\Runtime\Cache\Backend\59c8d6a5f639ebb8316f2859e2276588.php 第 90 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\htdocs\web\Runtime\Cache\Backend\59c8d6a5f639ebb8316f2859e2276588.php 第 90 行.
+NOTIC: [8] Undefined variable: iframe_src D:\htdocs\web\Runtime\Cache\Backend\59c8d6a5f639ebb8316f2859e2276588.php 第 241 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.149519s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.149519s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001501s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.001500s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004501s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001500s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002500s ]
+
+[ 2015-11-12T10:10:18+08:00 ] ::1 /web/Backend/Base/Group/access/id/7.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001500s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001500s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002500s ]
+SQL: SHOW COLUMNS FROM `sr_menu` [ RunTime:0.0405s ]
+SQL: SELECT * FROM `sr_menu` ORDER BY sort desc  [ RunTime:0.1305s ]
+SQL: SHOW COLUMNS FROM `sr_role` [ RunTime:0.0555s ]
+SQL: SELECT * FROM `sr_role` WHERE `id` = 7 LIMIT 1   [ RunTime:0.0060s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Undefined variable: title D:\htdocs\web\Runtime\Cache\Backend\5b5beee5a38dcbad6d7242c98087803c.php 第 10 行.
+NOTIC: [8] Undefined variable: keywords D:\htdocs\web\Runtime\Cache\Backend\5b5beee5a38dcbad6d7242c98087803c.php 第 10 行.
+NOTIC: [8] Undefined variable: description D:\htdocs\web\Runtime\Cache\Backend\5b5beee5a38dcbad6d7242c98087803c.php 第 10 行.
+NOTIC: [8] Undefined variable: need_display D:\htdocs\web\Runtime\Cache\Backend\5b5beee5a38dcbad6d7242c98087803c.php 第 90 行.
+NOTIC: [8] Undefined variable: need_display D:\htdocs\web\Runtime\Cache\Backend\5b5beee5a38dcbad6d7242c98087803c.php 第 90 行.
+NOTIC: [8] Undefined variable: need_display D:\htdocs\web\Runtime\Cache\Backend\5b5beee5a38dcbad6d7242c98087803c.php 第 90 行.
+NOTIC: [8] Undefined variable: need_display D:\htdocs\web\Runtime\Cache\Backend\5b5beee5a38dcbad6d7242c98087803c.php 第 90 行.
+NOTIC: [8] Undefined index: _child D:\htdocs\web\Runtime\Cache\Backend\5b5beee5a38dcbad6d7242c98087803c.php 第 90 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\htdocs\web\Runtime\Cache\Backend\5b5beee5a38dcbad6d7242c98087803c.php 第 90 行.
+NOTIC: [8] Undefined variable: need_display D:\htdocs\web\Runtime\Cache\Backend\5b5beee5a38dcbad6d7242c98087803c.php 第 90 行.
+NOTIC: [8] Undefined variable: need_display D:\htdocs\web\Runtime\Cache\Backend\5b5beee5a38dcbad6d7242c98087803c.php 第 90 行.
+NOTIC: [8] Undefined variable: need_display D:\htdocs\web\Runtime\Cache\Backend\5b5beee5a38dcbad6d7242c98087803c.php 第 90 行.
+NOTIC: [8] Undefined variable: need_display D:\htdocs\web\Runtime\Cache\Backend\5b5beee5a38dcbad6d7242c98087803c.php 第 90 行.
+NOTIC: [8] Undefined variable: need_display D:\htdocs\web\Runtime\Cache\Backend\5b5beee5a38dcbad6d7242c98087803c.php 第 90 行.
+NOTIC: [8] Undefined variable: need_display D:\htdocs\web\Runtime\Cache\Backend\5b5beee5a38dcbad6d7242c98087803c.php 第 90 行.
+NOTIC: [8] Undefined variable: need_display D:\htdocs\web\Runtime\Cache\Backend\5b5beee5a38dcbad6d7242c98087803c.php 第 90 行.
+NOTIC: [8] Undefined variable: need_display D:\htdocs\web\Runtime\Cache\Backend\5b5beee5a38dcbad6d7242c98087803c.php 第 90 行.
+NOTIC: [8] Undefined variable: need_display D:\htdocs\web\Runtime\Cache\Backend\5b5beee5a38dcbad6d7242c98087803c.php 第 90 行.
+NOTIC: [8] Undefined variable: need_display D:\htdocs\web\Runtime\Cache\Backend\5b5beee5a38dcbad6d7242c98087803c.php 第 90 行.
+NOTIC: [8] Undefined variable: need_display D:\htdocs\web\Runtime\Cache\Backend\5b5beee5a38dcbad6d7242c98087803c.php 第 90 行.
+NOTIC: [8] Undefined variable: need_display D:\htdocs\web\Runtime\Cache\Backend\5b5beee5a38dcbad6d7242c98087803c.php 第 90 行.
+NOTIC: [8] Undefined variable: need_display D:\htdocs\web\Runtime\Cache\Backend\5b5beee5a38dcbad6d7242c98087803c.php 第 90 行.
+NOTIC: [8] Undefined index: _child D:\htdocs\web\Runtime\Cache\Backend\5b5beee5a38dcbad6d7242c98087803c.php 第 90 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\htdocs\web\Runtime\Cache\Backend\5b5beee5a38dcbad6d7242c98087803c.php 第 90 行.
+NOTIC: [8] Undefined index: _child D:\htdocs\web\Runtime\Cache\Backend\5b5beee5a38dcbad6d7242c98087803c.php 第 90 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\htdocs\web\Runtime\Cache\Backend\5b5beee5a38dcbad6d7242c98087803c.php 第 90 行.
+NOTIC: [8] Undefined index: _child D:\htdocs\web\Runtime\Cache\Backend\5b5beee5a38dcbad6d7242c98087803c.php 第 90 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\htdocs\web\Runtime\Cache\Backend\5b5beee5a38dcbad6d7242c98087803c.php 第 90 行.
+NOTIC: [8] Undefined index: _child D:\htdocs\web\Runtime\Cache\Backend\5b5beee5a38dcbad6d7242c98087803c.php 第 90 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\htdocs\web\Runtime\Cache\Backend\5b5beee5a38dcbad6d7242c98087803c.php 第 90 行.
+NOTIC: [8] Undefined variable: iframe_src D:\htdocs\web\Runtime\Cache\Backend\5b5beee5a38dcbad6d7242c98087803c.php 第 241 行.
+NOTIC: [8] Undefined index: _child D:\htdocs\web\Runtime\Cache\Backend\5b5beee5a38dcbad6d7242c98087803c.php 第 303 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\htdocs\web\Runtime\Cache\Backend\5b5beee5a38dcbad6d7242c98087803c.php 第 303 行.
+NOTIC: [8] Undefined index: _child D:\htdocs\web\Runtime\Cache\Backend\5b5beee5a38dcbad6d7242c98087803c.php 第 303 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\htdocs\web\Runtime\Cache\Backend\5b5beee5a38dcbad6d7242c98087803c.php 第 303 行.
+NOTIC: [8] Undefined index: _child D:\htdocs\web\Runtime\Cache\Backend\5b5beee5a38dcbad6d7242c98087803c.php 第 303 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\htdocs\web\Runtime\Cache\Backend\5b5beee5a38dcbad6d7242c98087803c.php 第 303 行.
+NOTIC: [8] Undefined index: _child D:\htdocs\web\Runtime\Cache\Backend\5b5beee5a38dcbad6d7242c98087803c.php 第 303 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\htdocs\web\Runtime\Cache\Backend\5b5beee5a38dcbad6d7242c98087803c.php 第 303 行.
+NOTIC: [8] Undefined index: _child D:\htdocs\web\Runtime\Cache\Backend\5b5beee5a38dcbad6d7242c98087803c.php 第 303 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\htdocs\web\Runtime\Cache\Backend\5b5beee5a38dcbad6d7242c98087803c.php 第 303 行.
+NOTIC: [8] Undefined index: _child D:\htdocs\web\Runtime\Cache\Backend\5b5beee5a38dcbad6d7242c98087803c.php 第 303 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\htdocs\web\Runtime\Cache\Backend\5b5beee5a38dcbad6d7242c98087803c.php 第 303 行.
+NOTIC: [8] Undefined index: _child D:\htdocs\web\Runtime\Cache\Backend\5b5beee5a38dcbad6d7242c98087803c.php 第 303 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\htdocs\web\Runtime\Cache\Backend\5b5beee5a38dcbad6d7242c98087803c.php 第 303 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.155020s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.156020s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.001500s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003500s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002001s ]
+
+[ 2015-11-12T10:10:35+08:00 ] ::1 /web/Backend/Base/Group/access/id/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001500s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001500s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002501s ]
+SQL: SHOW COLUMNS FROM `sr_menu` [ RunTime:0.0250s ]
+SQL: SELECT * FROM `sr_menu` ORDER BY sort desc  [ RunTime:0.1945s ]
+SQL: SHOW COLUMNS FROM `sr_role` [ RunTime:0.0180s ]
+SQL: SELECT * FROM `sr_role` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0075s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Undefined variable: title D:\htdocs\web\Runtime\Cache\Backend\5b5beee5a38dcbad6d7242c98087803c.php 第 10 行.
+NOTIC: [8] Undefined variable: keywords D:\htdocs\web\Runtime\Cache\Backend\5b5beee5a38dcbad6d7242c98087803c.php 第 10 行.
+NOTIC: [8] Undefined variable: description D:\htdocs\web\Runtime\Cache\Backend\5b5beee5a38dcbad6d7242c98087803c.php 第 10 行.
+NOTIC: [8] Undefined variable: need_display D:\htdocs\web\Runtime\Cache\Backend\5b5beee5a38dcbad6d7242c98087803c.php 第 90 行.
+NOTIC: [8] Undefined variable: need_display D:\htdocs\web\Runtime\Cache\Backend\5b5beee5a38dcbad6d7242c98087803c.php 第 90 行.
+NOTIC: [8] Undefined variable: need_display D:\htdocs\web\Runtime\Cache\Backend\5b5beee5a38dcbad6d7242c98087803c.php 第 90 行.
+NOTIC: [8] Undefined variable: need_display D:\htdocs\web\Runtime\Cache\Backend\5b5beee5a38dcbad6d7242c98087803c.php 第 90 行.
+NOTIC: [8] Undefined index: _child D:\htdocs\web\Runtime\Cache\Backend\5b5beee5a38dcbad6d7242c98087803c.php 第 90 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\htdocs\web\Runtime\Cache\Backend\5b5beee5a38dcbad6d7242c98087803c.php 第 90 行.
+NOTIC: [8] Undefined variable: need_display D:\htdocs\web\Runtime\Cache\Backend\5b5beee5a38dcbad6d7242c98087803c.php 第 90 行.
+NOTIC: [8] Undefined variable: need_display D:\htdocs\web\Runtime\Cache\Backend\5b5beee5a38dcbad6d7242c98087803c.php 第 90 行.
+NOTIC: [8] Undefined variable: need_display D:\htdocs\web\Runtime\Cache\Backend\5b5beee5a38dcbad6d7242c98087803c.php 第 90 行.
+NOTIC: [8] Undefined variable: need_display D:\htdocs\web\Runtime\Cache\Backend\5b5beee5a38dcbad6d7242c98087803c.php 第 90 行.
+NOTIC: [8] Undefined variable: need_display D:\htdocs\web\Runtime\Cache\Backend\5b5beee5a38dcbad6d7242c98087803c.php 第 90 行.
+NOTIC: [8] Undefined variable: need_display D:\htdocs\web\Runtime\Cache\Backend\5b5beee5a38dcbad6d7242c98087803c.php 第 90 行.
+NOTIC: [8] Undefined variable: need_display D:\htdocs\web\Runtime\Cache\Backend\5b5beee5a38dcbad6d7242c98087803c.php 第 90 行.
+NOTIC: [8] Undefined variable: need_display D:\htdocs\web\Runtime\Cache\Backend\5b5beee5a38dcbad6d7242c98087803c.php 第 90 行.
+NOTIC: [8] Undefined variable: need_display D:\htdocs\web\Runtime\Cache\Backend\5b5beee5a38dcbad6d7242c98087803c.php 第 90 行.
+NOTIC: [8] Undefined variable: need_display D:\htdocs\web\Runtime\Cache\Backend\5b5beee5a38dcbad6d7242c98087803c.php 第 90 行.
+NOTIC: [8] Undefined variable: need_display D:\htdocs\web\Runtime\Cache\Backend\5b5beee5a38dcbad6d7242c98087803c.php 第 90 行.
+NOTIC: [8] Undefined variable: need_display D:\htdocs\web\Runtime\Cache\Backend\5b5beee5a38dcbad6d7242c98087803c.php 第 90 行.
+NOTIC: [8] Undefined variable: need_display D:\htdocs\web\Runtime\Cache\Backend\5b5beee5a38dcbad6d7242c98087803c.php 第 90 行.
+NOTIC: [8] Undefined index: _child D:\htdocs\web\Runtime\Cache\Backend\5b5beee5a38dcbad6d7242c98087803c.php 第 90 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\htdocs\web\Runtime\Cache\Backend\5b5beee5a38dcbad6d7242c98087803c.php 第 90 行.
+NOTIC: [8] Undefined index: _child D:\htdocs\web\Runtime\Cache\Backend\5b5beee5a38dcbad6d7242c98087803c.php 第 90 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\htdocs\web\Runtime\Cache\Backend\5b5beee5a38dcbad6d7242c98087803c.php 第 90 行.
+NOTIC: [8] Undefined index: _child D:\htdocs\web\Runtime\Cache\Backend\5b5beee5a38dcbad6d7242c98087803c.php 第 90 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\htdocs\web\Runtime\Cache\Backend\5b5beee5a38dcbad6d7242c98087803c.php 第 90 行.
+NOTIC: [8] Undefined index: _child D:\htdocs\web\Runtime\Cache\Backend\5b5beee5a38dcbad6d7242c98087803c.php 第 90 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\htdocs\web\Runtime\Cache\Backend\5b5beee5a38dcbad6d7242c98087803c.php 第 90 行.
+NOTIC: [8] Undefined variable: iframe_src D:\htdocs\web\Runtime\Cache\Backend\5b5beee5a38dcbad6d7242c98087803c.php 第 241 行.
+NOTIC: [8] Undefined index: _child D:\htdocs\web\Runtime\Cache\Backend\5b5beee5a38dcbad6d7242c98087803c.php 第 303 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\htdocs\web\Runtime\Cache\Backend\5b5beee5a38dcbad6d7242c98087803c.php 第 303 行.
+NOTIC: [8] Undefined index: _child D:\htdocs\web\Runtime\Cache\Backend\5b5beee5a38dcbad6d7242c98087803c.php 第 303 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\htdocs\web\Runtime\Cache\Backend\5b5beee5a38dcbad6d7242c98087803c.php 第 303 行.
+NOTIC: [8] Undefined index: _child D:\htdocs\web\Runtime\Cache\Backend\5b5beee5a38dcbad6d7242c98087803c.php 第 303 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\htdocs\web\Runtime\Cache\Backend\5b5beee5a38dcbad6d7242c98087803c.php 第 303 行.
+NOTIC: [8] Undefined index: _child D:\htdocs\web\Runtime\Cache\Backend\5b5beee5a38dcbad6d7242c98087803c.php 第 303 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\htdocs\web\Runtime\Cache\Backend\5b5beee5a38dcbad6d7242c98087803c.php 第 303 行.
+NOTIC: [8] Undefined index: _child D:\htdocs\web\Runtime\Cache\Backend\5b5beee5a38dcbad6d7242c98087803c.php 第 303 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\htdocs\web\Runtime\Cache\Backend\5b5beee5a38dcbad6d7242c98087803c.php 第 303 行.
+NOTIC: [8] Undefined index: _child D:\htdocs\web\Runtime\Cache\Backend\5b5beee5a38dcbad6d7242c98087803c.php 第 303 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\htdocs\web\Runtime\Cache\Backend\5b5beee5a38dcbad6d7242c98087803c.php 第 303 行.
+NOTIC: [8] Undefined index: _child D:\htdocs\web\Runtime\Cache\Backend\5b5beee5a38dcbad6d7242c98087803c.php 第 303 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\htdocs\web\Runtime\Cache\Backend\5b5beee5a38dcbad6d7242c98087803c.php 第 303 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.133017s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.134017s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.002001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003501s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001500s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-11-12T10:10:49+08:00 ] ::1 /web/Backend/Base/ActionLog/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001500s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Undefined index: r D:\htdocs\web\Application\Common\Controller\CommonController.class.php 第 45 行.
+NOTIC: [8] Undefined index: p D:\htdocs\web\Application\Common\Controller\CommonController.class.php 第 47 行.
+SQL: SHOW COLUMNS FROM `sr_action_log` [ RunTime:0.0275s ]
+SQL: SHOW COLUMNS FROM `sr_menu` [ RunTime:0.0200s ]
+SQL: SELECT action_log.url AS action_url,action_log.id AS id,action_log.member_id AS member_id,action_log.username AS username,action_log.url AS url,action_log.table_name AS table_name,action_log.table_id AS table_id,action_log.description AS description,action_log.ip AS ip,action_log.status AS status,action_log.add_time AS add_time,menu.log_title AS log_title FROM sr_action_log action_log LEFT JOIN sr_menu menu ON action_log.url=menu.url WHERE action_log.status = 1 ORDER BY action_log.id desc LIMIT 0,20   [ RunTime:0.1445s ]
+SQL: SELECT COUNT(*) AS tp_count FROM sr_action_log action_log LEFT JOIN sr_menu menu ON action_log.url=menu.url WHERE action_log.status = 1 LIMIT 1   [ RunTime:0.0685s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Undefined variable: title D:\htdocs\web\Runtime\Cache\Backend\64241d6d712ea348db0de4ab72120517.php 第 10 行.
+NOTIC: [8] Undefined variable: keywords D:\htdocs\web\Runtime\Cache\Backend\64241d6d712ea348db0de4ab72120517.php 第 10 行.
+NOTIC: [8] Undefined variable: description D:\htdocs\web\Runtime\Cache\Backend\64241d6d712ea348db0de4ab72120517.php 第 10 行.
+NOTIC: [8] Undefined variable: need_display D:\htdocs\web\Runtime\Cache\Backend\64241d6d712ea348db0de4ab72120517.php 第 90 行.
+NOTIC: [8] Undefined variable: need_display D:\htdocs\web\Runtime\Cache\Backend\64241d6d712ea348db0de4ab72120517.php 第 90 行.
+NOTIC: [8] Undefined variable: need_display D:\htdocs\web\Runtime\Cache\Backend\64241d6d712ea348db0de4ab72120517.php 第 90 行.
+NOTIC: [8] Undefined variable: need_display D:\htdocs\web\Runtime\Cache\Backend\64241d6d712ea348db0de4ab72120517.php 第 90 行.
+NOTIC: [8] Undefined index: _child D:\htdocs\web\Runtime\Cache\Backend\64241d6d712ea348db0de4ab72120517.php 第 90 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\htdocs\web\Runtime\Cache\Backend\64241d6d712ea348db0de4ab72120517.php 第 90 行.
+NOTIC: [8] Undefined variable: need_display D:\htdocs\web\Runtime\Cache\Backend\64241d6d712ea348db0de4ab72120517.php 第 90 行.
+NOTIC: [8] Undefined index: _child D:\htdocs\web\Runtime\Cache\Backend\64241d6d712ea348db0de4ab72120517.php 第 90 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\htdocs\web\Runtime\Cache\Backend\64241d6d712ea348db0de4ab72120517.php 第 90 行.
+NOTIC: [8] Undefined index: _child D:\htdocs\web\Runtime\Cache\Backend\64241d6d712ea348db0de4ab72120517.php 第 90 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\htdocs\web\Runtime\Cache\Backend\64241d6d712ea348db0de4ab72120517.php 第 90 行.
+NOTIC: [8] Undefined index: _child D:\htdocs\web\Runtime\Cache\Backend\64241d6d712ea348db0de4ab72120517.php 第 90 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\htdocs\web\Runtime\Cache\Backend\64241d6d712ea348db0de4ab72120517.php 第 90 行.
+NOTIC: [8] Undefined variable: iframe_src D:\htdocs\web\Runtime\Cache\Backend\64241d6d712ea348db0de4ab72120517.php 第 241 行.
+SQL: SELECT `title`,`url`,`id`,`pid` FROM `sr_menu`  [ RunTime:0.0755s ]
+NOTIC: [8] Undefined index: _child D:\htdocs\web\Runtime\Cache\Backend\64241d6d712ea348db0de4ab72120517.php 第 329 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\htdocs\web\Runtime\Cache\Backend\64241d6d712ea348db0de4ab72120517.php 第 329 行.
+NOTIC: [8] Undefined index: _child D:\htdocs\web\Runtime\Cache\Backend\64241d6d712ea348db0de4ab72120517.php 第 329 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\htdocs\web\Runtime\Cache\Backend\64241d6d712ea348db0de4ab72120517.php 第 329 行.
+NOTIC: [8] Undefined index: _child D:\htdocs\web\Runtime\Cache\Backend\64241d6d712ea348db0de4ab72120517.php 第 329 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\htdocs\web\Runtime\Cache\Backend\64241d6d712ea348db0de4ab72120517.php 第 329 行.
+NOTIC: [8] Undefined index: _child D:\htdocs\web\Runtime\Cache\Backend\64241d6d712ea348db0de4ab72120517.php 第 329 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\htdocs\web\Runtime\Cache\Backend\64241d6d712ea348db0de4ab72120517.php 第 329 行.
+NOTIC: [8] Undefined index: _child D:\htdocs\web\Runtime\Cache\Backend\64241d6d712ea348db0de4ab72120517.php 第 329 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\htdocs\web\Runtime\Cache\Backend\64241d6d712ea348db0de4ab72120517.php 第 329 行.
+NOTIC: [8] Undefined index: _child D:\htdocs\web\Runtime\Cache\Backend\64241d6d712ea348db0de4ab72120517.php 第 329 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\htdocs\web\Runtime\Cache\Backend\64241d6d712ea348db0de4ab72120517.php 第 329 行.
+NOTIC: [8] Undefined index: _child D:\htdocs\web\Runtime\Cache\Backend\64241d6d712ea348db0de4ab72120517.php 第 329 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\htdocs\web\Runtime\Cache\Backend\64241d6d712ea348db0de4ab72120517.php 第 329 行.
+NOTIC: [8] Undefined property: stdClass::$title D:\htdocs\web\Runtime\Cache\Backend\64241d6d712ea348db0de4ab72120517.php 第 335 行.
+NOTIC: [8] Undefined property: stdClass::$title D:\htdocs\web\Runtime\Cache\Backend\64241d6d712ea348db0de4ab72120517.php 第 335 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.285036s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.285536s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.001500s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003501s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001500s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002500s ]
+
+[ 2015-11-12T10:11:03+08:00 ] ::1 /web/Backend/Base/Member/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.015002s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.016002s ]
+NOTIC: [8] Undefined index: r D:\htdocs\web\Application\Common\Controller\CommonController.class.php 第 45 行.
+NOTIC: [8] Undefined index: p D:\htdocs\web\Application\Common\Controller\CommonController.class.php 第 47 行.
+SQL: SHOW COLUMNS FROM `sr_member` [ RunTime:0.0315s ]
+SQL: SHOW COLUMNS FROM `sr_role` [ RunTime:0.0175s ]
+SQL: SELECT member.id AS member_id,member.status AS member_status,member.rules AS member_rules,member.add_time AS member_add_time,member.id AS id,member.pid AS pid,member.path AS path,member.telephone AS telephone,member.email AS email,member.nickname AS nickname,member.username AS username,member.type AS type,member.deal_password AS deal_password,member.password AS password,member.role_id AS role_id,member.is_admin AS is_admin,member.description AS description,member.rules AS rules,member.register_ip AS register_ip,member.level AS level,member.integration AS integration,member.balance AS balance,member.freeze AS freeze,member.withdrawals AS withdrawals,member.wallet_status AS wallet_status,member.status AS status,member.tags AS tags,member.bank_cards AS bank_cards,member.add_time AS add_time,member.login_time AS login_time,member.login_ip AS login_ip,member.last_login_time AS last_login_time,member.last_login_ip AS last_login_ip,member.realname AS realname,member.code AS code,member.address_id AS address_id,member.has_buy AS has_buy,member.remark AS remark,role.id AS id,role.title AS title,role.description AS description,role.rules AS rules,role.status AS status,role.add_time AS add_time FROM sr_member member LEFT JOIN sr_role role ON member.role_id=role.id WHERE member.is_admin = 1 AND member.status > -1 ORDER BY member.id asc LIMIT 0,20   [ RunTime:0.0300s ]
+SQL: SELECT COUNT(*) AS tp_count FROM sr_member member LEFT JOIN sr_role role ON member.role_id=role.id WHERE member.is_admin = 1 AND member.status > -1 LIMIT 1   [ RunTime:0.0100s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Undefined variable: title D:\htdocs\web\Runtime\Cache\Backend\99980d4961fe0dda067e7afddbda55e0.php 第 10 行.
+NOTIC: [8] Undefined variable: keywords D:\htdocs\web\Runtime\Cache\Backend\99980d4961fe0dda067e7afddbda55e0.php 第 10 行.
+NOTIC: [8] Undefined variable: description D:\htdocs\web\Runtime\Cache\Backend\99980d4961fe0dda067e7afddbda55e0.php 第 10 行.
+NOTIC: [8] Undefined variable: need_display D:\htdocs\web\Runtime\Cache\Backend\99980d4961fe0dda067e7afddbda55e0.php 第 90 行.
+NOTIC: [8] Undefined variable: need_display D:\htdocs\web\Runtime\Cache\Backend\99980d4961fe0dda067e7afddbda55e0.php 第 90 行.
+NOTIC: [8] Undefined variable: need_display D:\htdocs\web\Runtime\Cache\Backend\99980d4961fe0dda067e7afddbda55e0.php 第 90 行.
+NOTIC: [8] Undefined index: _child D:\htdocs\web\Runtime\Cache\Backend\99980d4961fe0dda067e7afddbda55e0.php 第 90 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\htdocs\web\Runtime\Cache\Backend\99980d4961fe0dda067e7afddbda55e0.php 第 90 行.
+NOTIC: [8] Undefined index: _child D:\htdocs\web\Runtime\Cache\Backend\99980d4961fe0dda067e7afddbda55e0.php 第 90 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\htdocs\web\Runtime\Cache\Backend\99980d4961fe0dda067e7afddbda55e0.php 第 90 行.
+NOTIC: [8] Undefined index: _child D:\htdocs\web\Runtime\Cache\Backend\99980d4961fe0dda067e7afddbda55e0.php 第 90 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\htdocs\web\Runtime\Cache\Backend\99980d4961fe0dda067e7afddbda55e0.php 第 90 行.
+NOTIC: [8] Undefined variable: iframe_src D:\htdocs\web\Runtime\Cache\Backend\99980d4961fe0dda067e7afddbda55e0.php 第 241 行.
+NOTIC: [8] Undefined index: id D:\htdocs\web\Runtime\Cache\Backend\99980d4961fe0dda067e7afddbda55e0.php 第 300 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.143519s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.144519s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.005500s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001500s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002500s ]
+
+[ 2015-11-12T10:11:10+08:00 ] ::1 /web/Backend/Base/Member/edit/id/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000500s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001500s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `sr_member` [ RunTime:0.0550s ]
+SQL: SELECT * FROM `sr_member` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0150s ]
+SQL: SHOW COLUMNS FROM `sr_role` [ RunTime:0.0195s ]
+SQL: SELECT * FROM `sr_role` WHERE `status` = 1 ORDER BY id asc  [ RunTime:0.0105s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.009001s ]
+NOTIC: [8] Undefined variable: title D:\htdocs\web\Runtime\Cache\Backend\09142aea96b69231b4b89e94982e2298.php 第 10 行.
+NOTIC: [8] Undefined variable: keywords D:\htdocs\web\Runtime\Cache\Backend\09142aea96b69231b4b89e94982e2298.php 第 10 行.
+NOTIC: [8] Undefined variable: description D:\htdocs\web\Runtime\Cache\Backend\09142aea96b69231b4b89e94982e2298.php 第 10 行.
+NOTIC: [8] Undefined variable: need_display D:\htdocs\web\Runtime\Cache\Backend\09142aea96b69231b4b89e94982e2298.php 第 90 行.
+NOTIC: [8] Undefined variable: need_display D:\htdocs\web\Runtime\Cache\Backend\09142aea96b69231b4b89e94982e2298.php 第 90 行.
+NOTIC: [8] Undefined variable: need_display D:\htdocs\web\Runtime\Cache\Backend\09142aea96b69231b4b89e94982e2298.php 第 90 行.
+NOTIC: [8] Undefined index: _child D:\htdocs\web\Runtime\Cache\Backend\09142aea96b69231b4b89e94982e2298.php 第 90 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\htdocs\web\Runtime\Cache\Backend\09142aea96b69231b4b89e94982e2298.php 第 90 行.
+NOTIC: [8] Undefined index: _child D:\htdocs\web\Runtime\Cache\Backend\09142aea96b69231b4b89e94982e2298.php 第 90 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\htdocs\web\Runtime\Cache\Backend\09142aea96b69231b4b89e94982e2298.php 第 90 行.
+NOTIC: [8] Undefined index: _child D:\htdocs\web\Runtime\Cache\Backend\09142aea96b69231b4b89e94982e2298.php 第 90 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\htdocs\web\Runtime\Cache\Backend\09142aea96b69231b4b89e94982e2298.php 第 90 行.
+NOTIC: [8] Undefined index: _child D:\htdocs\web\Runtime\Cache\Backend\09142aea96b69231b4b89e94982e2298.php 第 90 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\htdocs\web\Runtime\Cache\Backend\09142aea96b69231b4b89e94982e2298.php 第 90 行.
+NOTIC: [8] Undefined index: _child D:\htdocs\web\Runtime\Cache\Backend\09142aea96b69231b4b89e94982e2298.php 第 90 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\htdocs\web\Runtime\Cache\Backend\09142aea96b69231b4b89e94982e2298.php 第 90 行.
+NOTIC: [8] Undefined variable: iframe_src D:\htdocs\web\Runtime\Cache\Backend\09142aea96b69231b4b89e94982e2298.php 第 241 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.134518s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.135518s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.001500s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001501s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002501s ]
+
+[ 2015-11-12T10:14:32+08:00 ] ::1 /web/Backend/Base/ActionLog/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001500s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001500s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002500s ]
+NOTIC: [8] Undefined index: r D:\htdocs\web\Application\Common\Controller\CommonController.class.php 第 45 行.
+NOTIC: [8] Undefined index: p D:\htdocs\web\Application\Common\Controller\CommonController.class.php 第 47 行.
+SQL: SHOW COLUMNS FROM `sr_action_log` [ RunTime:0.0195s ]
+SQL: SHOW COLUMNS FROM `sr_menu` [ RunTime:0.0170s ]
+SQL: SELECT action_log.url AS action_url,action_log.id AS id,action_log.member_id AS member_id,action_log.username AS username,action_log.url AS url,action_log.table_name AS table_name,action_log.table_id AS table_id,action_log.description AS description,action_log.ip AS ip,action_log.status AS status,action_log.add_time AS add_time,menu.log_title AS log_title FROM sr_action_log action_log LEFT JOIN sr_menu menu ON action_log.url=menu.url WHERE action_log.status = 1 ORDER BY action_log.id desc LIMIT 0,20   [ RunTime:0.1155s ]
+SQL: SELECT COUNT(*) AS tp_count FROM sr_action_log action_log LEFT JOIN sr_menu menu ON action_log.url=menu.url WHERE action_log.status = 1 LIMIT 1   [ RunTime:0.0610s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001500s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002500s ]
+NOTIC: [8] Undefined variable: title D:\htdocs\web\Runtime\Cache\Backend\64241d6d712ea348db0de4ab72120517.php 第 10 行.
+NOTIC: [8] Undefined variable: keywords D:\htdocs\web\Runtime\Cache\Backend\64241d6d712ea348db0de4ab72120517.php 第 10 行.
+NOTIC: [8] Undefined variable: description D:\htdocs\web\Runtime\Cache\Backend\64241d6d712ea348db0de4ab72120517.php 第 10 行.
+NOTIC: [8] Undefined variable: need_display D:\htdocs\web\Runtime\Cache\Backend\64241d6d712ea348db0de4ab72120517.php 第 90 行.
+NOTIC: [8] Undefined variable: need_display D:\htdocs\web\Runtime\Cache\Backend\64241d6d712ea348db0de4ab72120517.php 第 90 行.
+NOTIC: [8] Undefined variable: need_display D:\htdocs\web\Runtime\Cache\Backend\64241d6d712ea348db0de4ab72120517.php 第 90 行.
+NOTIC: [8] Undefined variable: need_display D:\htdocs\web\Runtime\Cache\Backend\64241d6d712ea348db0de4ab72120517.php 第 90 行.
+NOTIC: [8] Undefined index: _child D:\htdocs\web\Runtime\Cache\Backend\64241d6d712ea348db0de4ab72120517.php 第 90 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\htdocs\web\Runtime\Cache\Backend\64241d6d712ea348db0de4ab72120517.php 第 90 行.
+NOTIC: [8] Undefined variable: need_display D:\htdocs\web\Runtime\Cache\Backend\64241d6d712ea348db0de4ab72120517.php 第 90 行.
+NOTIC: [8] Undefined index: _child D:\htdocs\web\Runtime\Cache\Backend\64241d6d712ea348db0de4ab72120517.php 第 90 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\htdocs\web\Runtime\Cache\Backend\64241d6d712ea348db0de4ab72120517.php 第 90 行.
+NOTIC: [8] Undefined index: _child D:\htdocs\web\Runtime\Cache\Backend\64241d6d712ea348db0de4ab72120517.php 第 90 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\htdocs\web\Runtime\Cache\Backend\64241d6d712ea348db0de4ab72120517.php 第 90 行.
+NOTIC: [8] Undefined index: _child D:\htdocs\web\Runtime\Cache\Backend\64241d6d712ea348db0de4ab72120517.php 第 90 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\htdocs\web\Runtime\Cache\Backend\64241d6d712ea348db0de4ab72120517.php 第 90 行.
+NOTIC: [8] Undefined variable: iframe_src D:\htdocs\web\Runtime\Cache\Backend\64241d6d712ea348db0de4ab72120517.php 第 241 行.
+SQL: SELECT `title`,`url`,`id`,`pid` FROM `sr_menu`  [ RunTime:0.0525s ]
+NOTIC: [8] Undefined index: _child D:\htdocs\web\Runtime\Cache\Backend\64241d6d712ea348db0de4ab72120517.php 第 329 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\htdocs\web\Runtime\Cache\Backend\64241d6d712ea348db0de4ab72120517.php 第 329 行.
+NOTIC: [8] Undefined index: _child D:\htdocs\web\Runtime\Cache\Backend\64241d6d712ea348db0de4ab72120517.php 第 329 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\htdocs\web\Runtime\Cache\Backend\64241d6d712ea348db0de4ab72120517.php 第 329 行.
+NOTIC: [8] Undefined index: _child D:\htdocs\web\Runtime\Cache\Backend\64241d6d712ea348db0de4ab72120517.php 第 329 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\htdocs\web\Runtime\Cache\Backend\64241d6d712ea348db0de4ab72120517.php 第 329 行.
+NOTIC: [8] Undefined index: _child D:\htdocs\web\Runtime\Cache\Backend\64241d6d712ea348db0de4ab72120517.php 第 329 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\htdocs\web\Runtime\Cache\Backend\64241d6d712ea348db0de4ab72120517.php 第 329 行.
+NOTIC: [8] Undefined index: _child D:\htdocs\web\Runtime\Cache\Backend\64241d6d712ea348db0de4ab72120517.php 第 329 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\htdocs\web\Runtime\Cache\Backend\64241d6d712ea348db0de4ab72120517.php 第 329 行.
+NOTIC: [8] Undefined index: _child D:\htdocs\web\Runtime\Cache\Backend\64241d6d712ea348db0de4ab72120517.php 第 329 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\htdocs\web\Runtime\Cache\Backend\64241d6d712ea348db0de4ab72120517.php 第 329 行.
+NOTIC: [8] Undefined index: _child D:\htdocs\web\Runtime\Cache\Backend\64241d6d712ea348db0de4ab72120517.php 第 329 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\htdocs\web\Runtime\Cache\Backend\64241d6d712ea348db0de4ab72120517.php 第 329 行.
+NOTIC: [8] Undefined property: stdClass::$title D:\htdocs\web\Runtime\Cache\Backend\64241d6d712ea348db0de4ab72120517.php 第 335 行.
+NOTIC: [8] Undefined property: stdClass::$title D:\htdocs\web\Runtime\Cache\Backend\64241d6d712ea348db0de4ab72120517.php 第 335 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.222028s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.223529s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001501s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.001500s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004501s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.008001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.009001s ]
+
+[ 2015-11-12T10:25:07+08:00 ] ::1 /web/Backend/Base/ActionLog/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001500s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001500s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002500s ]
+NOTIC: [8] Undefined index: r D:\htdocs\web\Application\Common\Controller\CommonController.class.php 第 45 行.
+NOTIC: [8] Undefined index: p D:\htdocs\web\Application\Common\Controller\CommonController.class.php 第 47 行.
+SQL: SHOW COLUMNS FROM `sr_action_log` [ RunTime:0.0130s ]
+SQL: SHOW COLUMNS FROM `sr_menu` [ RunTime:0.0165s ]
+SQL: SELECT action_log.url AS action_url,action_log.id AS id,action_log.member_id AS member_id,action_log.username AS username,action_log.url AS url,action_log.table_name AS table_name,action_log.table_id AS table_id,action_log.description AS description,action_log.ip AS ip,action_log.status AS status,action_log.add_time AS add_time,menu.log_title AS log_title FROM sr_action_log action_log LEFT JOIN sr_menu menu ON action_log.url=menu.url WHERE action_log.status = 1 ORDER BY action_log.id desc LIMIT 0,20   [ RunTime:0.1330s ]
+SQL: SELECT COUNT(*) AS tp_count FROM sr_action_log action_log LEFT JOIN sr_menu menu ON action_log.url=menu.url WHERE action_log.status = 1 LIMIT 1   [ RunTime:0.0705s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001500s ]
+NOTIC: [8] Undefined variable: title D:\htdocs\web\Runtime\Cache\Backend\64241d6d712ea348db0de4ab72120517.php 第 10 行.
+NOTIC: [8] Undefined variable: keywords D:\htdocs\web\Runtime\Cache\Backend\64241d6d712ea348db0de4ab72120517.php 第 10 行.
+NOTIC: [8] Undefined variable: description D:\htdocs\web\Runtime\Cache\Backend\64241d6d712ea348db0de4ab72120517.php 第 10 行.
+NOTIC: [8] Undefined variable: need_display D:\htdocs\web\Runtime\Cache\Backend\64241d6d712ea348db0de4ab72120517.php 第 90 行.
+NOTIC: [8] Undefined variable: need_display D:\htdocs\web\Runtime\Cache\Backend\64241d6d712ea348db0de4ab72120517.php 第 90 行.
+NOTIC: [8] Undefined variable: need_display D:\htdocs\web\Runtime\Cache\Backend\64241d6d712ea348db0de4ab72120517.php 第 90 行.
+NOTIC: [8] Undefined variable: need_display D:\htdocs\web\Runtime\Cache\Backend\64241d6d712ea348db0de4ab72120517.php 第 90 行.
+NOTIC: [8] Undefined index: _child D:\htdocs\web\Runtime\Cache\Backend\64241d6d712ea348db0de4ab72120517.php 第 90 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\htdocs\web\Runtime\Cache\Backend\64241d6d712ea348db0de4ab72120517.php 第 90 行.
+NOTIC: [8] Undefined variable: need_display D:\htdocs\web\Runtime\Cache\Backend\64241d6d712ea348db0de4ab72120517.php 第 90 行.
+NOTIC: [8] Undefined index: _child D:\htdocs\web\Runtime\Cache\Backend\64241d6d712ea348db0de4ab72120517.php 第 90 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\htdocs\web\Runtime\Cache\Backend\64241d6d712ea348db0de4ab72120517.php 第 90 行.
+NOTIC: [8] Undefined index: _child D:\htdocs\web\Runtime\Cache\Backend\64241d6d712ea348db0de4ab72120517.php 第 90 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\htdocs\web\Runtime\Cache\Backend\64241d6d712ea348db0de4ab72120517.php 第 90 行.
+NOTIC: [8] Undefined index: _child D:\htdocs\web\Runtime\Cache\Backend\64241d6d712ea348db0de4ab72120517.php 第 90 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\htdocs\web\Runtime\Cache\Backend\64241d6d712ea348db0de4ab72120517.php 第 90 行.
+NOTIC: [8] Undefined variable: iframe_src D:\htdocs\web\Runtime\Cache\Backend\64241d6d712ea348db0de4ab72120517.php 第 241 行.
+SQL: SELECT `title`,`url`,`id`,`pid` FROM `sr_menu`  [ RunTime:0.0775s ]
+NOTIC: [8] Undefined index: _child D:\htdocs\web\Runtime\Cache\Backend\64241d6d712ea348db0de4ab72120517.php 第 329 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\htdocs\web\Runtime\Cache\Backend\64241d6d712ea348db0de4ab72120517.php 第 329 行.
+NOTIC: [8] Undefined index: _child D:\htdocs\web\Runtime\Cache\Backend\64241d6d712ea348db0de4ab72120517.php 第 329 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\htdocs\web\Runtime\Cache\Backend\64241d6d712ea348db0de4ab72120517.php 第 329 行.
+NOTIC: [8] Undefined index: _child D:\htdocs\web\Runtime\Cache\Backend\64241d6d712ea348db0de4ab72120517.php 第 329 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\htdocs\web\Runtime\Cache\Backend\64241d6d712ea348db0de4ab72120517.php 第 329 行.
+NOTIC: [8] Undefined index: _child D:\htdocs\web\Runtime\Cache\Backend\64241d6d712ea348db0de4ab72120517.php 第 329 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\htdocs\web\Runtime\Cache\Backend\64241d6d712ea348db0de4ab72120517.php 第 329 行.
+NOTIC: [8] Undefined index: _child D:\htdocs\web\Runtime\Cache\Backend\64241d6d712ea348db0de4ab72120517.php 第 329 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\htdocs\web\Runtime\Cache\Backend\64241d6d712ea348db0de4ab72120517.php 第 329 行.
+NOTIC: [8] Undefined index: _child D:\htdocs\web\Runtime\Cache\Backend\64241d6d712ea348db0de4ab72120517.php 第 329 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\htdocs\web\Runtime\Cache\Backend\64241d6d712ea348db0de4ab72120517.php 第 329 行.
+NOTIC: [8] Undefined index: _child D:\htdocs\web\Runtime\Cache\Backend\64241d6d712ea348db0de4ab72120517.php 第 329 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\htdocs\web\Runtime\Cache\Backend\64241d6d712ea348db0de4ab72120517.php 第 329 行.
+NOTIC: [8] Undefined property: stdClass::$title D:\htdocs\web\Runtime\Cache\Backend\64241d6d712ea348db0de4ab72120517.php 第 335 行.
+NOTIC: [8] Undefined property: stdClass::$title D:\htdocs\web\Runtime\Cache\Backend\64241d6d712ea348db0de4ab72120517.php 第 335 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.247032s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.248032s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.001500s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.006000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.007501s ]
+

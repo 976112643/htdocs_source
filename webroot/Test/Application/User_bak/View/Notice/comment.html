@@ -1,0 +1,125 @@
+<extend name="Home@Public/body"/>
+<block name="style">
+	<css href="__CSS__/index.css"/>
+	<css href="__PLUGIN__/popover/dist/jquery.webui-popover.min.css"/>
+</block>
+<block name="body">
+	<!-- 主体部分 S-->
+	<div class="main">
+		<div class="container">
+			<div class="col-lg-9 clearfix">
+				<div class="notice_content">
+					<div class="title clearfix">
+						<h4 class="pull-left">通知</h4>
+						<div class="notice_nav pull-right">
+							<a href="<?=U('User/Notice/index')?>">主页</a>
+							<a href="<?=U('User/Notice/comment')?>" class="active">评论</a>
+						</div>
+					</div>
+					<div class="content_body">
+						<div class="con_box">
+							<div class="date_tile">
+								<span class="date">4月21日</span>
+							</div>
+							<div class="notice_list reply_list">
+								<div class="con_item">
+									<div class="clearfix js_comment_info">
+										<div class="user_img pull-left">
+											<img src="__IMG__/user-img1.jpg" class="img-responsive" alt="">
+										</div>
+										<div class="item_text pull-left">
+											<a href="#" class="who">林夕凡</a> 
+											在
+											<a href="#" class="where">图片：早安上海</a> 
+											中回复了您：
+											<p>厉害，拍的真好</p>
+										</div>
+										<div class="attent_whoimg pull-right">
+											<img src="__IMG__/user-img5.jpg" class="img-responsive" alt="">
+										</div>
+										<div class="btn_group pull-right">
+											<a href="#">加黑</a> 
+											<a href="#" class="reply_btn js_reply_c">回复</a>
+										</div>
+									</div>
+									<form action="<?=('comment')?>" class="input_bar js_input_bar clearfix">
+										<input type="text" class="form-control txt_input js_txt_input pull-left">
+										<button class="btn btn-primary btn_comment js_btn_comment pull-right">回复</button>
+									</form>
+								</div>
+								<div class="con_item clearfix">
+									<div class="user_img pull-left">
+										<img src="__IMG__/user-img1.jpg" class="img-responsive" alt="">
+									</div>
+									<div class="item_text pull-left">
+										<a href="#" class="who">林夕凡</a> 
+										在
+										<a href="#" class="where">图片：早安上海</a> 
+										中回复了您：
+										<p>写的很好。</p>
+									</div>
+									<div class="attent_whoimg pull-right">
+										<img src="__IMG__/user-img5.jpg" class="img-responsive" alt="">
+									</div>
+									<div class="btn_group pull-right">
+										<a href="#">加黑</a> 
+										<a href="#" class="reply_btn">回复</a>
+									</div>
+								</div>
+								<div class="con_item clearfix">
+									<div class="user_img pull-left">
+										<img src="__IMG__/user-img1.jpg" class="img-responsive" alt="">
+									</div>
+									<div class="item_text pull-left">
+										<a href="#" class="who">林夕凡</a> 
+										在
+										<a href="#" class="where">图片：早安上海</a> 
+										中回复了您：
+										<p>写的很好。</p>
+									</div>
+									<div class="attent_whoimg pull-right">
+										<img src="__IMG__/user-img5.jpg" class="img-responsive" alt="">
+									</div>
+									<div class="btn_group pull-right">
+										<a href="#">加黑</a> 
+										<a href="#" class="reply_btn">回复</a>
+									</div>
+								</div>
+								<div class="con_item clearfix">
+									<div class="user_img pull-left">
+										<img src="__IMG__/user-img1.jpg" class="img-responsive" alt="">
+									</div>
+									<div class="item_text pull-left">
+										<a href="#" class="who">林夕凡</a> 
+										在
+										<a href="#" class="where">图片：早安上海</a> 
+										中回复了您：
+										<p>写的很好。</p>
+									</div>
+									<div class="attent_whoimg pull-right">
+										<img src="__IMG__/user-img5.jpg" class="img-responsive" alt="">
+									</div>
+									<div class="btn_group pull-right">
+										<a href="#">加黑</a> 
+										<a href="#" class="reply_btn">回复</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-3">
+				<div class="user_info">
+					<include file="Home@Public/sidebar"/>
+				</div>
+			</div>		
+		</div>
+	</div>
+	<include file="Home@Public/footer"/>
+	<script>
+		$('.js_reply_c').click(function(){
+			$(this).parents('.js_comment_info').siblings('.js_input_bar').slideToggle();
+		});
+	</script>	
+</block>

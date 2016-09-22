@@ -1,0 +1,57 @@
+
+<section class="content js_box">
+	<div class="row">
+		<!-- left column -->
+		<div class="col-md-12">
+			<!-- general form elements -->
+			<div class="box box-primary">
+				<!-- form start -->
+				
+				<div class="box-body">
+					<div class="form-group js_send_one">
+						<label>收件人：</label><span><?=$info['now']['username_info']['mobile']?></span>
+							
+					</div>
+					<div class="form-group">
+						<label>标题：</label> <span><?=$info['now']['title']?></span>
+					</div>
+					<div class="form-group">
+						<label>内容：</label>
+						<span><?=$info['now']['content']?></span>
+						
+					</div>
+				
+				</div>
+					
+				
+			</div>
+			<div class="form-group">
+				<span class="text-left">上一篇:<a class="js_page_content" data-id="<?=$info['prev']['msg_id']?>"><?=$info['prev']['title']?></a></span>
+				<span class="text-right">下一篇:<a class="js_page_content" href="javascript:;"data-id="<?=$info['next']['msg_id']?>"><?=$info['next']['title']?></a></span>
+			</div>
+			<!-- /.box -->
+		<!--/.col (left) -->
+		</div>
+	</div>
+	<!-- /.row -->
+	
+</section>
+
+<script>
+	$(function(){
+		$('.js_box').on('click','.js_page_content',function(){
+			var id = $(this).data('id');
+			$.ajax({
+				type:'post',
+				dataType :'json',
+				data :{operate:'ajax_next',id:id},
+				success:function(data){
+					$('.js_box').html($(data.content).html());
+				},
+				
+			});
+			return false;
+		})
+	})
+</script>
+

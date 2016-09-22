@@ -1,0 +1,47 @@
+/* 
+* @Author: cnsunrun
+* @Date:   2016-04-08 09:26:40
+* @Last Modified by:   cnsunrun
+* @Last Modified time: 2016-04-08 10:13:27
+*/
+.header {position: absolute;top: 0;left: 0;z-index: 9;}
+.content {position: relative;}
+.foot {background: #fff;position: relative;padding:50px 50px 30px;}
+.foot img {position:absolute; top: 0;left: 0;transform: translateY(-100%);}
+.idown_btn { width: 182px;height: 36px;background-color:#3583db;border-color: #3583db;color:#fff;margin:0 auto 20px;display: block}
+.adown_btn { width: 182px;height: 36px;background-color:#e33131;border-color: #e33131;color:#fff;margin:0 auto 20px;display: block}
+.wx_modal{display:inline;}
+body{
+  background: #fff!important;
+}
+.header_nav{
+  display: none;
+}
+.wrap{
+  padding-bottom: 0;
+}
+.c_444 {
+  color:#444;
+}
+.c_f97c06 {
+  color:#f97c06;
+}
+.dialog_lh {
+  background: #fff;
+  padding: 10px;
+  position: absolute;
+  border-radius: 10px;
+  top:30px;
+  right:10px;
+}
+.dialog_lh::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-width: 12px;
+  border-color: transparent transparent #fff transparent;
+  border-style: solid;
+  top:-24px;
+  right: 10px;
+}

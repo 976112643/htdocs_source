@@ -1,0 +1,39 @@
+				<div class="toptitle" style="background-image:url(__IMG__/recomm_title.jpg)"></div>
+				<div class="recommlist">
+					<ul class="clearfix">
+					<?php 
+						foreach($result as $value){
+					?>
+						<li>
+							<div class="shopbox">
+								<div class="imgbox">
+									<a href="<?=U('Home/Shop/detail/shop_id/'.$value['id'])?>" class="img"><img width="228" height="158" src="__ROOT__/<?=$value['logo']?>" alt="<?=$value['title']?>" /></a>
+								</div>
+								<div class="descbox">
+									<a href="<?=U('Home/Shop/detail/shop_id/'.$value['id'])?>" class="title"><?=$value['title']?></a>
+									<span>主要服务:<?=$value['main_business']?></span>
+									<ul class="databox clearfix">
+										<li class="pull-left">好评率：<strong><?=$value['star_rating']?>%</strong></li>
+										<li class="pull-right">成交：<span><?=$value['sales']?>笔</span></li>
+									</ul>
+									<ul class="pricebox">
+									<?php
+										foreach($value['subset'] as $val){
+									?>
+										<li class="clearfix">
+											<span class="col-xs-4 price ellipsis" title="￥<?=$val['selling_price']?>">￥<?=$val['selling_price']?></span>
+											<a href="<?=U('Home/Product/detail/id/'.$val['id'])?>" class="col-xs-8 message ellipsis" title="<?=$val['title']?>"><?=$val['title']?></a>
+										</li>
+						
+									<?php
+										}
+									?>
+									</ul>
+								</div>
+							</div>
+						</li>
+					<?php 
+						}
+					?>
+					</ul>
+				</div>

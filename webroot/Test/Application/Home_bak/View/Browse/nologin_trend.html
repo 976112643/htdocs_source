@@ -1,0 +1,548 @@
+<extend name="Home@Public/nologin_body"/>
+<block name="style">
+	<css href="__CSS__/index.css"/>
+	<css href="__CSS__/browse.css"/>
+	<css href="__PLUGIN__/popover/dist/jquery.webui-popover.min.css"/>
+</block>
+<block name="body">
+	<include file="Public/browse_nav" />
+	<!-- 趋势页主体 S-->
+	<div class="trend_main">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-3">
+					<div class="trend_conbox">
+						<div class="title clearfix">
+							<div class="user_image" style="background-image:url('__IMG__/user_image1.jpg')">
+								
+							</div>
+							<a href="javascript:;" data-url="<?=U('Home/Index/about')?>" class="user_name js_Personame" data-target="webuiPopover10">
+								MAX
+							</a>
+							<button class="attention_btn btn btn-default js_atten_btn">
+								<i class="iconfont">&#xe618;</i> 关注
+							</button>
+						</div>
+						<div class="content">
+							<div class="img_box js_trendimg">
+								<a href="#" data-toggle="modal" data-target="#newUserModal">
+								<img src="__IMG__/trend-img1.jpg" class="img-responsive" alt="">
+								</a>
+							</div>
+							<div class="txt_box">
+								<p>小炸弹，白又灰，两只耳朵竖起来～</p>
+							</div>
+						</div>
+						<div class="footer">
+							<i class="iconfont js_icon_like icon-aixinshixin"></i>
+							<span>314人喜欢</span>
+						</div>
+					</div>
+
+					<div class="trend_conbox">
+						<div class="title clearfix">
+							<div class="user_image" style="background-image:url('__IMG__/user_image2.jpg')">
+								
+							</div>
+							<a href="javascript:;" data-url="<?=U('Home/Index/about')?>" class="user_name js_Personame" data-target="webuiPopover10">
+								叁玖莲生Ken.
+							</a>
+							<button class="attention_btn btn btn-default js_atten_btn">
+								<i class="iconfont">&#xe618;</i> 关注
+							</button>
+						</div>
+						<div class="content">
+							<div class="img_box js_trendimg">
+								<a href="#" data-toggle="modal" data-target="#newUserModal">
+								<img src="__IMG__/trend-img2.jpg" class="img-responsive" alt="">
+								</a>
+							</div>
+						</div>
+						<div class="footer">
+							<i class="iconfont js_icon_like icon-xihuan"></i>
+							<span>127人喜欢</span>
+						</div>
+					</div>
+
+					<div class="trend_conbox">
+						<div class="title clearfix">
+							<div class="user_image" style="background-image:url('__IMG__/user_image3.jpg')">
+								
+							</div>
+							<a href="javascript:;" data-url="<?=U('Home/Index/about')?>" class="user_name js_Personame" data-target="webuiPopover10">
+								叁玖莲生Ken.
+							</a>
+							<button class="attention_btn btn btn-default js_atten_btn">
+								<i class="iconfont">&#xe618;</i> 关注
+							</button>
+						</div>
+						<div class="content">
+							<div class="img_box js_trendimg">
+								<a href="#" data-toggle="modal" data-target="#newUserModal">
+								<img src="__IMG__/trend-img3.jpg" class="img-responsive" alt="">
+								</a>
+							</div>
+							<div class="txt_box">
+								<p>人来人往的车站，到处都是行色匆匆的旅人。</p>
+							</div>
+						</div>
+						<div class="footer">
+							<i class="iconfont js_icon_like icon-xihuan"></i>
+							<span>527人喜欢</span>
+						</div>
+					</div>
+
+					<div class="trend_conbox">
+						<div class="title clearfix">
+							<div class="user_image" style="background-image:url('__IMG__/user_image1.jpg')">
+								
+							</div>
+							<a href="javascript:;" data-url="<?=U('Home/Index/about')?>" class="user_name js_Personame" data-target="webuiPopover10">
+								叁玖莲生Ken.
+							</a>
+							<button class="dont_attention btn btn-default js_atten_btn">
+								取消关注
+							</button>
+						</div>
+						<div class="content">
+							<div class="img_box js_trendimg">
+								<a href="#" data-toggle="modal" data-target="#newUserModal">
+								<img src="__IMG__/trend-img4_long.jpg" class="img-responsive" alt="">
+								</a>
+							</div>
+							<div class="txt_box">
+								<p>小炸弹，白又灰，两只耳朵竖起来～</p>
+							</div>
+						</div>
+						<div class="footer">
+							<i class="iconfont js_icon_like icon-aixinshixin"></i>
+							<span>527人喜欢</span>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-3">
+					<div class="trend_conbox">
+						<div class="title clearfix">
+							<div class="user_image" style="background-image:url('__IMG__/user_image4.jpg')">
+								
+							</div>
+							<a href="javascript:;" data-url="<?=U('Home/Index/about')?>" class="user_name js_Personame" data-target="webuiPopover10">
+								布鲁兰
+							</a>
+							<button class="attention_btn btn btn-default js_atten_btn">
+								<i class="iconfont">&#xe618;</i> 关注
+							</button>
+						</div>
+						<div class="content">
+							<div class="img_box js_trendimg">
+								<a href="#" data-toggle="modal" data-target="#newUserModal">
+								<img src="__IMG__/trend-img5.jpg" class="img-responsive" alt="">
+								</a>
+							</div>
+						</div>
+						<div class="footer">
+							<i class="iconfont js_icon_like icon-xihuan"></i>
+							<span>226人喜欢</span>
+						</div>
+					</div>
+
+					<div class="trend_conbox">
+						<div class="title clearfix">
+							<div class="user_image" style="background-image:url('__IMG__/user_image1.jpg')">
+								
+							</div>
+							<a href="javascript:;" data-url="<?=U('Home/Index/about')?>" class="user_name js_Personame" data-target="webuiPopover10">
+								MAX
+							</a>
+							<button class="attention_btn btn btn-default js_atten_btn">
+								<i class="iconfont">&#xe618;</i> 关注
+							</button>
+						</div>
+						<div class="content">
+							<div class="img_box js_trendimg">
+								<a href="#" data-toggle="modal" data-target="#newUserModal">
+								<img src="__IMG__/trend-img6.jpg" class="img-responsive" alt="">
+								</a>
+							</div>
+							<div class="txt_box">
+								<p>我说小雏菊都闭上了昏昏欲睡的眼睛，你说夜来香又开放了层层叠叠的心。我说这是一个生机勃勃的暮春，你说这是一个诱人沉醉</p>
+							</div>
+						</div>
+						<div class="footer">
+							<i class="iconfont js_icon_like icon-aixinshixin"></i>
+							<span>226人喜欢</span>
+						</div>
+					</div>
+
+					<div class="trend_conbox">
+						<div class="title clearfix">
+							<div class="user_image" style="background-image:url('__IMG__/user_image4.jpg')">
+								
+							</div>
+							<a href="javascript:;" data-url="<?=U('Home/Index/about')?>" class="user_name js_Personame" data-target="webuiPopover10">
+								布鲁兰
+							</a>
+							<button class="attention_btn btn btn-default js_atten_btn">
+								<i class="iconfont">&#xe618;</i> 关注
+							</button>
+						</div>
+						<div class="content">
+							<div class="img_box js_trendimg">
+								<a href="#" data-toggle="modal" data-target="#newUserModal">
+								<img src="__IMG__/trend-img7.jpg" class="img-responsive" alt="">
+								</a>
+							</div>
+						</div>
+						<div class="footer">
+							<i class="iconfont js_icon_like icon-xihuan"></i>
+							<span>126人喜欢</span>
+						</div>
+					</div>
+
+					<div class="trend_conbox">
+						<div class="title clearfix">
+							<div class="user_image" style="background-image:url('__IMG__/user_image1.jpg')">
+								
+							</div>
+							<a href="javascript:;" data-url="<?=U('Home/Index/about')?>" class="user_name js_Personame" data-target="webuiPopover10">
+								MAX
+							</a>
+							<button class="attention_btn btn btn-default js_atten_btn">
+								<i class="iconfont">&#xe618;</i> 关注
+							</button>
+						</div>
+						<div class="content">
+							<div class="img_box js_trendimg">
+								<a href="#" data-toggle="modal" data-target="#newUserModal">
+								<img src="__IMG__/trend-img8.jpg" class="img-responsive" alt="">
+								</a>
+							</div>
+							<div class="txt_box">
+								<p>我说小雏菊都闭上了昏昏欲睡的眼睛，你说夜来香又开放了层层叠叠的心。我说这是一个生机勃勃的暮春，你说这是一个诱人沉醉</p>
+							</div>
+						</div>
+						<div class="footer">
+							<i class="iconfont js_icon_like icon-aixinshixin"></i>
+							<span>114人喜欢</span>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-3">
+					<div class="trend_conbox">
+						<div class="title clearfix">
+							<div class="user_image" style="background-image:url('__IMG__/user_image5.jpg')">
+								
+							</div>
+							<a href="javascript:;" data-url="<?=U('Home/Index/about')?>" class="user_name js_Personame" data-target="webuiPopover10">
+								Cavatina
+							</a>
+							<button class="attention_btn btn btn-default js_atten_btn">
+								<i class="iconfont">&#xe618;</i> 关注
+							</button>
+						</div>
+						<div class="content">
+							<div class="img_box js_trendimg">
+								<img src="__IMG__/trend-img9.jpg" class="img-responsive" alt="">
+							</div>
+							<div class="txt_box">
+								<p>和淑喵太太玩耍了一天*/ω＼*)晚上风很大，可是天空特别特别美！</p>
+							</div>
+						</div>
+						<div class="footer">
+							<i class="iconfont js_icon_like icon-xihuan"></i>
+							<span>427人喜欢</span>
+						</div>
+					</div>
+
+					<div class="trend_conbox">
+						<div class="title clearfix">
+							<div class="user_image" style="background-image:url('__IMG__/user_image4.jpg')">
+								
+							</div>
+							<a href="javascript:;" data-url="<?=U('Home/Index/about')?>" class="user_name js_Personame" data-target="webuiPopover10">
+								布鲁兰
+							</a>
+							<button class="attention_btn btn btn-default js_atten_btn">
+								<i class="iconfont">&#xe618;</i> 关注
+							</button>
+						</div>
+						<div class="content">
+							<div class="img_box js_trendimg">
+								<img src="__IMG__/trend-img10.jpg" class="img-responsive" alt="">
+							</div>
+						</div>
+						<div class="footer">
+							<i class="iconfont js_icon_like icon-xihuan"></i>
+							<span>126人喜欢</span>
+						</div>
+					</div>
+
+					<div class="trend_conbox">
+						<div class="title clearfix">
+							<div class="user_image" style="background-image:url('__IMG__/user_image1.jpg')">
+								
+							</div>
+							<a href="javascript:;" data-url="<?=U('Home/Index/about')?>" class="user_name js_Personame" data-target="webuiPopover10">
+								MAX
+							</a>
+							<button class="attention_btn btn btn-default js_atten_btn">
+								<i class="iconfont">&#xe618;</i> 关注
+							</button>
+						</div>
+						<div class="content">
+							<div class="img_box js_trendimg">
+								<img src="__IMG__/trend-img11.jpg" class="img-responsive" alt="">
+							</div>
+							<div class="txt_box">
+								<p>小炸弹，白又灰，两只耳朵竖起来～</p>
+							</div>
+						</div>
+						<div class="footer">
+							<i class="iconfont js_icon_like icon-aixinshixin"></i>
+							<span>314人喜欢</span>
+						</div>
+					</div>
+
+					<div class="trend_conbox">
+						<div class="title clearfix">
+							<div class="user_image" style="background-image:url('__IMG__/user_image4.jpg')">
+								
+							</div>
+							<a href="javascript:;" data-url="<?=U('Home/Index/about')?>" class="user_name js_Personame" data-target="webuiPopover10">
+								布鲁兰
+							</a>
+							<button class="attention_btn btn btn-default js_atten_btn">
+								<i class="iconfont">&#xe618;</i> 关注
+							</button>
+						</div>
+						<div class="content">
+							<div class="img_box js_trendimg">
+								<img src="__IMG__/trend-img12.jpg" class="img-responsive" alt="">
+							</div>
+						</div>
+						<div class="footer">
+							<i class="iconfont js_icon_like icon-xihuan"></i>
+							<span>126人喜欢</span>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-3">
+					<div class="trend_conbox">
+						<div class="title clearfix">
+							<div class="user_image" style="background-image:url('__IMG__/user_image3.jpg')">
+								
+							</div>
+							<a href="javascript:;" data-url="<?=U('Home/Index/about')?>" class="user_name js_Personame" data-target="webuiPopover10">
+								叁玖莲生Ken.
+							</a>
+							<button class="attention_btn btn btn-default js_atten_btn">
+								<i class="iconfont">&#xe618;</i> 关注
+							</button>
+						</div>
+						<div class="content">
+							<div class="img_box js_trendimg">
+								<img src="__IMG__/trend-img3.jpg" class="img-responsive" alt="">
+							</div>
+							<div class="txt_box">
+								<p>人来人往的车站，到处都是行色匆匆的旅人。</p>
+							</div>
+						</div>
+						<div class="footer">
+							<i class="iconfont js_icon_like icon-xihuan"></i>
+							<span>527人喜欢</span>
+						</div>
+					</div>
+
+					<div class="trend_conbox">
+						<div class="title clearfix">
+							<div class="user_image" style="background-image:url('__IMG__/user_image4.jpg')">
+								
+							</div>
+							<a href="javascript:;" data-url="<?=U('Home/Index/about')?>" class="user_name js_Personame" data-target="webuiPopover10">
+								布鲁兰
+							</a>
+							<button class="attention_btn btn btn-default js_atten_btn">
+								<i class="iconfont">&#xe618;</i> 关注
+							</button>
+						</div>
+						<div class="content">
+							<div class="img_box js_trendimg">
+								<img src="__IMG__/trend-img13.jpg" class="img-responsive" alt="">
+							</div>
+						</div>
+						<div class="footer">
+							<i class="iconfont js_icon_like icon-xihuan"></i>
+							<span>126人喜欢</span>
+						</div>
+					</div>
+
+					<div class="trend_conbox">
+						<div class="title clearfix">
+							<div class="user_image" style="background-image:url('__IMG__/user_image1.jpg')">
+								
+							</div>
+							<a href="javascript:;" data-url="<?=U('Home/Index/about')?>" class="user_name js_Personame" data-target="webuiPopover10">
+								MAX
+							</a>
+							<button class="attention_btn btn btn-default js_atten_btn">
+								<i class="iconfont">&#xe618;</i> 关注
+							</button>
+						</div>
+						<div class="content">
+							<div class="img_box js_trendimg">
+								<img src="__IMG__/trend-img14.jpg" class="img-responsive" alt="">
+							</div>
+							<div class="txt_box">
+								<p>我说小雏菊都闭上了昏昏欲睡的眼睛，你说夜来香又开放了层层叠叠的心。我说这是一个生机勃勃的暮春，你说这是一个诱人沉醉</p>
+							</div>
+						</div>
+						<div class="footer">
+							<i class="iconfont js_icon_like icon-aixinshixin"></i>
+							<span>114人喜欢</span>
+						</div>
+					</div>
+
+					<div class="trend_conbox">
+						<div class="title clearfix">
+							<div class="user_image" style="background-image:url('__IMG__/user_image3.jpg')">
+								
+							</div>
+							<a href="javascript:;" data-url="<?=U('Home/Index/about')?>" class="user_name js_Personame" data-target="webuiPopover10">
+								叁玖莲生Ken.
+							</a>
+							<button class="attention_btn btn btn-default js_atten_btn">
+								<i class="iconfont">&#xe618;</i> 关注
+							</button>
+						</div>
+						<div class="content">
+							<div class="img_box js_trendimg">
+								<a class="dialog" dialog-id="info_dialog" func="About" href="<?=U('about')?>"><img src="__IMG__/trend-img15.jpg" class="img-responsive" alt=""></a>
+
+							</div>
+							<div class="txt_box">
+								<p>人来人往的车站，到处都是行色匆匆的旅人。</p>
+							</div>
+						</div>
+						<div class="footer">
+							<i class="iconfont js_icon_like icon-xihuan"></i>
+							<span>527人喜欢</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- 模态框（Modal） -->
+	<div class="modal fade" id="newUserModal">
+	   <div class="modal-dialog newuser_modal">
+	      <div class="modal-content">
+	         <div class="modal-header">
+	            <button type="button" class="close" 
+	               data-dismiss="modal">
+	                  <i class="iconfont">&#xe633;</i>
+	            </button>
+	         </div>
+	         <div class="modal-body">
+	         	<h3 class="text-center">加入 轻博客 开通功能特权</h3>
+	         	<div class="nuser_modal_img">
+	         		<img src="__IMG__/User/nuser_modal_img.png" class="img-responsive" alt="">
+	         	</div>
+	         	<div class="register_group clearfix">
+					<a href="#" class="register_btn phone">
+						<span class="icon">
+							<i class="iconfont">&#xe64a;</i>
+						</span>
+						<span class="word">
+						手机注册
+						</span>
+					</a>
+					<a href="#" class="register_btn qq">
+						<span class="icon">
+							<i class="iconfont">&#xe64c;</i>
+						</span>
+						<span class="word">
+						腾讯QQ注册
+						</span>
+					</a>
+					<a href="#" class="register_btn weixin">
+						<span class="icon">
+							<i class="iconfont">&#xe64d;</i>
+						</span>
+						<span class="word">
+						微信注册
+						</span>
+					</a>
+					<a href="#" class="register_btn weibo">
+						<span class="icon">
+							<i class="iconfont">&#xe64b;</i>
+						</span>
+						<span class="word">
+						新浪微博注册
+						</span>
+					</a>
+					<span class="pull-left" style="font-size:16px;padding:10px 20px 0 15px;">或</span>
+					<a href="#" class="register_btn dl_app">
+						<span class="icon">
+							<i class="iconfont">&#xe64b;</i>
+						</span>
+						<span class="word">
+						下载APP
+						</span>
+					</a>
+				</div>
+	         </div>
+	      </div><!-- /.modal-content -->
+		</div><!-- /.modal -->
+	</div>
+	<!-- 趋势页主体 E-->
+	<div class="loading_box"><i class="iconfont">&#xe61a;</i>正在加载</div>
+</block>
+<block name="script">
+	<js href="__PLUGIN__/popover/dist/jquery.webui-popover.min.js"/>
+	<js href="__JS__/common.js"/>
+	<script>
+		$(function(){
+			$('.js_atten_btn').click(function(){
+				var tHtml = $(this).html();
+				if($(this).hasClass('attention_btn')){
+					$(this).removeClass('attention_btn').addClass('dont_attention');
+					tHtml = "取消关注";
+					$(this).html(tHtml);
+				}else if($(this).hasClass('dont_attention')){
+					$(this).removeClass('dont_attention').addClass('attention_btn');
+					tHtml = '<i class="iconfont">&#xe618;</i> 关注';
+					$(this).html(tHtml);
+				}
+			});
+
+			// 查看完整图片
+			window.onload=function(){
+				$('.js_trendimg').each(function(){
+					var imgHeight = $(this).find('img').height();
+					if(imgHeight>500){
+						$(this).addClass('long_img_box');
+						$(this).append('<div class="look_all js_look_all"><i class="iconfont">&#xe61b;</i> 查看完整图片</div>')
+					}
+				});
+			}
+
+			// 爱心切换
+			$('.js_icon_like').click(function(){
+				if($(this).hasClass('icon-xihuan')){
+					$(this).removeClass('icon-xihuan').addClass('icon-aixinshixin');
+				}else if($(this).hasClass('icon-aixinshixin')){
+					$(this).removeClass('icon-aixinshixin').addClass('icon-xihuan');
+				}
+			});
+		})
+		function openBeforeAbout(obj){
+			$(window).scrollTop(0);
+			return true;
+		}
+		function closeAfterAbout(obj){
+			$(window).scrollTop(obj.offset().top);
+			return true;
+		}
+	</script>
+</block>

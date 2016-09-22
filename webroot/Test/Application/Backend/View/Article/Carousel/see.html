@@ -1,0 +1,48 @@
+<section class="content">
+		<div class="row">
+			<div class="col-xs-12">
+				<div class="box">
+					<div class="box-body">
+						<div id="example2_wrapper"
+							class="dataTables_wrapper form-inline dt-bootstrap">
+							<div class="row">
+								<div class="col-sm-6">
+								</div>
+								<div class="col-md-12 text-right">
+									<?=getTopBtn($menu_info['id'],I('pid'))?>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-sm-12">
+									<div class="box-body">
+										<label>轮播图</label><br>
+										<?php
+											if($res['image']){
+
+												echo "<img src='__ROOT__/".$res['image']."' width='375' height='140'>";
+											
+											}
+										?>
+									</div>
+									<div class="box-body">
+										<label>轮播/文章标题</label>
+										<p><?=$res['feed_title']?><p>
+									</div>
+										
+									<div class="box-body">
+										<label>内容</label>
+										<p><?= $res['feed_content']?></p>
+									</div>
+
+								</div>
+							</div>
+						</div>
+						</div>
+						<!-- /.box-body -->
+					</div>
+					<!-- /.box -->
+				</div>
+				<!-- /.col -->
+			</div>
+			<!-- /.row -->
+	</section>

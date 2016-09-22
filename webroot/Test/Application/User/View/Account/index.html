@@ -1,0 +1,113 @@
+<extend name="Home@Public/body"/>
+<block name="style">
+	<css href="__CSS__/index.css"/>
+	<css href="__PLUGIN__/popover/dist/jquery.webui-popover.min.css"/>
+</block>
+<block name="body">
+	<div class="container">
+		<div class="a_con_content account_content con_content">
+			<div class="title clearfix">
+				<h4 class="pull-left">账号设置</h4>
+				<a href="<?=U('User/Index/index')?>" class="pull-right btn utop_btn"><i class="iconfont">&#xe60e;</i> 主页设置</a>
+			</div>
+			<form>
+				<table class="account_tabel">
+					<tr class="item">
+						<td class="item_title">手机账号</td>
+						<td class="item_content">
+							<p style="color:#999">可使用该手机号直接登录轻博客</p>
+							<p class="phone">18872243121</p>
+							<a href="<?=U("User/Login/find_password")?>" class="change_pw">修改账号密码></a>
+						</td>
+					</tr>
+					<tr class="item">
+						<td class="item_title">社交账号</td>
+						<td class="item_content">
+							<p style="color:#999">绑定社交账号，绑定后可以使用以下账号直接登录轻博客</p>
+							<ul class="socially clearfix">
+								<li class="dont">
+									<i class="iconfont qq">&#xe62e;</i> 腾讯QQ (<a href="<?=U('User/Login/index')?>">去绑定</a>)
+								</li>
+								<li class="dont">
+									<i class="iconfont weixin">&#xe62f;</i> 微信 (<a href="<?=U('User/Login/index')?>">去绑定</a>)
+								</li>
+								<li class="done">
+									<i class="iconfont weibo">&#xe625;</i> 微博 (已绑定)
+								</li>
+							</ul>
+						</td>
+					</tr>
+					<tr class="item">
+						<td class="item_title">站内通知</td>
+						<td class="item_content">
+							<p style="color:#999">绑定社交账号，绑定后可以使用以下账号直接登录轻博客</p>
+							<ul class="check_list">
+								<li>
+									<span class="name">ljjchen29</span>
+									<label>
+										<input type="checkbox"> 被评论
+									</label>
+									<label>
+										<input type="checkbox"> 被转载
+									</label>
+									<label>
+										<input type="checkbox"> 被喜欢
+									</label>
+									<label>
+										<input type="checkbox"> 被推荐
+									</label>
+									<label>
+										<input type="checkbox"> 被@
+									</label>
+									<label>
+										<input type="checkbox"> 被关注
+									</label>
+								</li>
+								<li>
+									<span class="name">推荐的文章</span>
+									<label>
+										<input type="checkbox"> 被评论
+									</label>
+									<label>
+										<input type="checkbox"> 被转载
+									</label>
+									<label>
+										<input type="checkbox"> 被喜欢
+									</label>
+									<label>
+										<input type="checkbox"> 被推荐
+									</label>
+								</li>
+								<li>
+									<span class="name">专题</span>
+									<label>
+										<input type="checkbox"> 被评论
+									</label>
+									<label>
+										<input type="checkbox"> 被转载
+									</label>
+									<label>
+										<input type="checkbox"> 向我推荐专题
+									</label>
+								</li>
+								<li>
+									<span class="name">标签</span>
+									<label>
+										<input type="checkbox"> 向我推荐专题
+									</label>
+								</li>
+							</ul>
+						</td>
+					</tr>
+				</table>
+				<div class="account_foot clearfix">
+					<a href="<?=('blacklist')?>" class="link_btn pull-left">黑名单</a>
+					<a href="<?=('label_shield')?>" class="link_btn pull-left">标签屏蔽</a>
+					<a href="<?=('delete')?>" class="link_btn pull-left">删除账号或主页</a>
+					<button class="btn pull-right btn_primary form_btn">保存</button>
+				</div>
+			</form>
+		</div>
+	</div>
+	<include file="Home@Public/footer"/>
+</block>

@@ -1,0 +1,158 @@
+
+<form action="">
+	<include file="Common@Plugins/editor" />
+	<div class="form-group textarea_box">
+		<?php $time=time(); ?>
+		<script id="<?='editor_'.$time?>" type="text/plain" name="content"><?=$info['content']?></script>
+		<script type="text/javascript">
+		var config_2={
+			initialFrameWidth:"100%",
+			initialFrameHeight:150,
+			pasteplain:true,
+			autoFloatEnabled:false,
+			clearFontFamily: false,
+			toolbars: [[
+	            'bold','underline','strikethrough','insertunorderedlist','insertorderedlist','blockquote','link','unlink','source','insertimage','fullscreen'
+			]]
+		};
+		//合并配置文件，config为默认配置，config_2为自定义的配置
+		var new_config=array_merge({},[config,config_2]);
+		//说明：editor_obj_id的值必须和编辑器ID保持一致
+		var editor_<?=$time?>=UE.getEditor('editor_<?=$time?>',new_config);
+		//对编辑器的操作最好在编辑器ready之后再做
+		editor_<?=$time?>.ready(function() {
+		    //设置编辑器的内容
+		    editor_<?=$time?>.setContent('<p></p><a href="#" class="user_name">布鲁兰:</a><p class="user_txt">鱼与水嬉戏相间。</p>');
+		});
+		// editor_<?=$time?>.execCommand( 'font-family', '微软雅黑' );
+		</script>
+	</div>
+	<div class="form-group">
+		<div class="tagsinput-primary tagsinput" id="tagsinput_tagsinput">
+	        <input name="tagsinput-02" class="tagsinput_inp tagsinput-typeahead input-lg" value="摄影,绘画" placeholder="添加标签，用逗号或回车分隔"/>
+    	</div>
+	</div>
+	<div class="form-group right_bar">
+		<div class="clearfix">
+			<span class="pull-left" style="color:#666;font-size:14px;">发布方式及版权声明：</span>
+			<div class="dropdown js_rbdropdown pull-left">
+				<a href="javascript:;" class="js_dropshow dropshow" data-toggle="dropdown">
+					<i class="iconfont">&#xe627;</i>
+					<span class="caret"></span>
+				</a>
+				<ul class="dropdown-menu right_munu" role="menu">
+					<span class="arrow-1"></span>
+					<span class="arrow-2"></span>
+					<li>
+						<a href="javascript:;">
+							<span class="iconbox">
+								<i class="iconfont">&#xe627;</i>
+							</span>
+							<span class="right_txt">不限作品用途</span>
+						</a>
+					</li>
+					<li>
+						<a href="javascript:;">
+							<span class="iconbox">
+								<i class="iconfont">&#xe62a;</i>
+								<i class="iconfont">&#xe61f;</i>
+								<i class="iconfont">&#xe629;</i>
+							</span>
+							<span class="right_txt">署名-禁止商业使用-禁止转载</span>
+						</a>
+					</li>
+					<li>
+						<a href="javascript:;">
+							<span class="iconbox">
+								<i class="iconfont">&#xe62a;</i>
+								<i class="iconfont">&#xe61f;</i>
+								<i class="iconfont">&#xe628;</i>
+							</span>
+							<span class="right_txt">署名-禁止商业使用-禁止个人使用</span>
+						</a>
+					</li>
+					<li>
+						<a href="javascript:;">
+							<span class="iconbox">
+								<i class="iconfont">&#xe62a;</i>
+								<i class="iconfont">&#xe61f;</i>
+							</span>
+							<span class="right_txt">署名-禁止商业使用</span>
+						</a>
+					</li>
+					<li>
+						<a href="javascript:;">
+							<span class="iconbox">
+								<i class="iconfont">&#xe62a;</i>
+								<i class="iconfont">&#xe629;</i>
+							</span>
+							<span class="right_txt">署名-禁止匿名使用</span>
+						</a>
+					</li>
+					<li>
+						<a href="javascript:;">
+							<span class="iconbox">
+								<i class="iconfont">&#xe62a;</i>
+							</span>
+							<span class="right_txt">仅自己可见</span>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="form-group clearfix zz_footer">
+		<div class="synchronize_bar pull-left" style="font-size:14px">
+			同步到
+			<a href="#" style="color:#d1d1d1;"><i class="iconfont"></i></a>
+			<a href="#" style="color:#d1d1d1"><i class="iconfont"></i></a>
+			<a href="#" style="color:#d1d1d1"><i class="iconfont"></i></a>
+			<a href="#" style="color:#d1d1d1"><i class="iconfont"></i></a>
+		</div>
+		<div class="pull-right">
+			<button class="btn-lg form_btn btn_primary">转载</button>
+		</div>
+	</div>
+</form>	
+<block name="script">
+	<js href="__PLUGIN__/flat-ui/dist/js/flat-ui.js"/>
+	<script>
+      var states = new Bloodhound({
+        datumTokenizer: function(d) { return Bloodhound.tokenizers.whitespace(d.word); },
+        queryTokenizer: Bloodhound.tokenizers.whitespace,
+        limit: 4,
+        local: [
+          { word: "Alabama" },
+          { word: "Alaska" },
+          { word: "Arizona" },
+          { word: "Arkansas" },
+          { word: "California" },
+          { word: "Colorado" }
+        ]
+      });
+
+      states.initialize();
+
+      $('input.tagsinput_inp').tagsinput();
+
+      $('input.tagsinput_inp').tagsinput('input').typeahead(null, {
+        name: 'states',
+        displayKey: 'word',
+        source: states.ttAdapter()
+      });
+
+      var closeIcon = '<i class="iconfont">&#xe633;</i>';
+      $('#tagsinput_tagsinput').on("mouseenter",".label-info",function(){      	
+      	$(this).children('span[data-role="remove"]').html(closeIcon);
+      });
+      $('#tagsinput_tagsinput').on("mouseleave",".label-info",function(){      	
+      	$(this).children('span[data-role="remove"]').html(null);
+      });
+
+      // 权限设置下拉框
+      $('.js_rbdropdown li').click(function(){
+      	var _checkHtml = $(this).find('a').html();
+      	$('.js_dropshow').html(_checkHtml);
+      });
+    </script>
+</block>

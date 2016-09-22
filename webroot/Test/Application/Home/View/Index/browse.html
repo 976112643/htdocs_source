@@ -1,0 +1,448 @@
+<extend name="Public/body"/>
+<block name="style">
+	<css href="__CSS__/index.css"/>
+	<css href="__PLUGIN__/popover/dist/jquery.webui-popover.min.css"/>
+</block>
+<block name="body">
+	<!-- 头部导航 S-->
+	<!-- <header class="header_nav">
+		<nav class="navbar">
+			<div class="container">
+				<div class="navbar-header">s
+					  <a href="#" class="myBrand">
+						  <img src="__IMG__/logo.png" alt="">
+					  </a>
+				</div>
+			</div>
+		</nav>
+	</header> -->
+	<div class="container browse_container clear">
+		<div class="row clear top_infos">
+			<div class="col-xs-6 user_left clear">
+				<?php 
+					if($member_res['icon'] != ""){
+					
+						if(!empty(parse_url($member_res['icon'])['scheme'])){
+							echo "<img class='pull-left' src='".$member_res['icon']."' width='80' height='80'>";
+						}else{
+							echo "<img class='pull-left' src='__ROOT__/".$member_res['icon']."' width='80' height='80'>";
+						}
+					}else{
+						echo "<img class='pull-left' src='__IMG__/User/nopic.png' width='80' height='80'>";
+					} 
+				?>
+				<!-- <img src="__IMG__/headportrait1.jpg" alt="" class="pull-left"> -->
+				<h2 class="user_name pull-left"><?=msubstr($member_res['nickname'],0,6)?></h2>
+				<p class="user_sign pull-left"><?=msubstr($member_res['description'],0,30)?></p>
+			</div>
+			<div class="col-xs-6 user_right clear">
+				<div class="ewm_img text-center pull-left">
+					<img src="__IMG__/User/ewm.jpg" alt="">
+					<span>扫一扫下载APP</span>
+				</div>
+				<div class=" iPhone pull-left clear">
+					<a href="#" class="download_btn">
+						<i class="iconfont">&#xe606;</i>
+						<span>App Store 下载</span>
+					</a>
+				</div>
+				<div class=" Android pull-left clear">
+					<a href="<?=U('down_file')?>" class="download_btn">
+						<i class="iconfont">&#xe602;</i>
+						<span>Android 下载</span>
+					</a>
+				</div>
+			</div>
+		</div>
+		<div class="center_con row">
+		<!-- 第一栏 S -->
+		<?php 
+		if(!$feed_res){
+			echo "此人很懒，没有任何文章！";
+		}else{
+			foreach($feed_res as $k=>$v){ ?>
+		<div class="row clear container_row">	
+			<div class="col-xs-2 text-center title_left">
+				<div class="title_time">
+					<h3><?=$v['addtime']['mday']?></h3>
+					<h4><?=$v['addtime']['month']?></h4>
+				</div>
+				<span class="title_year"><?=$v['addtime']['year']?></span>
+			</div>
+			<div class="col-xs-10 title_right clear">
+				<div class="img_div">
+					<?php 
+						if(!empty($v['image'])){
+							foreach($v['image'] as $key=>$value){
+								echo "<img src='__ROOT__/".$value['image']."' class='img-responsive'>";
+								// echo "<img src='__IMG__/User/app_section1_bg.png' class='img-responsive'>";
+							}
+						}
+					?>
+					<!-- <img src="__IMG__/User/u_blog_img1.jpg" class="img-responsive"> -->
+					<span class="img_num"></span>
+				</div>
+				<h5><?=$v['feed_title']?></h5>
+			
+				<time class="hide_time"><?=date("Y-m-d",$v['addtime'][0])?></time>
+				<p><?=$v['feed_content']?></p>
+				<div class="title_footer clear">
+					<div class="span_s">	
+						<?php 
+							if(!empty($v['lable'])){
+								echo "<span class='tags'>#</span>";
+								foreach($v['lable'] as $key=>$value){
+									echo "<span>".$value."</span>";
+								}
+							}
+						?>
+					</div>	
+					<?php 
+						if($v['address']){
+							echo "<p class='t_address'><i class='iconfont'>&#xe601;</i>".$v['address']."</p>";
+						}
+					?>
+
+					<span class="comments pull-right">
+					<i class="iconfont">&#xe608;</i>评论(<p><?=$v['comment_count']?></p>)</span>
+					<span class="hots pull-right">热度(<p><?=$v['hot_count']?></p>)</span>
+				</div>
+				<div class="comments_open clear">
+					<i class="open_arrow"></i>
+				<?php 
+					$_list = (!empty($v['comment'])) ?$v['comment']:array();
+					foreach($_list  as $key=>$value){ 
+						if($key<6){
+				?>
+					<div class="comments_div clear">
+						<?php
+							$icon=$value['icon'];
+							if($icon!= ""){
+								if(!empty(parse_url($icon)['scheme'])){
+									echo "<img class='img-responsive pull-left' src='".$icon."'>";
+								}else{
+									echo "<img class='img-responsive pull-left' src='__ROOT__/".$icon."'>";
+								}
+							}else{
+								echo "<img class='img-responsive pull-left' src='__IMG__/User/nopic.png'>";
+							}
+						?>
+						<!-- <img src="<?=$value['icon']?>" class="img-responsive pull-left"> -->
+						<div class="messages pull-left">
+							<p class="user_names"><a href="<?=U('browse',array('ids'=>$value['from_uid']))?>"><?=$value['from_name']?></a></p>
+					<?php
+						if($value['to_uid']){
+							
+					?>			
+								<span class='mess'>回复</span>
+								<p class='user_names'>
+								<a href="<?=U('browse',array('ids'=>$value['from_uid']))?>"><?=$value['to_name']?></a>
+								</p>
+					<?php
+						}
+					?>
+								
+							
+							<span class="mess"><?=$value['content']?></span>
+						</div>
+					</div>
+					
+					<?php } }?>
+					<div class="more_comment">
+						
+					</div>
+					<?php 
+						if($v['comment_count']>6){
+							echo "<a href='#' class='see_more' fid='".$v['id']."'>点击查看更多</a>";
+						}
+					?>
+					<a href="#" class="close_com clearfix">收起<i class="iconfont">&#xe609;</i></a>
+				</div>
+			</div>
+		</div>	
+			<?php }} ?>
+		<!-- 滚动下拉刷新 -->
+		<div class="loads">
+			<div class="loading_box load_more js_load_more hidden" data-url="<?=U('index')?>"></div>
+		</div>
+		
+		<!-- 模态框文章浏览（Modal） -->
+		<div class="modal fade clear" id="myModal_pic" tabindex="2" role="dialog" 
+		   aria-labelledby="myModalLabel" aria-hidden="true">
+		   <div class="modal-dialog clear">
+		      <div class="modal-content clear">
+				<div class="modal-header">
+					<button type="button" class="close" 
+					data-dismiss="modal" aria-hidden="true">
+					  &times;
+					</button>
+				</div>
+		        <div class="modal-body clear">
+					
+		        </div>
+		      </div>
+		    </div>
+		</div>
+		</div>
+		<!-- modal -->
+		<div class="back_top">
+			<span class="back_top_span"><i class="iconfont">&#xe609;</i></span>
+		</div>
+		
+	</div>
+	<include file="Home@Public/footer"/>
+<?php
+	if(is_mobile()){
+	?>
+	<script>
+	$(function(){
+		$(".img_div").each(function(){
+		 	var imgs=$(this).find("img");
+		 	var imgs_length=imgs.length;
+		 	var spans=$(this).find("span");
+		 	var img_x=1;
+		 	if(imgs_length==0){
+		 		$(this).hide();
+		 	}else{
+		 		spans.text(imgs_length);
+			 	for(var i=0;i<imgs_length;i++){
+			 		imgs.eq(i).hide();
+			 		imgs.eq(0).show();
+				 	imgs.eq(i).on("click",function(){
+				 		if(img_x){
+				 			spans.hide();
+					 		for(var i=0;i<imgs_length;i++){
+					 		imgs.eq(i).show();
+					 		img_x=0;
+					 	}}else{
+					 		imgs.eq(0).show().siblings().hide();
+					 		spans.show();
+					 		img_x=1;
+					 	}
+
+					 	
+			 		})
+			 	}
+		 	}
+		})
+	})
+	</script>
+	<?php
+	}else{	
+    ?>
+    <script>
+    $(function(){
+    	$(".img_div").each(function(){
+		 	var imgs=$(this).find("img");
+		 	var imgs_length=imgs.length;
+		 	var spans=$(this).find("span");
+		 	var img_x=1;
+		 	if(imgs_length==0){
+		 		$(this).hide();
+		 	}else{
+		 		spans.text(imgs_length);
+			 	for(var i=0;i<imgs_length;i++){
+			 		imgs.eq(i).hide();
+			 		imgs.eq(0).show();
+				 	imgs.eq(0).on("click",function(){
+				 		var right_clone=$(this).parents(".title_right").clone(true);
+				 		$("#myModal_pic .modal-body").empty().append(right_clone);
+				 		$("#myModal_pic").modal();
+				 		$("#myModal_pic .comments").click();
+				 		// if(right_clone.find(".comments_div").length!=0){
+			 			// 	right_clone.find(".comments_open").show();
+				 		// }
+			 		})
+			 	}
+		 	}
+		})
+
+    	
+    })
+
+		
+
+    </script>
+    <?php
+	}
+	?>
+
+	
+
+
+
+	<script type="text/javascript">
+		//获取滚动条当前的位置 
+		function getScrollTop() { 
+			var scrollTop = 0; 
+			if (document.documentElement && document.documentElement.scrollTop) { 
+				scrollTop = document.documentElement.scrollTop; 
+			} 
+			else if (document.body) { 
+				scrollTop = document.body.scrollTop; 
+			} 
+			return scrollTop; 
+		} 
+
+		//获取当前可是范围的高度 
+		function getClientHeight() { 
+			var clientHeight = 0; 
+			if (document.body.clientHeight && document.documentElement.clientHeight) { 
+				clientHeight = Math.min(document.body.clientHeight, document.documentElement.clientHeight); 
+			} 
+			else { 
+				clientHeight = Math.max(document.body.clientHeight, document.documentElement.clientHeight); 
+			} 
+			return clientHeight; 
+		} 
+
+		//获取文档完整的高度 
+		function getScrollHeight() { 
+			return Math.max(document.body.scrollHeight, document.documentElement.scrollHeight); 
+		} 
+
+		// 底部Ajax加载
+		$(function (){
+			p=1;
+			$(window).scroll(function (){
+				if (getScrollTop() + getClientHeight() == getScrollHeight()){
+					var _this=$(".js_load_more");
+						_this.removeClass("hidden");
+					if(_this.attr("load")=="false" || _this.attr("load")==undefined){
+						_this.html('<img src="__STATIC__/img/loading.gif" width="20" height="20" /> 正在加载中').attr("load","true");
+						var url = $(this).attr('data-url');  //请求地址
+					
+						var Todata={"p":p};
+						$.get(url,Todata,function(data,status){
+							if(status == 'success'){
+								var html="";
+								if(!data.content){
+									_this.html("没有更多了！").addClass("loading_last").delay(500).fadeOut("slow");
+								}else{
+									p++;
+									$('.test').append(data.content);
+									_this.attr("load","false");
+								}
+								
+							}else{
+								_this.html("加载失败，下拉重试");
+								_this.attr("load","false");
+							}
+						});
+					}
+				}
+
+				if(document.body.scrollTop==0){
+					$(".back_top_span").fadeOut();
+				}else{
+					$(".back_top_span").fadeIn();
+				}
+
+
+			});
+
+
+			// 评论展开
+			var browser=navigator.appName; 
+			var b_version=navigator.appVersion; 
+			var version=b_version.split(";"); 
+			var trim_Version=version[0].replace(/[ ]/g,""); 
+
+			$(".comments").on("click",function(){
+				var comments_div=$(this).parent().siblings(".comments_open").find(".comments_div");
+				var comment_num=parseInt($(this).find("p").text());
+				// for ie7
+				if(browser=="Microsoft Internet Explorer" && trim_Version=="MSIE7.0") 
+				{ 
+					if($(this).parent().siblings(".comments_open").is(":hidden")){
+					if(comment_num==0){
+						$(this).parent().siblings(".comments_open").hide();
+						return;
+					}else if(comment_num>0&&comment_num<=6){
+						$(this).parent().siblings(".comments_open").find(".see_more").hide();
+					}else if(comment_num>6){
+						$(this).parent().siblings(".comments_open").find(".see_more").show();
+
+					}
+					$(this).parent().siblings(".comments_open").show().end().end().addClass("click_p");
+					}else{
+						$(this).parent().siblings(".comments_open").hide().end().end().removeClass("click_p");
+					}
+
+				} 
+				else{
+					if($(this).parent().siblings(".comments_open").is(":hidden")){
+					if(comment_num==0){
+						$(this).parent().siblings(".comments_open").hide();
+						return;
+					}else if(comment_num>0&&comment_num<=6){
+						$(this).parent().siblings(".comments_open").find(".see_more").hide();
+					}else if(comment_num>6){
+						if($(this).parent().siblings(".comments_open").find(".more_comment .comments_div")){
+							$(this).parent().siblings(".comments_open").find(".more_comment").html("");
+							$(this).parent().siblings(".comments_open").find(".see_more").show();
+						}else{
+							$(this).parent().siblings(".comments_open").find(".see_more").show();
+						}
+						
+					}
+					$(this).parent().siblings(".comments_open").slideDown().end().end().addClass("click_p");
+					}else{
+						$(this).parent().siblings(".comments_open").slideUp().end().end().removeClass("click_p");
+					}
+				}
+				
+				
+			})
+
+			$(".close_com").on("click",function(){
+
+				if(browser=="Microsoft Internet Explorer" && trim_Version=="MSIE7.0") 
+				{
+					$(this).parent(".comments_open").hide().siblings().find(".comments").removeClass("click_p"); 
+				}else{
+					$(this).parent(".comments_open").slideUp("slow").siblings().find(".comments").removeClass("click_p");
+				}
+				
+				return false;
+			})
+
+			var page=1;
+			$(".see_more").on("click",function(){
+				var _this = $(this);
+				var feed_id=_this.attr('fid');
+	
+				_this.html('<img src="__STATIC__/img/loading.gif" height="20" width="20">正在加载中...');
+				$.ajax({
+					type:'get',
+					url:'<?=U('get_comment')?>',
+					timeout:'5000',
+					dataType:'json',
+					data:{'page':page,'feed_id':feed_id},
+					global:'false',
+					success: function(data){
+						
+						// 请求数据成功后
+						_this.siblings('.more_comment').append(data.content);
+						_this.html("点击查看更多").hide();
+						
+					},
+					complete: function(XMLHttpRequest,status){ 
+						//请求错误超时
+				　　　　if(status=='timeout'){
+				 　　　　　 ajaxTimeOut.abort(); //取消请求
+				 			_this.html('加载超时，点击重试');
+				　　　　}
+				　　}
+				})
+				return false;
+			})
+
+
+
+			$(".back_top_span").on("click",function(){
+			$('body,html').animate({scrollTop: 0},1000);
+			})
+		});
+	</script>
+</block>

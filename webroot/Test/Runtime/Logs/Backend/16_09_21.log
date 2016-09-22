@@ -1,0 +1,32 @@
+[ 2016-09-21T22:27:26+08:00 ] 192.168.2.33 /Test/Backend/Base/Public/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001500s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002500s ]
+SQL: SHOW COLUMNS FROM `sr_admin` [ RunTime:0.0485s ]
+SQL: SHOW COLUMNS FROM `sr_role` [ RunTime:0.0590s ]
+SQL: SELECT admin.id AS member_id,admin.is_hid AS member_hid,admin.is_del AS member_del,admin.rules AS member_rules,admin.id AS id,admin.email AS email,admin.mobile AS mobile,admin.nickname AS nickname,admin.username AS username,admin.realname AS realname,admin.role_id AS role_id,admin.password AS password,admin.salt AS salt,admin.description AS description,admin.rules AS rules,admin.reg_ip AS reg_ip,admin.addtime AS addtime,admin.is_hid AS is_hid,admin.is_del AS is_del,admin.login_ip AS login_ip,admin.login_time AS login_time,role.id AS id,role.title AS title,role.remark AS remark,role.menu_ids AS menu_ids,role.addtime AS addtime,role.is_hid AS is_hid,role.is_del AS is_del,role.type AS type FROM sr_admin admin LEFT JOIN sr_role role ON admin.role_id=role.id WHERE admin.username = 'admin' AND admin.password = '9db06bcff9248837f86d1a6bcf41c9e7' AND admin.is_del = 0 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT `login_time`,`login_ip` FROM `sr_admin` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: UPDATE `sr_admin` SET `login_time`='2016',`login_ip`='192.168.2.33' WHERE `id` = 1 [ RunTime:0.0335s ]
+SQL: SELECT admin.id AS member_id,admin.is_hid AS member_hid,admin.is_del AS member_del,admin.rules AS member_rules,admin.id AS id,admin.email AS email,admin.mobile AS mobile,admin.nickname AS nickname,admin.username AS username,admin.realname AS realname,admin.role_id AS role_id,admin.password AS password,admin.salt AS salt,admin.description AS description,admin.rules AS rules,admin.reg_ip AS reg_ip,admin.addtime AS addtime,admin.is_hid AS is_hid,admin.is_del AS is_del,admin.login_ip AS login_ip,admin.login_time AS login_time,role.id AS id,role.title AS title,role.remark AS remark,role.menu_ids AS menu_ids,role.addtime AS addtime,role.is_hid AS is_hid,role.is_del AS is_del,role.type AS type FROM sr_admin admin LEFT JOIN sr_role role ON admin.role_id=role.id WHERE admin.username = 'admin' AND admin.password = '9db06bcff9248837f86d1a6bcf41c9e7' AND admin.is_del = 0 LIMIT 1   [ RunTime:0.0015s ]
+SQL: SELECT `id`,username as title FROM `sr_admin` WHERE `id` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `sr_action_log` [ RunTime:0.0465s ]
+SQL: INSERT INTO `sr_action_log` (`member_id`,`username`,`url`,`table_name`,`description`,`ip`) VALUES ('1','admin','backend/base/public/login','admin','[{\"id\":\"1\",\"title\":\"admin\"}]','192.168.2.33') [ RunTime:0.0450s ]
+SQL: SHOW COLUMNS FROM `sr_menu` [ RunTime:0.1075s ]
+SQL: SELECT * FROM `sr_menu` WHERE `is_hid` = 0 AND `is_del` = 0 ORDER BY sort desc,id asc  [ RunTime:0.0225s ]
+
+[ 2016-09-21T23:15:07+08:00 ] 192.168.2.33 /Test/Backend/Base/Public/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `sr_admin` [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `sr_role` [ RunTime:0.0090s ]
+SQL: SELECT admin.id AS member_id,admin.is_hid AS member_hid,admin.is_del AS member_del,admin.rules AS member_rules,admin.id AS id,admin.email AS email,admin.mobile AS mobile,admin.nickname AS nickname,admin.username AS username,admin.realname AS realname,admin.role_id AS role_id,admin.password AS password,admin.salt AS salt,admin.description AS description,admin.rules AS rules,admin.reg_ip AS reg_ip,admin.addtime AS addtime,admin.is_hid AS is_hid,admin.is_del AS is_del,admin.login_ip AS login_ip,admin.login_time AS login_time,role.id AS id,role.title AS title,role.remark AS remark,role.menu_ids AS menu_ids,role.addtime AS addtime,role.is_hid AS is_hid,role.is_del AS is_del,role.type AS type FROM sr_admin admin LEFT JOIN sr_role role ON admin.role_id=role.id WHERE admin.username = 'admin' AND admin.password = '9db06bcff9248837f86d1a6bcf41c9e7' AND admin.is_del = 0 LIMIT 1   [ RunTime:0.0015s ]
+SQL: SELECT `login_time`,`login_ip` FROM `sr_admin` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0005s ]
+SQL: UPDATE `sr_admin` SET `login_time`='2016',`login_ip`='192.168.2.33' WHERE `id` = 1 [ RunTime:0.0730s ]
+SQL: SELECT admin.id AS member_id,admin.is_hid AS member_hid,admin.is_del AS member_del,admin.rules AS member_rules,admin.id AS id,admin.email AS email,admin.mobile AS mobile,admin.nickname AS nickname,admin.username AS username,admin.realname AS realname,admin.role_id AS role_id,admin.password AS password,admin.salt AS salt,admin.description AS description,admin.rules AS rules,admin.reg_ip AS reg_ip,admin.addtime AS addtime,admin.is_hid AS is_hid,admin.is_del AS is_del,admin.login_ip AS login_ip,admin.login_time AS login_time,role.id AS id,role.title AS title,role.remark AS remark,role.menu_ids AS menu_ids,role.addtime AS addtime,role.is_hid AS is_hid,role.is_del AS is_del,role.type AS type FROM sr_admin admin LEFT JOIN sr_role role ON admin.role_id=role.id WHERE admin.username = 'admin' AND admin.password = '9db06bcff9248837f86d1a6bcf41c9e7' AND admin.is_del = 0 LIMIT 1   [ RunTime:0.0015s ]
+SQL: SELECT `id`,username as title FROM `sr_admin` WHERE `id` = 1  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `sr_action_log` [ RunTime:0.0085s ]
+SQL: INSERT INTO `sr_action_log` (`member_id`,`username`,`url`,`table_name`,`description`,`ip`) VALUES ('1','admin','backend/base/public/login','admin','[{\"id\":\"1\",\"title\":\"admin\"}]','192.168.2.33') [ RunTime:0.0345s ]
+SQL: SHOW COLUMNS FROM `sr_menu` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `sr_menu` WHERE `is_hid` = 0 AND `is_del` = 0 ORDER BY sort desc,id asc  [ RunTime:0.0030s ]
+

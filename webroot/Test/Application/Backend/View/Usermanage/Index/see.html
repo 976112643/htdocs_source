@@ -1,0 +1,176 @@
+<extend name="Public/body" />
+<block name="body"> <!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper" style="min-height: 922px;">
+	<!-- Content Header (Page header) -->
+	<section class="content-header">
+		<h1>
+			<?=$page_title?>
+			<small>
+				<?=$small_title?>
+			</small>
+		</h1>
+		<ol class="breadcrumb">
+			<li>
+				<a href="<?=U('/Backend')?>"><i class="fa fa-dashboard"></i>首页</a>
+			</li>
+			<li class="active">
+				<?=$page_title?>
+			</li>
+		</ol>
+	</section>
+
+	<!-- Main content -->
+	<section class="content">
+		<div class="row">
+			<div class="col-xs-12">
+				<div class="box">
+					<div class="box-body">
+						<div id="example2_wrapper"
+							class="dataTables_wrapper form-inline dt-bootstrap">
+							<div class="row">
+								<div class="col-md-12 text-right">
+									<?=getTopBtn($menu_info['id'],I('pid'))?>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-sm-12">
+									<table id="example2"
+										class="table table-bordered table-striped dataTable text-center"
+										role="grid" aria-describedby="example2_info">
+										<tr>
+											<td>头像</td>
+											<td>
+												<?php 
+												if($res['icon'] != ""){
+												
+													if(!empty(parse_url($res['icon'])['scheme'])){
+														echo "<img width='80' height='80' src='".$res['icon']."'>";
+													}else{
+														echo "<img width='80' height='80' src='__ROOT__/".$v['icon']."'>";
+													}
+												}else{
+													echo "<img width='80' height='80' src='__IMG__/nopic.png'>"; 
+												} 
+												?>
+											</td>
+											<td>用户名</td>
+											<td><?=$res['nickname']?></td>
+										</tr>
+										<tr>
+											<td>性别</td>
+											<td>
+												<?php 
+
+													switch($res['sex']){
+														case 1:
+															$sex="男";
+															break;
+														case 2:
+															$sex="女";
+															break;
+														default:
+															$sex="保密";
+															break;
+													}
+													echo $sex;
+												?>
+											</td>
+											<td>绑定登录方式</td>
+											<td>
+												<?php 	
+													if($res['mobile'] != ""){echo "手机登录:".$res['mobile']."<br>";}
+													if($res['qq_open_id'] != ""){echo "QQ登录<br>";}
+													if($res['sina_open_id'] != ""){echo "新浪登录<br>";}
+													if($res['weixin_open_id'] != ""){echo "微信登录<br>";}
+												?>
+											</td>
+											
+										</tr>
+										<tr>
+											<td>TA的描述</td>
+											<td><?=$res['description']?></td>
+											<td>最近登陆时间</td>
+											<td><?=date("Y-m-d H:i:s",$res['login_time'])?></td>
+										</tr>
+										<tr>
+											<td>关注数</td>
+											<td><?=$res['attention_count']?></td>
+											<td>喜欢的文章数：</td>
+											<td><?=$res['fond_count']?></td>
+										</tr>
+										<tr>
+											<td>粉丝数</td>
+											<td><?=$res['fans_count']?></td>
+											<td>发布文章数</td>
+											<td><?=$res['feed_count']?></td>
+										</tr>
+										<tr>
+											<td>是否推荐别人关注</td>
+											<td>
+												<?php 	
+													if($res['is_recommend'] == "1"){echo "是";}else{echo "否";}
+												?>
+											</td>
+											<td>所属分组</td>
+											<td>
+												<?php 
+													if($res['role_id']=='0'){
+														echo "未分组";
+													}else{
+														$gres=get_role($res['role_id']);
+														if($gres){
+															echo $gres;
+														}else{
+															echo "未分组";
+														}
+														
+													} 
+												?>
+											</td>
+										</tr>
+										<tr>
+											<td>TA的标签</td>
+											<td colspan="3">
+												<?php	foreach($lable as $k=>$v):  ?>
+												<?=$v['name']?>&nbsp;
+												<?php endforeach; ?>
+											</td>	
+										</tr>
+									</table>
+							<div class="row">
+								<div class="col-sm-12" >
+									<div>
+										<?php 
+											if($res['feed_count']>0){
+												echo "<a class='btn btn-info btn-xs' href=".U('Home/Index/browse/ids/'.$res['id'])." target='_blank'>查看TA的文章</a>";
+											}
+										?>
+										
+										<?php
+											$unique_url=array(
+												'status'=>array(
+													'0'=>U("enable"),
+													'1'=>U("disable"),
+												)
+											);
+											$url=array();
+											$url[]=$unique_url['status'][$row['status']];
+											getListBtn($menu_info['id'],$res['id'],$url,I('pid'));
+											getListBtn($menu_info['id'],$res['id'],$unique_url,I('pid'),false);
+										?>
+									</div>
+								</div>
+							</div>
+						</div>
+						</div>
+						<!-- /.box-body -->
+					</div>
+					<!-- /.box -->
+				</div>
+				<!-- /.col -->
+			</div>
+			<!-- /.row -->
+	</section>
+	<!-- /.content -->
+</div>
+</block>

@@ -1,0 +1,153 @@
+<extend name="Public/body" />
+<block name="body"> <!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper" style="min-height: 922px;">
+	<!-- Content Header (Page header) -->
+	<section class="content-header">
+		<h1>
+			<?=$page_title?>
+			<small>
+				<?=$page_small?>
+			</small>
+		</h1>
+		<ol class="breadcrumb">
+			<li><a href="<?=U('/Backend')?>"><i class="fa fa-dashboard"></i>
+					首页</a></li>
+			<li class="active">
+				<?=$page_small?>
+			</li>
+		</ol>
+	</section>
+
+	<!-- Main content -->
+	<section class="content">
+		<div class="row">
+			<div class="col-xs-12">
+				<div class="box">
+					<div class="box-body">
+						<div id="example2_wrapper"
+							class="dataTables_wrapper form-inline dt-bootstrap">
+							<div class="row">
+								<div class="col-md-7"></div>
+									<div  class="col-md-7">
+									<form action="<?=U('index')?>"  method="get">
+											<input type="text" class="form-control input-sm" placeholder="主题、关键字" aria-controls="example1" name="keywords" value="<?=$keywords?>">
+											<select name="is_hid" class="form-control input-sm">
+												
+												<?=$msg_list['html_1']?>
+												
+											</select>
+											<select name="type" class="form-control input-sm">
+												<?=$msg_list['html']?>
+											</select>
+											<button type="submit" class="btn btn-primary"
+											target-form="operate_form">提交</button>
+									</form>
+								</div>
+								<div class="col-md-5 text-right">
+									<?=getTopBtn($menu_info['id'],I('pid'))?>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-sm-12">
+									<table id="example2"
+										class="table table-bordered table-hover dataTable text-center"
+										role="grid" aria-describedby="example2_info">
+										<thead>
+											<tr role="row">
+												<th class="sorting_asc" tabindex="0"
+													aria-controls="example2" rowspan="1" colspan="1"
+													aria-sort="ascending"
+													aria-label="Rendering engine: activate to sort column descending"
+													style="width: 3%"><label><input
+														type="checkbox" class="js_check_all" value=""></label></th>
+												<th class="sorting" tabindex="0" aria-controls="example2"
+													rowspan="1" colspan="1"
+													aria-label="Platform(s): activate to sort column ascending">主题</th>
+												<th class="sorting" tabindex="0" aria-controls="example2"
+													rowspan="1" colspan="1"
+													aria-label="Engine version: activate to sort column ascending">通知类型</th>
+												<th class="sorting" tabindex="0" aria-controls="example2"
+													rowspan="1" colspan="1"
+													aria-label="Engine version: activate to sort column ascending">收件人</th>
+												<th class="sorting" tabindex="0" aria-controls="example2"
+													rowspan="1" colspan="1"
+													aria-label="Browser: activate to sort column ascending">时间</th>
+												<th class="sorting" tabindex="0" aria-controls="example2"
+													rowspan="1" colspan="1"
+													aria-label="Browser: activate to sort column ascending"
+													style="width: 6%">状态</th>
+												<th class="sorting" tabindex="0" aria-controls="example2"
+													rowspan="1" colspan="1"
+													aria-label="Platform(s): activate to sort column ascending"
+													style="width: 9%">操作</th>
+											</tr>
+										</thead>
+										<tbody>
+										
+						<?php	
+							foreach($list as $v){
+						?>
+											<tr>
+												<td><label><input type="checkbox" class="ids"
+														name="ids[]" value="<?=$v['id']?>"></label></td>
+												<td>
+													<a href="<?=U('detail',array('id'=>$v['id']))?>" class="dialog" padding="20" title="收件箱"><?=$v['title']?><a>
+												</td>
+												<td>
+													系统通知
+												</td>
+												<td>
+													<?=$v['type_text']?>
+												</td>
+												<td>
+													<?=int_to_date($v['addtime'])?>
+												</td>
+												<td>
+													已发送
+												</td>
+												
+												<td>
+													<?php
+															$unique_url=array(
+																'is_hid'=>array(
+																	'1'=>U("enable"),
+																	'0'=>U("disable"),
+																),
+																'recommend'=>array(
+																	'1'=>U("recommend_not"),
+																	'0'=>U("recommend"),
+																)
+															);
+							
+															$url=array();
+															$url[]=$unique_url['is_hid'][$v['is_hid']];
+															$url[]=$unique_url['recommend'][$v['recommend']];
+															getListBtn($menu_info['id'],$v['id'],$url,I('pid'));
+															getListBtn($menu_info['id'],$v['id'],$unique_url,I('pid'),false);
+														?>
+												</td>
+											</tr>
+						<?php
+							}
+						?>
+										</tbody>
+									</table>
+								</div>
+							</div>
+							<div class="pages">
+								<?=$page?>
+							</div>
+						</div>
+						<!-- /.box-body -->
+					</div>
+					<!-- /.box -->
+				</div>
+			</div>
+			<!-- /.col -->
+		</div>
+		<!-- /.row -->
+	</section>
+	<!-- /.content -->	
+
+</div>
+</block>

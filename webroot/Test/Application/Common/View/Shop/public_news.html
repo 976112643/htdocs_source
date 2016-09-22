@@ -1,0 +1,28 @@
+<div class="recommbox">
+		<div class="topbox" style="background-image: url(__IMG__/news_top.jpg);"></div>
+		<ul>
+			<?php 
+				$class = '';
+				foreach($result as $key => $value){
+					if($key<3){
+						$class ='top clearfix'; 
+					}else{
+						$class = 'clearfix';
+					}
+			?>
+					<li class="<?=$class?>"><a href="<?=U('Home/News/info/id/'.$value['id'])?>" class="ellipsis" title="<?=$value['title']?>"><span><?=$key+1?></span><?=$value['title']?></a></li>						
+			<?php 
+				}
+			?>
+			<!--<li class="top clearfix"><span>1</span><a href="/zzypt/code/Home/News/info.html" class="ellipsis">制造业以逐利为导向 消费制造业以逐利为导向 消费......</a></li>						
+			<li class="top clearfix"><span>3</span><a href="/zzypt/code/Home/News/info.html" class="ellipsis">埃森普特发力焊接机器人争做埃森普特发力焊接机器人争做...</a></li>
+			<li class="top clearfix"><span>4</span><a href="/zzypt/code/Home/News/info.html" class="ellipsis">工业4.0将把制造业带往何方?</a></li>
+			<li class="clearfix"><span>5</span><a href="/zzypt/code/Home/News/info.html" class="ellipsis">工匠精神回归制造业 需要企业...</a></li>
+			<li class="clearfix"><span>6</span><a href="/zzypt/code/Home/News/info.html" class="ellipsis">发展制造业,要眼高手不低</a></li>
+			<li class="clearfix"><span>7</span><a href="/zzypt/code/Home/News/info.html" class="ellipsis">互联网+无孔不入 传统制造业...</a></li>
+			<li class="clearfix"><span>8</span><a href="/zzypt/code/Home/News/info.html" class="ellipsis">汽车举升机制造业在奋力前行</a></li>
+			<li class="clearfix"><span>9</span><a href="/zzypt/code/Home/News/info.html" class="ellipsis">制造业将大量应用人工智能</a></li>
+			<li class="clearfix"><span>10</span><a href="/zzypt/code/Home/News/info.html" class="ellipsis">互联网助推制造业供给侧改革</a></li>-->
+		</ul>
+		<a href="#" class="img"><img src="__IMG__/news_recomm.jpg" width="100%" height="100%"></a>
+</div>

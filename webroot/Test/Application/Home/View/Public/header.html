@@ -1,0 +1,58 @@
+<!-- 导航代码 -->
+	<!-- 头部导航 S-->
+	<header class="header_nav">
+		<nav class="navbar">
+			<div class="container">
+				<div class="row">
+				<div class="navbar-header pull-left">
+					  <a href="#" class="myBrand">
+						  <img src="__IMG__/logo.png" alt="">
+					  </a>
+				</div>
+
+				<div class="pull-right"  id="myNavbarCollapse">
+			      <ul class="nav navbar-nav navbar-right myNav">
+			        <li class="active">
+			        	<a href="<?=U("Home/Index/index/ids/$cid")?>">
+				        	首页
+				        	<span></span>
+				        	<i></i>
+			        	</a>
+			        </li>
+
+			        <li  <?php if(!$cid){echo "style='display:none'";}?> >
+			        	<a href="<?=U("Home/Index/browse/ids/$cid")?>">
+			        		浏览
+			        		<span></span>
+			        		<i></i>
+			        	</a>
+			        </li>
+			        <li>
+			        	<a href="<?=U("Home/Help/index/ids/$cid")?>">
+				        	帮助中心
+				        	<span></span>
+				        	<i></i>
+			        	</a>
+			       </li>
+			      </ul>
+			    </div><!-- /.navbar-collapse -->
+			    </div><!-- /.row -->
+			</div>
+		</nav>
+	</header>
+	<!-- 头部导航 E-->
+
+	<!-- 头部菜单字体变色js -->
+	<script type="text/javascript">
+		$(function (){
+			var cid="<?=$cid?>";
+			var con="__ACTION__"+"/ids/"+cid+".html";
+			$('.myNav li').each(function (){
+				var href=$(this).children('a').attr('href');
+				if(con==href){
+					$('.myNav li').removeClass('active');
+					$(this).addClass('active');
+				}
+			});
+		});
+	</script>

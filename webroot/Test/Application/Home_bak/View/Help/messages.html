@@ -1,0 +1,52 @@
+<extend name="Public/body"/>
+<block name="style">
+	<css href="__CSS__/help.css"/>
+	<css href="__PLUGIN__/popover/dist/jquery.webui-popover.min.css"/>
+</block>
+<block name="body">
+	<div class="container">
+		<div class="messages_content">
+		<form action="" class="messages_form">
+			<div class="form_title">
+				<h3 class="pull-left">发私信给QING小秘书</h3>
+				<span class="form_label pull-right inputnote"></span>
+			</div>
+			<textarea id="msgTextarea" class="msg_text"></textarea>
+			<div class="form-group btn_group">
+				<input type="submit" class="btn btn-primary submit_btn" value="发布">
+				<button class="btn btn-default cancel_btn">取消</button>
+			</div>
+		</form>
+		</div>
+	</div>
+	<!-- 页脚 S-->
+	<footer class="footer_404">
+		<div class="container">
+			<div class="foot_content clearfix">
+				<ul class="contant_list clearfix pull-left">
+					<li><a href="<?=U('Home/Help/contact')?>">联系我们</a> |</li>
+					<li><a href="javascript:;">移动客户端</a> |</li>
+					<li><a href="javascript:;">关于我们</a> |</li>
+					<li><a href="javascript:;">帮助中心</a></li>
+				</ul>
+				<div class="right_info pull-right">
+					<span>公司版权所有©2010-2016</span>
+					<span>备XXXXXX号</span>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!-- 页脚 E-->
+</block>
+<block name="script">
+	<js href="__PLUGIN__/popover/dist/jquery.webui-popover.min.js"/>
+	<js href="__JS__/common.js"/>
+	<script>
+		$(function(){
+			// 文本框字数统计
+			$('#msgTextarea').on('keydown',function(){
+				countsize.inputLimit($('#msgTextarea'),500);
+			});
+		})
+	</script>
+</block>

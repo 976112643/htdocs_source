@@ -1,0 +1,384 @@
+<extend name="Public/body"/>
+<block name="style">
+	<css href="__CSS__/login.css"/>
+	<style>
+		html, body {
+			height: 100%;
+			overflow-y: hidden;
+		}
+		.foot_content {
+			border-top-color:transparent;
+		}
+		.wrap {
+			overflow-y: hidden;
+			min-width: 1200px;
+			width: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: 4;
+		}
+	</style>
+</block>
+<block name="body">
+	<!-- 登录、注册 S -->
+	<div class="log_regis_con js_section section1">
+		<div class="loginregister_box">
+			<ul id="loginTab" class="login_regis_tab clearfix">
+				<li>
+					<a href="#register" data-toggle="tab">
+			        	注册
+			      	</a>
+				</li>
+				<li class="active">
+					<a href="#login" data-toggle="tab">
+			        	登录
+			      	</a>
+				</li>
+				<li>
+					<a href="#downloadApp" data-toggle="tab">
+			        	下载APP
+			      	</a>
+				</li>
+			</ul>
+			<div class="tab-content">
+				<div class="tab-pane register_pane fade" id="register">
+					<form action="<?=U('opendomain')?>" class="form-horizontal js_form">
+						<div class="form_group">
+							<input type="text" class="form_input" id="newUserName" datatype="*" placeholder="请填写用户名/手机号" nullmsg="请填写用户名/手机号">
+							<label for="newUserName" class="iconfont form_icon">&#xe631;</label>
+						</div>
+						<div class="form_group">
+							<input type="password" class="form_input" id="password" datatype="*6-16" placeholder="密码" nullmsg="请填写6-16位密码">
+							<label for="password" class="iconfont form_icon">&#xe632;</label>
+						</div>
+						<div class="form_group" style="margin-bottom:10px">
+							<div class="input_group clearfix">
+								<input type="text" class="form_input" datatype="*" id="Codes" placeholder="验证码" nullmsg="请输入验证码">
+								<input type="button" class="get_codesbtn" value="获取验证码">
+							</div>
+							<label for="Codes" class="iconfont form_icon">&#xe64a;</label>
+						</div>
+						<div class="form_group">
+							<span class="Validform_checktip group_checktip" id="Validform_checktip"></span>
+							<input type="submit" class="btn form_btn" value="下一步">
+						</div>
+						<div class="form_group clearfix">
+							<label class="remember_password pull-left"><input type="checkbox"> 记住密码</label>
+							<a href="<?=U('User/Login/find_password')?>" class="forget_password pull-right">忘记密码</a>
+						</div>
+						<div class="form_group clearfix">
+							<div class="dsfdl_box text-center">
+								<div class="title"></div>
+								<a href="#" class="dsfdl_link qq_link">
+									<i class="iconfont">&#xe62f;</i>
+								</a>
+								<a href="#" class="dsfdl_link weixin_link">
+									<i class="iconfont">&#xe62e;</i>
+								</a>
+								<a href="#" class="dsfdl_link weibo_link">
+									<i class="iconfont">&#xe625;</i>
+								</a>
+							</div>
+						</div>
+					</form>
+				</div>
+				<div class="tab-pane login_pane fade in active" id="login">
+					<form action="<?=U('Home/Index/index')?>" class="form-horizontal index_form js_form">
+						<div class="form_group">
+							<input type="text" class="form_input" id="userName" datatype="*" placeholder="请填写用户名/手机号" nullmsg="请填写用户名/手机号">
+							<label for="userName" class="iconfont form_icon">&#xe631;</label>
+							
+						</div>
+						<div class="form_group">
+							<input type="password" class="form_input" datatype="*6-16" id="password2" placeholder="密码" nullmsg="请填写密码">
+							<label for="password2" class="iconfont form_icon">&#xe632;</label>
+						</div>
+						<div class="form_group">
+							<span class="Validform_checktip group_checktip" id="Validform_checktip"></span>
+							<button class="btn form_btn">登&nbsp;&nbsp;&nbsp;录</button>
+						</div>
+						<div class="form_group clearfix">
+							<label class="remember_password pull-left"><input type="checkbox"> 记住密码</label>
+							<a href="<?=U('User/Login/find_password')?>" class="forget_password pull-right">忘记密码</a>
+						</div>
+						<div class="form_group clearfix">
+							<div class="dsfdl_box text-center">
+								<div class="title"></div>
+								<a href="#" class="dsfdl_link qq_link">
+									<i class="iconfont">&#xe62f;</i>
+								</a>
+								<a href="#" class="dsfdl_link weixin_link">
+									<i class="iconfont">&#xe62e;</i>
+								</a>
+								<a href="#" class="dsfdl_link weibo_link">
+									<i class="iconfont">&#xe625;</i>
+								</a>
+							</div>
+						</div>
+					</form>
+				</div>
+				<div class="tab-pane download_pane fade clearfix" id="downloadApp">
+					<div class="linkbtn_group pull-left">
+						<div class="clearfix iPhone">
+							<span class="pull-left">iPhone版：</span>
+							<a href="#" class="download_btn pull-right">
+								<i class="iconfont">&#xe654;</i>
+								App Store 下载
+							</a>
+						</div>
+						<div class="clearfix Android">
+							<span class="pull-left">Android版：</span>
+							<a href="#" class="download_btn pull-right">
+								<i class="iconfont">&#xe653;</i>
+								Android 下载
+							</a>
+						</div>
+					</div>
+					<div class="ewm_box pull-right">
+						<img src="__IMG__/User/ewm.jpg" alt="">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 登录、注册 E -->
+	<!-- 第二屏 S-->
+	<div class="js_section section section2">
+		<h1>轻松记录干货，分享科技趣事</h1>
+		<p class="txt_box">方便地记录照片、文字、音乐、视频，适用于iPhone和Android移动客户端及PC端，让你随时随地的记录与分享。</p>
+		<div class="section_img text-center">
+			<img src="__IMG__/User/section2_img.png" alt="">
+		</div>
+	</div>
+	<!-- 第二屏 E-->
+	<!-- 第三屏 S-->
+	<div class="js_section section3 clearfix">
+		<div class="container">
+			<div class="sec3_conbox zdtb">
+				<div class="icon_box">
+					<i class="iconfont">&#xe646;</i>
+				</div>
+				<h2>自动同步</h2>
+				<p>方便同步你的内容到QQ空间、微信朋友圈、新浪微博等社交网络，让你的科技干货和小伙伴们一同分享。</p>
+			</div>
+			<div class="sec3_conbox gzltp">
+				<div class="icon_box">
+					<i class="iconfont">&#xe647;</i>
+				</div>
+				<h2>高质量图片</h2>
+				<p>使用无损图片压缩技术，上传图片保留高质量细节，当你手机处于WiFi网络，将自动加载全高清图片。</p>
+			</div>
+			<div class="sec3_conbox dlym">
+				<div class="icon_box">
+					<i class="iconfont">&#xe649;</i>
+				</div>
+				<h2>独立域名</h2>
+				<p>QING个人主页，可以自定义以lightblog.com为基础的二级域名，让你拥有属于自己的独立空间。</p>
+			</div>
+			<div class="sec3_conbox tjsf">
+				<div class="icon_box">
+					<i class="iconfont">&#xe648;</i>
+				</div>
+				<h2>推荐算法</h2>
+				<p>通过你的喜欢、关注，标签的使用情况，推荐出更多你感兴趣的人与内容。</p>
+			</div>
+		</div>
+	</div>
+	<!-- 第三屏 E-->
+	<!-- 第四屏 S-->
+	<div class="js_section section section4">
+		<h1>搜罗全球有共同爱好的小伙伴</h1>
+		<p class="txt_box">汇聚了数百万的开源、科技达人，设计师及源代码爱好者，并不断分享更多的干货，无论是
+软件研发、WEB开发、运维、服务器端开发、方案输出都有精彩的人与内容不断产出。
+</p>
+		<div class="section_img text-center">
+			<img src="__IMG__/User/section4_img.png" alt="">
+		</div>
+	</div>
+	<!-- 第四屏 E-->
+	<!-- 第五屏 S-->
+	<div class="js_section section section5">
+		<h1>轻巧的移动QING</h1>
+		<p class="txt_box">通过iPhone及Android版客户端，体验轻博客的快速、漂亮、有趣，把你的科技干货告诉小伙伴，和大家一起分享。</p>
+		<p class="download_link text-center"><a href="#">马上下载 ></a></p>
+		<div class="section_img text-center">
+			<img src="__IMG__/User/section5_img.png" alt="">
+		</div>
+	</div>
+	<!-- 第五屏 E-->
+	<!-- 底部 S-->
+	<div class="last_section">
+		<div class="container">
+			<h1>QING - 与成功者，同行</h1>
+			<div class="register_group clearfix">
+				<a href="#" class="register_btn phone">
+					<span class="icon">
+						<i class="iconfont">&#xe64a;</i>
+					</span>
+					<span class="word">
+					手机注册
+					</span>
+				</a>
+				<a href="#" class="register_btn qq">
+					<span class="icon">
+						<i class="iconfont">&#xe64c;</i>
+					</span>
+					<span class="word">
+					腾讯QQ注册
+					</span>
+				</a>
+				<a href="#" class="register_btn weixin">
+					<span class="icon">
+						<i class="iconfont">&#xe64d;</i>
+					</span>
+					<span class="word">
+					微信注册
+					</span>
+				</a>
+				<a href="#" class="register_btn weibo">
+					<span class="icon">
+						<i class="iconfont">&#xe64b;</i>
+					</span>
+					<span class="word">
+					新浪微博注册
+					</span>
+				</a>
+			</div>
+		</div>
+		<include file="Home@Public/footer"/>
+	</div>
+	<!-- 底部 E-->
+	<script>
+	$(function(){
+		var windowH = $(window).height();
+		$('.js_section').css('height',windowH+"px");
+
+		// 表单验证样式自定义
+    	$(".js_form").Validform({
+			tiptype:function(msg,o,cssctl){
+				var objtip=o.obj.parents('.js_form').find("#Validform_checktip");
+				cssctl(objtip,o.type);
+				// objtip.text(msg);
+				msg = '<i class="iconfont">&#xe630;</i> '+msg;
+				if(o.type==2){
+					objtip.html('').fadeOut();
+				}else{
+					objtip.html(msg).fadeIn();
+				}
+			}
+			// ajaxPost:true,
+			// callback:function(data){
+			// 	if(data.status==200){
+			// 		window.location.URL = "<?=U('User/Login/opendomain')?>";
+			// 		//window.location.href=data.url;
+			// 	}
+			// }
+		});
+
+		$('input.form_input').on('blur',function(){
+			if($(this).hasClass('Validform_error')){
+				$(this).siblings('.form_icon').css('color','red');
+			}else {
+				$(this).siblings('.form_icon').css('color','#999');
+			}
+		})
+
+		// 获取验证码倒计时
+		$('.get_codesbtn').on('click',function(){
+			var _this = $(this);
+			var num = 60;
+			_this.val('重新发送(60)');
+			$('.Validform_checktip').addClass('mt15').text('验证码已发送，请注意查收');
+			var timer = setInterval(function(){
+				_this.attr('disabled','true');
+				--num;
+				_this.val('重新发送('+ num +')');
+				if(num == 0){
+					clearInterval(timer);
+					_this.removeAttr('disabled');
+					_this.val('获取验证码')
+				}
+			},1000);
+		})
+	})
+	</script>
+</block>
+<block name="script">
+<js href="__JS__/jquery.mousewheel.js"/>
+<script>
+// var windowH = $(window).height();
+var screen_height=$(window).height();
+var screen_weight=window.screen.availWidth;
+var cur_page_index=0,is_scroll=true,scroll_top=false;
+var top_total_height=0;
+var footer_height=204;
+$(function(){
+// $('.js_section').css('height',screen_height+"px");
+$('.wrap').mousewheel(function(event,delta){
+	scroll_page($(this),delta,1)
+});
+function quanp(){
+	$('.js_section').height(screen_height);
+	$('.js_section').width(screen_weight);
+	setTimeout(function(){
+		cur_page_index=0;
+		scroll_page($(".wrap"),-1,0);
+	},500);
+}
+quanp();
+})
+function scroll_page(_this,delta,num){
+	//判断当前滚屏动画是否结束
+	if(is_scroll){
+		is_scroll=false;
+		//delta的值是负的即-1，那么滚轮就是向下滚动，正的1就是向上
+		if(delta>=0){
+			if(cur_page_index>0){
+				cur_page_index--;
+			}else{
+				$("#navBar li").removeClass("current");
+				$("#navBar li:eq("+cur_page_index+")").removeClass("current");
+			}
+		}else{
+			if(cur_page_index<=$(".wrap .js_section").length){
+				cur_page_index++;
+			}else{
+				$("#navBar li").removeClass("current");
+			}
+		}
+		if(cur_page_index==1){
+			$("#navBar li:eq(0)").addClass("current");
+		}
+
+		var page_top;
+		var page_scroll=cur_page_index-1;
+		if(page_scroll<0){
+			page_scroll=0;
+		}
+		if(cur_page_index<1){
+			page_top=0;
+		}else{
+			if(cur_page_index==($(".wrap .js_section").length+1)){
+				page_top=screen_height*(page_scroll-1)+top_total_height+footer_height;
+				$("#navBar li:eq("+(page_scroll-1)+")").removeClass("current");
+			}else{
+				page_top=screen_height*page_scroll+top_total_height;
+			}
+		}
+		_this.stop(false,true).animate({"margin-top":-page_top+"px"},800,function(){
+			$(".wrap .js_section:eq("+page_scroll+")").addClass("current").siblings('.js_section').removeClass("current");
+			is_scroll=true;
+		});
+
+		if(cur_page_index>0){
+			$("#navBar li:eq("+page_scroll+")").addClass("current").siblings('li').removeClass("current");
+		}else{
+			$("#navBar li:eq(0)").removeClass("current");
+		}
+
+	}
+}
+
+</script>
+</block>

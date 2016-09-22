@@ -1,0 +1,68 @@
+<section class="content js_box">
+		<div class="row">
+		<!-- left column -->
+			<div class="col-md-12">
+			<!-- general form elements -->
+				<div class="box box-primary">
+					<!-- form start -->
+					
+					<div class="box-body">
+						<div class="form-group">
+							<label>发件人：</label> <span>平台管理员</span>
+						</div>
+						<div class="form-group">
+							<label>时间：</label> <span><?=int_to_date($v['addtime'])?></span>
+						</div>
+						<div class="form-group">
+							<label>主题：</label> <span><?=$info['now']['title']?></span>
+						</div>
+						<div class="form-group">
+							<span><?=$info['replay']?></span>
+							
+						</div>
+						<div class="form-group js_replay_edit" style="display:none">
+							<form role="form" action="<?=U('reply')?>" method="post"
+						class="operate_form">
+								<input type="hidden" name="id" value="<?=$info['now']['msg_id']?>"/>
+								<input type="hidden" name="pid" value="<?=$info['now']['msg_id']?>"/>
+						<?php
+							if($info['now']['pid']=='0'){
+						?>
+								<input type="hidden" name="pid" value="<?=$info['now']['msg_id']?>"/>
+						<?php
+							}else{
+						?>
+								<input type="hidden" name="pid" value="<?=$info['now']['pid']?>"/>
+						<?php
+							}
+						?>
+								<label>回复：</label>
+								<!--百度编辑器-->
+								<?php $time=time(); ?>
+								<script id="<?='editor_'.$time?>" type="text/plain"
+									name="content"><?=$info['content']?></script>
+								<script type="text/javascript">
+									//说明：editor_obj_id的值必须和编辑器ID保持一致
+									var editor_<?=$time?>=UE.getEditor('editor_<?=$time?>',config);
+									</script>
+								<div class="box-footer">
+									<button type="submit" class="btn btn-primary ajax-post"
+										target-form="operate_form">提交</button>
+								</div>
+							</form>
+						</div>
+					</div>
+						
+					
+				</div>
+			<div class="form-group">
+				<span class="text-left">上一篇:<a class="js_page_content" data-id="<?=$info['prev']['msg_id']?>"><?=$info['prev']['title']?></a></span>
+				<span class="text-right">下一篇:<a class="js_page_content" href="javascript:;"data-id="<?=$info['next']['msg_id']?>"><?=$info['next']['title']?></a></span>
+				<span class="text-right js_replay btn btn-xs btn-default"><a href="javascript:;">回复</a></span>
+			</div>
+		<!--/.col (left) -->
+		</div>
+	</div>
+	<!-- /.row -->
+	
+	</section>

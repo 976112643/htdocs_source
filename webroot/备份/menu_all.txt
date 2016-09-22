@@ -1,0 +1,2178 @@
+<?php 
+array (
+  0 => 
+  array (
+    'title' => '系统设置',
+    'url' => '',
+    'id' => '1',
+    'pid' => '0',
+    '_child' => 
+    array (
+      0 => 
+      array (
+        'title' => '配置管理',
+        'url' => 'Backend/Base/Config/index',
+        'id' => '3',
+        'pid' => '1',
+        '_child' => 
+        array (
+          0 => 
+          array (
+            'title' => '启用',
+            'url' => 'Backend/Base/Config/enable',
+            'id' => '777',
+            'pid' => '3',
+          ),
+          1 => 
+          array (
+            'title' => '修改',
+            'url' => 'Backend/Base/Config/edit',
+            'id' => '776',
+            'pid' => '3',
+          ),
+          2 => 
+          array (
+            'title' => '添加',
+            'url' => 'Backend/Base/Config/add',
+            'id' => '775',
+            'pid' => '3',
+          ),
+          3 => 
+          array (
+            'title' => '禁用',
+            'url' => 'Backend/Base/Config/disable',
+            'id' => '778',
+            'pid' => '3',
+          ),
+        ),
+      ),
+      1 => 
+      array (
+        'title' => '管理员列表',
+        'url' => 'Backend/Base/Member/index',
+        'id' => '4',
+        'pid' => '1',
+        '_child' => 
+        array (
+          0 => 
+          array (
+            'title' => '添加',
+            'url' => 'Backend/Base/Member/add',
+            'id' => '147',
+            'pid' => '4',
+          ),
+          1 => 
+          array (
+            'title' => '修改',
+            'url' => 'Backend/Base/Member/edit',
+            'id' => '148',
+            'pid' => '4',
+          ),
+          2 => 
+          array (
+            'title' => '启用',
+            'url' => 'Backend/Base/Member/enable',
+            'id' => '149',
+            'pid' => '4',
+          ),
+          3 => 
+          array (
+            'title' => '禁用',
+            'url' => 'Backend/Base/Member/disable',
+            'id' => '150',
+            'pid' => '4',
+          ),
+          4 => 
+          array (
+            'title' => '删除',
+            'url' => 'Backend/Base/Member/del',
+            'id' => '151',
+            'pid' => '4',
+          ),
+        ),
+      ),
+      2 => 
+      array (
+        'title' => '菜单管理',
+        'url' => 'Backend/Base/Menu/index',
+        'id' => '2',
+        'pid' => '1',
+        '_child' => 
+        array (
+          0 => 
+          array (
+            'title' => '启用',
+            'url' => 'Backend/Base/Menu/enable',
+            'id' => '759',
+            'pid' => '2',
+          ),
+          1 => 
+          array (
+            'title' => '添加',
+            'url' => 'Backend/Base/Menu/add',
+            'id' => '757',
+            'pid' => '2',
+          ),
+          2 => 
+          array (
+            'title' => '删除',
+            'url' => 'Backend/Base/Menu/del',
+            'id' => '761',
+            'pid' => '2',
+          ),
+          3 => 
+          array (
+            'title' => '禁用',
+            'url' => 'Backend/Base/Menu/disable',
+            'id' => '760',
+            'pid' => '2',
+          ),
+          4 => 
+          array (
+            'title' => '修改',
+            'url' => 'Backend/Base/Menu/edit',
+            'id' => '758',
+            'pid' => '2',
+          ),
+        ),
+      ),
+      3 => 
+      array (
+        'title' => '站点设置',
+        'url' => 'Backend/Base/Set/index',
+        'id' => '11',
+        'pid' => '1',
+      ),
+      4 => 
+      array (
+        'title' => '操作日志',
+        'url' => 'Backend/Base/ActionLog/index',
+        'id' => '52',
+        'pid' => '1',
+        '_child' => 
+        array (
+          0 => 
+          array (
+            'title' => '删除',
+            'url' => 'Backend/Base/ActionLog/del',
+            'id' => '157',
+            'pid' => '52',
+          ),
+        ),
+      ),
+      5 => 
+      array (
+        'title' => '头部导航',
+        'url' => 'Backend/Navigation/Index/index',
+        'id' => '195',
+        'pid' => '1',
+        '_child' => 
+        array (
+          0 => 
+          array (
+            'title' => '删除',
+            'url' => 'Backend/Navigation/Index/del',
+            'id' => '345',
+            'pid' => '195',
+          ),
+          1 => 
+          array (
+            'title' => '禁用',
+            'url' => 'Backend/Navigation/Index/disable',
+            'id' => '344',
+            'pid' => '195',
+          ),
+          2 => 
+          array (
+            'title' => '启用',
+            'url' => 'Backend/Navigation/Index/enable',
+            'id' => '343',
+            'pid' => '195',
+          ),
+          3 => 
+          array (
+            'title' => '修改',
+            'url' => 'Backend/Navigation/Index/edit',
+            'id' => '342',
+            'pid' => '195',
+          ),
+          4 => 
+          array (
+            'title' => '添加',
+            'url' => 'Backend/Navigation/Index/add',
+            'id' => '341',
+            'pid' => '195',
+          ),
+        ),
+      ),
+      6 => 
+      array (
+        'title' => '底部导航',
+        'url' => 'Backend/Navigation/Bottom/index',
+        'id' => '290',
+        'pid' => '1',
+        '_child' => 
+        array (
+          0 => 
+          array (
+            'title' => '删除',
+            'url' => 'Backend/Navigation/Bottom/del',
+            'id' => '335',
+            'pid' => '290',
+          ),
+          1 => 
+          array (
+            'title' => '禁用',
+            'url' => 'Backend/Navigation/Bottom/disable',
+            'id' => '334',
+            'pid' => '290',
+          ),
+          2 => 
+          array (
+            'title' => '启用',
+            'url' => 'Backend/Navigation/Bottom/enable',
+            'id' => '333',
+            'pid' => '290',
+          ),
+          3 => 
+          array (
+            'title' => '添加',
+            'url' => 'Backend/Navigation/Bottom/add',
+            'id' => '331',
+            'pid' => '290',
+          ),
+          4 => 
+          array (
+            'title' => '修改',
+            'url' => 'Backend/Navigation/Bottom/edit',
+            'id' => '332',
+            'pid' => '290',
+          ),
+        ),
+      ),
+      7 => 
+      array (
+        'title' => '友情链接',
+        'url' => 'Backend/Links/Index/index',
+        'id' => '471',
+        'pid' => '1',
+        '_child' => 
+        array (
+          0 => 
+          array (
+            'title' => '禁用',
+            'url' => 'Backend/Links/Index/disable',
+            'id' => '485',
+            'pid' => '471',
+          ),
+          1 => 
+          array (
+            'title' => '删除',
+            'url' => 'Backend/Links/Index/del',
+            'id' => '486',
+            'pid' => '471',
+          ),
+          2 => 
+          array (
+            'title' => '启用',
+            'url' => 'Backend/Links/Index/enable',
+            'id' => '484',
+            'pid' => '471',
+          ),
+          3 => 
+          array (
+            'title' => '添加',
+            'url' => 'Backend/Links/Index/add',
+            'id' => '482',
+            'pid' => '471',
+          ),
+          4 => 
+          array (
+            'title' => '修改',
+            'url' => 'Backend/Links/Index/edit',
+            'id' => '483',
+            'pid' => '471',
+          ),
+        ),
+      ),
+      8 => 
+      array (
+        'title' => '地区管理',
+        'url' => 'Backend/Base/Area/index',
+        'id' => '487',
+        'pid' => '1',
+        '_child' => 
+        array (
+          0 => 
+          array (
+            'title' => '禁用',
+            'url' => 'Backend/Base/Area/disable',
+            'id' => '495',
+            'pid' => '487',
+          ),
+          1 => 
+          array (
+            'title' => '启用',
+            'url' => 'Backend/Base/Area/enable',
+            'id' => '494',
+            'pid' => '487',
+          ),
+          2 => 
+          array (
+            'title' => '修改',
+            'url' => 'Backend/Base/Area/edit',
+            'id' => '493',
+            'pid' => '487',
+          ),
+          3 => 
+          array (
+            'title' => '添加',
+            'url' => 'Backend/Base/Area/add',
+            'id' => '492',
+            'pid' => '487',
+          ),
+          4 => 
+          array (
+            'title' => '删除',
+            'url' => 'Backend/Base/Area/del',
+            'id' => '496',
+            'pid' => '487',
+          ),
+        ),
+      ),
+      9 => 
+      array (
+        'title' => '外语等级',
+        'url' => 'Backend/Base/LanguageLevel/index',
+        'id' => '596',
+        'pid' => '1',
+        '_child' => 
+        array (
+          0 => 
+          array (
+            'title' => '添加',
+            'url' => 'Backend/Base/LanguageLevel/add',
+            'id' => '597',
+            'pid' => '596',
+          ),
+          1 => 
+          array (
+            'title' => '修改',
+            'url' => 'Backend/Base/LanguageLevel/edit',
+            'id' => '598',
+            'pid' => '596',
+          ),
+          2 => 
+          array (
+            'title' => '启用',
+            'url' => 'Backend/Base/LanguageLevel/enable',
+            'id' => '599',
+            'pid' => '596',
+          ),
+          3 => 
+          array (
+            'title' => '禁用',
+            'url' => 'Backend/Base/LanguageLevel/disable',
+            'id' => '600',
+            'pid' => '596',
+          ),
+          4 => 
+          array (
+            'title' => '删除',
+            'url' => 'Backend/Base/LanguageLevel/del',
+            'id' => '601',
+            'pid' => '596',
+          ),
+        ),
+      ),
+      10 => 
+      array (
+        'title' => '英语水平',
+        'url' => 'Backend/Base/EnglishLevel/index',
+        'id' => '602',
+        'pid' => '1',
+        '_child' => 
+        array (
+          0 => 
+          array (
+            'title' => '添加',
+            'url' => 'Backend/Base/EnglishLevel/add',
+            'id' => '603',
+            'pid' => '602',
+          ),
+          1 => 
+          array (
+            'title' => '修改',
+            'url' => 'Backend/Base/EnglishLevel/edit',
+            'id' => '604',
+            'pid' => '602',
+          ),
+          2 => 
+          array (
+            'title' => '启用',
+            'url' => 'Backend/Base/EnglishLevel/enable',
+            'id' => '605',
+            'pid' => '602',
+          ),
+          3 => 
+          array (
+            'title' => '禁用',
+            'url' => 'Backend/Base/EnglishLevel/disable',
+            'id' => '606',
+            'pid' => '602',
+          ),
+          4 => 
+          array (
+            'title' => '删除',
+            'url' => 'Backend/Base/EnglishLevel/del',
+            'id' => '607',
+            'pid' => '602',
+          ),
+        ),
+      ),
+      11 => 
+      array (
+        'title' => '信用等级',
+        'url' => 'Backend/Base/CreditLevel/index',
+        'id' => '608',
+        'pid' => '1',
+        '_child' => 
+        array (
+          0 => 
+          array (
+            'title' => '添加',
+            'url' => 'Backend/Base/CreditLevel/add',
+            'id' => '609',
+            'pid' => '608',
+          ),
+          1 => 
+          array (
+            'title' => '修改',
+            'url' => 'Backend/Base/CreditLevel/edit',
+            'id' => '610',
+            'pid' => '608',
+          ),
+          2 => 
+          array (
+            'title' => '启用',
+            'url' => 'Backend/Base/CreditLevel/enable',
+            'id' => '611',
+            'pid' => '608',
+          ),
+          3 => 
+          array (
+            'title' => '禁用',
+            'url' => 'Backend/Base/CreditLevel/disable',
+            'id' => '612',
+            'pid' => '608',
+          ),
+          4 => 
+          array (
+            'title' => '删除',
+            'url' => 'Backend/Base/CreditLevel/del',
+            'id' => '613',
+            'pid' => '608',
+          ),
+        ),
+      ),
+      12 => 
+      array (
+        'title' => '敏感词管理',
+        'url' => 'Backend/Base/LimitWords/index',
+        'id' => '614',
+        'pid' => '1',
+        '_child' => 
+        array (
+          0 => 
+          array (
+            'title' => '添加',
+            'url' => 'Backend/Base/LimitWords/add',
+            'id' => '615',
+            'pid' => '614',
+          ),
+          1 => 
+          array (
+            'title' => '修改',
+            'url' => 'Backend/Base/LimitWords/edit',
+            'id' => '616',
+            'pid' => '614',
+          ),
+          2 => 
+          array (
+            'title' => '启用',
+            'url' => 'Backend/Base/LimitWords/enable',
+            'id' => '617',
+            'pid' => '614',
+          ),
+          3 => 
+          array (
+            'title' => '禁用',
+            'url' => 'Backend/Base/LimitWords/disable',
+            'id' => '618',
+            'pid' => '614',
+          ),
+          4 => 
+          array (
+            'title' => '删除',
+            'url' => 'Backend/Base/LimitWords/del',
+            'id' => '619',
+            'pid' => '614',
+          ),
+        ),
+      ),
+      13 => 
+      array (
+        'title' => '会员等级',
+        'url' => 'Backend/Base/MemberLevel/index',
+        'id' => '620',
+        'pid' => '1',
+        '_child' => 
+        array (
+          0 => 
+          array (
+            'title' => '添加',
+            'url' => 'Backend/Base/MemberLevel/add',
+            'id' => '621',
+            'pid' => '620',
+          ),
+          1 => 
+          array (
+            'title' => '修改',
+            'url' => 'Backend/Base/MemberLevel/edit',
+            'id' => '622',
+            'pid' => '620',
+          ),
+          2 => 
+          array (
+            'title' => '启用',
+            'url' => 'Backend/Base/MemberLevel/enable',
+            'id' => '623',
+            'pid' => '620',
+          ),
+          3 => 
+          array (
+            'title' => '禁用',
+            'url' => 'Backend/Base/MemberLevel/disable',
+            'id' => '624',
+            'pid' => '620',
+          ),
+          4 => 
+          array (
+            'title' => '删除',
+            'url' => 'Backend/Base/MemberLevel/del',
+            'id' => '625',
+            'pid' => '620',
+          ),
+        ),
+      ),
+      14 => 
+      array (
+        'title' => '翻译难度等级',
+        'url' => 'Backend/Base/DifficultLevel/index',
+        'id' => '626',
+        'pid' => '1',
+        '_child' => 
+        array (
+          0 => 
+          array (
+            'title' => '添加',
+            'url' => 'Backend/Base/DifficultLevel/add',
+            'id' => '627',
+            'pid' => '626',
+          ),
+          1 => 
+          array (
+            'title' => '修改',
+            'url' => 'Backend/Base/DifficultLevel/edit',
+            'id' => '628',
+            'pid' => '626',
+          ),
+          2 => 
+          array (
+            'title' => '启用',
+            'url' => 'Backend/Base/DifficultLevel/enable',
+            'id' => '629',
+            'pid' => '626',
+          ),
+          3 => 
+          array (
+            'title' => '禁用',
+            'url' => 'Backend/Base/DifficultLevel/disable',
+            'id' => '630',
+            'pid' => '626',
+          ),
+          4 => 
+          array (
+            'title' => '删除',
+            'url' => 'Backend/Base/DifficultLevel/del',
+            'id' => '631',
+            'pid' => '626',
+          ),
+        ),
+      ),
+      15 => 
+      array (
+        'title' => '帮助类别管理',
+        'url' => 'Backend/Base/HelpCategory/index',
+        'id' => '676',
+        'pid' => '1',
+        '_child' => 
+        array (
+          0 => 
+          array (
+            'title' => '启用',
+            'url' => 'Backend/Base/HelpCategory/enable',
+            'id' => '684',
+            'pid' => '676',
+          ),
+          1 => 
+          array (
+            'title' => '修改',
+            'url' => 'Backend/Base/HelpCategory/edit',
+            'id' => '683',
+            'pid' => '676',
+          ),
+          2 => 
+          array (
+            'title' => '添加',
+            'url' => 'Backend/Base/HelpCategory/add',
+            'id' => '682',
+            'pid' => '676',
+          ),
+          3 => 
+          array (
+            'title' => '禁用',
+            'url' => 'Backend/Base/HelpCategory/disable',
+            'id' => '685',
+            'pid' => '676',
+          ),
+          4 => 
+          array (
+            'title' => '删除',
+            'url' => 'Backend/Base/HelpCategory/del',
+            'id' => '686',
+            'pid' => '676',
+          ),
+        ),
+      ),
+      16 => 
+      array (
+        'title' => '测试菜单',
+        'url' => 'Backend/Base/ListDemo',
+        'id' => '730',
+        'pid' => '1',
+        '_child' => 
+        array (
+          0 => 
+          array (
+            'title' => '添加',
+            'url' => 'Backend/Base/ListDemo',
+            'id' => '857',
+            'pid' => '730',
+          ),
+          1 => 
+          array (
+            'title' => '修改',
+            'url' => 'Backend/Base/ListDemo',
+            'id' => '858',
+            'pid' => '730',
+          ),
+          2 => 
+          array (
+            'title' => '启用',
+            'url' => 'Backend/Base/ListDemo',
+            'id' => '859',
+            'pid' => '730',
+          ),
+          3 => 
+          array (
+            'title' => '禁用',
+            'url' => 'Backend/Base/ListDemo',
+            'id' => '860',
+            'pid' => '730',
+          ),
+          4 => 
+          array (
+            'title' => '删除',
+            'url' => 'Backend/Base/ListDemo',
+            'id' => '861',
+            'pid' => '730',
+          ),
+        ),
+      ),
+      17 => 
+      array (
+        'title' => '权限管理',
+        'url' => 'Backend/Base/Group/index',
+        'id' => '766',
+        'pid' => '1',
+        '_child' => 
+        array (
+          0 => 
+          array (
+            'title' => '添加',
+            'url' => 'Backend/Base/Group/add',
+            'id' => '767',
+            'pid' => '766',
+          ),
+          1 => 
+          array (
+            'title' => '修改',
+            'url' => 'Backend/Base/Group/edit',
+            'id' => '768',
+            'pid' => '766',
+          ),
+          2 => 
+          array (
+            'title' => '启用',
+            'url' => 'Backend/Base/Group/enable',
+            'id' => '769',
+            'pid' => '766',
+          ),
+          3 => 
+          array (
+            'title' => '禁用',
+            'url' => 'Backend/Base/Group/disable',
+            'id' => '770',
+            'pid' => '766',
+          ),
+          4 => 
+          array (
+            'title' => '删除',
+            'url' => 'Backend/Base/Group/del',
+            'id' => '771',
+            'pid' => '766',
+          ),
+          5 => 
+          array (
+            'title' => '访问授权',
+            'url' => 'Backend/Base/Group/access',
+            'id' => '772',
+            'pid' => '766',
+          ),
+        ),
+      ),
+      18 => 
+      array (
+        'title' => 'SEO设置',
+        'url' => 'Backend/Base/SeoPage/index',
+        'id' => '783',
+        'pid' => '1',
+        '_child' => 
+        array (
+          0 => 
+          array (
+            'title' => '修改',
+            'url' => 'Backend/Base/SeoPage/edit',
+            'id' => '784',
+            'pid' => '783',
+          ),
+        ),
+      ),
+      19 => 
+      array (
+        'title' => '修改密码',
+        'url' => 'Backend/Base/Security/index',
+        'id' => '826',
+        'pid' => '1',
+      ),
+      20 => 
+      array (
+        'title' => '测试菜单2',
+        'url' => 'http://weibo.com/',
+        'id' => '839',
+        'pid' => '1',
+        '_child' => 
+        array (
+          0 => 
+          array (
+            'title' => '修改',
+            'url' => 'http://weibo.com/',
+            'id' => '846',
+            'pid' => '839',
+          ),
+          1 => 
+          array (
+            'title' => '添加',
+            'url' => 'http://weibo.com/',
+            'id' => '845',
+            'pid' => '839',
+          ),
+          2 => 
+          array (
+            'title' => '启用',
+            'url' => 'http://weibo.com/',
+            'id' => '847',
+            'pid' => '839',
+          ),
+          3 => 
+          array (
+            'title' => '禁用',
+            'url' => 'http://weibo.com/',
+            'id' => '848',
+            'pid' => '839',
+          ),
+          4 => 
+          array (
+            'title' => '删除',
+            'url' => 'http://weibo.com/',
+            'id' => '849',
+            'pid' => '839',
+          ),
+        ),
+      ),
+      21 => 
+      array (
+        'title' => '关键字管理',
+        'url' => 'Backend/Base/Keywords/index',
+        'id' => '850',
+        'pid' => '1',
+        '_child' => 
+        array (
+          0 => 
+          array (
+            'title' => '启用',
+            'url' => 'Backend/Base/Keywords/enable',
+            'id' => '869',
+            'pid' => '850',
+          ),
+          1 => 
+          array (
+            'title' => '修改',
+            'url' => 'Backend/Base/Keywords/edit',
+            'id' => '868',
+            'pid' => '850',
+          ),
+          2 => 
+          array (
+            'title' => '禁用',
+            'url' => 'Backend/Base/Keywords/disable',
+            'id' => '870',
+            'pid' => '850',
+          ),
+          3 => 
+          array (
+            'title' => '添加',
+            'url' => 'Backend/Base/Keywords/add',
+            'id' => '867',
+            'pid' => '850',
+          ),
+          4 => 
+          array (
+            'title' => '删除',
+            'url' => 'Backend/Base/Keywords/del',
+            'id' => '871',
+            'pid' => '850',
+          ),
+        ),
+      ),
+      22 => 
+      array (
+        'title' => 'b',
+        'url' => '',
+        'id' => '873',
+        'pid' => '1',
+      ),
+    ),
+  ),
+  1 => 
+  array (
+    'title' => '平台管理',
+    'url' => '',
+    'id' => '355',
+    'pid' => '0',
+    '_child' => 
+    array (
+      0 => 
+      array (
+        'title' => '用户列表',
+        'url' => 'Backend/Member/Index/index',
+        'id' => '356',
+        'pid' => '355',
+        '_child' => 
+        array (
+          0 => 
+          array (
+            'title' => '添加',
+            'url' => 'Backend/Member/Index/add',
+            'id' => '357',
+            'pid' => '356',
+          ),
+          1 => 
+          array (
+            'title' => '修改',
+            'url' => 'Backend/Member/Index/edit',
+            'id' => '358',
+            'pid' => '356',
+          ),
+          2 => 
+          array (
+            'title' => '启用',
+            'url' => 'Backend/Member/Index/enable',
+            'id' => '359',
+            'pid' => '356',
+          ),
+          3 => 
+          array (
+            'title' => '禁用',
+            'url' => 'Backend/Member/Index/disable',
+            'id' => '360',
+            'pid' => '356',
+          ),
+          4 => 
+          array (
+            'title' => '删除',
+            'url' => 'Backend/Member/Index/del',
+            'id' => '361',
+            'pid' => '356',
+          ),
+          5 => 
+          array (
+            'title' => '用户资金详情',
+            'url' => 'Backend/Member/Index/record',
+            'id' => '825',
+            'pid' => '356',
+          ),
+        ),
+      ),
+      1 => 
+      array (
+        'title' => '普通用户',
+        'url' => 'Backend/Member/Common/index',
+        'id' => '362',
+        'pid' => '355',
+        '_child' => 
+        array (
+          0 => 
+          array (
+            'title' => '删除',
+            'url' => 'Backend/Member/Common/del',
+            'id' => '726',
+            'pid' => '362',
+          ),
+          1 => 
+          array (
+            'title' => '禁用',
+            'url' => 'Backend/Member/Common/disable',
+            'id' => '725',
+            'pid' => '362',
+          ),
+          2 => 
+          array (
+            'title' => '启用',
+            'url' => 'Backend/Member/Common/enable',
+            'id' => '724',
+            'pid' => '362',
+          ),
+          3 => 
+          array (
+            'title' => '修改',
+            'url' => 'Backend/Member/Common/edit',
+            'id' => '723',
+            'pid' => '362',
+          ),
+          4 => 
+          array (
+            'title' => '添加',
+            'url' => 'Backend/Member/Common/add',
+            'id' => '722',
+            'pid' => '362',
+          ),
+        ),
+      ),
+      2 => 
+      array (
+        'title' => '个人译者',
+        'url' => 'Backend/Member/Personer/index',
+        'id' => '363',
+        'pid' => '355',
+        '_child' => 
+        array (
+          0 => 
+          array (
+            'title' => '添加',
+            'url' => 'Backend/Member/Personer/add',
+            'id' => '453',
+            'pid' => '363',
+          ),
+          1 => 
+          array (
+            'title' => '修改',
+            'url' => 'Backend/Member/Personer/edit',
+            'id' => '454',
+            'pid' => '363',
+          ),
+          2 => 
+          array (
+            'title' => '启用',
+            'url' => 'Backend/Member/Personer/enable',
+            'id' => '455',
+            'pid' => '363',
+          ),
+          3 => 
+          array (
+            'title' => '禁用',
+            'url' => 'Backend/Member/Personer/disable',
+            'id' => '456',
+            'pid' => '363',
+          ),
+          4 => 
+          array (
+            'title' => '删除',
+            'url' => 'Backend/Member/Personer/del',
+            'id' => '457',
+            'pid' => '363',
+          ),
+        ),
+      ),
+      3 => 
+      array (
+        'title' => '翻译公司',
+        'url' => 'Backend/Member/Company/index',
+        'id' => '364',
+        'pid' => '355',
+        '_child' => 
+        array (
+          0 => 
+          array (
+            'title' => '添加',
+            'url' => 'Backend/Member/Company/add',
+            'id' => '458',
+            'pid' => '364',
+          ),
+          1 => 
+          array (
+            'title' => '修改',
+            'url' => 'Backend/Member/Company/edit',
+            'id' => '459',
+            'pid' => '364',
+          ),
+          2 => 
+          array (
+            'title' => '启用',
+            'url' => 'Backend/Member/Company/enable',
+            'id' => '460',
+            'pid' => '364',
+          ),
+          3 => 
+          array (
+            'title' => '禁用',
+            'url' => 'Backend/Member/Company/disable',
+            'id' => '461',
+            'pid' => '364',
+          ),
+          4 => 
+          array (
+            'title' => '删除',
+            'url' => 'Backend/Member/Company/del',
+            'id' => '462',
+            'pid' => '364',
+          ),
+        ),
+      ),
+      4 => 
+      array (
+        'title' => '等级设置',
+        'url' => 'Backend/Member/Level/index',
+        'id' => '365',
+        'pid' => '355',
+        '_child' => 
+        array (
+          0 => 
+          array (
+            'title' => '启用',
+            'url' => 'Backend/Member/Level/enable',
+            'id' => '468',
+            'pid' => '365',
+          ),
+          1 => 
+          array (
+            'title' => '修改',
+            'url' => 'Backend/Member/Level/edit',
+            'id' => '467',
+            'pid' => '365',
+          ),
+          2 => 
+          array (
+            'title' => '添加',
+            'url' => 'Backend/Member/Level/add',
+            'id' => '466',
+            'pid' => '365',
+          ),
+          3 => 
+          array (
+            'title' => '禁用',
+            'url' => 'Backend/Member/Level/disable',
+            'id' => '469',
+            'pid' => '365',
+          ),
+          4 => 
+          array (
+            'title' => '删除',
+            'url' => 'Backend/Member/Level/del',
+            'id' => '470',
+            'pid' => '365',
+          ),
+        ),
+      ),
+      5 => 
+      array (
+        'title' => '店铺列表',
+        'url' => 'Backend/Shop/Shop/index',
+        'id' => '366',
+        'pid' => '355',
+        '_child' => 
+        array (
+          0 => 
+          array (
+            'title' => '添加',
+            'url' => 'Backend/Shop/Shop/add',
+            'id' => '527',
+            'pid' => '366',
+          ),
+          1 => 
+          array (
+            'title' => '修改',
+            'url' => 'Backend/Shop/Shop/edit',
+            'id' => '528',
+            'pid' => '366',
+          ),
+          2 => 
+          array (
+            'title' => '启用',
+            'url' => 'Backend/Shop/Shop/enable',
+            'id' => '529',
+            'pid' => '366',
+          ),
+          3 => 
+          array (
+            'title' => '禁用',
+            'url' => 'Backend/Shop/Shop/disable',
+            'id' => '530',
+            'pid' => '366',
+          ),
+          4 => 
+          array (
+            'title' => '删除',
+            'url' => 'Backend/Shop/Shop/del',
+            'id' => '531',
+            'pid' => '366',
+          ),
+          5 => 
+          array (
+            'title' => '过往经历',
+            'url' => 'Backend/Shop/Shop/undergo',
+            'id' => '773',
+            'pid' => '366',
+          ),
+          6 => 
+          array (
+            'title' => '成功案例',
+            'url' => 'Backend/Shop/Shop/shop_success',
+            'id' => '774',
+            'pid' => '366',
+          ),
+          7 => 
+          array (
+            'title' => '查看资质',
+            'url' => 'Backend/Shop/Shop/checkshop',
+            'id' => '779',
+            'pid' => '366',
+          ),
+          8 => 
+          array (
+            'title' => '编辑',
+            'url' => 'Backend/Shop/Shop/see',
+            'id' => '823',
+            'pid' => '366',
+          ),
+          9 => 
+          array (
+            'title' => '视频相册',
+            'url' => 'Backend/Shop/Shop/VedioAblum',
+            'id' => '812',
+            'pid' => '366',
+          ),
+        ),
+      ),
+      6 => 
+      array (
+        'title' => '皮肤列表',
+        'url' => 'Backend/Shop/Theme/index',
+        'id' => '367',
+        'pid' => '355',
+        '_child' => 
+        array (
+          0 => 
+          array (
+            'title' => '添加',
+            'url' => 'Backend/Shop/Theme/add',
+            'id' => '632',
+            'pid' => '367',
+          ),
+          1 => 
+          array (
+            'title' => '修改',
+            'url' => 'Backend/Shop/Theme/edit',
+            'id' => '633',
+            'pid' => '367',
+          ),
+          2 => 
+          array (
+            'title' => '启用',
+            'url' => 'Backend/Shop/Theme/enable',
+            'id' => '634',
+            'pid' => '367',
+          ),
+          3 => 
+          array (
+            'title' => '禁用',
+            'url' => 'Backend/Shop/Theme/disable',
+            'id' => '635',
+            'pid' => '367',
+          ),
+          4 => 
+          array (
+            'title' => '删除',
+            'url' => 'Backend/Shop/Theme/del',
+            'id' => '636',
+            'pid' => '367',
+          ),
+        ),
+      ),
+      7 => 
+      array (
+        'title' => '商品列表',
+        'url' => 'Backend/Products/Products/index',
+        'id' => '368',
+        'pid' => '355',
+        '_child' => 
+        array (
+          0 => 
+          array (
+            'title' => '添加',
+            'url' => 'Backend/Products/Products/add',
+            'id' => '565',
+            'pid' => '368',
+          ),
+          1 => 
+          array (
+            'title' => '修改',
+            'url' => 'Backend/Products/Products/edit',
+            'id' => '566',
+            'pid' => '368',
+          ),
+          2 => 
+          array (
+            'title' => '启用',
+            'url' => 'Backend/Products/Products/enable',
+            'id' => '567',
+            'pid' => '368',
+          ),
+          3 => 
+          array (
+            'title' => '禁用',
+            'url' => 'Backend/Products/Products/disable',
+            'id' => '568',
+            'pid' => '368',
+          ),
+          4 => 
+          array (
+            'title' => '删除',
+            'url' => 'Backend/Products/Products/del',
+            'id' => '569',
+            'pid' => '368',
+          ),
+        ),
+      ),
+      8 => 
+      array (
+        'title' => '语种设置',
+        'url' => 'Backend/Products/Language/index',
+        'id' => '369',
+        'pid' => '355',
+        '_child' => 
+        array (
+          0 => 
+          array (
+            'title' => '禁用',
+            'url' => 'Backend/Products/Language/disable',
+            'id' => '738',
+            'pid' => '369',
+          ),
+          1 => 
+          array (
+            'title' => '启用',
+            'url' => 'Backend/Products/Language/enable',
+            'id' => '737',
+            'pid' => '369',
+          ),
+          2 => 
+          array (
+            'title' => '修改',
+            'url' => 'Backend/Products/Language/edit',
+            'id' => '736',
+            'pid' => '369',
+          ),
+          3 => 
+          array (
+            'title' => '添加',
+            'url' => 'Backend/Products/Language/add',
+            'id' => '735',
+            'pid' => '369',
+          ),
+          4 => 
+          array (
+            'title' => '删除',
+            'url' => 'Backend/Products/Language/del',
+            'id' => '739',
+            'pid' => '369',
+          ),
+        ),
+      ),
+      9 => 
+      array (
+        'title' => '行业设置',
+        'url' => 'Backend/Products/Industry/index',
+        'id' => '370',
+        'pid' => '355',
+        '_child' => 
+        array (
+          0 => 
+          array (
+            'title' => '禁用',
+            'url' => 'Backend/Products/Industry/disable',
+            'id' => '743',
+            'pid' => '370',
+          ),
+          1 => 
+          array (
+            'title' => '启用',
+            'url' => 'Backend/Products/Industry/enable',
+            'id' => '742',
+            'pid' => '370',
+          ),
+          2 => 
+          array (
+            'title' => '修改',
+            'url' => 'Backend/Products/Industry/edit',
+            'id' => '741',
+            'pid' => '370',
+          ),
+          3 => 
+          array (
+            'title' => '添加',
+            'url' => 'Backend/Products/Industry/add',
+            'id' => '740',
+            'pid' => '370',
+          ),
+          4 => 
+          array (
+            'title' => '删除',
+            'url' => 'Backend/Products/Industry/del',
+            'id' => '744',
+            'pid' => '370',
+          ),
+        ),
+      ),
+      10 => 
+      array (
+        'title' => '技能设置',
+        'url' => 'Backend/Products/Ability/index',
+        'id' => '371',
+        'pid' => '355',
+        '_child' => 
+        array (
+          0 => 
+          array (
+            'title' => '禁用',
+            'url' => 'Backend/Products/Ability/disable',
+            'id' => '748',
+            'pid' => '371',
+          ),
+          1 => 
+          array (
+            'title' => '启用',
+            'url' => 'Backend/Products/Ability/enable',
+            'id' => '747',
+            'pid' => '371',
+          ),
+          2 => 
+          array (
+            'title' => '修改',
+            'url' => 'Backend/Products/Ability/edit',
+            'id' => '746',
+            'pid' => '371',
+          ),
+          3 => 
+          array (
+            'title' => '添加',
+            'url' => 'Backend/Products/Ability/add',
+            'id' => '745',
+            'pid' => '371',
+          ),
+          4 => 
+          array (
+            'title' => '删除',
+            'url' => 'Backend/Products/Ability/del',
+            'id' => '749',
+            'pid' => '371',
+          ),
+        ),
+      ),
+      11 => 
+      array (
+        'title' => '订单列表',
+        'url' => 'Backend/Order/Order/index',
+        'id' => '372',
+        'pid' => '355',
+        '_child' => 
+        array (
+          0 => 
+          array (
+            'title' => '查看',
+            'url' => 'Backend/Order/Order',
+            'id' => '763',
+            'pid' => '372',
+          ),
+        ),
+      ),
+      12 => 
+      array (
+        'title' => '现金流水',
+        'url' => 'Backend/Finance/Record/index',
+        'id' => '373',
+        'pid' => '355',
+        '_child' => 
+        array (
+          0 => 
+          array (
+            'title' => '现金详情',
+            'url' => 'Backend/Finance/Recorddetail/index',
+            'id' => '818',
+            'pid' => '373',
+          ),
+        ),
+      ),
+      13 => 
+      array (
+        'title' => '积分记录',
+        'url' => 'Backend/Finance/Integration/index',
+        'id' => '374',
+        'pid' => '355',
+      ),
+      14 => 
+      array (
+        'title' => '文件列表',
+        'url' => 'Backend/Member/Index/index',
+        'id' => '375',
+        'pid' => '355',
+      ),
+      15 => 
+      array (
+        'title' => 'banner列表',
+        'url' => 'Backend/Advert/Banner/index',
+        'id' => '376',
+        'pid' => '355',
+        '_child' => 
+        array (
+          0 => 
+          array (
+            'title' => '禁用',
+            'url' => 'Backend/Advert/Banner/disable',
+            'id' => '512',
+            'pid' => '376',
+          ),
+          1 => 
+          array (
+            'title' => '启用',
+            'url' => 'Backend/Advert/Banner/enable',
+            'id' => '511',
+            'pid' => '376',
+          ),
+          2 => 
+          array (
+            'title' => '修改',
+            'url' => 'Backend/Advert/Banner/edit',
+            'id' => '510',
+            'pid' => '376',
+          ),
+          3 => 
+          array (
+            'title' => '添加',
+            'url' => 'Backend/Advert/Banner/add',
+            'id' => '509',
+            'pid' => '376',
+          ),
+          4 => 
+          array (
+            'title' => '删除',
+            'url' => 'Backend/Advert/Banner/del',
+            'id' => '513',
+            'pid' => '376',
+          ),
+        ),
+      ),
+      16 => 
+      array (
+        'title' => '帮助中心',
+        'url' => 'Backend/Contents/Help/index',
+        'id' => '497',
+        'pid' => '355',
+        '_child' => 
+        array (
+          0 => 
+          array (
+            'title' => '添加',
+            'url' => 'Backend/Contents/Help/add',
+            'id' => '498',
+            'pid' => '497',
+          ),
+          1 => 
+          array (
+            'title' => '修改',
+            'url' => 'Backend/Contents/Help/edit',
+            'id' => '499',
+            'pid' => '497',
+          ),
+          2 => 
+          array (
+            'title' => '启用',
+            'url' => 'Backend/Contents/Help/enable',
+            'id' => '500',
+            'pid' => '497',
+          ),
+          3 => 
+          array (
+            'title' => '禁用',
+            'url' => 'Backend/Contents/Help/disable',
+            'id' => '501',
+            'pid' => '497',
+          ),
+          4 => 
+          array (
+            'title' => '删除',
+            'url' => 'Backend/Contents/Help/del',
+            'id' => '502',
+            'pid' => '497',
+          ),
+          5 => 
+          array (
+            'title' => '(取消)推荐',
+            'url' => 'Backend/Contents/Help/recommend',
+            'id' => '652',
+            'pid' => '497',
+          ),
+        ),
+      ),
+      17 => 
+      array (
+        'title' => '广告列表',
+        'url' => 'Backend/Advert/Index/index',
+        'id' => '503',
+        'pid' => '355',
+        '_child' => 
+        array (
+          0 => 
+          array (
+            'title' => '添加',
+            'url' => 'Backend/Advert/Index/add',
+            'id' => '504',
+            'pid' => '503',
+          ),
+          1 => 
+          array (
+            'title' => '修改',
+            'url' => 'Backend/Advert/Index/edit',
+            'id' => '505',
+            'pid' => '503',
+          ),
+          2 => 
+          array (
+            'title' => '启用',
+            'url' => 'Backend/Advert/Index/enable',
+            'id' => '506',
+            'pid' => '503',
+          ),
+          3 => 
+          array (
+            'title' => '禁用',
+            'url' => 'Backend/Advert/Index/disable',
+            'id' => '507',
+            'pid' => '503',
+          ),
+          4 => 
+          array (
+            'title' => '删除',
+            'url' => 'Backend/Advert/Index/del',
+            'id' => '508',
+            'pid' => '503',
+          ),
+        ),
+      ),
+      18 => 
+      array (
+        'title' => '待审核店铺',
+        'url' => 'Backend/Shop/Pendingshop/index',
+        'id' => '514',
+        'pid' => '355',
+        '_child' => 
+        array (
+          0 => 
+          array (
+            'title' => '启用',
+            'url' => 'Backend/Shop/Pendingshop/enable',
+            'id' => '753',
+            'pid' => '514',
+          ),
+          1 => 
+          array (
+            'title' => '修改',
+            'url' => 'Backend/Shop/Pendingshop/edit',
+            'id' => '752',
+            'pid' => '514',
+          ),
+          2 => 
+          array (
+            'title' => '添加',
+            'url' => 'Backend/Shop/Pendingshop/add',
+            'id' => '751',
+            'pid' => '514',
+            '_child' => 
+            array (
+              0 => 
+              array (
+                'title' => '添加',
+                'url' => 'Backend/Shop/Pendingshop/add',
+                'id' => '756',
+                'pid' => '751',
+              ),
+            ),
+          ),
+          3 => 
+          array (
+            'title' => '禁用',
+            'url' => 'Backend/Shop/Pendingshop/disable',
+            'id' => '754',
+            'pid' => '514',
+          ),
+          4 => 
+          array (
+            'title' => '删除',
+            'url' => 'Backend/Shop/Pendingshop/del',
+            'id' => '755',
+            'pid' => '514',
+          ),
+          5 => 
+          array (
+            'title' => '查看资质',
+            'url' => 'Backend/Shop/Pendingshop',
+            'id' => '762',
+            'pid' => '514',
+          ),
+        ),
+      ),
+      19 => 
+      array (
+        'title' => '资讯管理',
+        'url' => 'Backend/Contents/News/index',
+        'id' => '518',
+        'pid' => '355',
+        '_child' => 
+        array (
+          0 => 
+          array (
+            'title' => '添加',
+            'url' => 'Backend/Contents/News/add',
+            'id' => '519',
+            'pid' => '518',
+          ),
+          1 => 
+          array (
+            'title' => '修改',
+            'url' => 'Backend/Contents/News/edit',
+            'id' => '520',
+            'pid' => '518',
+          ),
+          2 => 
+          array (
+            'title' => '启用',
+            'url' => 'Backend/Contents/News/enable',
+            'id' => '521',
+            'pid' => '518',
+          ),
+          3 => 
+          array (
+            'title' => '禁用',
+            'url' => 'Backend/Contents/News/disable',
+            'id' => '522',
+            'pid' => '518',
+          ),
+          4 => 
+          array (
+            'title' => '删除',
+            'url' => 'Backend/Contents/News/del',
+            'id' => '523',
+            'pid' => '518',
+          ),
+          5 => 
+          array (
+            'title' => '(取消)推荐',
+            'url' => 'Backend/Contents/News/recommend',
+            'id' => '651',
+            'pid' => '518',
+          ),
+        ),
+      ),
+      20 => 
+      array (
+        'title' => '公告管理',
+        'url' => 'Backend/Contents/Notice/index',
+        'id' => '535',
+        'pid' => '355',
+        '_child' => 
+        array (
+          0 => 
+          array (
+            'title' => '添加',
+            'url' => 'Backend/Contents/Notice/add',
+            'id' => '536',
+            'pid' => '535',
+          ),
+          1 => 
+          array (
+            'title' => '修改',
+            'url' => 'Backend/Contents/Notice/edit',
+            'id' => '537',
+            'pid' => '535',
+          ),
+          2 => 
+          array (
+            'title' => '启用',
+            'url' => 'Backend/Contents/Notice/enable',
+            'id' => '538',
+            'pid' => '535',
+          ),
+          3 => 
+          array (
+            'title' => '禁用',
+            'url' => 'Backend/Contents/Notice/disable',
+            'id' => '539',
+            'pid' => '535',
+          ),
+          4 => 
+          array (
+            'title' => '删除',
+            'url' => 'Backend/Contents/Notice/del',
+            'id' => '540',
+            'pid' => '535',
+          ),
+        ),
+      ),
+      21 => 
+      array (
+        'title' => '活动管理',
+        'url' => 'Backend/Contents/Activity/index',
+        'id' => '541',
+        'pid' => '355',
+        '_child' => 
+        array (
+          0 => 
+          array (
+            'title' => '删除',
+            'url' => 'Backend/Contents/Activity/del',
+            'id' => '551',
+            'pid' => '541',
+          ),
+          1 => 
+          array (
+            'title' => '禁用',
+            'url' => 'Backend/Contents/Activity/disable',
+            'id' => '550',
+            'pid' => '541',
+          ),
+          2 => 
+          array (
+            'title' => '启用',
+            'url' => 'Backend/Contents/Activity/enable',
+            'id' => '549',
+            'pid' => '541',
+          ),
+          3 => 
+          array (
+            'title' => '修改',
+            'url' => 'Backend/Contents/Activity/edit',
+            'id' => '548',
+            'pid' => '541',
+          ),
+          4 => 
+          array (
+            'title' => '添加',
+            'url' => 'Backend/Contents/Activity/add',
+            'id' => '547',
+            'pid' => '541',
+          ),
+        ),
+      ),
+      22 => 
+      array (
+        'title' => '图片管理',
+        'url' => 'Backend/Contents/Picture/index',
+        'id' => '552',
+        'pid' => '355',
+        '_child' => 
+        array (
+          0 => 
+          array (
+            'title' => '删除',
+            'url' => 'Backend/Contents/Picture/del',
+            'id' => '797',
+            'pid' => '552',
+          ),
+          1 => 
+          array (
+            'title' => '禁用',
+            'url' => 'Backend/Contents/Picture/disable',
+            'id' => '796',
+            'pid' => '552',
+          ),
+          2 => 
+          array (
+            'title' => '启用',
+            'url' => 'Backend/Contents/Picture/enable',
+            'id' => '795',
+            'pid' => '552',
+          ),
+        ),
+      ),
+      23 => 
+      array (
+        'title' => '消息列表',
+        'url' => 'Backend/Message/Letter/index',
+        'id' => '570',
+        'pid' => '355',
+        '_child' => 
+        array (
+          0 => 
+          array (
+            'title' => '删除',
+            'url' => 'Backend/Message/Letter/del',
+            'id' => '571',
+            'pid' => '570',
+          ),
+          1 => 
+          array (
+            'title' => '查看详情',
+            'url' => 'Backend/Message/Letter/detail',
+            'id' => '764',
+            'pid' => '570',
+          ),
+          2 => 
+          array (
+            'title' => '发送消息',
+            'url' => 'Backend/Message/Letter/send_msg',
+            'id' => '780',
+            'pid' => '570',
+          ),
+        ),
+      ),
+      24 => 
+      array (
+        'title' => '最新评价',
+        'url' => 'Backend/Comment/New/index',
+        'id' => '592',
+        'pid' => '355',
+        '_child' => 
+        array (
+          0 => 
+          array (
+            'title' => '启用',
+            'url' => 'Backend/Comment/New/enable',
+            'id' => '593',
+            'pid' => '592',
+          ),
+          1 => 
+          array (
+            'title' => '禁用',
+            'url' => 'Backend/Comment/New/disable',
+            'id' => '594',
+            'pid' => '592',
+          ),
+          2 => 
+          array (
+            'title' => '删除',
+            'url' => 'Backend/Comment/New/del',
+            'id' => '595',
+            'pid' => '592',
+          ),
+        ),
+      ),
+      25 => 
+      array (
+        'title' => '评价列表',
+        'url' => 'Backend/Comment/List/index',
+        'id' => '583',
+        'pid' => '355',
+        '_child' => 
+        array (
+          0 => 
+          array (
+            'title' => '删除',
+            'url' => 'Backend/Comment/List/del',
+            'id' => '591',
+            'pid' => '583',
+          ),
+          1 => 
+          array (
+            'title' => '禁用',
+            'url' => 'Backend/Comment/List/disable',
+            'id' => '590',
+            'pid' => '583',
+          ),
+          2 => 
+          array (
+            'title' => '启用',
+            'url' => 'Backend/Comment/List/enable',
+            'id' => '589',
+            'pid' => '583',
+          ),
+        ),
+      ),
+      26 => 
+      array (
+        'title' => '文件管理',
+        'url' => 'Backend/Contents/Files/index',
+        'id' => '642',
+        'pid' => '355',
+        '_child' => 
+        array (
+          0 => 
+          array (
+            'title' => '删除',
+            'url' => 'Backend/Contents/Files/del',
+            'id' => '800',
+            'pid' => '642',
+          ),
+          1 => 
+          array (
+            'title' => '禁用',
+            'url' => 'Backend/Contents/Files/disable',
+            'id' => '799',
+            'pid' => '642',
+          ),
+          2 => 
+          array (
+            'title' => '启用',
+            'url' => 'Backend/Contents/Files/enable',
+            'id' => '798',
+            'pid' => '642',
+          ),
+        ),
+      ),
+      27 => 
+      array (
+        'title' => '查找列表',
+        'url' => 'Backend/Interpret/Index/index',
+        'id' => '715',
+        'pid' => '355',
+        '_child' => 
+        array (
+          0 => 
+          array (
+            'title' => '删除',
+            'url' => 'Backend/Interpret/Index/del',
+            'id' => '716',
+            'pid' => '715',
+          ),
+          1 => 
+          array (
+            'title' => '处理',
+            'url' => 'Backend/Interpret/Index/enable',
+            'id' => '717',
+            'pid' => '715',
+          ),
+        ),
+      ),
+      28 => 
+      array (
+        'title' => '收支记录',
+        'url' => 'Backend/Finance/Platrecord/index',
+        'id' => '781',
+        'pid' => '355',
+      ),
+      29 => 
+      array (
+        'title' => '提现管理',
+        'url' => 'Backend/Finance/Balance/index',
+        'id' => '782',
+        'pid' => '355',
+      ),
+      30 => 
+      array (
+        'title' => '今日过期',
+        'url' => 'Backend/Order/Overdue/index',
+        'id' => '785',
+        'pid' => '355',
+        '_child' => 
+        array (
+          0 => 
+          array (
+            'title' => '查看',
+            'url' => 'Backend/Order/Overdue/detail',
+            'id' => '790',
+            'pid' => '785',
+          ),
+        ),
+      ),
+      31 => 
+      array (
+        'title' => '商家文件',
+        'url' => 'Backend/Contents/Filescom/index',
+        'id' => '791',
+        'pid' => '355',
+        '_child' => 
+        array (
+          0 => 
+          array (
+            'title' => '启用',
+            'url' => 'Backend/Contents/Filescom/enable',
+            'id' => '792',
+            'pid' => '791',
+          ),
+          1 => 
+          array (
+            'title' => '禁用',
+            'url' => 'Backend/Contents/Filescom/disable',
+            'id' => '793',
+            'pid' => '791',
+          ),
+          2 => 
+          array (
+            'title' => '删除',
+            'url' => 'Backend/Contents/Filescom/del',
+            'id' => '794',
+            'pid' => '791',
+          ),
+        ),
+      ),
+      32 => 
+      array (
+        'title' => '退款订单',
+        'url' => 'Backend/Order/Refund/index',
+        'id' => '801',
+        'pid' => '355',
+        '_child' => 
+        array (
+          0 => 
+          array (
+            'title' => '修改',
+            'url' => 'Backend/Order/Refund/edit',
+            'id' => '803',
+            'pid' => '801',
+          ),
+        ),
+      ),
+      33 => 
+      array (
+        'title' => '头像审核',
+        'url' => 'Backend/Shop/ShopPhoto/index',
+        'id' => '804',
+        'pid' => '355',
+        '_child' => 
+        array (
+          0 => 
+          array (
+            'title' => '编辑',
+            'url' => 'Backend/Shop/ShopPhoto/see',
+            'id' => '824',
+            'pid' => '804',
+          ),
+        ),
+      ),
+      34 => 
+      array (
+        'title' => '银行设置',
+        'url' => 'Backend/Bank/Index/index',
+        'id' => '805',
+        'pid' => '355',
+        '_child' => 
+        array (
+          0 => 
+          array (
+            'title' => '添加',
+            'url' => 'Backend/Bank/Index/add',
+            'id' => '806',
+            'pid' => '805',
+          ),
+          1 => 
+          array (
+            'title' => '修改',
+            'url' => 'Backend/Bank/Index/edit',
+            'id' => '807',
+            'pid' => '805',
+          ),
+          2 => 
+          array (
+            'title' => '启用',
+            'url' => 'Backend/Bank/Index/enable',
+            'id' => '808',
+            'pid' => '805',
+          ),
+          3 => 
+          array (
+            'title' => '禁用',
+            'url' => 'Backend/Bank/Index/disable',
+            'id' => '809',
+            'pid' => '805',
+          ),
+          4 => 
+          array (
+            'title' => '删除',
+            'url' => 'Backend/Bank/Index/del',
+            'id' => '810',
+            'pid' => '805',
+          ),
+        ),
+      ),
+      35 => 
+      array (
+        'title' => '举报列表',
+        'url' => 'Backend/Member/Infrom/index',
+        'id' => '813',
+        'pid' => '355',
+        '_child' => 
+        array (
+          0 => 
+          array (
+            'title' => '修改',
+            'url' => 'Backend/Member/Infrom/edit',
+            'id' => '814',
+            'pid' => '813',
+          ),
+          1 => 
+          array (
+            'title' => '启用',
+            'url' => 'Backend/Member/Infrom/enable',
+            'id' => '815',
+            'pid' => '813',
+          ),
+          2 => 
+          array (
+            'title' => '禁用',
+            'url' => 'Backend/Member/Infrom/disable',
+            'id' => '816',
+            'pid' => '813',
+          ),
+          3 => 
+          array (
+            'title' => '删除',
+            'url' => 'Backend/Member/Infrom/del',
+            'id' => '817',
+            'pid' => '813',
+          ),
+        ),
+      ),
+    ),
+  ),
+)
+ ?>

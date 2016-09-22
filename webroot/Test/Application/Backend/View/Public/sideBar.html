@@ -1,0 +1,69 @@
+<!-- Left side column. contains the logo and sidebar -->
+<aside class="main-sidebar">
+	<section class="sidebar">
+
+		<!-- Sidebar user panel (optional) -->
+		<div class="user-panel">
+			<div class="pull-left image">
+				<img src="__IMG__/user.jpg" class="img-circle" alt="User Image" />
+			</div>
+			<div class="pull-left info">
+				<p>
+					<?=session('username')?>
+				</p>
+				<p>
+					<?=$member_info['title']?>
+				</p>
+			</div>
+		</div>
+
+		<!-- Sidebar Menu -->
+		<ul class="sidebar-menu">
+			<!-- Optionally, you can add icons to the links -->
+			<?php
+					$group_menu=array();
+					foreach($sideMenu as $_row){
+						if($_row['groups']!=''){
+							$group_menu[$_row['groups']][]=$_row;
+						}
+					}
+				?>
+			<?php
+					foreach($group_menu as $k=>$val){
+						foreach($val as $menu){
+							if($k==$menu_info['groups'] || $menu['id']==$menuPathArr[3]){
+								$group_class='active';
+								$page_title=$k;
+								break;
+							}else{
+								$group_class='';
+							}
+						}
+				?>
+			<li class="treeview <?=$group_class?>"><a
+				class="one one-hover"><i class="fa fa-th-large"></i><span>
+						<?=$k?>
+				</span> <i class="fa fa-angle-left pull-right"></i></a>
+				<ul class="treeview-menu">
+					<?php
+							foreach($val as $menu){
+								if( $menu_info['id']==$menu['id'] || $menu['id']==$menuPathArr[3] ){
+									$sideClass='cur';
+									$small_title=$menu['title'];
+								}else{
+									$sideClass='';
+								}
+						?>
+					<li class="<?=$sideClass?>"><a href="<?=U($menu['url'])?>"><i
+							class="fa fa-align-left"></i>
+						<?=$menu['title']?></a></li>
+					<?php
+							}
+						?>
+				</ul></li>
+			<?php
+					}
+				?>
+		</ul>
+	</section>
+</aside>

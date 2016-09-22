@@ -1,0 +1,65 @@
+	<div class="loading">
+			<i style="background-image: url(__IMG__/loading.gif)"></i>
+			<span>正在加载</span>
+		</div>
+		<div class="main_top clearfix">
+			<div class="main_title pull-left">
+				<i class="iconfont">&#xe611;</i>
+				<span>优质服务商</span>
+			</div>
+			<div class="bus_list pull-right">
+				<ul class="clearfix">
+					<?php 
+						foreach($shop_category as $key=>$value){
+					?>
+						<li <?php if($result[0]['category_id'] == $key){?>class="active"<?php }?> data-id="<?=$key?>"><?=$value?></li>
+					<?php 
+						}
+					?>
+					<!--<li data-id="2">手机数码</li>
+					<li data-id="3">电脑办公</li>
+					<li data-id="4">家居家具</li>
+					<li data-id="5">服装饰品</li>
+					<li data-id="6">个护化妆</li>
+					<li data-id="7">鞋靴箱包</li>
+					<li data-id="8">户外运动</li>-->
+					<li><a href="javascript:void(0)">查看更多&gt;</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="main_con provider">
+			<ul class="clearfix">
+			<?php 
+						foreach($result as $value){
+			?>
+				<li>
+					<div class="imgbox">
+						<a href="#" class="img"><img width="220" height="158" src="__ROOT__/<?=$value['logo']?>" alt="<?=$value['title']?>"  /></a>
+					</div>
+					<div class="descbox">
+						<a href="#" class="title"><?=$value['title']?></a>
+						<a href="#" class="service">主要服务:控制电器、主令电器、保护电器、执行电器、配电电器,保护电器、执行电器、配电电器</a>
+						<ul class="databox clearfix">
+							<li class="pull-left">好评率：<strong><?=$value['star_rating']?>%</strong>
+							</li>
+							<li class="pull-right">成交：<span><?=$value['sales']?>笔</span>
+							</li>
+						</ul>
+						<ul class="pricebox">
+						<?php
+							foreach($value['subset'] as $val){
+						?>
+							<li class="clearfix">
+								<span class="col-xs-4 price">￥<?=$val['selling_price']?></span>
+								<span class="col-xs-4 price ellipsis" title="￥1000">￥1000</span>
+								<a href="#" class="col-xs-8 message ellipsis" title="活动宣传/品牌展示/品牌展示">活动宣传/品牌展示/品牌展示 </a>
+							</li>
+						<?php
+							}
+						?>
+						</ul>
+					</div>
+				</li>
+				<?php }?>
+			</ul>
+		</div>

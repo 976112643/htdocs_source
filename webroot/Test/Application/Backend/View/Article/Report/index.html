@@ -1,0 +1,225 @@
+<extend name="Public/body" />
+<block name="body"> <!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper" style="min-height: 922px;">
+	<!-- Content Header (Page header) -->
+	<section class="content-header">
+		<h1>
+			<?=$page_title?>
+			<small>
+				<?=$small_title?>
+			</small>
+		</h1>
+		<ol class="breadcrumb">
+			<li><a href="<?=U('/Backend')?>"><i class="fa fa-dashboard"></i>
+					首页</a></li>
+			<li class="active">
+				<?=$page_title?>
+			</li>
+		</ol>
+	</section>
+
+	<!-- Main content -->
+	<section class="content">
+		<div class="row">
+			<div class="col-xs-12">
+				<div class="box">
+					<div class="box-body">
+						<div id="example2_wrapper"
+							class="dataTables_wrapper form-inline dt-bootstrap">
+							<div class="row">
+								<div class="col-sm-6">
+								<form class="forms" action="" method="get" name="status">
+									<input type="hidden" name="p" value="1">
+									<label>	
+										<select class="biaoji form-control" name="status">
+											<option value="">是否处理</option>
+											<option value="2" <?php if($status=='2'){echo "selected";} ?>>已处理</option>
+											<option value="1" <?php if($status=='1'){echo "selected";} ?>>未处理</option>
+										</select>
+									</label>
+									<label>
+										<select class="biaoji form-control" name='fenlei'>
+											<option value="nickname" <?php if($fenlei=='nickname'){echo "selected";} ?>>举报文章的作者</option>
+											<option value="title" <?php if($fenlei=='content'){echo "selected";} ?>>举报文章的标题</option>
+										</select>
+									</label>
+									<label>
+										<input type="search" class="form-control  titles"  name="keywords" value="<?php echo $keywords ?>" size="35" placeholder="请输入文章的作者" />
+									</label>
+									<label>
+										<input type="button" class="btn btn-info sousuo" value='搜索' />
+									</label>
+								</form>
+								</div>
+								<div class="col-md-6 text-right">
+									<?=getTopBtn($menu_info['id'],I('pid'))?>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-sm-12">
+									<table id="example2"
+										class="table table-bordered table-striped dataTable text-center"
+										role="grid" aria-describedby="example2_info">
+										<thead>
+											<tr role="row">
+												<th class="sorting_asc" tabindex="0"
+													aria-controls="example2" rowspan="1" colspan="1"
+													aria-sort="ascending"
+													aria-label="Rendering engine: activate to sort column descending "
+													style="width: 3%"><label><input
+														type="checkbox" class="js_check_all" value=""></label></th>
+												<th class="sorting" tabindex="0" aria-controls="example2"
+													rowspan="1" colspan="1"
+													aria-label="Engine version: activate to sort column ascending">id</th>
+												<th class="sorting" tabindex="0" aria-controls="example2"
+													rowspan="1" colspan="1"
+													aria-label="Engine version: activate to sort column ascending">被举报的文章</th>
+												
+												<th class="sorting" tabindex="0" aria-controls="example2"
+													rowspan="1" colspan="1"
+													aria-label="CSS grade: activate to sort column ascending" >该文章的作者</th>
+												<th class="sorting" tabindex="0" aria-controls="example2"
+													rowspan="1" colspan="1"
+													aria-label="CSS grade: activate to sort column ascending" >举报人</th>
+												<th class="sorting" tabindex="0" aria-controls="example2"
+													rowspan="1" colspan="1"
+													aria-label="CSS grade: activate to sort column ascending" >启用/禁用文章</th>
+												<th class="sorting" tabindex="0" aria-controls="example2"
+													rowspan="1" colspan="1"
+													aria-label="CSS grade: activate to sort column ascending" >举报文章是否删除</th>
+												<th class="sorting" tabindex="0" aria-controls="example2"
+													rowspan="1" colspan="1"
+													aria-label="CSS grade: activate to sort column ascending">操作</th>
+											</tr>
+										</thead>
+										<tbody>
+											<?php	foreach($result as $k=>$v):  ?>
+											<tr>
+												<td>
+													<label>
+														<input type="checkbox" class="ids"
+														name="ids[]" value="<?php echo $v['id'] ?> ">
+													</label>
+												</td>
+												<td><?=$v['id']?></td>
+												<td>
+													<?php 
+														if($v['title']){
+															echo $v['title'];
+														}else if($v['feed_content']){
+															echo $v['feed_content'];
+														}else{
+															echo "<img src='".get_comment_img($v['feed_id'])." ' width='50' height='50'/>";
+														}
+													?>
+												</td>
+												<td><?=$v['nickname'] ?></td>
+												
+												<td><?php echo get_user_info($v['report_id'])['nickname']; ?></td>
+												<td><?php if($v['status']=='2'){echo "已禁用";}else{echo "已启用";} ?>
+												<td><?php if($v['is_del']=='0'){echo "未删除";}else{echo "已删除";}?></td>
+												<td>
+													<button class="btn btn-info btn-xs" onclick="getCotent(<?=$v['id']?>);">查看</button>
+
+													<input type="hidden" class='is_del' value="<?=$v['is_del']?>">
+													<input type="hidden" class='status' value="<?=$v['status']?>">
+													<input type="hidden" class='rid' value="<?=$v['id']?>">
+													<?php
+														$unique_url=array(
+															'is_hid'=>array(
+																'1'=>U("enable"),
+																'0'=>U("disable"),
+															)
+														);
+														$url=array();
+														$url[]=$unique_url['is_hid'][$v['is_hid']];
+														getListBtn($menu_info['id'],$v['id'],$url,I('pid'));
+														getListBtn($menu_info['id'],$v['id'],$unique_url,I('pid'),false);
+													?>
+												</td>
+											</tr>
+											<?php endforeach; ?>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+						<div class="pages">
+							<?=$page?>
+						</div>
+						</div>
+						<!-- /.box-body -->
+					</div>
+					<!-- /.box -->
+				</div>
+				<!-- /.col -->
+			</div>
+			<!-- /.row -->
+	</section>
+	<!-- /.content -->
+</div>
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  	<div class="modal-dialog modal-lg" role="document">
+	    <div class="modal-content">
+	      	<div class="modal-header">
+	        	<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		        <h4 class="modal-title" id="myModalLabel">文章详情</h4>
+	      	</div>
+
+	      	<div class="modal-body">
+	       		
+	      	</div>
+	      	<div class="modal-footer">
+	        	<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+	      	</div>
+	    </div>
+  	</div>
+</div>
+<script>
+function getCotent(id) {
+	$.ajax({
+	 	type: "get",
+        url: "__CONTROLLER__/see",
+        dataType : "json",
+        data:{"ids":id},
+        success: function(s){ 
+          	$('.modal-body').empty().append(s.content);
+          	$('#myModal').modal();
+        }
+	});
+}
+$(function(){
+	$(".is_del").each(function (){
+		var is_del=$(this).val();
+		var status=$(this).nextAll('.status').val();
+		var id=$(this).nextAll('.rid').val();
+	
+		var html="";
+		if(status=='1'){
+			html+="<a href='__CONTROLLER__/setstatus/status/2/ids/"+id+"' class='btn btn-warning btn-xs ajax-get'>禁用</a>";
+		}else{
+			html+="<a href='__CONTROLLER__/setstatus/status/1/ids/"+id+"' class='btn btn-primary btn-xs ajax-get'>启用</a>";
+		}
+		if(is_del=='0'){
+			html+="<a href='__MODULE__/Article/Base/del_art/ids/"+id+"' class='btn btn-danger btn-xs ajax-get' style='margin-left:3px;'>删除该文章</a>";
+			$(this).parent().append(html);
+		}
+	});
+
+	var search = $('.searchs').val();
+	if(search == ""){
+		search = "0";
+	}
+	$('.search option[value='+search+']').attr('selected',true);
+	function trim(str){ //删除左右两端的空格
+	    return str.replace(/(^\s*)|(\s*$)/g, "");
+	}
+	$('.sousuo').click(function(){
+		keys = trim($('.titles').val());
+		$('.titles').val(keys);
+		$('.forms').submit();
+	})
+})
+</script>
+</block>

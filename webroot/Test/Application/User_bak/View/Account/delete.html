@@ -1,0 +1,29 @@
+<extend name="Home@Public/body"/>
+<block name="style">
+	<css href="__CSS__/index.css"/>
+	<css href="__PLUGIN__/popover/dist/jquery.webui-popover.min.css"/>
+</block>
+<block name="body">
+	<div class="container">
+		<div class="a_con_content con_content">
+			<div class="title clearfix">
+				<h4 class="pull-left">删除账号和主页</h4>
+				<a href="<?=U('index')?>" class="pull-right go_back">返回账号设置</a>
+			</div>
+			<div class="delete_body">	
+				<p style="color:#999;padding:20px 0;">若删除帐号，或退出并删除主页，相关主页内容将一并删除；若仅退出主页，对主页内容无影响。</p>			
+				<div class="account_item clearfix">
+					<div class="account_img pull-left">
+						<img src="__IMG__/User/u_img.jpg" class="img-responsive" alt="">
+					</div>
+					<div class="account_info pull-left">
+						<p class="name">ljjchen29</p>
+						<p><span>14</span>天前开通，发布了<span>9</span>篇文章，<span>0</span>篇精华，<span>0</span>位关注者。</p>
+					</div>
+					<button class="btn pull-right delete_btn">删除账号</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<include file="Home@Public/footer"/>
+</block>

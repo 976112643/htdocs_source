@@ -1,0 +1,170 @@
+<extend name="Public/body" />
+<block name="body"> <!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper" style="min-height: 922px;">
+	<!-- Content Header (Page header) -->
+	<section class="content-header">
+		<h1>
+			<?=$page_title?>
+			<small>
+				<?=$small_title?>
+			</small>
+		</h1>
+		<ol class="breadcrumb">
+			<li><a href="<?=U('/Backend')?>"><i class="fa fa-dashboard"></i>
+					首页</a></li>
+			<li class="active">
+				<?=$page_title?>
+			</li>
+		</ol>
+	</section>
+
+	<!-- Main content -->
+	<section class="content">
+		<div class="row">
+			<div class="col-xs-12">
+				<div class="box">
+					<div class="box-body">
+						<div id="example2_wrapper"
+							class="dataTables_wrapper form-inline dt-bootstrap">
+							<div class="row">
+								<div class="col-sm-6">
+								
+								<form class="forms" action="" method="get" >
+									<input type="hidden" name="p" value='1'>
+									<select class="form-control" name="is_recommend">
+										<option value="">默认推荐</option>
+										<option value="1"
+										<?php if($is_recommend=='1'){echo "selected";} ?> >已推荐</option>
+										<option value="0" 
+										<?php if($is_recommend=='0'){echo "selected";} ?>>未推荐</option>
+									</select>
+									<select class="form-control" name='order'>
+										<option value="">默认排序</option>
+										<option value="addtime"
+										<?php if($order=='addtime'){echo "selected";} ?> >时间排序</option>
+										<option value="activity" 
+										<?php if($order=='activity'){echo "selected";} ?>>活跃度排序</option>
+									</select>
+									
+									<label>
+										<input type="search" class="form-control  keywords" placeholder="请输入标签名称" name="keywords" value="<?php echo $keywords; ?>" size="35" />
+									</label>
+									<label>
+										<input type="button" class="btn btn-info  sousuo" value='搜索' /
+									</label>
+								</form>
+								
+								</div>
+								<div class="col-md-6 text-right">
+									<?=getTopBtn($menu_info['id'],I('pid'))?>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-sm-12">
+									<table id="example2"
+										class="table table-bordered table-striped dataTable text-center"
+										role="grid" aria-describedby="example2_info">
+										<thead>
+											<tr role="row">
+												<th class="sorting_asc" tabindex="0"
+													aria-controls="example2" rowspan="1" colspan="1"
+													aria-sort="ascending"
+													aria-label="Rendering engine: activate to sort column descending "
+													style="width: 3%"><label><input
+														type="checkbox" class="js_check_all" value=""></label></th>
+												<th class="sorting" tabindex="0" aria-controls="example2"
+													rowspan="1" colspan="1"
+													aria-label="Browser: activate to sort column ascending">id</th>
+												<th class="sorting" tabindex="0" aria-controls="example2"
+													rowspan="1" colspan="1"
+													aria-label="Platform(s): activate to sort column ascending">标签名</th>
+												<th class="sorting" tabindex="0" aria-controls="example2"
+													rowspan="1" colspan="1"
+													aria-label="Platform(s): activate to sort column ascending">活跃度</th>	
+													
+												<th class="sorting" tabindex="0" aria-controls="example2"
+													rowspan="1" colspan="1"
+													aria-label="Platform(s): activate to sort column ascending">是否推荐</th>
+												<th class="sorting" tabindex="0" aria-controls="example2"
+													rowspan="1" colspan="1"
+													aria-label="Platform(s): activate to sort column ascending">添加时间</th>
+												<th class="sorting" tabindex="0" aria-controls="example2"
+													rowspan="1" colspan="1"
+													aria-label="CSS grade: activate to sort column ascending"
+													style="width: 30%">操作</th>
+											</tr>
+										</thead>
+										<tbody>
+											<?php	foreach($result as $k=>$v):  ?>
+											<tr>
+												<td>
+													<label>
+														<input type="checkbox" class="ids" name="ids[]" value="<?=$v['id'] ?> ">
+													</label>
+												</td>
+												<td><?=$v['id']; ?></td>
+												<td><?=$v['name']; ?></td>
+												<td><?=$v['activity']; ?></td>
+												<td><?php if($v['is_recommend']=='1'){echo "已推荐";}else{echo "未推荐";};?></td>
+												<td><?=date('Y-m-d H:i:s',$v['addtime'])?></td>
+												<td>
+													<input type="hidden" class='recommend' value="<?=$v['is_recommend']?>">
+													<?php
+													$unique_url=array(
+																'is_hid'=>array(
+																	'1'=>U("enable"),
+																	'0'=>U("disable"),
+																)
+															);
+															$url=array();
+															$url[]=$unique_url['is_hid'][$v['is_hid']];
+															getListBtn($menu_info['id'],$v['id'],$url,I('pid'));
+															getListBtn($menu_info['id'],$v['id'],$unique_url,I('pid'),false);
+													?>
+												</td>
+											</tr>
+											<?php endforeach; ?>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+						<div class="pages">
+								<?=$page?>
+						</div>
+						</div>
+						<!-- /.box-body -->
+					</div>
+					<!-- /.box -->
+				</div>
+				<!-- /.col -->
+			</div>
+			<!-- /.row -->
+	</section>
+	<!-- /.content -->
+</div>
+<script>
+
+$(function(){
+
+	$(".is_recommend").each(function (){
+		var com=$(this).prevAll('input').val();
+		var z=$(this).attr('href').split('/');
+		if(com=='1'){
+			z[z.indexOf('recommend')+1]=0;
+			z=z.join("/");
+			$(this).attr("href",z).removeClass('btn-info').addClass('btn-primary').html("取消推荐");
+		}
+	});
+
+	$('.sousuo').click(function(){
+		keys = trim($('.keywords').val());
+		$('.keywords').val(keys);
+		$('.forms').submit();
+	});
+	function trim(str){ //删除左右两端的空格
+		return str.replace(/(^\s*)|(\s*$)/g, "");
+	}
+});
+</script>
+</block>

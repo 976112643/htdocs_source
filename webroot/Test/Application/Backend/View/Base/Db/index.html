@@ -1,0 +1,115 @@
+<extend name="Public/body" />
+<block name="body"> <!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper" style="min-height: 922px;">
+	<!-- Content Header (Page header) -->
+	<section class="content-header">
+		<h1>
+			<?=$page_title?>
+			<small>
+				<?=$small_title?>
+			</small>
+		</h1>
+		<ol class="breadcrumb">
+			<li><a href="<?=U('/Backend')?>"><i class="fa fa-dashboard"></i>
+					首页</a></li>
+			<li class="active">
+				<?=$page_title?>
+			</li>
+		</ol>
+	</section>
+
+	<!-- Main content -->
+	<section class="content">
+		<div class="row">
+			<div class="col-xs-12">
+				<div class="box">
+					<div class="box-body">
+						<div id="example2_wrapper"
+							class="dataTables_wrapper form-inline dt-bootstrap">
+							<div class="row">
+								<div class="col-sm-6">
+								<form action="" method="get">
+									<label><input type="search" class="form-control input-sm" placeholder="表名/注释" name="keyword" value="<?=I('get.keyword', '')?>" size="35" /></label>
+									<label><input type="submit" class="btn btn-info btn-sm" value='搜索' /></label>
+								</form>
+								</div>							
+								<div class="col-sm-12 text-right">
+									<?=getTopBtn($menu_info['id'],I('pid'))?>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-sm-12">
+									<table id="example2"
+										class="table table-bordered table-striped dataTable text-center"
+										role="grid" aria-describedby="example2_info">
+										<thead>
+											<tr role="row">
+												<th class="sorting text-left" tabindex="0"
+													aria-controls="example2" rowspan="1" colspan="1"
+													aria-label="Browser: activate to sort column ascending">表名</th>
+												<th class="sorting text-left" tabindex="0"
+													aria-controls="example2" rowspan="1" colspan="1"
+													aria-label="Platform(s): activate to sort column ascending">注释</th>
+												<th class="sorting" tabindex="0" aria-controls="example2"
+													rowspan="1" colspan="1"
+													aria-label="CSS grade: activate to sort column ascending">操作</th>
+											</tr>
+										</thead>
+										<tbody>
+										<?php
+											foreach($list as $key=>$row){
+										?>
+											<tr>
+												
+												<td class="text-left" width="30%">
+													<?=$row['table_name']?>
+												</td>
+												<td class="text-left" width="60%">
+													<?=$row['table_comment']?>
+												</td>
+												<td width="10%">
+												<?php
+													$unique_url=array(
+														'status'=>array(
+															'0'=>U("enable"),
+															'1'=>U("disable"),
+														)
+													);
+													getListBtn($menu_info['id'], $row['table_name'], $unique_url, I('pid'), false);
+												?>
+												</td>
+											</tr>
+										<?php
+											}
+										?>
+										</tbody>
+									</table>
+								</div>
+							</div>
+
+							<div class="pages">
+								<?=$page?>
+							</div>
+						</div>
+						<!-- /.box-body -->
+					</div>
+					<!-- /.box -->
+
+				</div>
+				<!-- /.col -->
+			</div>
+			<!-- /.row -->
+	</section>
+	<!-- /.content -->
+</div>
+</block>
+<block name="script">
+<script type="text/javascript">
+$(function(){
+	$("select[name=department]").change(function(){
+		$(this).parents("form").submit();
+	})
+	$("select[name=department]").val("<?=I('department')?>");
+})
+</script>
+</block>

@@ -1,0 +1,166 @@
+[ 2015-12-23T10:58:46+08:00 ] 127.0.0.1 /webroot/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.021003s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.016002s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.016002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.043005s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.043505s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001500s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001501s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001501s ]
+
+[ 2015-12-23T10:59:13+08:00 ] 127.0.0.1 /webroot/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001500s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `sr_category` [ RunTime:0.2065s ]
+SQL: SELECT * FROM `sr_category` WHERE `status` = 1 AND `type` = 0 AND `level` = 2 AND `recommend` = 1 ORDER BY  sort desc LIMIT 10   [ RunTime:0.0590s ]
+SQL: SHOW COLUMNS FROM `sr_theme` [ RunTime:0.0375s ]
+SQL: SELECT * FROM `sr_theme` WHERE `status` = 1  [ RunTime:0.0570s ]
+SQL: SHOW COLUMNS FROM `sr_sysmsg_status` [ RunTime:0.0425s ]
+SQL: SELECT * FROM `sr_sysmsg_status` WHERE `member_id` = null AND `status` = 0  [ RunTime:0.0270s ]
+SQL: SHOW COLUMNS FROM `sr_message` [ RunTime:0.0260s ]
+SQL: SELECT * FROM `sr_message` WHERE `to_member_id` = null AND `to_status` = 0  [ RunTime:0.1075s ]
+SQL: SHOW COLUMNS FROM `sr_banner` [ RunTime:0.0950s ]
+SQL: SELECT * FROM `sr_banner` WHERE `page` = 'home_banner' AND `start_time` <= '2015-12-23 10:59:09' AND `end_time` >= '2015-12-23 10:59:09' AND `status` = 1 ORDER BY sort desc,id asc  [ RunTime:0.0460s ]
+SQL: SELECT * FROM `sr_banner` WHERE `page` = 'advert_banner' AND `start_time` <= '2015-12-23 10:59:09' AND `end_time` >= '2015-12-23 10:59:09' AND `status` = 1 ORDER BY sort desc,id asc  [ RunTime:0.0600s ]
+SQL: SHOW COLUMNS FROM `sr_article` [ RunTime:0.1160s ]
+SQL: SELECT `id`,`title` FROM `sr_article` WHERE `type` = 'news' AND `status` = 1 AND `recommend` = 1 ORDER BY  id desc LIMIT 9   [ RunTime:0.1840s ]
+SQL: SELECT `id`,`title` FROM `sr_article` WHERE `type` = 'notice' AND `status` = 1 AND `recommend` = 1 ORDER BY  id desc LIMIT 9   [ RunTime:0.1440s ]
+SQL: SHOW COLUMNS FROM `sr_shop` [ RunTime:0.1055s ]
+SQL: SHOW COLUMNS FROM `sr_member` [ RunTime:0.0765s ]
+SQL: SELECT shop.id AS shop_id,shop.status AS shop_status,shop.add_time AS shop_add_time,shop.id AS id,shop.title AS title,shop.slogan AS slogan,shop.type AS type,shop.member_id AS member_id,shop.logo AS logo,shop.keywords AS keywords,shop.short_description AS short_description,shop.level AS level,shop.status AS status,shop.recommend AS recommend,shop.add_time AS add_time,shop.theme_id AS theme_id,shop.have_theme AS have_theme,shop.good_at AS good_at,shop.shop_license AS shop_license,shop.shop_tax AS shop_tax,shop.translate_type AS translate_type,shop.translate_year AS translate_year,shop.comment_num AS comment_num,shop.total_translate_time AS total_translate_time,shop.translate_num AS translate_num,shop.service_times AS service_times,shop.total_translate_num AS total_translate_num,shop.regtime AS regtime,shop.area_id AS area_id,shop.address AS address,shop.operate_type AS operate_type,shop.description_now AS description_now,shop.work_time_s AS work_time_s,shop.work_time_e AS work_time_e,shop.speed_star_num AS speed_star_num,shop.quality_star_num AS quality_star_num,shop.serve_star_num AS serve_star_num,shop.star_num AS star_num,shop.is_identity_confirm AS is_identity_confirm,shop.is_qualified_comfirm AS is_qualified_comfirm,shop.min_price AS min_price,shop.shop_license_1 AS shop_license_1,shop.have_product AS have_product,shop.reason AS reason,shop.be_x AS be_x,shop.be_y AS be_y,member.username AS username,member.id AS seller_id FROM sr_shop shop LEFT JOIN sr_member member ON shop.member_id=member.id WHERE member.id > 0 AND shop.type = 1 AND shop.status = 1 AND shop.recommend = 1 ORDER BY shop.id desc LIMIT 5   [ RunTime:0.0600s ]
+SQL: SELECT shop.id AS shop_id,shop.status AS shop_status,shop.add_time AS shop_add_time,shop.id AS id,shop.title AS title,shop.slogan AS slogan,shop.type AS type,shop.member_id AS member_id,shop.logo AS logo,shop.keywords AS keywords,shop.short_description AS short_description,shop.level AS level,shop.status AS status,shop.recommend AS recommend,shop.add_time AS add_time,shop.theme_id AS theme_id,shop.have_theme AS have_theme,shop.good_at AS good_at,shop.shop_license AS shop_license,shop.shop_tax AS shop_tax,shop.translate_type AS translate_type,shop.translate_year AS translate_year,shop.comment_num AS comment_num,shop.total_translate_time AS total_translate_time,shop.translate_num AS translate_num,shop.service_times AS service_times,shop.total_translate_num AS total_translate_num,shop.regtime AS regtime,shop.area_id AS area_id,shop.address AS address,shop.operate_type AS operate_type,shop.description_now AS description_now,shop.work_time_s AS work_time_s,shop.work_time_e AS work_time_e,shop.speed_star_num AS speed_star_num,shop.quality_star_num AS quality_star_num,shop.serve_star_num AS serve_star_num,shop.star_num AS star_num,shop.is_identity_confirm AS is_identity_confirm,shop.is_qualified_comfirm AS is_qualified_comfirm,shop.min_price AS min_price,shop.shop_license_1 AS shop_license_1,shop.have_product AS have_product,shop.reason AS reason,shop.be_x AS be_x,shop.be_y AS be_y,member.username AS username,member.id AS seller_id FROM sr_shop shop LEFT JOIN sr_member member ON shop.member_id=member.id WHERE member.id > 0 AND shop.status = 1 AND shop.recommend = 1 ORDER BY shop.id desc LIMIT 5   [ RunTime:0.3445s ]
+SQL: SELECT distinct(sr_shop.id),sr_shop.title,sr_shop.translate_year,sr_shop.good_at FROM sr_shop,sr_products WHERE sr_shop.id=sr_products.shop_id AND sr_shop.status=1 AND sr_shop.have_product=1 order by sr_shop.add_time desc limit 5 [ RunTime:0.0440s ]
+SQL: SHOW COLUMNS FROM `sr_products` [ RunTime:0.0670s ]
+SQL: SELECT `shop_id` FROM `sr_products` WHERE `type` = 36 AND `status` = 1  [ RunTime:0.0685s ]
+SQL: SELECT * FROM `sr_shop` WHERE `id` IN (1,2,5,9,11,13,14,18,21,17,19,44,45) AND `status` = 1 AND `recommend` = 1 ORDER BY  id desc LIMIT 5   [ RunTime:0.0850s ]
+SQL: SELECT `shop_id` FROM `sr_products` WHERE `type` = 37 AND `status` = 1  [ RunTime:0.1835s ]
+SQL: SELECT * FROM `sr_shop` WHERE `id` IN (2,5,3,1,8,9,14,11,17,15,18,21,19,26,39,46,44) AND `status` = 1 AND `recommend` = 1 ORDER BY  id desc LIMIT 5   [ RunTime:0.1060s ]
+SQL: SELECT SUM(1) as demand,SUM(total_price) as price_sum FROM sr_orders WHERE `status`>1 [ RunTime:0.4421s ]
+SQL: SELECT COUNT(id) as total_num FROM sr_shop WHERE `status`=1; [ RunTime:0.0575s ]
+SQL: SELECT * FROM `sr_banner` WHERE `status` = 1  [ RunTime:0.0905s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: title D:\htdocs\webroot\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 9 行.
+NOTIC: [8] Undefined variable: keywords D:\htdocs\webroot\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 9 行.
+NOTIC: [8] Undefined variable: description D:\htdocs\webroot\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 9 行.
+NOTIC: [8] Undefined variable: param D:\htdocs\webroot\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 98 行.
+NOTIC: [8] Undefined variable: param D:\htdocs\webroot\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 100 行.
+NOTIC: [8] Undefined variable: param D:\htdocs\webroot\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 101 行.
+NOTIC: [8] Undefined variable: param D:\htdocs\webroot\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 102 行.
+SQL: SELECT * FROM `sr_category` WHERE `status` = 1 AND `type` = 2 ORDER BY  sort desc  [ RunTime:0.3065s ]
+NOTIC: [8] Undefined variable: param D:\htdocs\webroot\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 139 行.
+SQL: SELECT * FROM `sr_category` WHERE `status` = 1 AND `type` = 0 ORDER BY  sort desc  [ RunTime:0.1485s ]
+SQL: SHOW COLUMNS FROM `sr_navigation` [ RunTime:0.6451s ]
+SQL: SELECT * FROM `sr_navigation` WHERE `status` = 1 ORDER BY sort desc,id asc  [ RunTime:0.0295s ]
+NOTIC: [8] Use of undefined constant 首页 - assumed '首页' D:\htdocs\webroot\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 196 行.
+NOTIC: [8] Use of undefined constant 首页 - assumed '首页' D:\htdocs\webroot\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 196 行.
+NOTIC: [8] Use of undefined constant 首页 - assumed '首页' D:\htdocs\webroot\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 196 行.
+NOTIC: [8] Use of undefined constant 首页 - assumed '首页' D:\htdocs\webroot\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 196 行.
+NOTIC: [8] Use of undefined constant 首页 - assumed '首页' D:\htdocs\webroot\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 196 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\htdocs\webroot\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 311 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\htdocs\webroot\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 319 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\htdocs\webroot\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 339 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\htdocs\webroot\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 467 行.
+NOTIC: [8] Undefined index: logo D:\htdocs\webroot\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 512 行.
+NOTIC: [8] Undefined index: logo D:\htdocs\webroot\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 512 行.
+NOTIC: [8] Undefined index: logo D:\htdocs\webroot\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 512 行.
+NOTIC: [8] Undefined index: logo D:\htdocs\webroot\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 512 行.
+NOTIC: [8] Undefined index: logo D:\htdocs\webroot\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 512 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\htdocs\webroot\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 577 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\htdocs\webroot\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 634 行.
+NOTIC: [8] Undefined index: links D:\htdocs\webroot\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 721 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\htdocs\webroot\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 721 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:1.370174s ]
+INFO: [ view_parse ] --END-- [ RunTime:1.370674s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.019503s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.020503s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001500s ]
+
+[ 2015-12-23T10:59:25+08:00 ] 127.0.0.1 /webroot/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001500s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001500s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001500s ]
+SQL: SHOW COLUMNS FROM `sr_sysmsg_status` [ RunTime:0.0945s ]
+SQL: SELECT * FROM `sr_sysmsg_status` WHERE `member_id` = null AND `status` = 0  [ RunTime:0.0535s ]
+SQL: SHOW COLUMNS FROM `sr_message` [ RunTime:0.2260s ]
+SQL: SELECT * FROM `sr_message` WHERE `to_member_id` = null AND `to_status` = 0  [ RunTime:0.2350s ]
+SQL: SHOW COLUMNS FROM `sr_banner` [ RunTime:0.0930s ]
+SQL: SELECT * FROM `sr_banner` WHERE `page` = 'home_banner' AND `start_time` <= '2015-12-23 10:59:18' AND `end_time` >= '2015-12-23 10:59:18' AND `status` = 1 ORDER BY sort desc,id asc  [ RunTime:0.0910s ]
+SQL: SELECT * FROM `sr_banner` WHERE `page` = 'advert_banner' AND `start_time` <= '2015-12-23 10:59:18' AND `end_time` >= '2015-12-23 10:59:18' AND `status` = 1 ORDER BY sort desc,id asc  [ RunTime:0.4821s ]
+SQL: SHOW COLUMNS FROM `sr_article` [ RunTime:0.1265s ]
+SQL: SELECT `id`,`title` FROM `sr_article` WHERE `type` = 'news' AND `status` = 1 AND `recommend` = 1 ORDER BY  id desc LIMIT 9   [ RunTime:0.0620s ]
+SQL: SELECT `id`,`title` FROM `sr_article` WHERE `type` = 'notice' AND `status` = 1 AND `recommend` = 1 ORDER BY  id desc LIMIT 9   [ RunTime:0.1055s ]
+SQL: SHOW COLUMNS FROM `sr_shop` [ RunTime:0.0575s ]
+SQL: SHOW COLUMNS FROM `sr_member` [ RunTime:0.0705s ]
+SQL: SELECT shop.id AS shop_id,shop.status AS shop_status,shop.add_time AS shop_add_time,shop.id AS id,shop.title AS title,shop.slogan AS slogan,shop.type AS type,shop.member_id AS member_id,shop.logo AS logo,shop.keywords AS keywords,shop.short_description AS short_description,shop.level AS level,shop.status AS status,shop.recommend AS recommend,shop.add_time AS add_time,shop.theme_id AS theme_id,shop.have_theme AS have_theme,shop.good_at AS good_at,shop.shop_license AS shop_license,shop.shop_tax AS shop_tax,shop.translate_type AS translate_type,shop.translate_year AS translate_year,shop.comment_num AS comment_num,shop.total_translate_time AS total_translate_time,shop.translate_num AS translate_num,shop.service_times AS service_times,shop.total_translate_num AS total_translate_num,shop.regtime AS regtime,shop.area_id AS area_id,shop.address AS address,shop.operate_type AS operate_type,shop.description_now AS description_now,shop.work_time_s AS work_time_s,shop.work_time_e AS work_time_e,shop.speed_star_num AS speed_star_num,shop.quality_star_num AS quality_star_num,shop.serve_star_num AS serve_star_num,shop.star_num AS star_num,shop.is_identity_confirm AS is_identity_confirm,shop.is_qualified_comfirm AS is_qualified_comfirm,shop.min_price AS min_price,shop.shop_license_1 AS shop_license_1,shop.have_product AS have_product,shop.reason AS reason,shop.be_x AS be_x,shop.be_y AS be_y,member.username AS username,member.id AS seller_id FROM sr_shop shop LEFT JOIN sr_member member ON shop.member_id=member.id WHERE member.id > 0 AND shop.type = 1 AND shop.status = 1 AND shop.recommend = 1 ORDER BY shop.id desc LIMIT 5   [ RunTime:0.0545s ]
+SQL: SELECT shop.id AS shop_id,shop.status AS shop_status,shop.add_time AS shop_add_time,shop.id AS id,shop.title AS title,shop.slogan AS slogan,shop.type AS type,shop.member_id AS member_id,shop.logo AS logo,shop.keywords AS keywords,shop.short_description AS short_description,shop.level AS level,shop.status AS status,shop.recommend AS recommend,shop.add_time AS add_time,shop.theme_id AS theme_id,shop.have_theme AS have_theme,shop.good_at AS good_at,shop.shop_license AS shop_license,shop.shop_tax AS shop_tax,shop.translate_type AS translate_type,shop.translate_year AS translate_year,shop.comment_num AS comment_num,shop.total_translate_time AS total_translate_time,shop.translate_num AS translate_num,shop.service_times AS service_times,shop.total_translate_num AS total_translate_num,shop.regtime AS regtime,shop.area_id AS area_id,shop.address AS address,shop.operate_type AS operate_type,shop.description_now AS description_now,shop.work_time_s AS work_time_s,shop.work_time_e AS work_time_e,shop.speed_star_num AS speed_star_num,shop.quality_star_num AS quality_star_num,shop.serve_star_num AS serve_star_num,shop.star_num AS star_num,shop.is_identity_confirm AS is_identity_confirm,shop.is_qualified_comfirm AS is_qualified_comfirm,shop.min_price AS min_price,shop.shop_license_1 AS shop_license_1,shop.have_product AS have_product,shop.reason AS reason,shop.be_x AS be_x,shop.be_y AS be_y,member.username AS username,member.id AS seller_id FROM sr_shop shop LEFT JOIN sr_member member ON shop.member_id=member.id WHERE member.id > 0 AND shop.status = 1 AND shop.recommend = 1 ORDER BY shop.id desc LIMIT 5   [ RunTime:1.1231s ]
+SQL: SELECT distinct(sr_shop.id),sr_shop.title,sr_shop.translate_year,sr_shop.good_at FROM sr_shop,sr_products WHERE sr_shop.id=sr_products.shop_id AND sr_shop.status=1 AND sr_shop.have_product=1 order by sr_shop.add_time desc limit 5 [ RunTime:2.1778s ]
+SQL: SHOW COLUMNS FROM `sr_products` [ RunTime:0.4671s ]
+SQL: SELECT `shop_id` FROM `sr_products` WHERE `type` = 36 AND `status` = 1  [ RunTime:0.2780s ]
+SQL: SELECT * FROM `sr_shop` WHERE `id` IN (1,2,5,9,11,13,14,18,21,17,19,44,45) AND `status` = 1 AND `recommend` = 1 ORDER BY  id desc LIMIT 5   [ RunTime:1.6902s ]
+SQL: SELECT `shop_id` FROM `sr_products` WHERE `type` = 37 AND `status` = 1  [ RunTime:0.0725s ]
+SQL: SELECT * FROM `sr_shop` WHERE `id` IN (2,5,3,1,8,9,14,11,17,15,18,21,19,26,39,46,44) AND `status` = 1 AND `recommend` = 1 ORDER BY  id desc LIMIT 5   [ RunTime:0.2765s ]
+SQL: SELECT * FROM `sr_banner` WHERE `status` = 1  [ RunTime:0.0825s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: title D:\htdocs\webroot\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 9 行.
+NOTIC: [8] Undefined variable: keywords D:\htdocs\webroot\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 9 行.
+NOTIC: [8] Undefined variable: description D:\htdocs\webroot\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 9 行.
+NOTIC: [8] Undefined variable: param D:\htdocs\webroot\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 98 行.
+NOTIC: [8] Undefined variable: param D:\htdocs\webroot\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 100 行.
+NOTIC: [8] Undefined variable: param D:\htdocs\webroot\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 101 行.
+NOTIC: [8] Undefined variable: param D:\htdocs\webroot\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 102 行.
+NOTIC: [8] Undefined variable: param D:\htdocs\webroot\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 139 行.
+NOTIC: [8] Use of undefined constant 首页 - assumed '首页' D:\htdocs\webroot\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 196 行.
+NOTIC: [8] Use of undefined constant 首页 - assumed '首页' D:\htdocs\webroot\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 196 行.
+NOTIC: [8] Use of undefined constant 首页 - assumed '首页' D:\htdocs\webroot\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 196 行.
+NOTIC: [8] Use of undefined constant 首页 - assumed '首页' D:\htdocs\webroot\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 196 行.
+NOTIC: [8] Use of undefined constant 首页 - assumed '首页' D:\htdocs\webroot\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 196 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\htdocs\webroot\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 311 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\htdocs\webroot\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 319 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\htdocs\webroot\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 339 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\htdocs\webroot\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 467 行.
+NOTIC: [8] Undefined index: logo D:\htdocs\webroot\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 512 行.
+NOTIC: [8] Undefined index: logo D:\htdocs\webroot\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 512 行.
+NOTIC: [8] Undefined index: logo D:\htdocs\webroot\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 512 行.
+NOTIC: [8] Undefined index: logo D:\htdocs\webroot\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 512 行.
+NOTIC: [8] Undefined index: logo D:\htdocs\webroot\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 512 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\htdocs\webroot\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 577 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\htdocs\webroot\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 634 行.
+NOTIC: [8] Undefined index: links D:\htdocs\webroot\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 721 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\htdocs\webroot\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 721 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.163021s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.163521s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000500s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000500s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002500s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001500s ]
+

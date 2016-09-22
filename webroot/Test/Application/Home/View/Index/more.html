@@ -1,0 +1,77 @@
+
+		<!-- 第一栏 S -->
+	<?php foreach($feed_res as $k=>$v){ ?>
+	<div class="col-xs-2 text-center title_left">
+		<div class="title_time">
+			<h3><?=$v['addtime']['mday']?></h3>
+			<h4><?=$v['addtime']['month']?></h4>
+		</div>
+		<span class="title_year"><?=$v['addtime']['year']?></span>
+	</div>
+	<div class="col-xs-10 title_right clear">
+		<div class="img_div">
+			<?php 
+				if(!empty($v['image'])){
+					foreach($v['image'] as $key=>$value){
+						echo "<img src='__ROOT__/".$value['image']."' class='img-responsive'>";
+					}
+				}
+			?>
+			<!-- <img src="__IMG__/User/u_blog_img1.jpg" class="img-responsive"> -->
+			<span class="img_num"></span>
+		</div>
+		<h5><?=$v['feed_title']?></h5>
+		<p><?=$v['feed_content']?></p>
+		<div class="title_footer clear">
+			<div class="span_s">	
+				<?php 
+					if(!empty($v['lable'])){
+						echo "<span class='tags'>#</span>";
+						foreach($v['lable'] as $key=>$value){
+							echo "<span>".$value['name']."</span>";
+						}
+					}
+				?>
+			</div>	
+			<?php if($v['address']){
+				echo "<p class='t_address'><i class='iconfont'>&#xe601;</i>".$v['address']."</p>";
+			}?>
+
+			<span class="comments pull-right">
+			<i class="iconfont">&#xe608;</i>评论(<p><?=$v['comment_count']?></p>)</span>
+			<span class="hots pull-right">热度(<p><?=$v['hot_count']?></p>)</span>
+		</div>
+
+	</div>
+	<?php } ?>
+	<script>
+	$(function(){
+		$(".img_div").each(function(){
+		 	var imgs=$(this).find("img");
+		 	var imgs_length=imgs.length;
+		 	var spans=$(this).find("span");
+		 	var img_x=1;
+		 	if(imgs_length==0){
+		 		$(this).hide();
+		 	}else{
+		 		spans.text(imgs_length);
+			 	for(var i=0;i<imgs_length;i++){
+			 		imgs.eq(i).hide();
+			 		imgs.eq(0).show();
+				 	imgs.eq(i).on("click",function(){
+				 		if(img_x){
+				 			spans.hide();
+					 		for(var i=0;i<imgs_length;i++){
+					 		imgs.eq(i).show();
+					 		img_x=0;
+					 	}}else{
+					 		imgs.eq(0).show().siblings().hide();
+					 		spans.show();
+					 		img_x=1;
+					 	}
+			 		})
+			 	}
+		 	}
+		})
+	})
+	</script>

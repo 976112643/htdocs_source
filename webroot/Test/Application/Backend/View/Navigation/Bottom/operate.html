@@ -1,0 +1,83 @@
+<extend name="Public/body" />
+<block name="body"> <!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+	<!-- Content Header (Page header) -->
+	<section class="content-header">
+		<h1>
+			<?=$page_title?>
+			<small> <?=$small_title?> <?php if($info){ echo "修改"; }else{ echo "添加"; } ?>
+			</small>
+		</h1>
+		<ol class="breadcrumb">
+			<li><a href="<?=U('/Backend')?>"><i class="fa fa-dashboard"></i>
+					首页</a></li>
+			<li><a href="<?=U('index')?>">
+					<?=$small_title?>
+			</a></li>
+			<li class="active">
+				<?php if($info){ echo "修改"; }else{ echo "添加"; } ?>
+			</li>
+		</ol>
+	</section>
+
+	<!-- Main content -->
+	<section class="content">
+		<!-- general form elements -->
+		<div class="box box-primary">
+			<!-- form start -->
+			<form role="form" action="<?=U('')?>" method="post"
+						class="operate_form">
+				<div class="box-body">
+					<input type="hidden" name="id" value="<?=$info['id']?>" />
+					<div class="form-group">
+						<label>上级菜单</label>
+						<select name="pid" class="form-control">
+							<option value="">顶级导航</option>
+							<?php
+								$map['pid']=0;
+								$map['type']='bottom';
+								$parent_result=get_result('navigation',$map,'id,title');
+								foreach($parent_result as $row){
+							?>
+								<option value="<?=$row['id']?>" <?php if($row['id']==I('pid')){ echo 'selected="selected"';} ?>><?=$row['title']?></option>
+							<?php
+								}
+							?>
+						</select>
+					</div>
+					<div class="form-group">
+						<label>导航标题</label> <input type="text"
+							class="form-control width_auto" name="title"
+							value="<?=$info['title']?>">
+					</div>
+					<div class="form-group">
+						<label>导航链接</label><span>(此处为站内链接，格式如：“/Index/index”) <input type="text" class="form-control large"
+							name="url" value="<?=$info['url']?>">
+					</div>
+					<div class="form-group">
+						<label>浏览方式</label> <select name="target"
+							class="form-control width_auto">
+							<option value="_self">当前标签打开</option>
+							<option value="_blank"<?php
+								if($info['target']=='_blank'){ echo 'selected="selected"'; } ?>
+								>在新标签打开</option>
+						</select>
+					</div>
+					<div class="form-group">
+						<label>导航排序</label> <input type="text"
+							class="form-control width_auto" name="sort"
+							value="<?=$info['sort']?>">
+					</div>
+				</div>
+					<div class="box-footer">
+							<button type="submit" class="btn btn-primary ajax-post"
+								target-form="operate_form">提交</button>
+							<a href="<?=U('index')?>" class="btn btn-default">取消返回</a>
+						</div>
+			</form>
+		</div>
+		<!-- /.box -->
+	</section>
+	<!-- /.content -->
+</div>
+</block>

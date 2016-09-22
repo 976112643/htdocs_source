@@ -1,0 +1,976 @@
+<extend name="Public/body"/>
+<block name="style">
+	<css href="__CSS__/index.css"/>
+	<css href="__CSS__/browse.css"/>
+	<css href="__PLUGIN__/popover/dist/jquery.webui-popover.min.css"/>
+</block>
+<block name="body">
+	<include file="Public/browse_nav" />
+	<!-- 主体部分 S-->
+	<div class="main label_delmain">
+		<div class="container">
+			<div class="col-lg-9 clearfix">
+				<div class="clearfix">
+					<div class="tab_top_box">
+						<div class="title clearfix">
+							<h4 class="pull-left"><i class="iconfont">&#xe615;</i> 摄影</h4>
+							<div class="btn-group pull-right">
+							  <a href="<?=U('details')?>" type="button" class="btn btn-default btn_tab1 active">
+							  	  <i class="iconfont">&#xe65a;</i>
+							  </a>
+							  <a href="<?=U('details2')?>" type="button" class="btn btn-default btn_tab2">
+							  	  <i class="iconfont">&#xe659;</i>
+							  </a>
+							</div>
+						</div>
+						<div class="down">
+							<a href="#" class="active">最新</a>
+							<a href="#">色彩</a>
+							<a href="#">榜单</a>
+						</div>
+					</div>
+				</div>
+				
+				
+				<div class="blogcon_col clearfix mt_20">
+					<div class="userimg_row">
+						<div class="userimg_box js_Personame" data-url="<?=U('Home/Index/about')?>" style="background-image:url('__IMG__/user-img7.jpg')">
+							
+						</div>
+					</div>
+					<div class="blogcnt_row">
+						<div class="blogcnt_box arrow_box clearfix">
+							<span class="b_arrow"></span>
+							<div class="fromwho">
+								<a href="#" data-url="<?=U('Home/Index/about')?>" class="topicname js_Personame">叁玖莲生Ken.  </a> 
+								<a href="#" class="more_label"><i class="iconfont">&#xe613;</i></a>
+							</div>
+							<div class="blogcnt_main clearfix">
+								<div class="img_box js_img_box clearfix pull-left">
+									<div class="img_con">
+										<img src="__IMG__/img11.jpg" width="240" alt="">	
+									</div>
+								</div>
+								<blockquote style="font-size:14px;" class="text-justify js_block">
+									<p>人生其实像一条从宽阔的平原走进森林的路。在平原上同伴可以结伙而行，欢乐地前推后挤、相濡以沫;一旦进入森林，草丛和荆棘挡路，各人专心走各人的路，寻找各人的方向，那推推挤挤的群体情感。</p>
+								</blockquote>								
+							</div>
+							<div class="label_bar pull-left">
+								<i class="iconfont">&#xe615;</i>
+								<a href="javascript:;">尚软</a>
+								<a href="javascript:;">开源</a>
+								<a href="javascript:;">科技</a>
+							</div>
+							<div class="blogtools_bar pull-right">
+								<a href="javascript:;" class="ja_abtn hot_btn">热度(<span class="num">19</span>)</a>	
+								<a href="javascript:;" class="ja_abtn"><i class="iconfont">&#xe612;</i> 评论(2)</a>
+								<a href="javascript:;" class="ja_abtn"><i class="iconfont">&#xe60f;</i> 分享</a>
+								<a href="javascript:;" class="js_tjbtn"><i class="iconfont">&#xe614;</i> 推荐</a>
+								<a href="javascript:;" class="js_likebtn"><i class="iconfont icon-xihuan"></i> 喜欢</a>
+							</div>
+						</div>
+						<!-- 热度列表 S-->
+						<div class="hot_bar con_bar js_hot_bar">
+							<ul class="hot_list con_list js_hot_list">
+								<li class="clearfix">
+									<span class="user_simg pull-left" style="background-image:url('__IMG__/user-img1.jpg')">
+										
+									</span>
+									<div class="comment_txt pull-left">
+										<span class="user_name">
+											ljjchen29
+										</span>
+										<span class="js_comment_txt">
+										喜欢此图片
+										</span>
+									</div>
+								</li>
+								<li class="clearfix">
+									<span class="user_simg pull-left" style="background-image:url('__IMG__/user-img2.jpg')">
+										
+									</span>
+									<div class="comment_txt pull-left">
+										<span class="user_name">
+											每日穿搭小图
+										</span>
+										<span class="js_comment_txt">
+										喜欢此图片
+										</span>
+									</div>
+								</li>
+								<li class="clearfix">
+									<span class="user_simg pull-left" style="background-image:url('__IMG__/user-img3.jpg')">
+										
+									</span>
+									<div class="comment_txt pull-left">
+										<span class="user_name">
+											MIC复古小姐
+										</span>
+										<span class="js_comment_txt">
+										喜欢此图片
+										</span>
+									</div>
+								</li>
+								<li class="clearfix">
+									<span class="user_simg pull-left" style="background-image:url('__IMG__/user-img4.jpg')">
+										
+									</span>
+									<div class="comment_txt pull-left">
+										<span class="user_name">
+											left小胖猪
+										</span>
+										<span class="js_comment_txt">
+										喜欢此图片
+										</span>
+									</div>
+								</li>
+								<li class="clearfix">
+									<span class="user_simg pull-left" style="background-image:url('__IMG__/user-img5.jpg')">
+										
+									</span>
+									<div class="comment_txt pull-left">
+										<span class="user_name">
+											每日穿搭小图
+										</span>
+										<span class="js_comment_txt">
+										喜欢此图片
+										</span>
+									</div>
+								</li>
+								<li class="clearfix">
+									<span class="user_simg pull-left" style="background-image:url('__IMG__/user-img6.jpg')">
+										
+									</span>
+									<div class="comment_txt pull-left">
+										<span class="user_name">
+											lyonhooo
+										</span>
+										<span class="js_comment_txt">
+										喜欢此图片
+										</span>
+									</div>
+								</li>
+							</ul>
+							<div class="look_more"><i class="iconfont">&#xe623;</i> 查看更多</div>
+							<span class="slideUpBtn">收起 <i class="iconfont">&#xe622;</i></span>
+						</div>
+						<!-- 热度列表 E-->
+						<!-- 评论列表 S-->
+						<div class="comment_bar con_bar js_comment_bar">
+							<div class="input_bar clearfix">
+								<input type="text" class="form-control txt_input js_txt_input pull-left">
+								<button class="btn btn-primary btn_comment js_btn_comment pull-right">评论</button>
+							</div>
+							<ul class="comment_list con_list js_comment_list">
+								<li class="clearfix">
+									<span class="user_simg pull-left" style="background-image:url('__IMG__/user-img1.jpg')">
+										
+									</span>
+									<div class="comment_txt pull-left">
+										<span class="user_name">
+											ljjchen29
+										</span>
+										<span class="js_comment_txt">
+										我很喜欢这张图。
+										</span>
+									</div>
+									<div class="btn_group pull-right">
+										<a href="javascript:;" class="delete_btn js_delete">删除</a>
+										<a href="javascript:;">回复</a>	
+									</div>
+								</li>
+								<li class="clearfix sr-only js_lidemo">
+									<span class="user_simg pull-left" style="background-image:url('__IMG__/user-img1.jpg')">
+										
+									</span>
+									<div class="comment_txt pull-left">
+										<span class="user_name">
+											ljjchen29
+										</span>
+										<span class="js_comment_txt">
+										ssksksks
+										</span>
+									</div>
+									<div class="btn_group pull-right">
+										<a href="javascript:;" class="js_delete">删除</a>	
+									</div>
+								</li>
+								<li class="clearfix">
+									<span class="user_simg pull-left" style="background-image:url('__IMG__/user-img2.jpg')">
+										
+									</span>
+									<div class="comment_txt pull-left">
+										<span class="user_name">
+											每日穿搭小图
+										</span>
+										<span class="js_comment_txt">
+										文艺范儿十足呀~
+										</span>
+									</div>
+									<div class="btn_group pull-right">
+										<a href="javascript:;" class="delete_btn js_delete">删除</a>
+										<a href="javascript:;">回复</a>	
+									</div>
+								</li>
+								<li class="clearfix">
+									<span class="user_simg pull-left" style="background-image:url('__IMG__/user-img3.jpg')">
+										
+									</span>
+									<div class="comment_txt pull-left">
+										<span class="user_name">
+											left小胖猪
+										</span>
+										<span class="js_comment_txt">
+										见云之灿烂想其衣裳之华艳，见花之艳丽想人之容貌照人。若不是在群玉山头见到了她，就是在瑶池的月光下来相逢。
+										</span>
+									</div>
+									<div class="btn_group pull-right">
+										<a href="#" class="delete_btn js_delete">删除</a>
+										<a href="javascript:;">回复</a>	
+									</div>
+								</li>
+								<li class="clearfix">
+									<span class="user_simg pull-left" style="background-image:url('__IMG__/user-img4.jpg')">
+										
+									</span>
+									<div class="comment_txt pull-left">
+										<span class="user_name">
+											MIC复古小姐
+										</span>
+										<span class="js_comment_txt">
+										我很喜欢这张图我很喜欢这张图
+										我很喜欢这张图我很喜欢这张图我很喜欢这张图我很喜欢这张图
+										</span>
+									</div>
+									<div class="btn_group pull-right">
+										<a href="#" class="delete_btn js_delete">删除</a>
+										<a href="javascript:;">回复</a>	
+									</div>
+								</li>
+							</ul>
+							<span class="slideUpBtn">收起 <i class="iconfont">&#xe622;</i></span>
+						</div>
+						<!-- 评论列表 E-->
+						<!-- 分享列表 S-->
+						<div class="share_bar con_bar js_share_bar">
+							<ul class="share_links clearfix">
+								<li>
+									<a href="#" class="txqq"><i class="iconfont">&#xe642;</i></a>
+									<div>腾讯qq</div>
+								</li>
+								<li>
+									<a href="#" class="qqzone"><i class="iconfont">&#xe606;</i></a>
+									<div>qq空间</div>
+								</li>
+								<li>
+									<a href="#" class="sina"><i class="iconfont">&#xe621;</i></a>
+									<div>新浪微博</div>
+								</li>
+								<li>
+									<a href="#" class="weixin"><i class="iconfont">&#xe620;</i></a>
+									<div>微信</div>
+								</li>
+								<li>
+									<a href="#" class="pyq"><i class="iconfont">&#xe644;</i></a>
+									<div>朋友圈</div>
+								</li>
+								<li>
+									<a href="#" class="sunrun"><i class="iconfont">&#xe64f;</i></a>
+									<div>尚软</div>
+								</li>
+							</ul>
+						</div>
+						<!-- 分享列表 E-->
+					</div>
+				</div><!-- blogcon_col -->
+				<div class="blogcon_col clearfix mt_20">
+					<div class="userimg_row">
+						<div class="userimg_box js_Personame" data-url="<?=U('Home/Index/about')?>" style="background-image:url('__IMG__/user-img8.jpg')">
+							
+						</div>
+					</div>
+					<div class="blogcnt_row">
+						<div class="blogcnt_box arrow_box clearfix">
+							<span class="b_arrow"></span>
+							<div class="fromwho">
+								<a href="#" data-url="<?=U('Home/Index/about')?>" class="topicname js_Personame">喵喵的美衣</a>
+							</div>
+							<div class="blogcnt_main clearfix">
+								<div class="img_box js_img_box clearfix pull-left">
+									<div class="img_con">
+										<img src="__IMG__/img12.jpg" width="240" alt="">	
+									</div>
+								</div>	
+								<blockquote style="font-size:14px;" class="text-justify js_block">
+									<p></p>
+								</blockquote>			
+							</div>
+							<div class="label_bar pull-left">
+								<i class="iconfont">&#xe615;</i>
+								<a href="javascript:;">尚软</a>
+								<a href="javascript:;">开源</a>
+								<a href="javascript:;">科技</a>
+							</div>
+							<div class="blogtools_bar pull-right">
+								<a href="javascript:;" class="ja_abtn hot_btn">热度(<span class="num">19</span>)</a>	
+								<a href="javascript:;" class="ja_abtn"><i class="iconfont">&#xe612;</i> 评论(2)</a>
+								<a href="javascript:;" class="ja_abtn"><i class="iconfont">&#xe60f;</i> 分享</a>
+								<a href="javascript:;" class="js_tjbtn"><i class="iconfont">&#xe614;</i> 推荐</a>
+								<a href="javascript:;" class="js_likebtn"><i class="iconfont icon-xihuan"></i> 喜欢</a>
+							</div>
+						</div>
+						<!-- 热度列表 S-->
+						<div class="hot_bar con_bar js_hot_bar">
+							<ul class="hot_list con_list js_hot_list">
+								<li class="clearfix">
+									<span class="user_simg pull-left" style="background-image:url('__IMG__/user-img1.jpg')">
+										
+									</span>
+									<div class="comment_txt pull-left">
+										<span class="user_name">
+											ljjchen29
+										</span>
+										<span class="js_comment_txt">
+										喜欢此图片
+										</span>
+									</div>
+								</li>
+								<li class="clearfix">
+									<span class="user_simg pull-left" style="background-image:url('__IMG__/user-img2.jpg')">
+										
+									</span>
+									<div class="comment_txt pull-left">
+										<span class="user_name">
+											每日穿搭小图
+										</span>
+										<span class="js_comment_txt">
+										喜欢此图片
+										</span>
+									</div>
+								</li>
+								<li class="clearfix">
+									<span class="user_simg pull-left" style="background-image:url('__IMG__/user-img3.jpg')">
+										
+									</span>
+									<div class="comment_txt pull-left">
+										<span class="user_name">
+											MIC复古小姐
+										</span>
+										<span class="js_comment_txt">
+										喜欢此图片
+										</span>
+									</div>
+								</li>
+								<li class="clearfix">
+									<span class="user_simg pull-left" style="background-image:url('__IMG__/user-img4.jpg')">
+										
+									</span>
+									<div class="comment_txt pull-left">
+										<span class="user_name">
+											left小胖猪
+										</span>
+										<span class="js_comment_txt">
+										喜欢此图片
+										</span>
+									</div>
+								</li>
+								<li class="clearfix">
+									<span class="user_simg pull-left" style="background-image:url('__IMG__/user-img5.jpg')">
+										
+									</span>
+									<div class="comment_txt pull-left">
+										<span class="user_name">
+											每日穿搭小图
+										</span>
+										<span class="js_comment_txt">
+										喜欢此图片
+										</span>
+									</div>
+								</li>
+								<li class="clearfix">
+									<span class="user_simg pull-left" style="background-image:url('__IMG__/user-img6.jpg')">
+										
+									</span>
+									<div class="comment_txt pull-left">
+										<span class="user_name">
+											lyonhooo
+										</span>
+										<span class="js_comment_txt">
+										喜欢此图片
+										</span>
+									</div>
+								</li>
+							</ul>
+							<div class="look_more"><i class="iconfont">&#xe623;</i> 查看更多</div>
+							<span class="slideUpBtn">收起 <i class="iconfont">&#xe622;</i></span>
+						</div>
+						<!-- 热度列表 E-->
+						<!-- 评论列表 S-->
+						<div class="comment_bar con_bar js_comment_bar">
+							<div class="input_bar clearfix">
+								<input type="text" class="form-control txt_input js_txt_input pull-left">
+								<button class="btn btn-primary btn_comment js_btn_comment pull-right">评论</button>
+							</div>
+							<ul class="comment_list con_list js_comment_list">
+								<li class="clearfix">
+									<span class="user_simg pull-left" style="background-image:url('__IMG__/user-img1.jpg')">
+										
+									</span>
+									<div class="comment_txt pull-left">
+										<span class="user_name">
+											ljjchen29
+										</span>
+										<span class="js_comment_txt">
+										我很喜欢这张图。
+										</span>
+									</div>
+									<div class="btn_group pull-right">
+										<a href="javascript:;" class="delete_btn js_delete">删除</a>
+										<a href="javascript:;">回复</a>	
+									</div>
+								</li>
+								<li class="clearfix sr-only js_lidemo">
+									<span class="user_simg pull-left" style="background-image:url('__IMG__/user-img1.jpg')">
+										
+									</span>
+									<div class="comment_txt pull-left">
+										<span class="user_name">
+											ljjchen29
+										</span>
+										<span class="js_comment_txt">
+										ssksksks
+										</span>
+									</div>
+									<div class="btn_group pull-right">
+										<a href="javascript:;" class="js_delete">删除</a>	
+									</div>
+								</li>
+								<li class="clearfix">
+									<span class="user_simg pull-left" style="background-image:url('__IMG__/user-img2.jpg')">
+										
+									</span>
+									<div class="comment_txt pull-left">
+										<span class="user_name">
+											每日穿搭小图
+										</span>
+										<span class="js_comment_txt">
+										文艺范儿十足呀~
+										</span>
+									</div>
+									<div class="btn_group pull-right">
+										<a href="javascript:;" class="delete_btn js_delete">删除</a>
+										<a href="javascript:;">回复</a>	
+									</div>
+								</li>
+								<li class="clearfix">
+									<span class="user_simg pull-left" style="background-image:url('__IMG__/user-img3.jpg')">
+										
+									</span>
+									<div class="comment_txt pull-left">
+										<span class="user_name">
+											left小胖猪
+										</span>
+										<span class="js_comment_txt">
+										见云之灿烂想其衣裳之华艳，见花之艳丽想人之容貌照人。若不是在群玉山头见到了她，就是在瑶池的月光下来相逢。
+										</span>
+									</div>
+									<div class="btn_group pull-right">
+										<a href="#" class="delete_btn js_delete">删除</a>
+										<a href="javascript:;">回复</a>	
+									</div>
+								</li>
+								<li class="clearfix">
+									<span class="user_simg pull-left" style="background-image:url('__IMG__/user-img4.jpg')">
+										
+									</span>
+									<div class="comment_txt pull-left">
+										<span class="user_name">
+											MIC复古小姐
+										</span>
+										<span class="js_comment_txt">
+										我很喜欢这张图我很喜欢这张图
+										我很喜欢这张图我很喜欢这张图我很喜欢这张图我很喜欢这张图
+										</span>
+									</div>
+									<div class="btn_group pull-right">
+										<a href="#" class="delete_btn js_delete">删除</a>
+										<a href="javascript:;">回复</a>	
+									</div>
+								</li>
+							</ul>
+							<span class="slideUpBtn">收起 <i class="iconfont">&#xe622;</i></span>
+						</div>
+						<!-- 评论列表 E-->
+						<!-- 分享列表 S-->
+						<div class="share_bar con_bar js_share_bar">
+							<ul class="share_links clearfix">
+								<li>
+									<a href="#" class="txqq"><i class="iconfont">&#xe642;</i></a>
+									<div>腾讯qq</div>
+								</li>
+								<li>
+									<a href="#" class="qqzone"><i class="iconfont">&#xe606;</i></a>
+									<div>qq空间</div>
+								</li>
+								<li>
+									<a href="#" class="sina"><i class="iconfont">&#xe621;</i></a>
+									<div>新浪微博</div>
+								</li>
+								<li>
+									<a href="#" class="weixin"><i class="iconfont">&#xe620;</i></a>
+									<div>微信</div>
+								</li>
+								<li>
+									<a href="#" class="pyq"><i class="iconfont">&#xe644;</i></a>
+									<div>朋友圈</div>
+								</li>
+								<li>
+									<a href="#" class="sunrun"><i class="iconfont">&#xe64f;</i></a>
+									<div>尚软</div>
+								</li>
+							</ul>
+						</div>
+						<!-- 分享列表 E-->
+					</div>
+				</div><!-- blogcon_col -->
+				<div class="blogcon_col clearfix mt_20">
+					<div class="userimg_row">
+						<div class="userimg_box js_Personame" data-url="<?=U('Home/Index/about')?>" style="background-image:url('__IMG__/user-img9.jpg')">
+							
+						</div>
+					</div>
+					<div class="blogcnt_row">
+						<div class="blogcnt_box arrow_box clearfix">
+							<span class="b_arrow"></span>
+							<div class="fromwho">
+								<a href="#" data-url="<?=U('Home/Index/about')?>" class="topicname js_Personame">洛丽塔</a>
+								<a href="#" class="more_label"><i class="iconfont">&#xe613;</i></a>
+							</div>
+							<div class="blogcnt_main clearfix">
+								<div class="img_box js_img_box clearfix pull-left">
+									<div class="img_con">
+										<img src="__IMG__/img13.jpg" width="240" alt="">
+										<span class="imgnum">3</span>
+									</div>
+									<div class="bigimg_list" style="display:none;margin-bottom:20px;">
+									<div class="bigimg_box">
+										<img src="__IMG__/img13.jpg" width="650" alt="">
+										<span><i class="iconfont">&#xe61b;</i>查看大图</span>
+									</div>
+									<div class="bigimg_box">
+										<img src="__IMG__/img14.jpg" width="650" alt="">
+										<span><i class="iconfont">&#xe61b;</i>查看大图</span>
+									</div>
+									<div class="bigimg_box">
+										<img src="__IMG__/img15.jpg" width="650" alt="">
+										<span><i class="iconfont">&#xe61b;</i>查看大图</span>
+									</div>
+									</div>
+								</div>
+								<blockquote style="font-size:14px;" class="text-justify js_block">
+									<p>一路向西，漫行青海我在星空下已诉说千遍，只愿在日出时与你再相见。雄踞“世界屋脊”的青海省是个神秘而诱人的地方，青海的最佳旅游时间是短暂的夏季，即5～9月，冰消雪融，高原进入生机勃勃的时期。7月是青海的最热月，本人就是7月去的，虽是夏季但高原温差很大，特别是夜里看星空和早起看日出一定得做好保暖措施。7月万亩油菜花在青海湖畔灿烂盛开，青海湖也呈现出最五彩缤纷的美态。此外位于湖西岸的黑马河正是观看星空和青海湖日出的最佳地点之一。门源的油菜花在雪山下绵延几十公里，极富震撼力，铺天盖地的都是金黄色。日月山东侧阡陌良田，一派塞上江南风光；西侧草原辽阔，牛羊成群，是一幅塞外景色。茶卡盐湖是柴达木盆地有名的天然结晶盐湖，中国的“天空之镜”，可以赤脚走到湖面上观看和拍摄自己的倒影，如果是晴天的话夜里湖面还能映出星空的倒影。无论摄影还是旅游，青海都是一个值得一去的地方。</p>
+								</blockquote>
+																
+							</div>
+							<div class="label_bar pull-left">
+								<i class="iconfont">&#xe615;</i>
+								<a href="javascript:;">尚软</a>
+								<a href="javascript:;">开源</a>
+								<a href="javascript:;">科技</a>
+							</div>
+							<div class="blogtools_bar pull-right">
+								<a href="javascript:;" class="ja_abtn hot_btn">热度(<span class="num">19</span>)</a>	
+								<a href="javascript:;" class="ja_abtn"><i class="iconfont">&#xe612;</i> 评论(2)</a>
+								<a href="javascript:;" class="ja_abtn"><i class="iconfont">&#xe60f;</i> 分享</a>
+								<a href="javascript:;" class="js_tjbtn"><i class="iconfont">&#xe614;</i> 推荐</a>
+								<a href="javascript:;" class="js_likebtn"><i class="iconfont icon-xihuan"></i> 喜欢</a>
+							</div>
+						</div>
+						<!-- 热度列表 S-->
+						<div class="hot_bar con_bar js_hot_bar">
+							<ul class="hot_list con_list js_hot_list">
+								<li class="clearfix">
+									<span class="user_simg pull-left" style="background-image:url('__IMG__/user-img1.jpg')">
+										
+									</span>
+									<div class="comment_txt pull-left">
+										<span class="user_name">
+											ljjchen29
+										</span>
+										<span class="js_comment_txt">
+										喜欢此图片
+										</span>
+									</div>
+								</li>
+								<li class="clearfix">
+									<span class="user_simg pull-left" style="background-image:url('__IMG__/user-img2.jpg')">
+										
+									</span>
+									<div class="comment_txt pull-left">
+										<span class="user_name">
+											每日穿搭小图
+										</span>
+										<span class="js_comment_txt">
+										喜欢此图片
+										</span>
+									</div>
+								</li>
+								<li class="clearfix">
+									<span class="user_simg pull-left" style="background-image:url('__IMG__/user-img3.jpg')">
+										
+									</span>
+									<div class="comment_txt pull-left">
+										<span class="user_name">
+											MIC复古小姐
+										</span>
+										<span class="js_comment_txt">
+										喜欢此图片
+										</span>
+									</div>
+								</li>
+								<li class="clearfix">
+									<span class="user_simg pull-left" style="background-image:url('__IMG__/user-img4.jpg')">
+										
+									</span>
+									<div class="comment_txt pull-left">
+										<span class="user_name">
+											left小胖猪
+										</span>
+										<span class="js_comment_txt">
+										喜欢此图片
+										</span>
+									</div>
+								</li>
+								<li class="clearfix">
+									<span class="user_simg pull-left" style="background-image:url('__IMG__/user-img5.jpg')">
+										
+									</span>
+									<div class="comment_txt pull-left">
+										<span class="user_name">
+											每日穿搭小图
+										</span>
+										<span class="js_comment_txt">
+										喜欢此图片
+										</span>
+									</div>
+								</li>
+								<li class="clearfix">
+									<span class="user_simg pull-left" style="background-image:url('__IMG__/user-img6.jpg')">
+										
+									</span>
+									<div class="comment_txt pull-left">
+										<span class="user_name">
+											lyonhooo
+										</span>
+										<span class="js_comment_txt">
+										喜欢此图片
+										</span>
+									</div>
+								</li>
+							</ul>
+							<div class="look_more"><i class="iconfont">&#xe623;</i> 查看更多</div>
+							<span class="slideUpBtn">收起 <i class="iconfont">&#xe622;</i></span>
+						</div>
+						<!-- 热度列表 E-->
+						<!-- 评论列表 S-->
+						<div class="comment_bar con_bar js_comment_bar">
+							<div class="input_bar clearfix">
+								<input type="text" class="form-control txt_input js_txt_input pull-left">
+								<button class="btn btn-primary btn_comment js_btn_comment pull-right">评论</button>
+							</div>
+							<ul class="comment_list con_list js_comment_list">
+								<li class="clearfix">
+									<span class="user_simg pull-left" style="background-image:url('__IMG__/user-img1.jpg')">
+										
+									</span>
+									<div class="comment_txt pull-left">
+										<span class="user_name">
+											ljjchen29
+										</span>
+										<span class="js_comment_txt">
+										我很喜欢这张图。
+										</span>
+									</div>
+									<div class="btn_group pull-right">
+										<a href="javascript:;" class="delete_btn js_delete">删除</a>
+										<a href="javascript:;">回复</a>	
+									</div>
+								</li>
+								<li class="clearfix sr-only js_lidemo">
+									<span class="user_simg pull-left" style="background-image:url('__IMG__/user-img1.jpg')">
+										
+									</span>
+									<div class="comment_txt pull-left">
+										<span class="user_name">
+											ljjchen29
+										</span>
+										<span class="js_comment_txt">
+										ssksksks
+										</span>
+									</div>
+									<div class="btn_group pull-right">
+										<a href="javascript:;" class="js_delete">删除</a>	
+									</div>
+								</li>
+								<li class="clearfix">
+									<span class="user_simg pull-left" style="background-image:url('__IMG__/user-img2.jpg')">
+										
+									</span>
+									<div class="comment_txt pull-left">
+										<span class="user_name">
+											每日穿搭小图
+										</span>
+										<span class="js_comment_txt">
+										文艺范儿十足呀~
+										</span>
+									</div>
+									<div class="btn_group pull-right">
+										<a href="javascript:;" class="delete_btn js_delete">删除</a>
+										<a href="javascript:;">回复</a>	
+									</div>
+								</li>
+								<li class="clearfix">
+									<span class="user_simg pull-left" style="background-image:url('__IMG__/user-img3.jpg')">
+										
+									</span>
+									<div class="comment_txt pull-left">
+										<span class="user_name">
+											left小胖猪
+										</span>
+										<span class="js_comment_txt">
+										见云之灿烂想其衣裳之华艳，见花之艳丽想人之容貌照人。若不是在群玉山头见到了她，就是在瑶池的月光下来相逢。
+										</span>
+									</div>
+									<div class="btn_group pull-right">
+										<a href="#" class="delete_btn js_delete">删除</a>
+										<a href="javascript:;">回复</a>	
+									</div>
+								</li>
+								<li class="clearfix">
+									<span class="user_simg pull-left" style="background-image:url('__IMG__/user-img4.jpg')">
+										
+									</span>
+									<div class="comment_txt pull-left">
+										<span class="user_name">
+											MIC复古小姐
+										</span>
+										<span class="js_comment_txt">
+										我很喜欢这张图我很喜欢这张图
+										我很喜欢这张图我很喜欢这张图我很喜欢这张图我很喜欢这张图
+										</span>
+									</div>
+									<div class="btn_group pull-right">
+										<a href="#" class="delete_btn js_delete">删除</a>
+										<a href="javascript:;">回复</a>	
+									</div>
+								</li>
+							</ul>
+							<span class="slideUpBtn">收起 <i class="iconfont">&#xe622;</i></span>
+						</div>
+						<!-- 评论列表 E-->
+						<!-- 分享列表 S-->
+						<div class="share_bar con_bar js_share_bar">
+							<ul class="share_links clearfix">
+								<li>
+									<a href="#" class="txqq"><i class="iconfont">&#xe642;</i></a>
+									<div>腾讯qq</div>
+								</li>
+								<li>
+									<a href="#" class="qqzone"><i class="iconfont">&#xe606;</i></a>
+									<div>qq空间</div>
+								</li>
+								<li>
+									<a href="#" class="sina"><i class="iconfont">&#xe621;</i></a>
+									<div>新浪微博</div>
+								</li>
+								<li>
+									<a href="#" class="weixin"><i class="iconfont">&#xe620;</i></a>
+									<div>微信</div>
+								</li>
+								<li>
+									<a href="#" class="pyq"><i class="iconfont">&#xe644;</i></a>
+									<div>朋友圈</div>
+								</li>
+								<li>
+									<a href="#" class="sunrun"><i class="iconfont">&#xe64f;</i></a>
+									<div>尚软</div>
+								</li>
+							</ul>
+						</div>
+						<!-- 分享列表 E-->
+					</div>
+				</div><!-- blogcon_col -->
+			</div><!-- col-lg-9 -->
+			<div class="col-lg-3">
+				<div class="showmore_user">
+					<div class="list-group">
+					  <div href="#" class="list-group-item list_header clearfix">
+					  	<p style="font-size:16px;" class="pull-left">显示更多用户</p>
+					  	<i class="iconfont pull-right">&#xe607;</i>
+					  </div>
+					  <ul class="list_body">
+						  <li class="clearfix">
+						  	<a href="#" class="user_img pull-left">
+						  		<img src="__IMG__/user_image1.jpg" class="img-responsive" alt="">
+						  	</a>
+						  	<div class="pull-left user_info">
+						  		<a href="#" class="user_name show">MAX</a>
+						  		<span class="user_label">资深用户</span>
+						  	</div>
+						  	<a href="#" class="pull-right">
+						  		<i class="iconfont attent">&#xe613;</i>
+						  	</a>
+						  </li>
+						  <li class="clearfix">
+						  	<a href="#" class="user_img pull-left">
+						  		<img src="__IMG__/user_image2.jpg" class="img-responsive" alt="">
+						  	</a>
+						  	<div class="pull-left user_info">
+						  		<a href="#" class="user_name show">蓝天咔</a>
+						  		<span class="user_label">资深用户</span>
+						  	</div>
+						  	<a href="#" class="pull-right">
+						  		<i class="iconfont attent">&#xe613;</i>
+						  	</a>
+						  </li>
+						  <li class="clearfix">
+						  	<a href="#" class="user_img pull-left">
+						  		<img src="__IMG__/user_image3.jpg" class="img-responsive" alt="">
+						  	</a>
+						  	<div class="pull-left user_info">
+						  		<a href="#" class="user_name show">YJuLing</a>
+						  		<span class="user_label">资深用户</span>
+						  	</div>
+						  	<a href="#" class="pull-right">
+						  		<i class="iconfont attent">&#xe613;</i>
+						  	</a>
+						  </li>
+						  <li class="clearfix">
+						  	<a href="#" class="user_img pull-left">
+						  		<img src="__IMG__/user_image4.jpg" class="img-responsive" alt="">
+						  	</a>
+						  	<div class="pull-left user_info">
+						  		<a href="#" class="user_name show">付付静</a>
+						  		<span class="user_label">资深用户</span>
+						  	</div>
+						  	<a href="#" class="pull-right">
+						  		<i class="iconfont attent">&#xe613;</i>
+						  	</a>
+						  </li>
+						  <li class="clearfix">
+						  	<a href="#" class="user_img pull-left">
+						  		<img src="__IMG__/user_image5.jpg" class="img-responsive" alt="">
+						  	</a>
+						  	<div class="pull-left user_info">
+						  		<a href="#" class="user_name show">八口厚多士</a>
+						  		<span class="user_label">资深用户</span>
+						  	</div>
+						  	<a href="#" class="pull-right">
+						  		<i class="iconfont attent">&#xe613;</i>
+						  	</a>
+						  </li>
+						  <li class="clearfix">
+						  	<a href="#" class="user_img pull-left">
+						  		<img src="__IMG__/user_image1.jpg" class="img-responsive" alt="">
+						  	</a>
+						  	<div class="pull-left user_info">
+						  		<a href="#" class="user_name show">威尼斯</a>
+						  		<span class="user_label">资深用户</span>
+						  	</div>
+						  	<a href="#" class="pull-right">
+						  		<i class="iconfont attent">&#xe613;</i>
+						  	</a>
+						  </li>
+						  <li class="clearfix">
+						  	<a href="#" class="user_img pull-left">
+						  		<img src="__IMG__/user_image2.jpg" class="img-responsive" alt="">
+						  	</a>
+						  	<div class="pull-left user_info">
+						  		<a href="#" class="user_name show">太阳xym</a>
+						  		<span class="user_label">资深用户</span>
+						  	</div>
+						  	<a href="#" class="pull-right">
+						  		<i class="iconfont attent">&#xe613;</i>
+						  	</a>
+						  </li>
+						   <li class="clearfix">
+						  	<a href="#" class="user_img pull-left">
+						  		<img src="__IMG__/user_image4.jpg" class="img-responsive" alt="">
+						  	</a>
+						  	<div class="pull-left user_info">
+						  		<a href="#" class="user_name show">笑笑哥</a>
+						  		<span class="user_label">资深用户</span>
+						  	</div>
+						  	<a href="#" class="pull-right">
+						  		<i class="iconfont attent">&#xe613;</i>
+						  	</a>
+						  </li>
+						  <li class="clearfix">
+						  	<a href="#" class="user_img pull-left">
+						  		<img src="__IMG__/user_image5.jpg" class="img-responsive" alt="">
+						  	</a>
+						  	<div class="pull-left user_info">
+						  		<a href="#" class="user_name show">喵呜不停</a>
+						  		<span class="user_label">资深用户</span>
+						  	</div>
+						  	<a href="#" class="pull-right">
+						  		<i class="iconfont attent">&#xe613;</i>
+						  	</a>
+						  </li>
+						  <li class="clearfix">
+						  	<a href="#" class="user_img pull-left">
+						  		<img src="__IMG__/user_image3.jpg" class="img-responsive" alt="">
+						  	</a>
+						  	<div class="pull-left user_info">
+						  		<a href="#" class="user_name show">MAX</a>
+						  		<span class="user_label">资深用户</span>
+						  	</div>
+						  	<a href="#" class="pull-right">
+						  		<i class="iconfont attent">&#xe613;</i>
+						  	</a>
+						  </li>
+					  </ul>
+					</div>
+					</div>
+
+					<div class="list-group more_label">
+						<div href="#" class="list-group-item list_header">
+							<p style="font-size:16px;">
+							 发现更多标签<a href="#" class="more pull-right iconfont" style="color:#999">&#xe607;</a>
+							</p>
+						</div>
+						<a href="#" class="list-group-item">
+							<i class="iconfont">&#xe615;</i>
+							<span class="label_name">人像</span>
+						</a>
+						<a href="#" class="list-group-item">
+							<i class="iconfont">&#xe615;</i>
+							<span class="label_name">摄影</span>
+						</a>
+						<a href="#" class="list-group-item">
+							<i class="iconfont">&#xe615;</i>
+							<span class="label_name">清新</span>
+						</a>
+						<a href="#" class="list-group-item">
+							<i class="iconfont">&#xe615;</i>
+							<span class="label_name">少女</span>
+						</a>
+						<a href="#" class="list-group-item">
+							<i class="iconfont">&#xe615;</i>
+							<span class="label_name">文艺</span>
+						</a>
+						<a href="#" class="list-group-item">
+							<i class="iconfont">&#xe615;</i>
+							<span class="label_name">女神</span>
+						</a>
+					</div>
+			</div>
+		</div>
+	</div>
+	<!-- 主体部分 S-->
+	<div class="loading_box"><i class="iconfont">&#xe61a;</i>正在加载</div>
+</block>
+<block name="script">
+	<js href="__PLUGIN__/popover/dist/jquery.webui-popover.min.js"/>
+	<js href="__JS__/common.js"/>
+</block>

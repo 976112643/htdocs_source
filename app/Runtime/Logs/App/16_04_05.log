@@ -1,0 +1,22 @@
+[ 2016-04-05T10:56:45+08:00 ] ::1 /app/
+ERR: æ— æ³•åŠ è½½æ§åˆ¶å™¨:Index
+
+[ 2016-04-05T11:00:31+08:00 ] ::1 /app/app/appuser/index/index
+ERR: æ— æ³•åŠ è½½æ§åˆ¶å™¨:Appuser/index
+
+[ 2016-04-05T11:01:14+08:00 ] ::1 /app/app/AppUser/Index/index
+ERR: SQLSTATE[HY000] [2002] ÓÉÓÚÁ¬½Ó·½ÔÚÒ»¶ÎÊ±¼äºóÃ»ÓĞÕıÈ·´ğ¸´»òÁ¬½ÓµÄÖ÷»úÃ»ÓĞ·´Ó¦£¬Á¬½Ó³¢ÊÔÊ§°Ü¡£
+
+
+[ 2016-04-05T11:05:27+08:00 ] ::1 /app/app/AppUser/Index/index
+ERR: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: ²»ÖªµÀÕâÑùµÄÖ÷»ú¡£ 
+
+[ 2016-04-05T11:05:29+08:00 ] ::1 /app/app/AppUser/Index/index
+ERR: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: ²»ÖªµÀÕâÑùµÄÖ÷»ú¡£ 
+
+[ 2016-04-05T11:05:53+08:00 ] ::1 /app/app/AppUser/Index/index
+ERR: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: ²»ÖªµÀÕâÑùµÄÖ÷»ú¡£ 
+
+[ 2016-04-05T11:05:54+08:00 ] ::1 /app/app/AppUser/Index/index
+ERR: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: ²»ÖªµÀÕâÑùµÄÖ÷»ú¡£ 
+

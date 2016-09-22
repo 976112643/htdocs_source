@@ -1,0 +1,28 @@
+<extend name="Public/body"/>
+<block name="style">
+	<css href="__CSS__/login.css"/>
+</block>
+<block name="body">
+	<header class="login_top">
+		<div class="logo">
+			<img src="__IMG__/logo.png" alt="">
+		</div>
+	</header>
+
+	<div class="findword_mian">
+		<div class="container">
+			<div class="findword_content">
+				<div class="lichengtu text-center">
+					<img src="__IMG__/User/liuchengtu3.png" alt="">
+				</div>
+				<p class="finish_tips">
+					<i class="iconfont">&#xe62b;</i> 密码修改完成!
+				</p>
+				<p class="goback_tips"><span class="num">3</span>秒后自动跳转至首页</p>
+				<a href="<?=U('Home/Index/index')?>" class="goback_btn">返回首页</a>
+			</div>
+		</div>
+	</div>
+
+	<include file="Home@Public/footer"/>
+</block>

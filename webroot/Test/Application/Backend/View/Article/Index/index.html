@@ -1,0 +1,252 @@
+<extend name="Public/body" />
+<block name="body"> <!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper" style="min-height: 922px;">
+	<!-- Content Header (Page header) -->
+	<section class="content-header">
+		<h1>
+			<?=$page_title?>
+			<small>
+				<?=$small_title?>
+			</small>
+		</h1>
+		<ol class="breadcrumb">
+			<li><a href="<?=U('/Backend')?>"><i class="fa fa-dashboard"></i>
+					首页</a></li>
+			<li class="active">
+				<?=$page_title?>
+			</li>
+		</ol>
+	</section>
+
+	<!-- Main content -->
+	<section class="content">
+		<div class="row">
+			<div class="col-xs-12">
+				<div class="box">
+					<div class="box-body">
+						<div id="example2_wrapper"
+							class="dataTables_wrapper form-inline dt-bootstrap">
+							<div class="row">
+								<div class="col-sm-8">
+								<form class="forms" action="" method="get">
+									<input type="hidden" name="p" value="1">
+									<label>
+										<select class="search form-control" name="style">
+											<option value="">默认文章分类</option>
+											<option value="1" <?php if($style==1){echo "selected";}?>>文字</option>
+											<option value="2" <?php if($style==2){echo "selected";}?>>图片</option>
+											<option value="3" <?php if($style==3){echo "selected";}?>>音乐</option>
+											<option value="4" <?php if($style==4){echo "selected";}?>>视频</option>
+										</select>
+									</label>
+									
+									<label>
+										<select class="search form-control" name="order">
+											<option value="">默认排序</option>
+											<option value="hot_count" <?php if($order=='hot_count'){echo "selected";}?>>热度</option>
+											<option value="comment_count" <?php if($order=='comment_count'){echo "selected";}?>>评论数</option>
+											<option value="addtime" <?php if($order=='addtime'){echo "selected";}?>>时间</option>
+										</select>
+									</label>
+									<label>
+										<select class="search form-control" name="status">
+											<option value="">是否首页推荐</option>
+											<option value="1" <?php if($status=='1'){echo "selected";}?>>未推荐</option>
+											<option value="2" <?php if($status=='2'){echo "selected";}?>>已推荐</option>
+										</select>
+									</label>
+									<label>
+										<input type="search" class="form-control" placeholder="请输入文章标题" name="title" value="<?php echo $titles ?>" size="35" />
+									</label>
+									<label>
+										<input type="submit" class="btn btn-info sousuo" value='搜索' />
+									</label>
+								</form>
+								</div>
+								<div class="col-md-4 text-right">
+									<?=getTopBtn($menu_info['id'],I('pid'))?>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-sm-12">
+									<table id="example2"
+										class="table table-bordered table-striped dataTable text-center"
+										role="grid" aria-describedby="example2_info">
+										<thead>
+											<tr role="row">
+												<th class="sorting_asc" tabindex="0"
+													aria-controls="example2" rowspan="1" colspan="1"
+													aria-sort="ascending"
+													aria-label="Rendering engine: activate to sort column descending "
+													style="width: 3%"><label><input
+														type="checkbox" class="js_check_all" value=""></label></th>
+												<th class="sorting" tabindex="0" aria-controls="example2"
+													rowspan="1" colspan="1"
+													aria-label="Browser: activate to sort column ascending">id</th>
+												<th class="sorting" tabindex="0" aria-controls="example2"
+													rowspan="1" colspan="1"
+													aria-label="Engine version: activate to sort column ascending"
+													style="width: 30%">文章标题</th>
+												<th class="sorting" tabindex="0" aria-controls="example2"
+													rowspan="1" colspan="1"
+													aria-label="Engine version: activate to sort column ascending">评论数</th>
+												<th class="sorting" tabindex="0" aria-controls="example2"
+													rowspan="1" colspan="1"
+													aria-label="CSS grade: activate to sort column ascending">热度</th>
+												<th class="sorting" tabindex="0" aria-controls="example2"
+													rowspan="1" colspan="1"
+													aria-label="CSS grade: activate to sort column ascending">类型</th>
+												<th class="sorting" tabindex="0" aria-controls="example2"
+													rowspan="1" colspan="1"
+													aria-label="CSS grade: activate to sort column ascending">发布人</th>
+												<th class="sorting" tabindex="0" aria-controls="example2"
+													rowspan="1" colspan="1"
+													aria-label="CSS grade: activate to sort column ascending">发布时间</th>
+												<th class="sorting" tabindex="0" aria-controls="example2"
+													rowspan="1" colspan="1"
+													aria-label="CSS grade: activate to sort column ascending">是否首页推荐</th>
+												<th class="sorting" tabindex="0" aria-controls="example2"
+													rowspan="1" colspan="1"
+													aria-label="CSS grade: activate to sort column ascending"
+													style="width: 22%">操作</th>
+											</tr>
+										</thead>
+										<tbody>
+											<?php	foreach($result as $k=>$v):  ?>
+											<tr>
+												<td><label><input type="checkbox" class="ids" name="ids[]" value="<?php echo $v['id'] ?> "></label></td>
+												<td><?=$v['id']; ?></td>
+												<td>
+													<?php 
+														if($v['title']){
+															echo $v['title'];
+														}else if($v['feed_content']){
+															echo  msubstr($v['feed_content'],0,30);
+														}else{
+															$img=get_article_img($v['feed_id'])[0]['image'];
+														
+															if($img != ""){
+																echo "<img width='80' height='80' src='__ROOT__/".$img."'>";
+															}else{
+																echo "--"; 
+															} 		
+														}
+													?>
+												</td>
+												<td><?=$v['comment_count'] ?></td>
+												<td><?=$v['hot_count'] ?></td>
+												<td>
+													<?php 
+														switch($v['style']){
+															case 1:
+																$s="文字";
+																break;
+															case 2:
+																$s="图片";
+																break;
+															case 3:
+																$s="音乐";
+																break;
+															case 4:
+																$s="视频";
+																break;
+															default :
+																$s="--";
+																break;
+														}
+														echo $s;
+													?>
+												</td>
+												<td><?php if($v['nickname'] == ""){ echo $v['username']; }else{ echo $v['nickname']; } ?></td>
+												<td><?=date('Y-m-d H:i:s',$v['addtime']) ?></td>
+												<td><?php if($v['status'] == "2"){ echo "已推荐"; }else{ echo "未推荐"; } ?></td>
+												<td>
+													<button class="btn btn-info btn-xs" onclick="getCotent(<?=$v['id']?>);">查看</button>
+													<?php
+														$unique_url=array(
+															'is_hid'=>array(
+																'1'=>U("enable"),
+																'0'=>U("disable"),
+															)
+														);
+														$url=array();
+														$url[]=$unique_url['is_hid'][$v['is_hid']];
+														getListBtn($menu_info['id'],$v['id'],$url,I('pid'));
+														getListBtn($menu_info['id'],$v['id'],$unique_url,I('pid'),false);
+													?>
+													<!--首页推荐按钮-->
+													<?php
+														$_class =($v['status']=='1')?'btn btn-primary btn-xs ajax-get':'btn btn-warning btn-xs ajax-get';
+													?>
+													<a href="<?=U('home_recommond',array('status'=>$v['status'],'id'=>$v['id']))?>" class='<?=$_class?>'>
+														<?=($v['status']=='1')?'首页推荐':'取消推荐'?>
+													</a>
+												</td>
+											</tr>
+											<?php endforeach; ?>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+						<div class="pages">
+								<?=$page?>
+						</div>
+						</div>
+						<!-- /.box-body -->
+					</div>
+					<!-- /.box -->
+				</div>
+				<!-- /.col -->
+			</div>
+			<!-- /.row -->
+	</section>
+	<!-- /.content -->
+</div>
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  	<div class="modal-dialog modal-lg" role="document">
+	    <div class="modal-content">
+	      	<div class="modal-header">
+	        	<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		        <h4 class="modal-title" id="myModalLabel">文章详情</h4>
+	      	</div>
+	      	<div class="modal-body">
+	       		
+	      	</div>
+	      	<div class="modal-footer">
+	        	<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+	      	</div>
+	    </div>
+  	</div>
+</div>
+<script>
+function getCotent(id) {
+	$.ajax({
+	 	type: "get",
+        url: "__CONTROLLER__/see",
+        dataType : "json",
+        data:{"ids":id},
+        success: function(s){ 
+          	$('.modal-body').empty().append(s.content);
+          	$('#myModal').modal();
+        }
+	});
+}
+$(function(){
+	var search = $('.searchs').val();
+	if(search == ""){
+		search = "0";
+	}
+	$('.search option[value='+search+']').attr('selected',true);
+	function trim(str){ //删除左右两端的空格
+	    return str.replace(/(^\s*)|(\s*$)/g, "");
+	}
+	$('.sousuo').click(function(){
+		keys = trim($('.titles').val());
+		$('.titles').val(keys);
+		$('.forms').submit();
+	})
+})
+</script>
+</block>

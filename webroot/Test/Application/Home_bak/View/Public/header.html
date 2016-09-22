@@ -1,0 +1,72 @@
+<!-- 导航代码 -->
+	<!-- 头部导航 S-->
+	<header class="header_nav">
+		<nav class="navbar">
+			<div class="container">
+				<div class="row">
+				<div class="navbar-header pull-left">
+					  <a href="#" class="myBrand">
+						  <img src="__IMG__/logo.png" alt="">
+					  </a>
+				</div>
+
+				<div class="pull-right"  id="myNavbarCollapse">
+			      <form class="navbar-form navbar-right mySearchBar" role="search">
+			        <div class="form-group">
+			          <div class="input-group">
+			          	  <button class="btn btn-sm btn_faj"><i class="iconfont">&#xe605;</i></button>
+				          <input type="text" class="search_input js_search_input" data-url="<?=U('getSearch')?>" placeholder="搜索标签、人">
+				       </div>
+				       <div></div>
+			        </div>
+			      </form>
+			      <ul class="nav navbar-nav navbar-right myNav">
+			        <li class="active havemsg">
+			        	<a href="<?=U('Home/Index/index')?>">
+				        	首页
+				        	<span></span>
+				        	<i></i>
+			        	</a>
+			        </li>
+			        <li>
+			        	<a href="<?=U('Home/Browse/trend')?>">
+			        		浏览
+			        		<span></span>
+			        		<i></i>
+			        	</a>
+			        </li>
+			        <li>
+			        	<a href="<?=U('Home/Download/app_download')?>">
+			        		APP
+			        		<span></span>
+			        		<i></i>
+			        	</a>
+			        </li>
+			        <li>
+			        	<a href="<?=U('User/Account/index')?>">
+				        	账号设置
+				        	<span></span>
+				        	<i></i>
+			        	</a>
+			        </li>
+			        <li>
+			        	<a href="<?=U('Home/Help/index')?>">
+				        	帮助中心
+				        	<span></span>
+				        	<i></i>
+			        	</a>
+			       </li>
+			        <li>
+				        <a href="javascript:;">
+					        退出
+					        <span></span>
+					        <i></i>
+				        </a>
+			        </li>
+			      </ul>
+			    </div><!-- /.navbar-collapse -->
+			    </div><!-- /.row -->
+			</div>
+		</nav>
+	</header>
+	<!-- 头部导航 E-->

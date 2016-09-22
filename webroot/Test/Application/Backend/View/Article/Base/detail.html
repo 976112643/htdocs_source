@@ -1,0 +1,89 @@
+
+<!-- Main content -->
+<section class="content">
+	<div class="row">
+		<div class="col-xs-12">
+			<div class="box">
+				<div class="box-body">
+					<div class="container-fluid">
+						<div class="row-fluid">
+							<span >
+
+								<?php 
+									if($article['icon'] != ""){
+										if(!empty(parse_url($article['icon'])['scheme'])){
+											echo "<img width='80' height='80' src='".$article['icon']."'>";
+										}else{
+											echo "<img width='80' height='80' src='__ROOT__/".$article['icon']."'>";
+										}
+									}else{
+										echo "<img width='80' height='80' src='__IMG__/nopic.png'>"; 
+									} 
+								?>
+							</span>
+
+							<span style="font-size:20px;">&nbsp;&nbsp;<?=$article['nickname']?></span>
+							<span>&nbsp;&nbsp;<?=date("Y-m-d H:i:s",$article['addtime'])?></span>
+								
+							<hr>
+							<div style="width: 600px;margin: auto;">
+								<?php if(empty($image)){echo "<span style='color:gray'>暂无图片</span>";}?>
+								<?php	foreach($image as $k=>$v):  ?>
+									<?php
+										echo "<img  src='__ROOT__/".$v['image']."' width='180' height='180' style='margin-left: 10px;margin-bottom: 10px;' />" ;
+									?>
+								<?php endforeach; ?>
+							</div>
+							<hr>
+							<p>
+								文章标题：
+								<?php if($article['title']){echo $article['title'];}else{echo "<span style='color:gray'>暂无标题</span>";}?>
+							</p>
+							<p>
+								文章内容：
+								<?php if($article['content']){echo $article['content'];}else{echo "<span style='color:gray'>暂无内容</span>";}?>
+							</p>
+							<hr/>
+								
+							<div style="height:200px;overflow-y: scroll;">
+								<p>评论内容：</p>
+								<?php if(empty($comment)){echo "<span style='color:gray'>暂无评论</span>";}?>
+								<?php	foreach($comment as $k=>$v):  ?>
+								<?php 
+									if($v['icon'] != ""){
+										if(!empty(parse_url($v['icon'])['scheme'])){
+											echo "<p><img width='50' height='50' src='".$v['icon']."'>&nbsp";
+										}else{
+											echo "<p><img width='50' height='50' src='__ROOT__/".$v['icon']."'>&nbsp";
+										}
+									}else{
+										echo "<p><img width='50' height='50' src='__IMG__/nopic.png'>&nbsp"; 
+									}
+									echo "<span style='color:#367FA9'>".$v['nickname']."</span>&nbsp";
+									
+									if($v['to_uid']){
+										echo "<span style='color:blue'>回复</span>&nbsp";
+										echo "<span style='color:#367FA9'>".get_user_info($v['to_uid'])['nickname']."</span>&nbsp";
+								
+									}
+									echo $v['content']."</p>";
+									
+								?>
+								<?php endforeach; ?>
+							</div>
+							<!-- </div> -->
+							<!-- 3 -->
+						</div>
+						<!-- 2 -->
+					</div>
+					<!-- 1 -->
+				</div>
+				<!-- /.box-body -->
+			</div>
+			<!-- /.box -->
+		</div>
+		<!-- /.col -->
+	</div>
+	<!-- /.row -->
+</section>
+<!-- /.content -->

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="renderer" content="webkit">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1" />
+	<meta http-equiv="X-UA-Compatible" content="IE=9" />
+	<meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no,minimal-ui' name='viewport'>
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="format-detection" content="email=no" />
+	<include file="Home@Public/head"/>
+</head>
+<body>
+	<div class="wrap">
+		
+	<include file="Home@Public/header"/>
+	<block name="body"></block>
+	<?php
+	if(is_mobile()){
+	?>
+	<css href="__CSS__/wap.css"/>
+	<?php
+	}else{
+    ?>
+    <?php
+	}
+	?>
+
+	</div>
+</body>
+</html>

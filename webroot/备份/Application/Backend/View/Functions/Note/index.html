@@ -1,0 +1,118 @@
+<extend name="Public/body" />
+<block name="body"> <!-- note视图模板--> <!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper" style="min-height: 922px;">
+	<section class="content-header">
+		<h1>
+			<?=$page_title?>
+			<small> <?=$page_small?>
+			</small>
+		</h1>
+		<ol class="breadcrumb">
+			<li><a href="<?=U('/Backend')?>"><i class="fa fa-dashboard"></i> 首页</a></li>
+			<li class="active">
+				<?=$page_small?>
+			</li>
+		</ol>
+	</section>
+
+	<style type="text/css">
+#cls:before {
+	display: none;
+}
+</style>
+	<section class="content">
+		<div class="row">
+			<div class="col-xs-12">
+				<div class="box">
+					<div class="box-header"></div>
+					<!-- /.box-header -->
+					<div class="box-body">
+						<div id="example2_wrapper" class="dataTables_wrapper form-inline dt-bootstrap">
+							<div class="row">
+
+								<form action="<?=U('index')?>" method='post'>
+									<div class="col-md-8">
+										<!--@liuqiao 过滤条件无用-->
+										<!-- <label><input type="search" class="form-control input-sm" placeholder="开始时间" aria-controls="example1" onClick="WdatePicker({startDate:'%y-%M-%d',dateFmt:'yyyy-MM-dd',alwaysUseStartDate:true})" name='add_time_begin' value="<?=$add_time_begin?$add_time_begin:''?>"></label>
+														<label><input type="search" class="form-control input-sm" placeholder="结束时间" aria-controls="example1" onClick="WdatePicker({startDate:'%y-%M-%d',dateFmt:'yyyy-MM-dd',alwaysUseStartDate:true})" name='add_time_end' value="<?=$add_time_end?$add_time_end:''?>"></label> -->
+										<label> <input type="search" class="form-control input-sm" placeholder="关键字或描述"
+											aria-controls="example1" name='keywords' value="<?=$keywords?$keywords:''?>">
+										</label> <label> <input type="submit" class="btn btn-info btn-sm" value='查找' />
+										</label>
+									</div>
+								</form>
+
+								<div class="col-md-4 text-right">
+									<?php
+											foreach($page_child as $v){
+												if($v['status']==1){
+													switch($v['title']){
+														case '删除':
+																?>
+									<a href="<?=U('del')?>" class="btn btn-danger btn-sm ajax-post confirm " target-form="ids">删除</a>
+									<?php
+																					break;
+														case '禁用':
+																?>
+									<a href="<?=U('disable',array('status'=>0))?>" class="btn bg-navy btn-sm ajax-post"
+										target-form="ids">禁用</a>
+									<?php
+																					break;
+														case '启用';
+										?>
+
+									<a href="<?=U('enable',array('status'=>1))?>" class="btn btn-success btn-sm ajax-post"
+										target-form="ids">启用</a>
+									<?php
+															break;
+														case '添加';
+										?>
+									<a class="btn btn-info btn-sm" href="<?=U('add',array('pid'=>intval(I('pid'))))?>">添加</a>
+									<?php
+															break;
+													}
+												}
+											}
+										?>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<ul id="cls" class="timeline">
+						<?php
+					foreach ($result as $notes){
+					?>
+						<li>
+							<div class="timeline-item" style="margin-left: 15px; margin-right: 10px">
+								<span class="time" style="font-size: 14px"> <i class="fa fa-clock-o"></i> <?=$notes['update_time']?$notes['update_time']:$notes['add_time']?>
+								</span>
+								<h3 class="timeline-header">
+									<a href="#">
+										<?=$notes['title']?>
+									</a>
+								</h3>
+								<div class="timeline-body">
+									<?=substr(strip_tags($notes['content']), 0,1000)?>
+								</div>
+								<div class="timeline-footer">
+									<a class="btn btn-primary btn-xs">查看全部</a> <a class="btn btn-danger btn-xs"
+										href="<?=U('del','ids='.$notes['id'])?>">删除</a>
+								</div>
+							</div>
+						</li>
+
+						<?php } ?>
+
+					</ul>
+				</div>
+				<div class="pages">
+					<?=$page?>
+				</div>
+	</section>
+
+
+
+</div>
+</block>

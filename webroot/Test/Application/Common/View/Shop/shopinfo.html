@@ -1,0 +1,22 @@
+<div class="top_right">
+	<div class="shopbox">
+		<div class="imgbox">
+		<a href="<?=U('Home/Shop/detail/shop_id/'.$info['id'])?>" class="img"><img width="100%" height="100%" src="__ROOT__/<?=$info['logo']?>" alt="<?=$info['title']?>"></a>
+		</div>
+		<div class="descbox no_bg">
+			<a href="<?=U('Home/Shop/detail/shop_id/'.$info['id'])?>" class="title"><?=$info['title']?></a>
+			<span>主要服务：<?=$info['main_business']?></span>
+			<ul class="databox clearfix">
+				<li class="pull-left">好评率：<strong><?=($info['star_rating']/5)*100?>%</strong></li>
+				<li class="pull-right">成交：<span><?=$info['sales']?>笔</span></li>
+			</ul>
+			<ul class="linkbox clearfix">
+				<a class="fl" href="<?=U('Home/Shop/detail/shop_id/'.$info['id'])?>">进入店铺</a>
+				<?php
+					$QQ = substr($info['shop_qq'],0,stripos($info['shop_qq'],','))
+				?>
+				<a class="fr" href="http://wpa.qq.com/msgrd?V=3&amp;uin=<?=$QQ?>&amp;Site=<?=$info['title']?>&amp;Menu=yes">和我联系</a>
+			</ul>
+		</div>
+	</div>
+</div>

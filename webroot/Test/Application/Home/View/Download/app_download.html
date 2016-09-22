@@ -1,0 +1,44 @@
+<extend name="Public/body"/>
+<block name="style">
+	<css href="__CSS__/index.css"/>
+	<css href="__CSS__/download.css"/>
+</block>
+<block name="body">
+	<div class="header">
+    		<img src="__IMG__/top_bg.png" class="img-responsive" alt="">
+    	</div>
+    	<div class="content">
+			<img src="__IMG__/body_img.jpg" class="img-responsive" alt="">			
+		</div>
+		<div class="foot">		
+			<img src="__IMG__/foot_bg.png" class="img-responsive" alt="">
+			<!-- <a href="https://itunes.apple.com/us/app/jiu-sao-bao/id1099011784?l=zh&ls=1&mt=8" class="btn btn-default idown_btn">Iphone下载</a> -->
+						<a target="_blank" href="#" class="btn btn-default idown_btn">Iphone下载</a>
+			<a href="#" class="btn btn-default adown_btn">Android下载</a>
+					</div>
+		
+		<div class="modal wx_modal" style="width:100%;height:100%;background-color:rgba(0,0,0,.5);display:none;">
+			<div class="dialog_lh">
+				<p class="f_16 c_444" style="text-indent:15px;">请点击按钮选择</p>
+				<p class="js_select_style f_16 c_f97c06">“在浏览器中打开”</p>
+			</div>
+		</div>
+    
+	
+</block>
+<block name="script">
+<js href="__JS__/jquery.mousewheel.js"/>
+<script>
+	$('.js_download').on('click',function(){
+		$('.modal').css('display','block');
+		if(browser.versions.ios || browser.versions.iPhone || browser.versions.iPad){
+			$('.js_select_style').html('“在Safari中打开”');
+		}else{
+			$('.js_select_style').html('“在浏览器中打开”');
+		}
+	})
+	$('.modal').on('click',function(){
+		 $('.modal').css('display','none');
+	})
+	</script>
+</block>
