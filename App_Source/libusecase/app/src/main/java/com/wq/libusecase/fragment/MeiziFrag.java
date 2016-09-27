@@ -20,12 +20,14 @@ import com.wq.libusecase.base.APIManager;
 import com.wq.libusecase.base.BaseBean;
 import com.wq.libusecase.bean.MeiZiBean;
 import com.wq.libusecase.fragment.adapter.MeiziAdapter;
+import com.wq.libusecase.util.RefreshUtil;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
+import cn.bingoogolapple.refreshlayout.BGARefreshLayout;
 import rx.Scheduler;
 import rx.Subscriber;
 import rx.android.schedulers.AndroidSchedulers;
@@ -39,6 +41,7 @@ import rx.schedulers.Schedulers;
 public class MeiziFrag extends BaseFragment implements BackTopListener{
     View rootView;
     @Bind(R.id.recycleview)RecyclerView recyclerView;
+    @Bind(R.id.refreshLayout)BGARefreshLayout refreshLayout;
     boolean mIsLoadingMore;
     protected boolean mIsNoMore;
     int mPage=1;
@@ -57,42 +60,57 @@ public class MeiziFrag extends BaseFragment implements BackTopListener{
 //        recyclerView.setAdapter(new MeiziAdapter());
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
         recyclerView.setItemAnimator(new DefaultItemAnimator());
-        recyclerView.addOnScrollListener(new RecyclerView.OnScrollListener() {
+//        recyclerView.addOnScrollListener(new RecyclerView.OnScrollListener() {
+//            @Override
+//            public void onScrolled(RecyclerView recyclerView, int dx, int dy) {
+//                super.onScrolled(recyclerView, dx, dy);
+//                if (!mIsLoadingMore && dy > 0) {
+//                    int lastVisiblePos = getLastVisiblePos();
+//                    if (!mIsNoMore && lastVisiblePos + 1 == mAdapter.getItemCount()) {
+//                       intData(++mPage);
+//                    }
+//                }
+//            }
+//        });
+        RefreshUtil.initRefresh(getContext(),refreshLayout);
+        refreshLayout.setDelegate(new BGARefreshLayout.BGARefreshLayoutDelegate(){
+
             @Override
-            public void onScrolled(RecyclerView recyclerView, int dx, int dy) {
-                super.onScrolled(recyclerView, dx, dy);
-                if (!mIsLoadingMore && dy > 0) {
-                    int lastVisiblePos = getLastVisiblePos();
-                    if (!mIsNoMore && lastVisiblePos + 1 == mAdapter.getItemCount()) {
-                       intData(++mPage);
-                    }
-                }
+            public void onBGARefreshLayoutBeginRefreshing(BGARefreshLayout refreshLayout) {
+                intData(mPage=1);
+            }
+
+            @Override
+            public boolean onBGARefreshLayoutBeginLoadingMore(BGARefreshLayout refreshLayout) {
+                intData(++mPage);
+                return true;
             }
         });
-        intData(mPage);
+        refreshLayout.beginRefreshing();
+
         super.onViewCreated(view, savedInstanceState);
     }
-    protected int getLastVisiblePos() {
-        LinearLayoutManager layoutManager = (LinearLayoutManager) recyclerView.getLayoutManager();
-        int lastPositions = layoutManager.findLastVisibleItemPosition();
-        return lastPositions;
-    }
+
 
     private void intData(int page) {
         mIsLoadingMore=true;
-        APIManager.getInstance().getMeiZi(String.valueOf(page),"20").
+        APIManager.getInstance().getMeiZi(String.valueOf(page),"5").
                 subscribeOn(Schedulers.newThread())
         .observeOn(AndroidSchedulers.mainThread())
         .subscribe(
                  new Subscriber<BaseBean>(){
                     @Override
                     public void onCompleted() {
-                        mIsLoadingMore=false;
+                        refreshLayout.endRefreshing();
+
+                        refreshLayout.endLoadingMore();
                     }
 
                     @Override
                     public void onError(Throwable e) {
                             Log.e("weiquan",""+e);
+                        refreshLayout.endRefreshing();
+                        refreshLayout.endLoadingMore();
                     }
 
                      @Override
